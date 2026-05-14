@@ -59,6 +59,7 @@
             ${dropItems}
           </div>
         </div>
+        <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" class="site-nav__simulari">Simulări</a>
         <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
       </div>`;
 
