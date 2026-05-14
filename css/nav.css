@@ -54,6 +54,22 @@
     color: #fff;
 }
 
+/* Simulări link */
+.site-nav__simulari {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.site-nav__simulari:hover {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+}
+
 /* Module dropdown */
 .site-nav__dropdown-wrap { position: relative; }
 
