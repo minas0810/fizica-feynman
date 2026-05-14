@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fizica-feynman",
+      "runtimeExecutable": "/Users/minas/.pyenv/versions/3.14.3/bin/python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "/Users/minas/Documents/CLAUDE_CODE/fizica-feynman-mm"],
+      "port": 8765
+    }
+  ]
+}

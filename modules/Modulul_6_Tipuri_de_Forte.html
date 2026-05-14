@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 6: Tipuri de forțe — Împingem și tragem</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'\$\$',right:'\$\$',display:true},{left:'\$',right:'\$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="6">
+
+    <!-- ===== NAVIGAȚIE ===== -->
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+
+
+    <!-- Header -->
+    <section class="hero">
+        <h1>Fizica cu Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="module-nav module-nav--top"></div>
+
+    <!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 6</div>
+    <h1>TIPURI DE FORȚE</h1>
+    <div class="subtitle">„Împingem și tragem — cum natura pune lucrurile în mișcare"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Ce este forța?</h2>
+
+<p>În capitolul despre dinamica newtoniană, Feynman prezintă esența forței:</p>
+
+<blockquote>
+    <p>„The time-rate-of-change of momentum is proportional to the force. Force = mass × acceleration. An undisturbed object continues at constant velocity — objects appear to stop because they're affected by external forces like friction."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Rata de schimbare în timp a impulsului este proporțională cu forța. Forță = masă × accelerație. Un obiect neperturbat continuă cu viteză constantă — obiectele par să se oprească pentru că sunt afectate de forțe externe precum frecarea."
+</div>
+
+<h2>Două categorii de forțe</h2>
+
+<p>Feynman face o distincție crucială între tipurile de forțe:</p>
+
+<blockquote>
+    <p>„Non-contact forces — gravitational, electrical, magnetic — are described by field equations with simple laws. Contact forces — friction, molecular forces — result from complex atomic interactions; they are empirical laws that become more complicated with closer study."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Forțele la distanță — gravitațională, electrică, magnetică — sunt descrise prin ecuații de câmp cu legi simple. Forțele de contact — frecarea, forțele moleculare — rezultă din interacțiuni atomice complexe; sunt legi empirice care devin mai complicate pe măsură ce le studiem mai îndeaproape."
+</div>
+
+<h2>Gravitația universală</h2>
+
+<p>Despre forța gravitațională, Feynman explică:</p>
+
+<blockquote>
+    <p>„Every object in the universe attracts every other object with a force proportional to the mass of each object and inversely proportional to the square of the distance between them. Gravity is exactly proportional to mass — this explains why objects of different masses fall together."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Fiecare obiect din univers atrage fiecare alt obiect cu o forță proporțională cu masa fiecărui obiect și invers proporțională cu pătratul distanței dintre ele. Gravitația este exact proporțională cu masa — aceasta explică de ce obiectele de mase diferite cad împreună."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Forțele sunt cauza schimbării mișcării. Fără forțe, lucrurile ar continua să se miște în linie dreaptă pentru totdeauna. Tot ce vedem — căderea merelor, orbitele planetelor, mersul pe jos — este rezultatul forțelor în acțiune.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este o forță?</h2>
+
+<p><strong>Forța</strong> este ceea ce produce o schimbare a mișcării. Este „împingerea" sau „tragerea" care:</p>
+<ul>
+    <li>Pornește un obiect din repaus</li>
+    <li>Oprește un obiect în mișcare</li>
+    <li>Schimbă viteza unui obiect</li>
+    <li>Schimbă direcția unui obiect</li>
+</ul>
+
+<div class="info-box">
+    <strong>Analogie:</strong> Forța este ca mâna invizibilă care împinge sau trage lucrurile. Nu poți vedea forța, dar vezi efectul ei — obiectele se mișcă!
+</div>
+
+<h2>Două mari categorii de forțe</h2>
+
+<table>
+    <tr>
+        <th>Forțe de CONTACT</th>
+        <th>Forțe la DISTANȚĂ</th>
+    </tr>
+    <tr>
+        <td>Corpurile trebuie să se atingă</td>
+        <td>Acționează fără atingere</td>
+    </tr>
+    <tr>
+        <td>Împingere, tragere, frecare</td>
+        <td>Gravitație, magnetism, electricitate</td>
+    </tr>
+    <tr>
+        <td>Cauză: interacțiuni atomice complexe</td>
+        <td>Cauză: câmpuri de forță</td>
+    </tr>
+</table>
+
+<h2>Principalele tipuri de forțe</h2>
+
+<table>
+    <tr>
+        <th>Forța</th>
+        <th>Ce face</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td><strong>Greutatea (G)</strong></td>
+        <td>Atrage corpurile spre centrul Pământului</td>
+        <td>Mărul cade din pom</td>
+    </tr>
+    <tr>
+        <td><strong>Forța normală (N)</strong></td>
+        <td>Suprafața împinge înapoi obiectele</td>
+        <td>Masa susține cartea</td>
+    </tr>
+    <tr>
+        <td><strong>Frecarea (Ff)</strong></td>
+        <td>Se opune mișcării</td>
+        <td>Frânele opresc bicicleta</td>
+    </tr>
+    <tr>
+        <td><strong>Forța elastică (Fe)</strong></td>
+        <td>Arcurile trag/împing spre poziția inițială</td>
+        <td>Trambulina te aruncă în sus</td>
+    </tr>
+    <tr>
+        <td><strong>Forța magnetică</strong></td>
+        <td>Magneții atrag/resping</td>
+        <td>Magnetul de frigider</td>
+    </tr>
+    <tr>
+        <td><strong>Forța electrică</strong></td>
+        <td>Sarcinile electrice atrag/resping</td>
+        <td>Părul electrizat de pieptene</td>
+    </tr>
+</table>
+
+<h2>Legea inerției (Prima lege a lui Newton)</h2>
+
+<p>Feynman explică: un obiect neperturbat continuă să se miște cu viteză constantă. Dacă vezi ceva oprindu-se, înseamnă că există o forță (de obicei frecarea) care îl oprește!</p>
+
+<div class="info-box">
+    <strong>Regula de aur:</strong> Dacă nu există forță, nu există schimbare a mișcării. Schimbarea înseamnă forță!
+</div>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul (Feynman)</th>
+    </tr>
+    <tr>
+        <td>„Trebuie forță continuă pentru mișcare continuă"</td>
+        <td>Fără forță, obiectele continuă să se miște! Forța e pentru SCHIMBAREA mișcării</td>
+    </tr>
+    <tr>
+        <td>„Obiectele grele cad mai repede"</td>
+        <td>Toate obiectele cad la fel (în vid). Diferența e din cauza rezistenței aerului</td>
+    </tr>
+    <tr>
+        <td>„Greutatea și masa sunt același lucru"</td>
+        <td>Masa = cantitate de materie; Greutatea = forța gravitațională</td>
+    </tr>
+    <tr>
+        <td>„Frecarea e mereu rea"</td>
+        <td>Fără frecare n-am putea merge sau conduce!</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: De ce te dai înapoi când autobuzul frânează</h2>
+
+<p><strong>Situația:</strong> Stai în picioare în autobuz. Când frânează brusc, te dezechilibrezi spre față.</p>
+
+<p><strong>Explicația fizică (inerția):</strong></p>
+<ul>
+    <li>Corpul tău se mișca odată cu autobuzul</li>
+    <li>Când autobuzul frânează, o forță îl oprește pe el, dar nu și pe tine</li>
+    <li>Corpul tău vrea să continue în aceeași direcție (inerție)</li>
+    <li>De aceea „zbori" înainte când autobuzul frânează</li>
+</ul>
+
+<p><strong>Întrebare de reflecție:</strong> <em>Ce se întâmplă când autobuzul accelerează brusc?</em></p>
+
+<div class="answer">
+    Te dezechilibrezi spre spate! Autobuzul se mișcă înainte, dar corpul tău vrea să rămână pe loc (inerție).
+</div>
+
+<h2>Exemplul 2: De ce portarul poartă mănuși</h2>
+
+<p><strong>Situația:</strong> Mingea de fotbal vine cu viteză mare. Portarul o oprește.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Pentru a opri mingea, portarul trebuie să aplice o forță</li>
+    <li>Dacă oprește mingea brusc, forța e foarte mare (dureroasă!)</li>
+    <li>Mănușile prelungesc timpul de oprire</li>
+    <li>Aceeași schimbare de viteză, dar în timp mai lung = forță mai mică</li>
+</ul>
+
+<div class="formula-box">
+    $$\vec{F} = \frac{\Delta\vec{p}}{\Delta t}$$
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">
+    cu cât Δt mai mare → cu atât $|\vec{F}|$ mai mic (aceeași variație de impuls)
+    </small>
+</div>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce mașinile au airbag-uri?</em></p>
+
+<h2>Exemplul 3: Luna care „cade" tot timpul</h2>
+
+<p><strong>Situația:</strong> Luna orbitează Pământul de miliarde de ani. De ce nu cade pe Pământ sau nu zboară în spațiu?</p>
+
+<p><strong>Explicația fizică (Feynman):</strong></p>
+
+<blockquote>
+    <p>„The moon 'falls' toward Earth but doesn't get closer — it falls away from the straight line it would travel without gravity."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Luna «cade» spre Pământ, dar nu se apropie — ea cade în afara liniei drepte pe care ar urma-o fără gravitație."
+</div>
+
+<ul>
+    <li>Luna ARE tendința să meargă în linie dreaptă (inerție)</li>
+    <li>Gravitația Pământului o trage tot timpul spre interior</li>
+    <li>Rezultatul: o curbă perfectă — orbita</li>
+    <li>Luna „cade" constant, dar niciodată nu ajunge!</li>
+</ul>
+
+<div class="info-box">
+    <strong>Ideea lui Newton:</strong> Imaginează-ți că arunci o piatră din vârful unui munte. Cu cât arunci mai tare, cu atât cade mai departe. Dacă ai arunca suficient de tare, piatra ar „rata" Pământul și ar continua să cadă în jurul lui — ar deveni un satelit!
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Inerția — Moneda și cartonul</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea legii inerției — obiectele în repaus rămân în repaus.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un pahar</li>
+        <li>Un carton rigid (carte poștală)</li>
+        <li>O monedă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune cartonul pe gura paharului</li>
+        <li>Pune moneda pe carton, exact deasupra gurii paharului</li>
+        <li>Cu un deget, lovește cartonul rapid și orizontal</li>
+        <li>Observă ce se întâmplă cu moneda</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Cartonul zboară lateral</li>
+        <li>Moneda cade în pahar!</li>
+        <li>Moneda nu s-a mișcat orizontal — a rămas pe loc (inerție)</li>
+    </ul>
+
+    <div class="result">Concluzie: Obiectele în repaus rămân în repaus dacă nu acționează o forță asupra lor. Moneda nu „simte" lovirea cartonului.</div>
+
+    <p><strong>Varianta avansată:</strong> Încearcă cu un turn de monede. Ce se întâmplă dacă tragi cartonul încet vs. rapid?</p>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Forțe echilibrate — Cartea pe masă</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea echilibrului între greutate și forța normală.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O carte</li>
+        <li>O masă</li>
+        <li>Opțional: balanță de arc (dinamometru)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune cartea pe masă și observă — stă nemișcată</li>
+        <li>Desenează forțele: G (greutatea) în jos, N (normala) în sus</li>
+        <li>Dacă ai dinamometru, măsoară greutatea cărții (G)</li>
+        <li>Ridică cartea — acum N = 0, doar G acționează, cartea cade</li>
+    </ol>
+
+    <p><strong>Diagrama forțelor:</strong></p>
+    <table>
+        <tr>
+            <th>Forța</th>
+            <th>Direcție</th>
+            <th>Mărime</th>
+        </tr>
+        <tr>
+            <td>Greutatea ($\vec{G}$)</td>
+            <td>↓ (vertical în jos)</td>
+            <td>G = m · g</td>
+        </tr>
+        <tr>
+            <td>Forța normală (N)</td>
+            <td>↑ (în sus)</td>
+            <td>N = G</td>
+        </tr>
+    </table>
+
+    <div class="result">Concluzie: Cartea stă pe loc pentru că G = N (forțe echilibrate). Suma forțelor = 0 → nu există accelerație.</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Frecarea — Planul înclinat</h3>
+
+    <p><strong>Obiectiv:</strong> Observarea frecării și a factorilor care o influențează.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O scândură sau carton rigid</li>
+        <li>Obiecte diverse: gumă, cub de lemn, monedă</li>
+        <li>Raportor pentru a măsura unghiul</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune scândura orizontal și așază un obiect pe ea</li>
+        <li>Ridică încet un capăt al scândurii</li>
+        <li>Notează unghiul la care obiectul începe să alunece</li>
+        <li>Repetă cu obiecte diferite</li>
+        <li>Încearcă cu suprafețe diferite (scândură uscată, unsă, cu hârtie)</li>
+    </ol>
+
+    <p><strong>Tabel de rezultate:</strong></p>
+    <table>
+        <tr>
+            <th>Obiect</th>
+            <th>Suprafață</th>
+            <th>Unghi de alunecare</th>
+        </tr>
+        <tr><td>Gumă</td><td>Lemn</td><td>~35°</td></tr>
+        <tr><td>Monedă</td><td>Lemn</td><td>~20°</td></tr>
+        <tr><td>Gumă</td><td>Hârtie</td><td>~25°</td></tr>
+        <tr><td>Monedă</td><td>Hârtie unsă</td><td>~10°</td></tr>
+    </table>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Unghiul depinde de materialele în contact</li>
+        <li>Suprafețele rugoase au frecare mai mare</li>
+        <li>Lubrifianții (uleiul) reduc frecarea</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Feynman:</strong> Frecarea pare simplă, dar la nivel atomic e foarte complexă. Suprafețele „netede" au de fapt mii de asperități microscopice care se agață unele de altele!
+    </div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Ce este forța:</strong> Interacțiunea dintre două corpuri care poate produce schimbarea stării de mișcare sau deformarea unui corp.</p>
+
+<p><strong>Efectele forțelor:</strong></p>
+<ol>
+    <li><strong>Efect dinamic:</strong> Schimbă mișcarea (pornire, oprire, accelerare, frânare, schimbare direcție)</li>
+    <li><strong>Efect static:</strong> Deformează corpul (întinde, comprimă, îndoaie)</li>
+</ol>
+
+<p><strong>Caracteristicile forței:</strong></p>
+<ul>
+    <li><strong>Mărime</strong> (cât de tare împingi/tragi)</li>
+    <li><strong>Direcție</strong> (spre unde)</li>
+    <li><strong>Punct de aplicație</strong> (unde acționează)</li>
+</ul>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>Unitatea de măsură:</h3>
+
+<div class="formula-box">
+    Forța se măsoară în NEWTON (N)<br><br>
+    1 N = forța necesară pentru a da unei mase de 1 kg<br>
+    o accelerație de 1 m/s²
+</div>
+
+<h3>Greutatea (forța gravitațională):</h3>
+
+<div class="formula-box">
+    $$\vec{G} = m \cdot \vec{g}$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li>$\vec{G}$ = greutatea — vector, unitate: N</li>
+    <li><strong>m</strong> = masa — scalar, unitate: kg</li>
+    <li>$\vec{g}$ = accelerația gravitațională — vector, $|\vec{g}| \approx 10 \text{ m/s}^2$, direcție: vertical în jos</li>
+</ul>
+
+<p><strong>Exemplu:</strong> Un elev de 50 kg are greutatea G = 50 × 10 = 500 N</p>
+
+<h3>Forța de frecare:</h3>
+
+<div class="formula-box">
+    F<sub>f</sub> = μ · N
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">(modul forței; direcție: opusă mișcării sau tendinței de mișcare)</small>
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>F<sub>f</sub></strong> = modulul forței de frecare (N)</li>
+    <li><strong>μ</strong> = coeficientul de frecare — adimensional, depinde de suprafețe</li>
+    <li><strong>N</strong> = modulul forței normale (N), perpendiculară pe suprafață, opusă greutății</li>
+</ul>
+
+<h3>Forța elastică (Legea lui Hooke):</h3>
+
+<div class="formula-box">
+    F<sub>e</sub> = k · |Δl|
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">Legea lui Hooke — forța de restabilire este opusă deformației</small>
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>F<sub>e</sub></strong> = modulul forței elastice (N)</li>
+    <li><strong>k</strong> = constanta elastică a arcului (N/m)</li>
+    <li><strong>|Δl|</strong> = deformația (alungire sau comprimare), în m</li>
+</ul>
+<div class="info-box">
+    <strong>Direcție:</strong> Forța elastică acționează întotdeauna <em>opus deformației</em> — arcul întins trage înapoi, arcul comprimat împinge înapoi.
+</div>
+
+<h3>Tabel de forțe tipice:</h3>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>Forță aproximativă</th>
+    </tr>
+    <tr><td>Greutatea unui măr</td><td>~1 N</td></tr>
+    <tr><td>Greutatea unui elev</td><td>~500 N</td></tr>
+    <tr><td>Forța de împingere la deschiderea ușii</td><td>~20 N</td></tr>
+    <tr><td>Forța mușchilor la ridicat o geantă</td><td>~50 N</td></tr>
+    <tr><td>Forța de frânare a bicicletei</td><td>~200 N</td></tr>
+</table>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Legea gravitației universale (Newton):</h3>
+
+<div class="formula-box">
+    F = 𝒢 · (m₁ · m₂) / r²
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">(modulul forței gravitaționale; direcție: de-a lungul dreptei care unește cele două corpuri)</small>
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>𝒢</strong> = 6,67 × 10⁻¹¹ N·m²/kg² (constanta gravitațională universală)</li>
+    <li><strong>m₁, m₂</strong> = masele celor două corpuri (kg)</li>
+    <li><strong>r</strong> = distanța dintre centrele de masă (m)</li>
+</ul>
+
+<h3>Comparația forțelor fundamentale (Feynman):</h3>
+
+<table>
+    <tr>
+        <th>Forța</th>
+        <th>Dependența de distanță</th>
+        <th>Intensitate relativă</th>
+    </tr>
+    <tr>
+        <td>Gravitațională</td>
+        <td>1/r²</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Electrică</td>
+        <td>1/r²</td>
+        <td>~10³⁶ (între electroni)</td>
+    </tr>
+    <tr>
+        <td>Nucleară tare</td>
+        <td>e⁻ʳ/r² (scurtă)</td>
+        <td>~10³⁸</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Feynman:</strong> „Forța electrică dintre doi electroni e de 4,17 × 10⁴² ori mai mare decât forța gravitațională dintre ei. Gravitația e incredibil de slabă — dar are efect cosmic pentru că masele mari sunt neutre electric!"
+</div>
+
+<h3>A doua lege a lui Newton:</h3>
+
+<div class="formula-box">
+    $$\vec{F} = m \cdot \vec{a}$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li>$\vec{F}$ = forța rezultantă — vector (N)</li>
+    <li><strong>m</strong> = masa — scalar (kg)</li>
+    <li>$\vec{a}$ = accelerația — vector (m/s²), aceeași direcție cu $\vec{F}$</li>
+</ul>
+<p>Această lege spune că:</p>
+<ul>
+    <li>Cu cât forța e mai mare, cu atât accelerația e mai mare</li>
+    <li>Cu cât masa e mai mare, cu atât accelerația e mai mică (pentru aceeași forță)</li>
+    <li>Accelerația are <em>aceeași direcție și sens</em> cu forța rezultantă</li>
+</ul>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Un corp are nevoie de forță pentru a se menține în mișcare."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Conform legii inerției, un corp în mișcare continuă să se miște fără forță. Forța e necesară doar pentru a SCHIMBA mișcarea. Obiectele se opresc din cauza frecării, nu din lipsă de forță.
+</div>
+
+<p><strong>2. „Greutatea unui obiect e aceeași pe Lună și pe Pământ."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Greutatea G = m·g depinde de g. Pe Lună, g ≈ 1,6 m/s², adică de ~6 ori mai mic. Masa rămâne aceeași, dar greutatea e de 6 ori mai mică pe Lună!
+</div>
+
+<p><strong>3. „Frecarea se opune întotdeauna mișcării."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Frecarea acționează întotdeauna în direcția opusă mișcării (sau tendinței de mișcare). De aceea frânele funcționează!
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce, când tragi brusc fața de masă, farfuriile rămân pe loc?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Inerția! Farfuriile sunt în repaus și „vor" să rămână în repaus. Dacă tragi fața de masă suficient de rapid, forța de frecare nu are timp să le pună în mișcare. Dacă tragi încet, frecarea are timp să le tragă cu fața de masă.
+</div>
+
+<p><strong>5. De ce astronauții „plutesc" în stația spațială?</strong></p>
+<div class="answer">
+    <strong>Răspuns (Feynman):</strong> NU pentru că nu există gravitație — există! Stația e la doar ~400 km, unde g ≈ 8,7 m/s² (încă 90% din g la sol). Astronauții „plutesc" pentru că atât ei, cât și stația cad ÎMPREUNĂ spre Pământ. Sunt în cădere liberă continuă, dar „ratează" Pământul — orbitează!
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un elev de 60 kg stă pe un scaun. Calculează: a) greutatea elevului; b) forța normală exercitată de scaun.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong></p>
+    <ul>
+        <li>Masa: m = 60 kg</li>
+        <li>Accelerația gravitațională: g = 10 m/s²</li>
+    </ul>
+
+    <p><strong>a) Greutatea:</strong></p>
+    <p class="formula">G = m · g = 60 kg × 10 m/s² = 600 N</p>
+
+    <p><strong>b) Forța normală:</strong></p>
+    <p>Elevul stă în repaus → forțele sunt echilibrate</p>
+    <p class="formula">N = G = 600 N</p>
+
+    <div class="result">Greutatea = 600 N (în jos); Forța normală = 600 N (în sus)</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Ion împinge o cutie pe podea cu forța de 50 N. Cutia se mișcă cu viteză constantă. Maria spune că forța de frecare e mai mică de 50 N. Are dreptate?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong> Maria NU are dreptate. Dacă cutia se mișcă cu viteză constantă, accelerația = 0. Asta înseamnă că suma forțelor = 0. Deci:
+    <ul>
+        <li>Forța lui Ion (50 N înainte) + Forța de frecare (? înapoi) = 0</li>
+        <li>Forța de frecare = 50 N (în direcție opusă)</li>
+    </ul>
+    <p>Dacă frecarea ar fi mai mică de 50 N, cutia ar accelera (ar merge din ce în ce mai repede). Viteză constantă înseamnă forțe echilibrate!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 7</strong> „The Theory of Gravitation" — gravitația universală</li>
+    <li><strong>Vol. I, Cap. 9</strong> „Newton's Laws of Dynamics" — legile mișcării</li>
+    <li><strong>Vol. I, Cap. 12</strong> „Characteristics of Force" — tipurile de forțe</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu forțele</th>
+    </tr>
+    <tr>
+        <td><strong>Sport</strong></td>
+        <td>Forța musculară, impulsul la aruncare, frecarea la alergare</td>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Gravitația și creșterea plantelor, forța musculară</td>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Frâne, amortizoare, structuri rezistente</td>
+    </tr>
+    <tr>
+        <td><strong>Istorie</strong></td>
+        <td>Newton și mărul, Galileo și turnul din Pisa</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>DEFINIȚIE:</strong> Forța = interacțiunea care schimbă mișcarea sau deformează corpuri</p>
+
+    <h3>DOUĂ CATEGORII:</h3>
+    <table>
+        <tr>
+            <th>Forțe de CONTACT</th>
+            <th>Forțe la DISTANȚĂ</th>
+        </tr>
+        <tr>
+            <td>Împingere, tragere, frecare</td>
+            <td>Gravitație, magnetism, electricitate</td>
+        </tr>
+    </table>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Greutate: $\vec{G} = m \cdot \vec{g}$<br><br>
+        Frecare: $F_f = \mu \cdot N$<br><br>
+        Forța elastică: $F_e = k \cdot |\Delta l|$<br><br>
+        Newton II: $\vec{F} = m \cdot \vec{a}$
+    </div>
+
+    <h3>LEGEA INERȚIEI (Newton I):</h3>
+    <p>„Un corp neinfluențat de forțe rămâne în repaus sau se mișcă rectiliniu uniform."</p>
+
+    <h3>ECHILIBRUL FORȚELOR:</h3>
+    <div class="formula-box">
+        Dacă $\sum\vec{F} = \vec{0}$ → repaus sau mișcare rectilinie uniformă<br><br>
+        Dacă $\sum\vec{F} \neq \vec{0}$ → corpul accelerează: $\vec{a} = \dfrac{\sum\vec{F}}{m}$
+    </div>
+
+    <h3>UNITATE:</h3>
+    <p>Forța se măsoară în <strong>NEWTON (N)</strong></p>
+    <p>1 N ≈ greutatea unui măr mic</p>
+</div>
+
+<footer>
+        <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em> © Caltech</p>
+    </footer>
+
+        </main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

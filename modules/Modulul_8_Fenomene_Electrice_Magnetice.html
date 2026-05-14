@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 8: Fenomene electrice și magnetice</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'\$\$',right:'\$\$',display:true},{left:'\$',right:'\$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="8">
+
+    <!-- ===== NAVIGAȚIE ===== -->
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+
+
+    <!-- Header -->
+    <section class="hero">
+        <h1>Fizica cu Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="module-nav module-nav--top"></div>
+
+    <!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 8</div>
+    <h1>FENOMENE ELECTRICE ȘI MAGNETICE</h1>
+    <div class="subtitle">„De ce fulgerele și magneții? — Forțele invizibile care mișcă lumea"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Electricitatea și magnetismul sunt una</h2>
+
+<p>Feynman face o revelație surprinzătoare despre magnetism:</p>
+
+<blockquote>
+    <p>„Magnetism is really a relativistic effect of electricity. The magnetic force between wires appears dominant only because electric forces cancel out — same number of protons and electrons — leaving the tiny relativistic correction (magnetism) as the observable effect."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Magnetismul este de fapt un efect relativist al electricității. Forța magnetică dintre fire pare dominantă doar pentru că forțele electrice se anulează — același număr de protoni și electroni — lăsând mica corecție relativistă (magnetismul) ca efect observabil."
+</div>
+
+<h2>Forța electrică — regula de bază</h2>
+
+<p>Feynman descrie comportamentul sarcinilor electrice:</p>
+
+<blockquote>
+    <p>„The force between two charged objects follows an inverse-square law. For electricity, like charges repel; unlike charges attract. The principle of superposition — total field is the sum of individual fields — is an absolutely guaranteed law."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Forța dintre două obiecte încărcate urmează o lege de inversă a pătratului distanței. Pentru electricitate, sarcinile de același fel se resping; cele de feluri diferite se atrag. Principiul superpoziției — câmpul total e suma câmpurilor individuale — este o lege absolut garantată."
+</div>
+
+<h2>De unde vine magnetismul materialelor</h2>
+
+<blockquote>
+    <p>„Electrons spin on their axes, creating current loops. In most materials, spins cancel out. In iron, many electrons align their spin axes, producing net magnetism. A piece of iron acts as though it contains perpetual circulating current."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Electronii se rotesc în jurul axelor lor, creând bucle de curent. În cele mai multe materiale, spinii se anulează. În fier, mulți electroni își aliniază axele de spin, producând magnetism net. O bucată de fier se comportă ca și cum ar conține un curent circulant perpetuu."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Electricitatea și magnetismul nu sunt fenomene separate — sunt două fețe ale aceleiași monede! Orice mișcare a sarcinilor electrice produce efect magnetic. Înțelegând acest lucru, înțelegem de la fulger până la funcționarea motoarelor electrice.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este sarcina electrică?</h2>
+
+<p><strong>Sarcina electrică</strong> este o proprietate fundamentală a materiei — la fel ca masa. Există două tipuri:</p>
+
+<table>
+    <tr>
+        <th>Sarcină</th>
+        <th>Simbol</th>
+        <th>Unde o găsim</th>
+    </tr>
+    <tr>
+        <td><strong>Pozitivă</strong> (+)</td>
+        <td>+</td>
+        <td>Protoni (în nucleul atomului)</td>
+    </tr>
+    <tr>
+        <td><strong>Negativă</strong> (−)</td>
+        <td>−</td>
+        <td>Electroni (în jurul nucleului)</td>
+    </tr>
+</table>
+
+<h2>Regula de aur a electricității</h2>
+
+<div class="formula-box">
+    Sarcini de ACELAȘI FEL → SE RESPING<br><br>
+    Sarcini de FELURI DIFERITE → SE ATRAG
+</div>
+
+<div class="info-box">
+    <strong>Analogie:</strong> Gândește-te la magneți: polii nord-nord se resping, nord-sud se atrag. La fel funcționează și sarcinile electrice!
+</div>
+
+<h2>Electrizarea — cum obiectele devin încărcate</h2>
+
+<table>
+    <tr>
+        <th>Metoda</th>
+        <th>Ce se întâmplă</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td><strong>Frecare</strong></td>
+        <td>Electronii trec de la un material la altul</td>
+        <td>Pieptene + păr, balon + pulover</td>
+    </tr>
+    <tr>
+        <td><strong>Contact</strong></td>
+        <td>Sarcinile se distribuie între obiecte</td>
+        <td>Atingi un obiect electrizat</td>
+    </tr>
+    <tr>
+        <td><strong>Influență</strong></td>
+        <td>Sarcinile se redistribuie fără contact</td>
+        <td>Balon electrizat atrage hârtie neutră</td>
+    </tr>
+</table>
+
+<h2>Ce este magnetismul?</h2>
+
+<p><strong>Magnetismul</strong> este efectul produs de sarcinile electrice în mișcare (curenți electrici).</p>
+
+<ul>
+    <li>Un <strong>magnet permanent</strong> are electroni care „se rotesc" în aceeași direcție</li>
+    <li>Un <strong>electromagnet</strong> produce magnetism când curentul trece prin sârmă</li>
+    <li>Pământul este un magnet uriaș — de aceea busola funcționează!</li>
+</ul>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul (Feynman)</th>
+    </tr>
+    <tr>
+        <td>„Electricitatea și magnetismul sunt fenomene separate"</td>
+        <td>Sunt aspecte diferite ale aceleiași forțe electromagnetice</td>
+    </tr>
+    <tr>
+        <td>„Magneții au doar doi poli pentru că sunt făcuți așa"</td>
+        <td>Nu există monopoli magnetici — fiecare magnet tăiat dă alți magneți cu 2 poli</td>
+    </tr>
+    <tr>
+        <td>„Fulgerul este o formă specială de electricitate"</td>
+        <td>Este aceeași electricitate ca în prizele de acasă — doar MULT mai multă!</td>
+    </tr>
+    <tr>
+        <td>„Obiectele neutre nu au sarcini"</td>
+        <td>Au același număr de + și −, care se anulează</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: De ce primești „șoc" de la clanța ușii</h2>
+
+<p><strong>Situația:</strong> Mergi pe covor, apoi atingi clanța metalică — PAC! O scânteie mică și senzație neplăcută.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Când mergi pe covor, tălpile tale freacă covorul</li>
+    <li>Electronii trec de la covor la tine (sau invers)</li>
+    <li>Te încarci electric — corpul tău acumulează sarcină</li>
+    <li>Când atingi metalul (conductor), electronii „sar" brusc</li>
+    <li>Acest flux rapid de electroni e scânteia pe care o vezi!</li>
+</ul>
+
+<div class="info-box">
+    <strong>Curiozitate:</strong> Iarna primești mai multe șocuri pentru că aerul e uscat. Umiditatea ajută sarcinile să se disipeze treptat.
+</div>
+
+<h2>Exemplul 2: Cum funcționează fulgerul</h2>
+
+<p><strong>Situația:</strong> În timpul unei furtuni, cerul se luminează cu fulgere uriașe.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>În nori, picăturile de apă și cristalele de gheață se freacă</li>
+    <li>Baza norului devine încărcată <strong>negativ</strong></li>
+    <li>Aceasta <strong>induce</strong> sarcină pozitivă pe sol (prin influență)</li>
+    <li>Când diferența de sarcină devine prea mare, aerul devine conductor</li>
+    <li>FULGERUL = o descărcare electrică gigantică între nor și sol</li>
+</ul>
+
+<div class="formula-box">
+    Temperatura fulgerului: ~30.000°C<br>
+    (de 5 ori mai fierbinte ca suprafața Soarelui!)
+</div>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce tunetul vine după fulger?</em></p>
+
+<div class="answer">
+    Lumina călătorește aproape instantaneu. Sunetul călătorește cu ~340 m/s. Dacă numeri secundele între fulger și tunet și împarți la 3, afli distanța în km!
+</div>
+
+<h2>Exemplul 3: Cum funcționează busola</h2>
+
+<p><strong>Situația:</strong> Acul busolei arată mereu spre nord, indiferent unde te afli.</p>
+
+<p><strong>Explicația fizică (Feynman):</strong></p>
+<ul>
+    <li>Pământul are un câmp magnetic generat de curenți în nucleul de fier lichid</li>
+    <li>Pământul se comportă ca un magnet uriaș</li>
+    <li>„Polul Nord magnetic" e de fapt un pol sud magnetic (atrage polul nord al busolei!)</li>
+    <li>Acul busolei, fiind magnet, se aliniază cu câmpul Pământului</li>
+</ul>
+
+<div class="info-box">
+    <strong>Știați că:</strong> Grecii antici au descoperit magnetita (din regiunea Magnesia) — o piatră care atrăgea fierul. De aici vine cuvântul „magnet"!
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Electrizarea prin frecare</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea transferului de sarcină electrică prin frecare.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un balon</li>
+        <li>Pulover de lână sau păr uscat</li>
+        <li>Bucățele mici de hârtie sau fulgi de polistiren</li>
+        <li>Un perete</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Freacă balonul de păr sau pulover timp de 30 secunde</li>
+        <li>Apropie balonul de bucățelele de hârtie — observă!</li>
+        <li>Pune balonul pe perete și eliberează-l — rămâne lipit!</li>
+        <li>Apropie balonul de un fir subțire de apă de la robinet</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Hârtia sare spre balon (atracție)</li>
+        <li>Balonul stă lipit de perete</li>
+        <li>Firul de apă se curbează spre balon</li>
+    </ul>
+
+    <div class="result">Concluzie: Frecarea a transferat electroni de la păr/lână la balon. Balonul încărcat negativ atrage obiectele neutre prin influență!</div>
+
+    <p><strong>Explicație avansată:</strong> Balonul încărcat (−) induce sarcină (+) pe partea apropiată a hârtiei/peretelui. Atracția (+)-(−) e mai puternică decât repulsia (−)-(−) de la partea îndepărtată.</p>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Liniile de câmp magnetic</h3>
+
+    <p><strong>Obiectiv:</strong> Vizualizarea câmpului magnetic al unui magnet.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Magnet bar (sau magnet de frigider puternic)</li>
+        <li>Pilitură de fier (sau agrafe de birou)</li>
+        <li>Foaie de hârtie albă</li>
+        <li>Busole mici (opțional)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune magnetul pe masă</li>
+        <li>Acoperă-l cu foaia de hârtie</li>
+        <li>Presară ușor pilitură de fier pe hârtie</li>
+        <li>Bate ușor hârtia pentru ca pilitura să se aranjeze</li>
+        <li>Observă modelul format</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Pilitura formează linii curbate de la un pol la celălalt</li>
+        <li>Liniile sunt mai dense la poli (câmp mai intens)</li>
+        <li>Liniile nu se intersectează niciodată</li>
+    </ul>
+
+    <div class="result">Concluzie: Câmpul magnetic are o formă caracteristică — liniile ies din polul Nord și intră în polul Sud!</div>
+
+    <div class="info-box">
+        <strong>Feynman:</strong> „Nu există monopoli magnetici — fluxul de B prin orice suprafață închisă este zero." Dacă tai un magnet, obții doi magneți, fiecare cu ambii poli!
+    </div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Electromagnet simplu</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că electricitatea produce magnetism.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Cui mare de fier</li>
+        <li>Sârmă de cupru izolată (~1m)</li>
+        <li>Baterie de 1,5V sau 9V</li>
+        <li>Agrafe de birou metalice</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Înfășoară sârma în jurul cuiului (20-30 de spire, în același sens)</li>
+        <li>Lasă capetele sârmei libere</li>
+        <li>Conectează capetele la baterie</li>
+        <li>Apropie cuiul de agrafe</li>
+        <li>Deconectează bateria și observă ce se întâmplă</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Cu bateria conectată, cuiul atrage agrafe (a devenit magnet!)</li>
+        <li>Cu bateria deconectată, agrafele cad (magnetismul dispare)</li>
+        <li>Inversând borna bateriei, se inversează polii magnetului</li>
+    </ul>
+
+    <table>
+        <tr>
+            <th>Factor</th>
+            <th>Efect asupra puterii</th>
+        </tr>
+        <tr><td>Mai multe spire</td><td>Magnet mai puternic</td></tr>
+        <tr><td>Curent mai mare</td><td>Magnet mai puternic</td></tr>
+        <tr><td>Miez de fier (în loc de aer)</td><td>Mult mai puternic</td></tr>
+    </table>
+
+    <div class="result">Concluzie: Curentul electric produce câmp magnetic! Aceasta este baza motoarelor electrice, generatoarelor, soneteriilor și multor alte dispozitive.</div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Sarcină electrică:</strong> Proprietatea materiei care produce și simte forțe electrice.</p>
+
+<p><strong>Câmp electric:</strong> „Zona de influență" în jurul unei sarcini, unde alte sarcini simt forță.</p>
+
+<p><strong>Câmp magnetic:</strong> „Zona de influență" în jurul magneților sau curenților electrici.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>Unitatea de sarcină electrică:</h3>
+
+<div class="formula-box">
+    Sarcina se măsoară în COULOMB (C)<br><br>
+    Sarcina unui electron: e = 1,6 × 10⁻¹⁹ C
+</div>
+
+<h3>Legea lui Coulomb (forța electrică):</h3>
+
+<div class="formula-box">
+    F = k · |q₁| · |q₂| / r²
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">(modulul forței; direcție: de-a lungul dreptei care unește sarcinile)</small>
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>F</strong> = modulul forței electrice (N)</li>
+    <li><strong>k</strong> = 9 × 10⁹ N·m²/C² (constanta Coulomb)</li>
+    <li><strong>|q₁|, |q₂|</strong> = valorile absolute ale sarcinilor electrice (C)</li>
+    <li><strong>r</strong> = distanța dintre sarcini (m)</li>
+</ul>
+<div class="info-box">
+    <strong>Sens:</strong> Sarcinile de <em>același semn</em> se <strong>resping</strong>; sarcinile de <em>semne opuse</em> se <strong>atrag</strong>.
+    Formula de mai sus dă doar magnitudinea forței.
+</div>
+
+<h3>Tipuri de materiale:</h3>
+
+<table>
+    <tr>
+        <th>Tip</th>
+        <th>Comportament</th>
+        <th>Exemple</th>
+    </tr>
+    <tr>
+        <td><strong>Conductori</strong></td>
+        <td>Electronii se mișcă liber</td>
+        <td>Metale (cupru, aluminiu, fier)</td>
+    </tr>
+    <tr>
+        <td><strong>Izolatori</strong></td>
+        <td>Electronii sunt blocați</td>
+        <td>Plastic, sticlă, cauciuc, lemn uscat</td>
+    </tr>
+    <tr>
+        <td><strong>Semiconductori</strong></td>
+        <td>Conductivitate intermediară</td>
+        <td>Siliciu, germaniu</td>
+    </tr>
+</table>
+
+<h3>Polii magnetici:</h3>
+
+<table>
+    <tr>
+        <th>Interacțiune</th>
+        <th>Rezultat</th>
+    </tr>
+    <tr>
+        <td>Nord — Nord</td>
+        <td>RESPINGERE</td>
+    </tr>
+    <tr>
+        <td>Sud — Sud</td>
+        <td>RESPINGERE</td>
+    </tr>
+    <tr>
+        <td>Nord — Sud</td>
+        <td>ATRACȚIE</td>
+    </tr>
+</table>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Comparația gravitație vs. electricitate (Feynman):</h3>
+
+<table>
+    <tr>
+        <th>Proprietate</th>
+        <th>Gravitație</th>
+        <th>Electricitate</th>
+    </tr>
+    <tr>
+        <td>Legea forței (modul)</td>
+        <td>F = 𝒢·m₁·m₂/r²</td>
+        <td>F = k·|q₁|·|q₂|/r²</td>
+    </tr>
+    <tr>
+        <td>Tipuri</td>
+        <td>Doar masă pozitivă</td>
+        <td>Sarcină + și −</td>
+    </tr>
+    <tr>
+        <td>Direcție</td>
+        <td>Mereu atracție</td>
+        <td>Atracție sau respingere</td>
+    </tr>
+    <tr>
+        <td>Intensitate relativă</td>
+        <td>1</td>
+        <td>~10³⁶ (între electroni)</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Feynman:</strong> „Forța electrică dintre doi electroni e de ~10⁴² ori mai mare decât forța gravitațională dintre ei! Gravitația pare importantă doar pentru că obiectele mari sunt neutre electric."
+</div>
+
+<h3>Forța electromagnetică completă:</h3>
+
+<div class="formula-box">
+    $$\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})$$
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">(Forța Lorentz — × este produsul vectorial)</small>
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li>$\vec{E}$ = câmpul electric (vector, N/C)</li>
+    <li>$\vec{B}$ = câmpul magnetic (vector, T)</li>
+    <li>$\vec{v}$ = viteza sarcinii (vector, m/s)</li>
+    <li>$\vec{v} \times \vec{B}$ = produs vectorial — forța magnetică este perpendiculară pe ambii vectori</li>
+</ul>
+
+<h3>Câmpul magnetic și relativitatea:</h3>
+
+<p>Feynman arată că magnetismul este un efect relativist al electricității! Când sarcini electrice se mișcă, din cauza contracției relativiste, forțele electrice nu se anulează perfect — diferența mică apare ca „magnetism".</p>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Poți crea un magnet cu un singur pol (doar nord sau doar sud)."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Nu există monopoli magnetici! Dacă tai un magnet, obții doi magneți, fiecare cu ambii poli. Aceasta este o lege fundamentală (Feynman: „fluxul de B prin orice suprafață închisă = 0").
+</div>
+
+<p><strong>2. „Un obiect neutru (fără sarcină netă) nu poate fi atras de un obiect încărcat."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Prin influență, sarcinile din obiectul neutru se redistribuie. Partea apropiată capătă sarcină opusă și este atrasă mai puternic decât e respinsă partea îndepărtată.
+</div>
+
+<p><strong>3. „Fulgerul și scânteia de la clanță sunt în esență același fenomen."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Ambele sunt descărcări electrice — flux rapid de electroni între zone cu sarcini diferite. Diferența e doar de scară!
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce păsările stau pe cablurile de înaltă tensiune fără să fie electrocutate?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Curentul electric curge doar dacă există o diferență de potențial. Pasărea atinge cablul cu ambele picioare foarte apropiate — diferența de potențial între ele e neglijabilă. Dacă ar atinge simultan cablul și un stâlp (sau pământul), ar fi electrocutată!
+</div>
+
+<p><strong>5. De ce magneții permanenți își pierd puterea dacă sunt încălziți prea mult?</strong></p>
+<div class="answer">
+    <strong>Răspuns (Feynman):</strong> Magnetismul provine din alinierea spinurilor electronilor. Când fierul e încălzit peste ~770°C (temperatura Curie), agitația termică „amestecă" spinurile — alinierea dispare și magnetismul se pierde.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Două sarcini de +2 μC fiecare sunt la distanța de 30 cm. Calculează forța electrică dintre ele.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong></p>
+    <ul>
+        <li>q₁ = q₂ = 2 μC = 2 × 10⁻⁶ C</li>
+        <li>r = 30 cm = 0,3 m</li>
+        <li>k = 9 × 10⁹ N·m²/C²</li>
+    </ul>
+
+    <p><strong>Calcul:</strong></p>
+    <p class="formula">F = k · |q₁| · |q₂| / r²</p>
+    <p class="formula">F = 9×10⁹ × (2×10⁻⁶ × 2×10⁻⁶) / (0,3)²</p>
+    <p class="formula">F = 9×10⁹ × 4×10⁻¹² / 0,09</p>
+    <p class="formula">F = 36×10⁻³ / 0,09 = 0,4 N</p>
+
+    <p><strong>Direcția:</strong> Sarcini de același semn → RESPINGERE</p>
+
+    <div class="result">F = 0,4 N (forță de respingere)</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Ion spune că a inventat un motor care funcționează cu magneți permanenți, fără nicio sursă de energie. Este posibil?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong> NU este posibil! Un astfel de motor ar viola legea conservării energiei.
+    <ul>
+        <li>Magneții permanenți pot produce forțe, dar forțele magnetice sunt perpendiculare pe mișcare</li>
+        <li>O forță perpendiculară pe deplasare NU efectuează lucru mecanic (W = F·d·cos90° = 0)</li>
+        <li>Orice „motor magnetic perpetuu" e fie o înșelătorie, fie are o sursă de energie ascunsă</li>
+    </ul>
+    <p><strong>Feynman:</strong> Energia trebuie să vină de undeva — fie baterie, fie mișcarea ta, fie arderea combustibilului!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 12</strong> „Characteristics of Force" — forța electrică și câmpul</li>
+    <li><strong>Vol. II, Cap. 1</strong> „Electromagnetism" — unificarea electricității și magnetismului</li>
+    <li><strong>Vol. II, Cap. 36</strong> „Ferromagnetism" — magnetismul în fier</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu electromagnetismul</th>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Motoare electrice, generatoare, transformatoare, telefoane</td>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Impulsuri nervoase (electrice), orientarea păsărilor migratoare</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Câmpul magnetic terestru, aurora boreală</td>
+    </tr>
+    <tr>
+        <td><strong>Chimie</strong></td>
+        <td>Legăturile chimice sunt electrice!</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>ELECTRICITATE:</strong> Forța dintre sarcini electrice</p>
+    <p><strong>MAGNETISM:</strong> Efectul sarcinilor în mișcare (relativistic)</p>
+
+    <h3>REGULA SARCINILOR:</h3>
+    <div class="formula-box">
+        ACELAȘI semn → RESPINGERE<br><br>
+        Semne DIFERITE → ATRACȚIE
+    </div>
+
+    <h3>LEGEA COULOMB:</h3>
+    <div class="formula-box">
+        F = k · |q₁| · |q₂| / r²<br><br>
+        k = 9 × 10⁹ N·m²/C²
+    </div>
+
+    <h3>TIPURI DE ELECTRIZARE:</h3>
+    <table>
+        <tr>
+            <th>Frecare</th>
+            <th>Contact</th>
+            <th>Influență</th>
+        </tr>
+        <tr>
+            <td>Electronii trec între materiale</td>
+            <td>Sarcinile se distribuie</td>
+            <td>Sarcinile se redistribuie</td>
+        </tr>
+    </table>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Magnetismul este un efect relativist al electricității — sunt două aspecte ale aceleiași forțe!"</p>
+
+    <h3>MONOPOLI MAGNETICI:</h3>
+    <p>NU EXISTĂ! Fiecare magnet are întotdeauna 2 poli.</p>
+</div>
+
+<footer>
+        <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em> © Caltech</p>
+    </footer>
+
+        </main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 1: Ce Este Fizica?</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        :root {
+            --primary-dark: #1F4E79;
+            --primary-medium: #2E75B6;
+            --primary-light: #5B9BD5;
+            --bg-light: #f8f9fa;
+            --text-dark: #333333;
+            --border-color: #dee2e6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--primary-dark);
+        }
+
+        .cover-page .class-label {
+            font-size: 1.2em;
+            color: var(--primary-medium);
+            margin-bottom: 20px;
+        }
+
+        .cover-page h1 {
+            font-size: 2.8em;
+            color: var(--primary-dark);
+            margin: 0 0 20px 0;
+        }
+
+        .cover-page .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Headings */
+        h1 {
+            color: var(--primary-dark);
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--primary-dark);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: var(--primary-medium);
+            font-size: 1.4em;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: var(--primary-light);
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        /* Block quotes */
+        blockquote {
+            background-color: #f5f5f5;
+            border-left: 4px solid var(--primary-medium);
+            margin: 20px 0;
+            padding: 15px 20px;
+            font-style: italic;
+            color: #555;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-dark);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e8f4fc;
+        }
+
+        /* Formula boxes */
+        .formula-box {
+            background-color: #fff8e1;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+            font-family: 'Cambria Math', 'Times New Roman', serif;
+        }
+
+        .formula {
+            font-family: 'Cambria Math', 'Times New Roman', serif;
+            font-size: 1.1em;
+            background-color: #fffde7;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Subscript and superscript styling */
+        sub, sup {
+            font-size: 0.75em;
+        }
+
+        /* Info boxes */
+        .info-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid var(--primary-medium);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box strong {
+            color: var(--primary-dark);
+        }
+
+        /* Experiment boxes */
+        .experiment {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .experiment h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        /* Answer boxes */
+        .answer {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        /* Solution boxes */
+        .solution {
+            background-color: #f3e5f5;
+            border: 1px solid #9c27b0;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+
+        .solution h4 {
+            color: #7b1fa2;
+            margin-top: 0;
+        }
+
+        /* Synthesis box */
+        .synthesis {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .synthesis h2 {
+            color: white;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+
+        .synthesis h3 {
+            color: #bbdefb;
+        }
+
+        .synthesis table {
+            background-color: white;
+            color: var(--text-dark);
+        }
+
+        .synthesis .formula-box {
+            background-color: rgba(255,255,255,0.9);
+            color: var(--text-dark);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        /* Strong emphasis */
+        strong {
+            color: var(--primary-dark);
+        }
+
+        /* Result highlight */
+        .result {
+            background-color: #c8e6c9;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                max-width: 100%;
+            }
+            .cover-page {
+                page-break-after: always;
+            }
+            h1 {
+                page-break-before: always;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cover-page">
+    <div class="class-label">CLASA a VI-a — MODULUL 1</div>
+    <h1>CE ESTE FIZICA?</h1>
+    <div class="subtitle">„Atomii — cea mai importantă idee din istoria omenirii"</div>
+</div>
+
+<h1>1. ESENTA CONCEPTULUI (din perspectiva lui Feynman)</h1>
+
+<h2>Citatul fundamental — Ipoteza atomică</h2>
+
+<p>Feynman deschide capitolul 1 („Atoms in Motion") cu cea mai faimoasă afirmație din toată seria de prelegeri:</p>
+
+<blockquote>
+    <p>„If, in some cataclysm, all of scientific knowledge were to be destroyed, and only one sentence passed on to the next generations of creatures, what statement would contain the most information in the fewest words? I believe it is the atomic hypothesis (or the atomic fact, or whatever you wish to call it) that all things are made of atoms — little particles that move around in perpetual motion, attracting each other when they are a little distance apart, but repelling upon being squeezed into one another."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Dacă, într-un cataclism, toată cunoașterea științifică ar fi distrusă, și o singură propoziție ar fi transmisă următoarelor generații de creaturi, ce afirmație ar conține cele mai multe informații în cele mai puține cuvinte? Cred că este ipoteza atomică — că toate lucrurile sunt făcute din atomi — particule mici care se mișcă în mișcare perpetuă, atrăgându-se când sunt la mică distanță, dar respingându-se când sunt presate unele în altele."
+</div>
+
+<h2>Interconexiunea naturii</h2>
+
+<p>În capitolul 2 („Basic Physics"), Feynman descrie fizica ca un efort de a înțelege interconexiunea naturii:</p>
+
+<blockquote>
+    <p>„Nature uses only the longest threads to weave her patterns, so each small piece of her fabric reveals the organization of the entire tapestry."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Natura folosește doar cele mai lungi fire pentru a-și țese tiparele, așa că fiecare bucățică mică din țesătura ei dezvăluie organizarea întregii tapiserii."
+</div>
+
+<h2>Despre imaginația în fizică</h2>
+
+<p>Feynman subliniază importanța imaginației în știință:</p>
+
+<blockquote>
+    <p>„The test of science is its ability to predict. Had you never been told about electric forces, you would begin with sharp observations of electrical phenomena, then you would gradually gather together those facts, and deduce the laws. This inductive scheme is the scientific method."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Fizica nu este doar memorare de formule — este un mod de a gândi despre univers, de a pune întrebări și de a căuta răspunsuri prin observație și experiment.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI (vârsta 12 ani)</h1>
+
+<h2>Ce este fizica?</h2>
+
+<p><strong>Fizica</strong> este știința care încearcă să răspundă la întrebarea: <em>„Din ce este făcut universul și cum funcționează?"</em></p>
+
+<p>Imaginează-ți că ești un detectiv care vrea să rezolve cel mai mare mister din toate — cum funcționează TOTUL în jurul tău!</p>
+
+<h2>Totul e făcut din atomi</h2>
+
+<p>Dacă ai lua o picătură de apă și ai împărți-o la jumătate, apoi iar la jumătate, și tot așa, la un moment dat ai ajunge la cea mai mică bucățică de apă posibilă: <strong>molecula de apă</strong>.</p>
+
+<p>Molecula de apă e făcută din atomi: 2 atomi de hidrogen + 1 atom de oxigen = H₂O</p>
+
+<p>Atomii sunt ca niște <strong>„cărămizi LEGO"</strong> din care este construit TOTUL:</p>
+<ul>
+    <li>Apa din pahar</li>
+    <li>Aerul pe care îl respiri</li>
+    <li>Mâna ta</li>
+    <li>Stelele din cer</li>
+    <li>Telefonul tău</li>
+</ul>
+
+<h2>Atomii nu stau pe loc!</h2>
+
+<p>Feynman subliniază că atomii se mișcă <strong>tot timpul</strong>. Într-un pahar de apă, moleculele se ciocnesc unele de altele de miliarde de ori pe secundă!</p>
+
+<div class="info-box">
+    <strong>Analogie:</strong> Imaginează-ți o sală plină cu bile de ping-pong care sar în toate direcțiile, lovindu-se între ele. Așa arată apa la nivel atomic!
+</div>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Ce cred mulți</th>
+        <th>Adevărul (Feynman)</th>
+    </tr>
+    <tr>
+        <td>„Atomii sunt bile solide și nemișcate"</td>
+        <td>Atomii se mișcă constant și sunt în mare parte spațiu gol</td>
+    </tr>
+    <tr>
+        <td>„Fizica e doar formule și calcule"</td>
+        <td>Fizica e mai întâi <strong>curiozitate</strong> și observație</td>
+    </tr>
+    <tr>
+        <td>„Știința are răspunsuri la toate întrebările"</td>
+        <td>Cele mai bune întrebări încă nu au răspuns!</td>
+    </tr>
+    <tr>
+        <td>„Fizica nu are legătură cu viața mea"</td>
+        <td>Fiecare secundă din viața ta e fizică în acțiune</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Difuzia parfumului</h2>
+
+<p><strong>Situația:</strong> Cineva deschide un flacon de parfum la capătul camerei. După câteva secunde, simți mirosul în toată camera.</p>
+
+<p><strong>Explicația fizică (din Feynman):</strong> Moleculele de parfum se mișcă haotic în aer, ciocnindu-se de moleculele de aer. Deși se mișcă cu sute de metri pe secundă, din cauza miliardelor de ciocniri, avansează încet într-o direcție — acest proces se numește <strong>difuzie</strong>.</p>
+
+<div class="info-box">
+    <strong>De reținut:</strong> Distanța parcursă prin difuzie este proporțională cu rădăcina pătrată a timpului: D ∝ √t
+</div>
+
+<p><strong>Întrebare:</strong> <em>De ce parfumul ajunge mai repede la tine dacă cineva ventilează cu o carte?</em></p>
+
+<h2>Exemplul 2: De ce apa se evaporă</h2>
+
+<p><strong>Situația:</strong> Lași un pahar cu apă pe masă. După câteva zile, apa „dispare".</p>
+
+<p><strong>Explicația fizică:</strong> Moleculele de apă se mișcă cu viteze diferite. Cele mai rapide au suficientă energie să „sară" din lichid în aer — aceasta este <strong>evaporarea</strong>. Nu e nevoie să fiarbă apa pentru ca moleculele să scape!</p>
+
+<div class="info-box">
+    <strong>Feynman explică:</strong> „Evaporarea este răcire" — moleculele cele mai energetice pleacă, iar cele rămase au în medie mai puțină energie (apa devine mai rece).
+</div>
+
+<h2>Exemplul 3: De ce gheața plutește</h2>
+
+<p><strong>Situația:</strong> Cuburile de gheață plutesc în paharul de limonadă.</p>
+
+<p><strong>Explicația fizică:</strong> Când apa îngheață, moleculele se aranjează într-o structură cristalină care ocupă <strong>mai mult spațiu</strong> decât în stare lichidă. Gheața e mai puțin densă decât apa lichidă!</p>
+
+<p><strong>Importanța:</strong> Dacă gheața ar fi mai densă, ar cădea la fundul oceanelor. Iarna, oceanele ar îngheța de jos în sus, omorând toată viața acvatică!</p>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Difuzia în apă (vizualizarea mișcării moleculelor)</h3>
+
+    <p><strong>Obiectiv:</strong> Observarea procesului de difuzie și demonstrarea că moleculele se mișcă.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un pahar cu apă (transparent)</li>
+        <li>Cerneală sau colorant alimentar</li>
+        <li>Cronometru</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Umple paharul cu apă și lasă-l să se liniștească complet</li>
+        <li>Cu o pipetă sau un pai, pune O SINGURĂ picătură de cerneală în centrul apei (fără să amesteci!)</li>
+        <li>Observă ce se întâmplă în următoarele 5-10 minute</li>
+        <li>Notează după cât timp cerneala ajunge la marginile paharului</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Cerneala se răspândește treptat, fără ca nimeni să amestece</li>
+        <li>Culorile se amestecă de la sine</li>
+        <li>Procesul este mai rapid în apă caldă</li>
+    </ul>
+
+    <div class="result">Concluzie: Moleculele se mișcă constant și se ciocnesc, răspândind cerneala prin difuzie.</div>
+
+    <p><strong>Varianta avansată:</strong> Repetă experimentul cu apă caldă și apă rece. În care caz difuzia e mai rapidă? De ce?</p>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Mișcarea browniană (observarea indirectă a atomilor)</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea mișcării aleatorii cauzate de ciocnirea moleculelor.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un pahar cu apă</li>
+        <li>Lapte (câteva picături)</li>
+        <li>Sursă de lumină (lanternă)</li>
+        <li>Opțional: lupă sau microscop</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune câteva picături de lapte în paharul cu apă</li>
+        <li>Iluminează cu lanterna din lateral</li>
+        <li>Privește particulele de grăsime din lapte (se văd ca puncte strălucitoare)</li>
+        <li>Observă cum se mișcă aceste particule</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Particulele de grăsime „dansează" haotic</li>
+        <li>Nu urmează nicio direcție previzibilă</li>
+        <li>Mișcarea nu se oprește niciodată</li>
+    </ul>
+
+    <div class="result">Concluzie: Particulele vizibile sunt „bombardate" de miliarde de molecule invizibile de apă — aceasta este mișcarea browniană, descoperită de botanistul Robert Brown în 1827.</div>
+
+    <p><strong>Context istoric:</strong> Einstein a explicat matematic acest fenomen în 1905, oferind o dovadă indirectă a existenței atomilor.</p>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă (pentru toți elevii)</h2>
+
+<p><strong>Ce sunt atomii:</strong> Cele mai mici particule care păstrează proprietățile unui element chimic.</p>
+
+<p><strong>Ce sunt moleculele:</strong> Grupuri de atomi legați împreună. Exemplu: molecula de apă (H₂O) = 2 atomi de hidrogen + 1 atom de oxigen.</p>
+
+<p><strong>Proprietățile atomilor (după Feynman):</strong></p>
+<ol>
+    <li><strong>Se mișcă tot timpul</strong> — mișcare perpetuă</li>
+    <li><strong>Se atrag</strong> când sunt la distanță mică</li>
+    <li><strong>Se resping</strong> când sunt prea apropiați</li>
+</ol>
+
+<h2>Nivel 2 — Formule de bază (conform programei)</h2>
+
+<h3>Dimensiunile atomului:</h3>
+
+<div class="formula-box">
+    Diametrul unui atom ≈ 10⁻¹⁰ m = 0,0000000001 m
+</div>
+
+<p><strong>Comparație:</strong> Dacă un atom ar fi cât o minge de tenis, atunci mingea de tenis originală ar fi cât Pământul!</p>
+
+<h3>Numărul de atomi:</h3>
+
+<div class="formula-box">
+    Într-o picătură de apă există aproximativ 10²¹ molecule<br>
+    (1.000.000.000.000.000.000.000 molecule!)
+</div>
+
+<h3>Scări de mărime (din Feynman):</h3>
+
+<table>
+    <tr>
+        <th>Obiect</th>
+        <th>Dimensiune</th>
+        <th>Putere de 10</th>
+    </tr>
+    <tr><td>Univers observabil</td><td>~10²⁶ m</td><td>10²⁶</td></tr>
+    <tr><td>Galaxia noastră</td><td>~10²¹ m</td><td>10²¹</td></tr>
+    <tr><td>Sistemul solar</td><td>~10¹³ m</td><td>10¹³</td></tr>
+    <tr><td>Pământul</td><td>~10⁷ m</td><td>10⁷</td></tr>
+    <tr><td>Om</td><td>~10⁰ m</td><td>1</td></tr>
+    <tr><td>Celulă</td><td>~10⁻⁵ m</td><td>10⁻⁵</td></tr>
+    <tr><td>Atom</td><td>~10⁻¹⁰ m</td><td>10⁻¹⁰</td></tr>
+    <tr><td>Nucleu atomic</td><td>~10⁻¹⁵ m</td><td>10⁻¹⁵</td></tr>
+</table>
+
+<h2>Nivel 3 — Extindere (pentru elevii performanți)</h2>
+
+<h3>Cele 4 forțe fundamentale ale naturii:</h3>
+
+<p>Feynman descrie în capitolul 2 că toată fizica se reduce la înțelegerea a 4 forțe fundamentale:</p>
+
+<table>
+    <tr>
+        <th>Forța</th>
+        <th>Ce face</th>
+        <th>Rază de acțiune</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td><strong>Gravitațională</strong></td>
+        <td>Atrage masele</td>
+        <td>Infinită</td>
+        <td>Căderea unei mere, orbitele planetelor</td>
+    </tr>
+    <tr>
+        <td><strong>Electromagnetică</strong></td>
+        <td>Atrage/respinge sarcini</td>
+        <td>Infinită</td>
+        <td>Lumina, magnetismul, chimia</td>
+    </tr>
+    <tr>
+        <td><strong>Nucleară tare</strong></td>
+        <td>Ține nucleul împreună</td>
+        <td>~10⁻¹⁵ m</td>
+        <td>Stabilitatea atomilor</td>
+    </tr>
+    <tr>
+        <td><strong>Nucleară slabă</strong></td>
+        <td>Transformă particule</td>
+        <td>~10⁻¹⁸ m</td>
+        <td>Dezintegrarea radioactivă</td>
+    </tr>
+</table>
+
+<h3>Metoda științifică (după Feynman):</h3>
+
+<ol>
+    <li><strong>Observație</strong> — vezi ceva interesant în natură</li>
+    <li><strong>Întrebare</strong> — de ce se întâmplă asta?</li>
+    <li><strong>Ipoteză</strong> — propui o explicație posibilă</li>
+    <li><strong>Experiment</strong> — testezi dacă ipoteza e corectă</li>
+    <li><strong>Concluzie</strong> — dacă experimentul confirmă, ai o teorie; dacă nu, revii la pasul 3</li>
+</ol>
+
+<div class="info-box">
+    <strong>Feynman:</strong> „Testul oricărei teorii este experimentul. Dacă teoria nu se potrivește cu experimentul, e greșită. E simplu."
+</div>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Atomii sunt cele mai mici lucruri care există în univers."</strong></p>
+<div class="answer">
+    FALS. Atomii sunt făcuți din particule și mai mici: protoni, neutroni și electroni. Protonii și neutronii sunt făcuți din quarci!
+</div>
+
+<p><strong>2. „Când apa stă liniștită într-un pahar, moleculele de apă nu se mișcă."</strong></p>
+<div class="answer">
+    FALS. Moleculele de apă se mișcă tot timpul, cu viteze de sute de metri pe secundă! Apa pare liniștită doar pentru că sunt prea multe molecule care se mișcă în toate direcțiile.
+</div>
+
+<p><strong>3. „Toată materia din univers este făcută din aceleași tipuri de atomi."</strong></p>
+<div class="answer">
+    ADEVĂRAT. Există doar ~100 de tipuri de atomi (elemente chimice). O stea de la miliarde de km depărtare este făcută din aceiași atomi ca și trupul tău!
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce parfumul se răspândește într-o cameră chiar dacă aerul pare nemișcat?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Moleculele de parfum se ciocnesc de moleculele de aer, care le împing în direcții aleatorii. Acest proces de difuzie face ca parfumul să ajungă treptat în toată camera, chiar fără curenți de aer vizibili.
+</div>
+
+<p><strong>5. De ce Feynman consideră ipoteza atomică cea mai importantă idee științifică?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Pentru că din această singură idee poți deduce o cantitate imensă de cunoștințe: de ce există gaze, lichide și solide; de ce există chimie; de ce lucrurile se încălzesc și se răcesc; cum funcționează viața. Este „compresia" maximă a cunoașterii.
+</div>
+
+<h2>Problemă de gândire</h2>
+
+<p><strong>6. Un atom are diametrul de aproximativ 10⁻¹⁰ m. Câți atomi puși unul lângă altul ar încăpea pe lungimea de 1 mm?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong></p>
+    <ul>
+        <li>Diametrul atomului: d = 10⁻¹⁰ m</li>
+        <li>Lungimea totală: L = 1 mm = 10⁻³ m</li>
+    </ul>
+
+    <p><strong>Calcul:</strong></p>
+    <p class="formula">N = L / d = 10⁻³ / 10⁻¹⁰ = 10⁻³⁺¹⁰ = 10⁷</p>
+
+    <div class="result">Răspuns: 10.000.000 (zece milioane) de atomi!</div>
+
+    <p><strong>Perspectivă:</strong> Pe o lungime cât grosimea unui fir de păr încap zeci de milioane de atomi.</p>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Maria pune o picătură de cerneală în apă rece și observă că se răspândește în 5 minute. Ion pune o picătură în apă fierbinte și se răspândește în 1 minut. Explică diferența folosind teoria atomică.</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong> În apa fierbinte, moleculele de apă se mișcă mai repede (au mai multă energie). Când se ciocnesc de moleculele de cerneală, le transmit mai multă energie și le împing mai departe. Difuzia este mai rapidă pentru că „bombardamentul" molecular este mai intens.
+
+    <p><strong>Relația:</strong> Temperatura unui corp reprezintă energia medie a mișcării moleculelor sale. Temperatură mai mare = mișcare mai rapidă = difuzie mai rapidă.</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 1</strong> „Atoms in Motion" — pentru profesori și elevi curioși</li>
+    <li><strong>Vol. I, Cap. 1, Secțiunea 1-2</strong> „Matter is made of atoms" — eseul despre ipoteza atomică</li>
+    <li><strong>Vol. I, Cap. 2</strong> „Basic Physics" — despre cele 4 forțe fundamentale</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu fizica</th>
+    </tr>
+    <tr>
+        <td><strong>Chimie</strong></td>
+        <td>Structura atomului, legături chimice, molecule</td>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Molecula ADN, respirația celulară, difuzia în țesuturi</td>
+    </tr>
+    <tr>
+        <td><strong>Matematică</strong></td>
+        <td>Puteri ale lui 10, notația exponențială, proporționalitate</td>
+    </tr>
+    <tr>
+        <td><strong>Istorie</strong></td>
+        <td>Democrit (atomismul antic), Einstein (1905), Bohr (modelul atomic)</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FISA DE SINTEZĂ</h2>
+
+    <p><strong>IDEEA SUPREMĂ:</strong> Totul este făcut din ATOMI!</p>
+    <p><em>„Particule mici în mișcare perpetuă, care se atrag și se resping"</em> — Feynman</p>
+
+    <h3>CE ESTE FIZICA?</h3>
+    <p>Știința care studiază <strong>din ce</strong> este făcut universul și <strong>cum funcționează</strong>.</p>
+
+    <h3>PROPRIETĂȚILE ATOMILOR:</h3>
+    <ol>
+        <li>Se mișcă tot timpul</li>
+        <li>Se atrag la distanță mică</li>
+        <li>Se resping când sunt presați</li>
+    </ol>
+
+    <h3>SCĂRI DE MĂRIME:</h3>
+    <div class="formula-box">
+        Univers: 10²⁶ m → Om: 10⁰ m → Atom: 10⁻¹⁰ m → Nucleu: 10⁻¹⁵ m
+    </div>
+
+    <h3>CELE 4 FORȚE FUNDAMENTALE:</h3>
+    <table>
+        <tr>
+            <th>Gravitațională</th>
+            <th>Electromagnetică</th>
+            <th>Nucleară tare</th>
+            <th>Nucleară slabă</th>
+        </tr>
+        <tr>
+            <td>Atrage masele</td>
+            <td>Atrage/respinge sarcini</td>
+            <td>Ține nucleul</td>
+            <td>Transformă particule</td>
+        </tr>
+    </table>
+
+    <h3>METODA ȘTIINȚIFICĂ:</h3>
+    <p>Observație → Întrebare → Ipoteză → Experiment → Concluzie</p>
+</div>
+
+    <!-- Module Navigation -->
+    <div class="module-nav">
+        <a href="#" class="disabled">← Modulul Anterior</a>
+        <a href="Modulul_2_Marimi_Fizice_Masurare.html">Următorul Modul →</a>
+    </div>
+	
+<footer>
+    <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em></p>
+    <p>Autor: MiniMax Agent | Pentru uz educațional</p>
+</footer>
+
+</body>
+</html>

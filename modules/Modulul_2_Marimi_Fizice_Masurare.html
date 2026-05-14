@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 2: Mărimi Fizice și Măsurare</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'\$\$',right:'\$\$',display:true},{left:'\$',right:'\$',display:false}]})"></script>
+
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+
+<body data-module="2">
+
+    <!-- ===== NAVIGAȚIE ===== -->
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+
+
+    <!-- Header -->
+    <section class="hero">
+        <!-- <div class="hero-icon">📗</div> -->
+        <h1>Fizica cu Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+        <!-- <a href="modules/Modulul_1_Ce_Este_Fizica.html" class="btn btn-primary">Începe cu Modulul 1</a> -->
+    </section>
+
+        <div class="module-nav module-nav--top"></div>
+
+    <!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+        <div class="class-label">MODULUL 2</div>
+        <h1>MĂRIMI FIZICE ȘI MĂSURARE</h1>
+        <div class="subtitle">„Cum cunoaștem lumea prin numere"</div>
+    </div>
+
+    <h1>1. ESENȚA CONCEPTULUI</h1>
+
+    <h2>Citatul fundamental</h2>
+
+    <p>În capitolul „Time and Distance", Feynman subliniază importanța măsurării cantitative:</p>
+
+    <blockquote>
+        <p>„Physics, as do all the sciences, depends on observation. One might also say that the development of the
+            physical sciences to their present form has depended to a large extent on the emphasis which has been placed
+            on the making of quantitative observations. Only with quantitative observations can one arrive at
+            quantitative relationships, which are the heart of physics."</p>
+    </blockquote>
+
+    <div class="info-box">
+        <strong>Traducere:</strong> „Fizica, ca toate științele, depinde de observație. S-ar putea spune că dezvoltarea
+        științelor fizice până la forma lor actuală a depins în mare măsură de accentul pus pe observațiile cantitative.
+        Doar prin observații cantitative putem ajunge la relații cantitative, care sunt inima fizicii."
+    </div>
+
+    <h2>Nașterea fizicii moderne</h2>
+
+    <p>Feynman identifică momentul nașterii fizicii moderne cu experimentele lui Galileo:</p>
+
+    <blockquote>
+        <p>„Many people would like to place the beginnings of physics with the work done 350 years ago by Galileo. Until
+            that time, the study of motion had been a philosophical one based on arguments that could be thought up in
+            one's head. Galileo was skeptical, and did an experiment... He did not, however, just look; he measured how
+            far the ball went in how long a time."</p>
+    </blockquote>
+
+    <div class="info-box">
+        <strong>Traducere:</strong> „Mulți oameni ar vrea să plaseze începuturile fizicii odată cu munca depusă cu 350
+        de ani în urmă de Galileo. Până atunci, studiul mișcării fusese unul filozofic, bazat pe argumente la care
+        puteai ajunge prin gândire. Galileo a fost sceptic și a efectuat un experiment... El nu s-a mulțumit doar să
+        privească; a măsurat cât de departe a mers mingea și în cât timp."
+    </div>
+
+    <div class="info-box">
+        <strong>Ideea centrală:</strong> Fizica nu s-a născut când oamenii au început să <strong>gândească</strong>
+        despre natură, ci când au început să <strong>măsoare</strong>. Diferența dintre filozofie și fizică este
+        <strong>măsurarea</strong>.
+    </div>
+
+    <h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+    <h2>Ce înseamnă „a măsura"?</h2>
+
+    <p><strong>A măsura</strong> înseamnă a compara ceva cu un <strong>etalon</strong> (un model acceptat de toată
+        lumea) și a număra de câte ori încape.</p>
+
+    <p>Când spui „masa are 2 metri lungime", de fapt spui: „am pus metrul de 2 ori pe masă și s-a potrivit exact".</p>
+
+    <h2>De ce e importantă măsurarea?</h2>
+
+    <p>Feynman ne arată că înainte de Galileo, oamenii <strong>credeau</strong> că știu cum cad obiectele. Aristotel
+        spusese că obiectele grele cad mai repede. Toată lumea a acceptat asta timp de 2000 de ani! Dar când Galileo a
+        <strong>măsurat</strong>, a descoperit că nu e adevărat.</p>
+
+    <div class="info-box">
+        <strong>Morala:</strong> Nu contează cât de convins ești că ai dreptate — doar măsurarea îți poate confirma.
+    </div>
+
+    <h2>Cele trei mărimi fundamentale</h2>
+
+    <table>
+        <tr>
+            <th>Mărime</th>
+            <th>Ce măsoară</th>
+            <th>Etalon internațional</th>
+            <th>Simbol</th>
+        </tr>
+        <tr>
+            <td><strong>Lungimea</strong></td>
+            <td>Cât de mare e ceva</td>
+            <td>metrul (m)</td>
+            <td>L sau l</td>
+        </tr>
+        <tr>
+            <td><strong>Masa</strong></td>
+            <td>Cât de multă materie conține</td>
+            <td>kilogramul (kg)</td>
+            <td>m</td>
+        </tr>
+        <tr>
+            <td><strong>Timpul</strong></td>
+            <td>Cât durează ceva</td>
+            <td>secunda (s)</td>
+            <td>t</td>
+        </tr>
+    </table>
+
+    <h2>Concepții greșite frecvente</h2>
+
+    <table>
+        <tr>
+            <th>Concepția greșită</th>
+            <th>Adevărul</th>
+        </tr>
+        <tr>
+            <td>„Măsurarea exactă este posibilă"</td>
+            <td>Orice măsurare are erori; putem doar să le minimizăm</td>
+        </tr>
+        <tr>
+            <td>„Masa și greutatea sunt același lucru"</td>
+            <td>Masa e cantitatea de materie; greutatea e forța cu care ești atras</td>
+        </tr>
+        <tr>
+            <td>„Cu cât instrumentul e mai scump, cu atât măsoară mai bine"</td>
+            <td>Tehnica de măsurare contează la fel de mult ca instrumentul</td>
+        </tr>
+        <tr>
+            <td>„O singură măsurătoare e suficientă"</td>
+            <td>Trebuie să măsurăm de mai multe ori și să facem media</td>
+        </tr>
+    </table>
+
+    <h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+    <h2>Exemplul 1: Pulsul lui Galileo</h2>
+
+    <p><strong>Situația concretă:</strong> Galileo nu avea ceas, dar trebuia să măsoare timpul în care o bilă coboară pe
+        un plan înclinat. A folosit bătăile propriului puls ca unitate de timp!</p>
+
+    <p><strong>Explicația fizică:</strong> Orice fenomen <strong>periodic</strong> (care se repetă regulat) poate fi
+        folosit ca unitate de timp. Pulsul bate aproximativ o dată pe secundă. Numărând bătăile, Galileo putea măsura
+        intervale de timp. A descoperit că distanța parcursă de bilă este proporțională cu <strong>pătratul</strong>
+        timpului:</p>
+
+    <div class="formula-box">
+        D ∝ t²
+    </div>
+
+    <p><strong>Întrebare de reflecție:</strong> <em>De ce crezi că pulsul nu e o metodă foarte precisă de măsurare a
+            timpului? Ce s-ar întâmpla dacă Galileo ar fi alergat înainte de experiment?</em></p>
+
+    <h2>Exemplul 2: Clepsidra cu nisip</h2>
+
+    <p><strong>Situația concretă:</strong> Feynman descrie cum putem verifica dacă zilele au aceeași lungime folosind o
+        clepsidră. Numărăm de câte ori se întoarce clepsidra de la un amiază la următorul.</p>
+
+    <p><strong>Explicația fizică:</strong> Pentru a verifica o unitate de timp (ziua), o comparăm cu alta (clepsidra).
+        Dacă numărul de „ore de clepsidră" e același în fiecare zi, avem încredere că ambele sunt periodice. Feynman
+        subliniază că nu putem <strong>demonstra</strong> că timpul curge uniform — doar că diferite metode de măsurare
+        <strong>se potrivesc</strong> între ele.</p>
+
+    <p><strong>Întrebare de reflecție:</strong> <em>Cum ai putea verifica dacă ceasul tău de mână arată corect, fără să
+            te uiți la alt ceas?</em></p>
+
+    <h2>Exemplul 3: De ce metrul a fost redefinit</h2>
+
+    <p><strong>Situația concretă:</strong> Inițial, metrul era definit ca distanța dintre două zgârieturi pe o bară de
+        metal păstrată în Franța. Astăzi, metrul este definit ca distanța parcursă de lumină în vid într-un interval de
+        timp extrem de scurt.</p>
+
+    <p><strong>Explicația fizică:</strong> Bara de metal se poate dilata, zgâria sau deteriora. Lumina, în schimb, are
+        întotdeauna aceeași viteză. Definind metrul prin lumină, avem un etalon care:</p>
+    <ul>
+        <li>Nu se degradează în timp</li>
+        <li>Poate fi reprodus oriunde în univers</li>
+        <li>Este extrem de precis</li>
+    </ul>
+
+    <p><strong>Întrebare de reflecție:</strong> <em>De ce crezi că oamenii de știință au căutat etalone din ce în ce mai
+            stabile? Ce probleme ar apărea dacă metrul din Franța ar fi diferit de cel din Japonia?</em></p>
+
+    <h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+    <div class="experiment">
+        <h3>Experimentul 1: Măsurarea lungimii — Erori și valoare medie</h3>
+
+        <p><strong>Obiectiv:</strong> Demonstrarea faptului că măsurătorile repetate dau rezultate diferite și că
+            valoarea medie este cea mai apropiată de realitate.</p>
+
+        <p><strong>Materiale necesare:</strong></p>
+        <ul>
+            <li>O riglă de 30 cm</li>
+            <li>Un creion</li>
+            <li>O foaie de hârtie</li>
+            <li>Un obiect de măsurat (ex: o carte, un stilou, o cutie)</li>
+            <li>Tabel de înregistrare</li>
+        </ul>
+
+        <p><strong>Procedură:</strong></p>
+        <ol>
+            <li>Alege un obiect pentru măsurare (ex: lungimea unei cărți)</li>
+            <li>Măsoară lungimea de 10 ori, notând fiecare valoare în tabel</li>
+            <li><strong>Important:</strong> După fiecare măsurătoare, pune rigla deoparte și ia-o din nou pentru
+                următoarea măsurătoare</li>
+            <li>Calculează <strong>valoarea medie</strong>: <span class="formula">L̄ = (L₁ + L₂ + ... + L₁₀) / 10</span>
+            </li>
+            <li>Calculează <strong>eroarea absolută</strong> pentru fiecare măsurătoare: <span class="formula">ΔLᵢ = |Lᵢ
+                    − L̄|</span></li>
+            <li>Calculează <strong>eroarea absolută medie</strong>: <span class="formula">ΔL̄ = (ΔL₁ + ΔL₂ + ... + ΔL₁₀)
+                    / 10</span></li>
+            <li>Scrie rezultatul final: <span class="formula">L = L̄ ± ΔL̄</span></li>
+        </ol>
+
+        <p><strong>Exemplu de tabel:</strong></p>
+
+        <table>
+            <tr>
+                <th>Nr.</th>
+                <th>Lungimea măsurată (cm)</th>
+                <th>Eroarea absolută (cm)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>21,3</td>
+                <td>0,12</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>21,5</td>
+                <td>0,08</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>21,4</td>
+                <td>0,02</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td><strong>Medie</strong></td>
+                <td><strong>21,42</strong></td>
+                <td><strong>0,09</strong></td>
+            </tr>
+        </table>
+
+        <div class="result">Rezultat: L = (21,42 ± 0,09) cm</div>
+
+        <p><strong>Ce observăm:</strong></p>
+        <ul>
+            <li>Nicio măsurătoare nu e identică cu alta</li>
+            <li>Valorile se grupează în jurul mediei</li>
+            <li>Eroarea medie ne spune cât de „împrăștiate" sunt măsurătorile</li>
+        </ul>
+
+        <p><strong>Interpretare:</strong> Erorile apar din cauza: poziționării imprecise a riglei, unghiului din care
+            privim (paralaxă) și diviziunilor riglei (precizie limitată).</p>
+
+        <p><strong>Surse de eroare:</strong></p>
+        <ul>
+            <li>Rigla nu e perfect aliniată cu obiectul</li>
+            <li>Citirea aproximativă între două linii ale riglei</li>
+            <li>Obiectul nu e perfect drept</li>
+        </ul>
+    </div>
+
+    <div class="experiment">
+        <h3>Experimentul 2: Pendulul — Măsurarea timpului</h3>
+
+        <p><strong>Obiectiv:</strong> Verificarea afirmației lui Galileo că perioada pendulului nu depinde de
+            amplitudinea oscilației (pentru oscilații mici).</p>
+
+        <p><strong>Materiale necesare:</strong></p>
+        <ul>
+            <li>Sfoară (1-1,5 m)</li>
+            <li>O greutate (piuliță, bilă, cheie)</li>
+            <li>Cronometru (sau telefonul)</li>
+            <li>Suport (tocul ușii, o riglă peste două scaune)</li>
+            <li>Raportor pentru a măsura unghiul</li>
+        </ul>
+
+        <p><strong>Procedură:</strong></p>
+        <ol>
+            <li>Construiește pendulul atârnând greutatea de sfoară</li>
+            <li>Măsoară lungimea sforii (de la punct de suspendare la centrul greutății)</li>
+            <li>Pornește pendulul cu un unghi mic (~10°) și măsoară timpul pentru 10 oscilații complete</li>
+            <li>Repetă de 3 ori și calculează media</li>
+            <li>Calculează perioada unei oscilații: T = timp total / 10</li>
+            <li>Repetă experimentul cu unghi mai mare (~20°) și apoi (~30°)</li>
+            <li>Compară perioadele obținute</li>
+        </ol>
+
+        <p><strong>Tabel de date:</strong></p>
+
+        <table>
+            <tr>
+                <th>Unghi</th>
+                <th>T pentru 10 oscilații (s)</th>
+                <th>Perioada T (s)</th>
+            </tr>
+            <tr>
+                <td>10°</td>
+                <td>15,2 s</td>
+                <td>1,52 s</td>
+            </tr>
+            <tr>
+                <td>20°</td>
+                <td>15,3 s</td>
+                <td>1,53 s</td>
+            </tr>
+            <tr>
+                <td>30°</td>
+                <td>15,5 s</td>
+                <td>1,55 s</td>
+            </tr>
+        </table>
+
+        <p><strong>Ce observăm:</strong></p>
+        <ul>
+            <li>Pentru unghiuri mici, perioada e aproape constantă</li>
+            <li>Pentru unghiuri mari, perioada crește ușor</li>
+            <li>Galileo avea dreptate (pentru oscilații mici)!</li>
+        </ul>
+
+        <p><strong>Formula teoretică</strong> (pentru elevii avansați):</p>
+
+        <div class="formula-box">
+            T = 2π · √(L / g)
+        </div>
+
+        <p>unde L = lungimea pendulului, g = accelerația gravitațională (~10 m/s²)</p>
+    </div>
+
+    <h1>5. TEORIA MATEMATICĂ</h1>
+
+    <h2>Nivel 1 — Exprimare calitativă</h2>
+
+    <p><strong>Ce este o mărime fizică:</strong> O proprietate a corpurilor sau fenomenelor care poate fi
+        <strong>măsurată</strong> și exprimată printr-un <strong>număr</strong> și o <strong>unitate de măsură</strong>.
+    </p>
+
+    <p><strong>Formula generală a măsurării:</strong></p>
+
+    <div class="formula-box">
+        Valoarea mărimii = număr × unitate de măsură
+    </div>
+
+    <p>Exemplu: Lungimea mesei = <strong>2</strong> × <strong>metri</strong> = 2 m</p>
+
+    <p><strong>Mărimi fundamentale vs. derivate:</strong></p>
+    <ul>
+        <li><strong>Fundamentale:</strong> lungime, masă, timp (nu pot fi exprimate prin alte mărimi)</li>
+        <li><strong>Derivate:</strong> viteză, densitate, forță (se calculează din cele fundamentale)</li>
+    </ul>
+
+    <h2>Nivel 2 — Formule de bază</h2>
+
+    <h3>Sistemul Internațional de Unități (SI):</h3>
+
+    <table>
+        <tr>
+            <th>Mărime</th>
+            <th>Unitate</th>
+            <th>Simbol</th>
+        </tr>
+        <tr>
+            <td>Lungime</td>
+            <td>metru</td>
+            <td>m</td>
+        </tr>
+        <tr>
+            <td>Masă</td>
+            <td>kilogram</td>
+            <td>kg</td>
+        </tr>
+        <tr>
+            <td>Timp</td>
+            <td>secundă</td>
+            <td>s</td>
+        </tr>
+        <tr>
+            <td>Temperatură</td>
+            <td>kelvin</td>
+            <td>K</td>
+        </tr>
+        <tr>
+            <td>Intensitate curent</td>
+            <td>amper</td>
+            <td>A</td>
+        </tr>
+    </table>
+
+    <h3>Multiplii și submultiplii:</h3>
+
+    <table>
+        <tr>
+            <th>Prefix</th>
+            <th>Simbol</th>
+            <th>Factor</th>
+            <th>Exemplu</th>
+        </tr>
+        <tr>
+            <td>kilo-</td>
+            <td>k</td>
+            <td>10³ = 1000</td>
+            <td>1 km = 1000 m</td>
+        </tr>
+        <tr>
+            <td>centi-</td>
+            <td>c</td>
+            <td>10⁻² = 0,01</td>
+            <td>1 cm = 0,01 m</td>
+        </tr>
+        <tr>
+            <td>mili-</td>
+            <td>m</td>
+            <td>10⁻³ = 0,001</td>
+            <td>1 mm = 0,001 m</td>
+        </tr>
+        <tr>
+            <td>micro-</td>
+            <td>μ</td>
+            <td>10⁻⁶</td>
+            <td>1 μm = 0,000001 m</td>
+        </tr>
+    </table>
+
+    <h3>Transformări de unități:</h3>
+
+    <div class="formula-box">
+        1 km = 1000 m<br><br>
+        1 m = 100 cm = 1000 mm<br><br>
+        1 h = 60 min = 3600 s<br><br>
+        1 kg = 1000 g
+    </div>
+
+    <h3>Calculul valorii medii:</h3>
+
+    <div class="formula-box">
+        x̄ = (x₁ + x₂ + ... + xₙ) / n
+    </div>
+
+    <h3>Calculul erorii absolute:</h3>
+
+    <div class="formula-box">
+        Δxᵢ = |xᵢ − x̄|
+    </div>
+
+    <h3>Eroarea absolută medie:</h3>
+
+    <div class="formula-box">
+        Δx̄ = (Δx₁ + Δx₂ + ... + Δxₙ) / n
+    </div>
+
+    <h3>Scrierea rezultatului:</h3>
+
+    <div class="formula-box">
+        x = x̄ ± Δx̄
+    </div>
+
+    <h2>Nivel 3 — Extindere</h2>
+
+    <h3>Măsurarea indirectă:</h3>
+
+    <p>Unele mărimi nu pot fi măsurate direct. Le calculăm din alte mărimi măsurate.</p>
+
+    <p><strong>Exemplu — Aria unui dreptunghi:</strong></p>
+    <ul>
+        <li>Măsurăm lungimea L și lățimea l</li>
+        <li>Calculăm aria: <span class="formula">A = L × l</span></li>
+    </ul>
+
+    <p><strong>Exemplu — Volumul unui paralelipiped:</strong></p>
+    <ul>
+        <li>Măsurăm L, l, h</li>
+        <li>Calculăm volumul: <span class="formula">V = L × l × h</span></li>
+    </ul>
+
+    <p><strong>Exemplu — Densitatea:</strong></p>
+    <ul>
+        <li>Măsurăm masa m și volumul V</li>
+        <li>Calculăm densitatea: <span class="formula">ρ = m / V</span></li>
+    </ul>
+
+    <h3>Analiza dimensională:</h3>
+
+    <p>Feynman menționează că unitățile trebuie să se „potrivească" în formule. Verificăm corectitudinea unei formule
+        prin analiza unităților.</p>
+
+    <p>Exemplu: Viteza = Distanță / Timp</p>
+
+    <div class="formula-box">
+        [v] = [L] / [t] = m / s = m/s ✓
+    </div>
+
+    <h3>Scări de mărime din Feynman:</h3>
+
+    <table>
+        <tr>
+            <th>Obiect</th>
+            <th>Dimensiune</th>
+            <th>Putere de 10</th>
+        </tr>
+        <tr>
+            <td>Univers observabil</td>
+            <td>~10²⁶ m</td>
+            <td>10²⁶</td>
+        </tr>
+        <tr>
+            <td>Galaxia noastră</td>
+            <td>~10²¹ m</td>
+            <td>10²¹</td>
+        </tr>
+        <tr>
+            <td>Distanța Pământ-Soare</td>
+            <td>~10¹¹ m</td>
+            <td>10¹¹</td>
+        </tr>
+        <tr>
+            <td>Raza Pământului</td>
+            <td>~10⁷ m</td>
+            <td>10⁷</td>
+        </tr>
+        <tr>
+            <td>Om</td>
+            <td>~10⁰ m</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Celulă</td>
+            <td>~10⁻⁵ m</td>
+            <td>10⁻⁵</td>
+        </tr>
+        <tr>
+            <td>Atom</td>
+            <td>~10⁻¹⁰ m</td>
+            <td>10⁻¹⁰</td>
+        </tr>
+        <tr>
+            <td>Nucleu atomic</td>
+            <td>~10⁻¹⁵ m</td>
+            <td>10⁻¹⁵</td>
+        </tr>
+    </table>
+
+    <h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+    <h2>Întrebări Adevărat/Fals</h2>
+
+    <p><strong>1. „Dacă măsor aceeași lungime de 5 ori, voi obține exact aceeași valoare de fiecare dată."</strong></p>
+    <div class="answer">
+        ❌ <strong>FALS.</strong> Din cauza erorilor de măsurare (poziționare, paralaxă, precizia instrumentului),
+        valorile vor fi ușor diferite. De aceea calculăm media.
+    </div>
+
+    <p><strong>2. „Un kilometru este mai mare decât un milion de milimetri."</strong></p>
+    <div class="answer">
+        ❌ <strong>FALS.</strong> 1 km = 1000 m = 1.000.000 mm. Sunt egale!
+    </div>
+
+    <p><strong>3. „Galileo a fost primul care a studiat mișcarea corpurilor."</strong></p>
+    <div class="answer">
+        ❌ <strong>FALS.</strong> Aristotel și alți filozofi au studiat mișcarea înaintea lui. Dar Galileo a fost primul
+        care a <strong>măsurat</strong> în loc să speculeze. Aceasta este diferența esențială.
+    </div>
+
+    <h2>Întrebări „De ce...?"</h2>
+
+    <p><strong>4. De ce trebuie să repetăm o măsurătoare de mai multe ori, în loc să o facem o singură dată?</strong>
+    </p>
+    <div class="answer">
+        <strong>Răspuns:</strong> Pentru că fiecare măsurătoare are erori. Dacă măsurăm o singură dată, nu știm cât de
+        departe suntem de valoarea reală. Făcând mai multe măsurători și calculând media, erorile „în plus" și „în
+        minus" se compensează parțial, iar media este mai aproape de valoarea reală.
+    </div>
+
+    <p><strong>5. De ce fizicienii preferă să definească metrul prin viteza luminii, nu prin bara de metal din
+            Franța?</strong></p>
+    <div class="answer">
+        <strong>Răspuns:</strong> Bara de metal se poate deteriora, dilata sau modifica în timp. Viteza luminii este
+        constantă peste tot în univers și nu se schimbă niciodată. Un etalon bazat pe lumină poate fi reprodus oriunde,
+        oricând, cu aceeași precizie.
+    </div>
+
+    <h2>Problemă cantitativă</h2>
+
+    <p><strong>6. Un elev măsoară lungimea unei cărți de 5 ori și obține valorile: 21,2 cm; 21,4 cm; 21,3 cm; 21,5 cm;
+            21,1 cm. Calculează valoarea medie și eroarea absolută medie. Scrie rezultatul corect.</strong></p>
+
+    <div class="solution">
+        <h4>Rezolvare:</h4>
+
+        <p><strong>Pasul 1:</strong> Calculăm valoarea medie</p>
+        <p class="formula">L̄ = (21,2 + 21,4 + 21,3 + 21,5 + 21,1) / 5 = 106,5 / 5 = <strong>21,3 cm</strong></p>
+
+        <p><strong>Pasul 2:</strong> Calculăm erorile absolute</p>
+        <ul>
+            <li>|21,2 − 21,3| = 0,1 cm</li>
+            <li>|21,4 − 21,3| = 0,1 cm</li>
+            <li>|21,3 − 21,3| = 0,0 cm</li>
+            <li>|21,5 − 21,3| = 0,2 cm</li>
+            <li>|21,1 − 21,3| = 0,2 cm</li>
+        </ul>
+
+        <p><strong>Pasul 3:</strong> Calculăm eroarea absolută medie</p>
+        <p class="formula">ΔL̄ = (0,1 + 0,1 + 0,0 + 0,2 + 0,2) / 5 = 0,6 / 5 = <strong>0,12 cm ≈ 0,1 cm</strong></p>
+
+        <div class="result">Rezultat: L = (21,3 ± 0,1) cm</div>
+    </div>
+
+    <h2>Situație-problemă</h2>
+
+    <p><strong>7. Maria și Ion trebuie să determine aria unei foi de hârtie A4. Maria măsoară lungimea și lățimea o
+            singură dată: L = 29,7 cm, l = 21,0 cm. Ion măsoară de 5 ori fiecare dimensiune și calculează mediile: L =
+            29,68 cm, l = 21,02 cm. Cine a făcut o determinare mai bună? Argumentează.</strong></p>
+
+    <div class="answer">
+        <strong>Răspuns:</strong> Ion a făcut o determinare mai bună, pentru că:
+        <ol>
+            <li>Măsurând de mai multe ori, a redus efectul erorilor accidentale</li>
+            <li>Poate calcula eroarea măsurătorilor și știe cât de precisă este determinarea lui</li>
+            <li>Maria nu poate ști dacă valorile ei sunt corecte sau nu, pentru că nu are cu ce compara</li>
+        </ol>
+        <p>Aria lui Maria: A = 29,7 × 21,0 = 623,7 cm²</p>
+        <p>Aria lui Ion: A = 29,68 × 21,02 = 623,87 cm²</p>
+        <p>Deși valorile sunt apropiate, Ion poate spune și care este incertitudinea rezultatului său.</p>
+    </div>
+
+    <h1>7. RESURSE SUPLIMENTARE</h1>
+
+    <h2>Lecturi din Feynman</h2>
+    <ul>
+        <li><strong>Vol. I, Cap. 5</strong> „Time and Distance" — complet, pentru profesori</li>
+        <li><strong>Vol. I, Cap. 5, Secțiunile 5-1 și 5-2</strong> — pentru elevii interesați de experimentele lui
+            Galileo</li>
+        <li><strong>Vol. I, Cap. 5, Secțiunea 5-5</strong> — despre standardele de timp și ceasurile atomice</li>
+    </ul>
+
+    <h2>Conexiuni interdisciplinare</h2>
+
+    <table>
+        <tr>
+            <th>Disciplina</th>
+            <th>Conexiunea</th>
+        </tr>
+        <tr>
+            <td><strong>Matematică</strong></td>
+            <td>Media aritmetică, valoarea absolută, puteri ale lui 10</td>
+        </tr>
+        <tr>
+            <td><strong>Istorie</strong></td>
+            <td>Galileo Galilei și nașterea metodei științifice (sec. XVII)</td>
+        </tr>
+        <tr>
+            <td><strong>Geografie</strong></td>
+            <td>Sistemul de coordonate geografice, măsurarea distanțelor pe Pământ</td>
+        </tr>
+        <tr>
+            <td><strong>Tehnologie</strong></td>
+            <td>GPS-ul folosește ceasuri atomice pentru a determina poziția</td>
+        </tr>
+    </table>
+
+    <div class="synthesis">
+        <h2>FIȘĂ DE SINTEZĂ</h2>
+
+        <p><strong>LECȚIA LUI GALILEO:</strong> Nu GÂNDI despre natură — MĂSOARĂ!</p>
+        <p><em>„A măsura înseamnă a compara cu un etalon și a număra"</em></p>
+
+        <h3>MĂRIMI FUNDAMENTALE:</h3>
+        <table>
+            <tr>
+                <th>LUNGIME</th>
+                <th>MASĂ</th>
+                <th>TIMP</th>
+            </tr>
+            <tr>
+                <td>metru (m)</td>
+                <td>kilogram (kg)</td>
+                <td>secundă (s)</td>
+            </tr>
+        </table>
+
+        <h3>CUM MĂSURĂM CORECT:</h3>
+        <ol>
+            <li>Repetă măsurătoarea de mai multe ori</li>
+            <li>Calculează MEDIA: x̄ = (x₁ + x₂ + ... + xₙ) / n</li>
+            <li>Calculează EROAREA: Δx = |xᵢ − x̄|</li>
+            <li>Scrie rezultatul: x = x̄ ± Δx̄</li>
+        </ol>
+
+        <h3>MULTIPLII ȘI SUBMULTIPLII:</h3>
+        <div class="formula-box">
+            kilo (k) = ×1000 → 1 km = 1000 m<br>
+            centi (c) = ÷100 → 1 m = 100 cm<br>
+            mili (m) = ÷1000 → 1 m = 1000 mm
+        </div>
+    </div>
+
+    <!-- Module Navigation -->
+    <div class="module-nav">
+        <a href="Modulul_1_Ce_Este_Fizica.html">← Modulul Anterior</a>
+        <a href="Modulul_3_Miscarea_Corpurilor.html">Următorul Modul →</a>
+    </div>
+
+        <footer>
+        <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em> © Caltech</p>
+    </footer>
+
+        </main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+
+</html>

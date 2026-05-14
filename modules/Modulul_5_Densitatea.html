@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 5: Densitatea — De ce unele lucruri plutesc?</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'\$\$',right:'\$\$',display:true},{left:'\$',right:'\$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="5">
+
+    <!-- ===== NAVIGAȚIE ===== -->
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+
+
+    <!-- Header -->
+    <section class="hero">
+        <h1>Fizica cu Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="module-nav module-nav--top"></div>
+
+    <!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 5</div>
+    <h1>DENSITATEA</h1>
+    <div class="subtitle">„De ce unele lucruri plutesc?"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Structura materiei</h2>
+
+<p>În capitolul „Atoms in Motion", Feynman explică de ce gheața plutește pe apă — un fenomen aparent simplu, dar cu implicații profunde:</p>
+
+<blockquote>
+    <p>„Ice shrinks when it melts. Most simple substances expand upon melting, because the atoms are jiggling more and need more room. But the ice crystal structure has many 'holes' in it — a rather open structure. When ice melts, the holes can be occupied by molecules, so water is actually denser than ice."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Gheața se contractă când se topește. Cele mai multe substanțe simple se dilată la topire, pentru că atomii vibrează mai mult și au nevoie de mai mult spațiu. Dar structura cristalină a gheții are multe «găuri» — este o structură destul de deschisă. Când gheața se topește, găurile pot fi ocupate de molecule, așa că apa este de fapt mai densă decât gheața."
+</div>
+
+<h2>Presiunea și densitatea</h2>
+
+<p>Feynman descrie legătura fundamentală dintre presiune și densitate în capitolul despre teoria cinetică:</p>
+
+<blockquote>
+    <p>„Pressure is proportional to density: doubling the number of molecules — the density — approximately doubles the pressure."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Presiunea este proporțională cu densitatea: dublarea numărului de molecule — densitatea — dublează aproximativ presiunea."
+</div>
+
+<h2>Atmosfera exponențială</h2>
+
+<p>În capitolul despre mecanica statistică, Feynman explică de ce aerul devine mai rar la altitudine:</p>
+
+<blockquote>
+    <p>„Heavier molecules decrease faster with altitude than lighter ones. At great heights, lighter gases like hydrogen dominate. The density at any height follows an exponential law: n = n₀e^(−mgh/kT)."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Moleculele mai grele scad mai rapid cu altitudinea decât cele mai ușoare. La înălțimi mari, gazele ușoare precum hidrogenul domină. Densitatea la orice înălțime urmează o lege exponențială: n = n₀e^(−mgh/kT)."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Densitatea nu este doar o proprietate statică — ea variază cu temperatura, presiunea și poziția. Înțelegerea densității la nivel atomic explică de ce plutesc lucrurile, de ce aerul e mai rar pe vârful muntelui și de ce balanțele de bucătărie funcționează.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este densitatea?</h2>
+
+<p><strong>Densitatea</strong> ne spune cât de „înghesuite" sunt moleculele într-un material. Este răspunsul la întrebarea: <em>„Cât de greu este ceva pentru mărimea pe care o are?"</em></p>
+
+<p>Imaginează-ți două cutii identice:</p>
+<ul>
+    <li>Una plină cu <strong>pene</strong></li>
+    <li>Una plină cu <strong>pietre</strong></li>
+</ul>
+<p>Ambele au același volum, dar cutia cu pietre e mult mai grea. Spunem că pietrele au <strong>densitate mai mare</strong> decât penele.</p>
+
+<div class="formula-box">
+    Densitate = Masă ÷ Volum<br><br>
+    ρ = m / V
+</div>
+
+<h2>De ce plutesc lucrurile?</h2>
+
+<p>Un obiect <strong>plutește</strong> dacă densitatea lui e mai mică decât densitatea lichidului.</p>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>Ce se întâmplă</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td>ρ<sub>obiect</sub> < ρ<sub>lichid</sub></td>
+        <td><strong>PLUTEȘTE</strong></td>
+        <td>Lemn în apă, ulei pe apă</td>
+    </tr>
+    <tr>
+        <td>ρ<sub>obiect</sub> > ρ<sub>lichid</sub></td>
+        <td><strong>SE SCUFUNDĂ</strong></td>
+        <td>Piatră în apă, cui în apă</td>
+    </tr>
+    <tr>
+        <td>ρ<sub>obiect</sub> = ρ<sub>lichid</sub></td>
+        <td><strong>PLUTEȘTE ÎNTRE APE</strong></td>
+        <td>Submarin echilibrat, pește</td>
+    </tr>
+</table>
+
+<h2>De ce gheața plutește? (Explicația lui Feynman)</h2>
+
+<p>Feynman ne oferă o explicație fascinantă:</p>
+
+<ol>
+    <li>În <strong>gheață</strong>, moleculele de apă sunt aranjate într-o structură hexagonală cu multe „găuri"</li>
+    <li>Această structură ocupă mai mult spațiu → densitate mai mică</li>
+    <li>Când gheața se <strong>topește</strong>, „găurile" se umplu cu molecule</li>
+    <li>Apa lichidă are moleculele mai „înghesuite" → densitate mai mare</li>
+</ol>
+
+<div class="info-box">
+    <strong>Consecință vitală:</strong> Dacă gheața ar fi mai densă decât apa, ar cădea la fundul oceanelor. Iarna, lacurile și oceanele ar îngheța de la fund în sus, omorând toată viața acvatică!
+</div>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul</th>
+    </tr>
+    <tr>
+        <td>„Lucrurile grele se scufundă, cele ușoare plutesc"</td>
+        <td>Contează densitatea, nu masa. O navă de 100.000 tone plutește!</td>
+    </tr>
+    <tr>
+        <td>„Fierul nu poate pluti niciodată"</td>
+        <td>Într-o formă potrivită (navă), fierul plutește prin deplasarea apei</td>
+    </tr>
+    <tr>
+        <td>„Gheața plutește pentru că e rece"</td>
+        <td>Plutește din cauza structurii moleculare cu „găuri"</td>
+    </tr>
+    <tr>
+        <td>„Densitatea unui material e mereu aceeași"</td>
+        <td>Densitatea variază cu temperatura și presiunea</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Balonul cu heliu</h2>
+
+<p><strong>Situația:</strong> Un balon cu heliu urcă spre cer când îl eliberezi.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Densitatea heliului: ~0,18 kg/m³</li>
+    <li>Densitatea aerului: ~1,29 kg/m³</li>
+    <li>Heliul e de ~7 ori mai puțin dens decât aerul!</li>
+</ul>
+<p>Balonul „plutește" în aer exact cum lemnul plutește în apă. Aerul mai greu „împinge" balonul în sus.</p>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce balonul se oprește la o anumită înălțime în loc să urce la infinit?</em></p>
+
+<div class="answer">
+    Răspuns: Pentru că densitatea aerului scade cu altitudinea (după legea exponențială a lui Feynman). La o anumită înălțime, densitatea aerului devine egală cu densitatea medie a balonului, și acesta nu mai urcă.
+</div>
+
+<h2>Exemplul 2: Oul în apă sărată</h2>
+
+<p><strong>Situația:</strong> Un ou proaspăt se scufundă în apă de la robinet, dar plutește în apă foarte sărată.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Densitatea oului: ~1,03-1,09 g/cm³</li>
+    <li>Densitatea apei pure: 1,00 g/cm³</li>
+    <li>Densitatea apei saturate cu sare: ~1,20 g/cm³</li>
+</ul>
+<p>Oul e ușor mai dens decât apa pură, dar mai puțin dens decât apa sărată. De aceea se scufundă în prima și plutește în a doua!</p>
+
+<p><strong>Întrebare de reflecție:</strong> <em>Poți face oul să plutească „între ape"? Cum?</em></p>
+
+<h2>Exemplul 3: De ce navele plutesc</h2>
+
+<p><strong>Situația:</strong> O navă de oțel de 50.000 de tone plutește, dar un cui de oțel de 5 grame se scufundă.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Densitatea oțelului: ~7,8 g/cm³ (de ~8 ori mai dens decât apa)</li>
+    <li>Dar nava nu e făcută doar din oțel — are spații goale pline cu aer!</li>
+    <li>Densitatea medie a navei (oțel + aer) < 1 g/cm³</li>
+</ul>
+
+<div class="info-box">
+    <strong>Principiul lui Arhimede:</strong> Un corp scufundat în lichid este împins în sus cu o forță egală cu greutatea lichidului dezlocuit. Nava deplasează o cantitate mare de apă, generând o forță de plutire mare.
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Turnul de lichide — Densități stratificate</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că lichide cu densități diferite se stratifică.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un pahar înalt sau cilindru gradat</li>
+        <li>Miere (ρ ≈ 1,4 g/cm³)</li>
+        <li>Sirop de porumb sau zahăr (ρ ≈ 1,3 g/cm³)</li>
+        <li>Lapte (ρ ≈ 1,03 g/cm³)</li>
+        <li>Apă colorată (ρ = 1,0 g/cm³)</li>
+        <li>Ulei vegetal (ρ ≈ 0,9 g/cm³)</li>
+        <li>Alcool (ρ ≈ 0,8 g/cm³)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Toarnă încet mierea pe fundul paharului</li>
+        <li>Adaugă siropul, înclinând paharul pentru a curge pe perete</li>
+        <li>Continuă cu laptele, apa, uleiul și alcoolul</li>
+        <li><strong>Important:</strong> Toarnă încet pentru a nu amesteca straturile!</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Lichidele formează straturi distincte</li>
+        <li>Cele mai dense stau la fund, cele mai puțin dense la suprafață</li>
+        <li>Straturile nu se amestecă (dacă sunt imiscibile)</li>
+    </ul>
+
+    <table>
+        <tr>
+            <th>Strat (de jos în sus)</th>
+            <th>Lichid</th>
+            <th>Densitate (g/cm³)</th>
+        </tr>
+        <tr><td>1 (fund)</td><td>Miere</td><td>~1,4</td></tr>
+        <tr><td>2</td><td>Sirop</td><td>~1,3</td></tr>
+        <tr><td>3</td><td>Lapte</td><td>~1,03</td></tr>
+        <tr><td>4</td><td>Apă</td><td>1,0</td></tr>
+        <tr><td>5</td><td>Ulei</td><td>~0,9</td></tr>
+        <tr><td>6 (sus)</td><td>Alcool</td><td>~0,8</td></tr>
+    </table>
+
+    <div class="result">Concluzie: Lichidele se stratifică în funcție de densitate — cele mai dense la fund!</div>
+
+    <p><strong>Varianta avansată:</strong> Aruncă în turn obiecte mici (strugure, măslină, dop de plută, bilă de plastic) și observă unde se opresc.</p>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Determinarea densității unui corp solid</h3>
+
+    <p><strong>Obiectiv:</strong> Calcularea densității unui obiect prin măsurarea masei și volumului.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Balanță de bucătărie (precizie 1 g)</li>
+        <li>Cilindru gradat sau pahar gradat</li>
+        <li>Obiecte de măsurat: pietricică, bilă de sticlă, cui, gomă</li>
+        <li>Apă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li><strong>Măsoară masa:</strong> Cântărește obiectul și notează masa (m)</li>
+        <li><strong>Măsoară volumul prin dezlocuire:</strong>
+            <ul>
+                <li>Pune apă în cilindrul gradat și notează volumul inițial (V₁)</li>
+                <li>Scufundă obiectul complet în apă</li>
+                <li>Notează volumul final (V₂)</li>
+                <li>Volumul obiectului: V = V₂ − V₁</li>
+            </ul>
+        </li>
+        <li><strong>Calculează densitatea:</strong> ρ = m / V</li>
+    </ol>
+
+    <p><strong>Exemplu de calcul:</strong></p>
+    <ul>
+        <li>Obiect: pietricică</li>
+        <li>Masa: m = 45 g</li>
+        <li>Volum inițial apă: V₁ = 50 ml</li>
+        <li>Volum final: V₂ = 67 ml</li>
+        <li>Volumul pietrei: V = 67 − 50 = 17 ml = 17 cm³</li>
+    </ul>
+
+    <div class="formula-box">
+        ρ = m / V = 45 g / 17 cm³ ≈ 2,6 g/cm³
+    </div>
+
+    <div class="result">Pietricica are densitatea ~2,6 g/cm³ (probabil granit sau cuarț)</div>
+
+    <p><strong>Surse de eroare:</strong></p>
+    <ul>
+        <li>Bule de aer pe suprafața obiectului</li>
+        <li>Citirea incorectă a nivelului apei (paralaxă)</li>
+        <li>Obiect care absoarbe apă</li>
+    </ul>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Gheața care plutește — verificarea lui Feynman</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că gheața e mai puțin densă decât apa lichidă.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Cub de gheață</li>
+        <li>Pahar cu apă</li>
+        <li>Riglă sau marker pentru a marca nivelul</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune cubul de gheață în paharul cu apă</li>
+        <li>Observă cât din gheață e <strong>deasupra</strong> apei și cât e <strong>sub</strong> apă</li>
+        <li>Marchează nivelul apei cu un marker</li>
+        <li>Așteaptă să se topească complet gheața</li>
+        <li>Verifică nivelul apei după topire</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>~90% din gheață e sub apă, ~10% deasupra</li>
+        <li>Nivelul apei <strong>rămâne același</strong> după topire!</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Explicație:</strong> Gheața deplasează exact atâta apă cât cântărește. Când se topește, apa rezultată ocupă exact spațiul pe care gheața îl dezlocuise. De aceea topirea calotelor glaciare plutitoare NU ridică nivelul oceanelor!
+    </div>
+
+    <p><strong>Calcul teoretic:</strong></p>
+    <ul>
+        <li>Densitatea gheții: ρ<sub>gheață</sub> ≈ 0,92 g/cm³</li>
+        <li>Densitatea apei: ρ<sub>apă</sub> = 1,00 g/cm³</li>
+        <li>Fracția scufundată = ρ<sub>gheață</sub> / ρ<sub>apă</sub> = 0,92 = 92%</li>
+    </ul>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Ce este densitatea:</strong> Densitatea ne spune câtă masă există într-un anumit volum de substanță.</p>
+
+<p><strong>Cum comparăm densitățile:</strong></p>
+<ul>
+    <li>Dacă două obiecte au același volum, cel mai greu are densitate mai mare</li>
+    <li>Dacă două obiecte au aceeași masă, cel mai mic are densitate mai mare</li>
+</ul>
+
+<p><strong>Regula plutirii:</strong></p>
+<ul>
+    <li>Obiect cu densitate mai mică decât lichidul → PLUTEȘTE</li>
+    <li>Obiect cu densitate mai mare decât lichidul → SE SCUFUNDĂ</li>
+</ul>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>Formula densității:</h3>
+
+<div class="formula-box">
+    ρ = m / V
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>ρ</strong> (litera greacă „rho") = densitatea</li>
+    <li><strong>m</strong> = masa</li>
+    <li><strong>V</strong> = volumul</li>
+</ul>
+
+<h3>Unități de măsură:</h3>
+
+<table>
+    <tr>
+        <th>Mărime</th>
+        <th>Unitate SI</th>
+        <th>Unități uzuale</th>
+    </tr>
+    <tr>
+        <td>Masă (m)</td>
+        <td>kilogram (kg)</td>
+        <td>gram (g)</td>
+    </tr>
+    <tr>
+        <td>Volum (V)</td>
+        <td>metru cub (m³)</td>
+        <td>cm³, litru (L), mL</td>
+    </tr>
+    <tr>
+        <td>Densitate (ρ)</td>
+        <td>kg/m³</td>
+        <td>g/cm³</td>
+    </tr>
+</table>
+
+<h3>Transformări importante:</h3>
+
+<div class="formula-box">
+    1 g/cm³ = 1000 kg/m³<br><br>
+    1 L = 1000 cm³ = 0,001 m³<br><br>
+    1 mL = 1 cm³
+</div>
+
+<h3>Densități de referință:</h3>
+
+<table>
+    <tr>
+        <th>Substanță</th>
+        <th>Densitate (g/cm³)</th>
+        <th>Densitate (kg/m³)</th>
+    </tr>
+    <tr><td>Aer (la 20°C)</td><td>0,0012</td><td>1,2</td></tr>
+    <tr><td>Lemn de brad</td><td>0,5</td><td>500</td></tr>
+    <tr><td>Gheață</td><td>0,92</td><td>920</td></tr>
+    <tr><td><strong>Apă</strong></td><td><strong>1,00</strong></td><td><strong>1000</strong></td></tr>
+    <tr><td>Sticlă</td><td>2,5</td><td>2500</td></tr>
+    <tr><td>Aluminiu</td><td>2,7</td><td>2700</td></tr>
+    <tr><td>Fier</td><td>7,8</td><td>7800</td></tr>
+    <tr><td>Cupru</td><td>8,9</td><td>8900</td></tr>
+    <tr><td>Plumb</td><td>11,3</td><td>11300</td></tr>
+    <tr><td>Aur</td><td>19,3</td><td>19300</td></tr>
+</table>
+
+<h3>Formule derivate:</h3>
+
+<div class="formula-box">
+    m = ρ · V (pentru a calcula masa)<br><br>
+    V = m / ρ (pentru a calcula volumul)
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Densitatea și temperatura:</h3>
+
+<p>Feynman explică că atomii vibrează mai mult la temperaturi mai mari, ocupând mai mult spațiu. De aceea:</p>
+
+<ul>
+    <li>Când încălzim un corp, acesta se dilată → volumul crește → densitatea scade</li>
+    <li>Când răcim un corp, acesta se contractă → volumul scade → densitatea crește</li>
+</ul>
+
+<p><strong>Excepție:</strong> Apa are densitate maximă la 4°C! Sub această temperatură, se dilată (de aceea gheața plutește).</p>
+
+<h3>Legea atmosferei (Feynman):</h3>
+
+<p>Densitatea aerului scade exponențial cu altitudinea:</p>
+
+<div class="formula-box">
+    n = n₀ · e<sup>−mgh/kT</sup>
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li>n = densitatea la înălțimea h</li>
+    <li>n₀ = densitatea la nivelul mării</li>
+    <li>m = masa moleculei</li>
+    <li>g = accelerația gravitațională</li>
+    <li>k = constanta Boltzmann</li>
+    <li>T = temperatura</li>
+</ul>
+
+<h3>Condiția de plutire (cantitativ):</h3>
+
+<p>Fracția dintr-un corp plutitor care e scufundată:</p>
+
+<div class="formula-box">
+    Fracția scufundată = ρ<sub>obiect</sub> / ρ<sub>lichid</sub>
+</div>
+
+<p><strong>Exemplu pentru aisberg:</strong></p>
+<ul>
+    <li>ρ<sub>gheață</sub> = 920 kg/m³</li>
+    <li>ρ<sub>apă de mare</sub> = 1025 kg/m³</li>
+    <li>Fracția scufundată = 920/1025 ≈ 0,90 = 90%</li>
+</ul>
+
+<div class="info-box">
+    <strong>Aisberg:</strong> Doar ~10% din aisberg e vizibil deasupra apei! De aici expresia „vârful aisbergului".
+</div>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Un obiect greu se scufundă întotdeauna în apă."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Contează densitatea, nu masa absolută. O navă de 100.000 de tone plutește pentru că densitatea medie (oțel + aer) e mai mică decât a apei.
+</div>
+
+<p><strong>2. „Gheața plutește pe apă pentru că e rece."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Gheața plutește pentru că are o structură cristalină cu „găuri", ceea ce îi dă o densitate mai mică decât apa lichidă.
+</div>
+
+<p><strong>3. „Dacă turnăm ulei în apă, uleiul va forma un strat deasupra apei."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Uleiul are densitate (~0,9 g/cm³) mai mică decât apa (1,0 g/cm³), deci plutește deasupra.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce este important că gheața plutește pe apă?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Dacă gheața ar fi mai densă, ar cădea la fundul lacurilor și oceanelor. Iarna, straturile de gheață ar continua să se formeze la fund, iar vara nu s-ar mai topi. În cele din urmă, toată viața acvatică ar muri. Stratul de gheață de la suprafață acționează ca un izolator, protejând apa lichidă de dedesubt.
+</div>
+
+<p><strong>5. De ce baloanele cu heliu urcă în aer?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Heliul (ρ ≈ 0,18 kg/m³) e de ~7 ori mai puțin dens decât aerul (ρ ≈ 1,29 kg/m³). Balonul „plutește" în aer exact cum lemnul plutește în apă — aerul mai dens îl împinge în sus (forța Arhimede).
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un cub de lemn are latura de 10 cm și masa de 600 g. Calculează densitatea lemnului și determină dacă plutește în apă.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong></p>
+    <ul>
+        <li>Latura cubului: l = 10 cm</li>
+        <li>Masa: m = 600 g</li>
+        <li>Densitatea apei: ρ<sub>apă</sub> = 1 g/cm³</li>
+    </ul>
+
+    <p><strong>Pasul 1:</strong> Calculăm volumul cubului</p>
+    <p class="formula">V = l³ = 10³ = 1000 cm³</p>
+
+    <p><strong>Pasul 2:</strong> Calculăm densitatea</p>
+    <p class="formula">ρ = m / V = 600 g / 1000 cm³ = 0,6 g/cm³</p>
+
+    <p><strong>Pasul 3:</strong> Comparăm cu apa</p>
+    <p>ρ<sub>lemn</sub> = 0,6 g/cm³ < ρ<sub>apă</sub> = 1 g/cm³</p>
+
+    <div class="result">Lemnul are densitatea 0,6 g/cm³ și PLUTEȘTE în apă (40% deasupra, 60% sub apă)</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Maria aruncă în apă un ou proaspăt și acesta se scufundă. Apoi dizolvă sare în apă și oul începe să plutească. Explică ce s-a întâmplat din punct de vedere al densității.</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>Densitatea oului proaspăt: ~1,03-1,05 g/cm³</li>
+        <li>Densitatea apei pure: 1,00 g/cm³</li>
+        <li>Oul e mai dens decât apa pură → se scufundă</li>
+    </ul>
+    <p>Când Maria adaugă sare:</p>
+    <ul>
+        <li>Sarea se dizolvă și crește densitatea apei</li>
+        <li>Apa saturată cu sare: ~1,20 g/cm³</li>
+        <li>Acum ρ<sub>ou</sub> < ρ<sub>apă sărată</sub> → oul plutește!</li>
+    </ul>
+    <p><strong>Aplicație:</strong> În Marea Moartă (foarte sărată, ρ ≈ 1,24 g/cm³), oamenii plutesc fără efort!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 1</strong> „Atoms in Motion" — explicația structurii gheții și de ce plutește</li>
+    <li><strong>Vol. I, Cap. 39</strong> „The Kinetic Theory of Gases" — relația presiune-densitate</li>
+    <li><strong>Vol. I, Cap. 40</strong> „The Principles of Statistical Mechanics" — atmosfera exponențială</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu densitatea</th>
+    </tr>
+    <tr>
+        <td><strong>Chimie</strong></td>
+        <td>Structura cristalină a gheții, legătura de hidrogen</td>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Plutirea peștilor (vezica înotătoare), supraviețuirea în lacurile înghețate</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Stratificarea oceanelor, curenții marini, formarea aisbergurilor</td>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Construcția navelor, submarine, baloane meteorologice</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>DEFINIȚIE:</strong> Densitatea = câtă masă încape într-un volum</p>
+
+    <div class="formula-box">
+        ρ = m / V
+    </div>
+
+    <h3>UNITĂȚI:</h3>
+    <table>
+        <tr>
+            <th>SI</th>
+            <th>Uzual</th>
+            <th>Conversie</th>
+        </tr>
+        <tr>
+            <td>kg/m³</td>
+            <td>g/cm³</td>
+            <td>1 g/cm³ = 1000 kg/m³</td>
+        </tr>
+    </table>
+
+    <h3>REGULA PLUTIRII:</h3>
+    <div class="formula-box">
+        ρ<sub>obiect</sub> < ρ<sub>lichid</sub> → PLUTEȘTE<br><br>
+        ρ<sub>obiect</sub> > ρ<sub>lichid</sub> → SE SCUFUNDĂ
+    </div>
+
+    <h3>DENSITĂȚI CHEIE:</h3>
+    <table>
+        <tr>
+            <th>Apă</th>
+            <th>Gheață</th>
+            <th>Aer</th>
+            <th>Fier</th>
+        </tr>
+        <tr>
+            <td>1,00 g/cm³</td>
+            <td>0,92 g/cm³</td>
+            <td>0,0012 g/cm³</td>
+            <td>7,8 g/cm³</td>
+        </tr>
+    </table>
+
+    <h3>DE CE PLUTEȘTE GHEAȚA? (Feynman)</h3>
+    <p>„Structura cristalină a gheții are «găuri» — când se topește, moleculele umple găurile și apa devine mai densă."</p>
+</div>
+
+<footer>
+        <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em> © Caltech</p>
+    </footer>
+
+        </main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

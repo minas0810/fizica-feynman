@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 7: Fenomene termice — De ce gheața se topește?</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'\$\$',right:'\$\$',display:true},{left:'\$',right:'\$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="7">
+
+    <!-- ===== NAVIGAȚIE ===== -->
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+
+
+    <!-- Header -->
+    <section class="hero">
+        <h1>Fizica cu Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="module-nav module-nav--top"></div>
+
+    <!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 7</div>
+    <h1>FENOMENE TERMICE</h1>
+    <div class="subtitle">„De ce gheața se topește? — Căldura ca mișcare a atomilor"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Ce este căldura?</h2>
+
+<p>Feynman oferă cea mai clară explicație a naturii căldurii:</p>
+
+<blockquote>
+    <p>„The jiggling motion is what we represent as heat: when we increase the temperature, we increase the motion. Heat is jiggling motion — atoms are in perpetual motion, moving faster when hotter."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Mișcarea de agitație este ceea ce numim căldură: când creștem temperatura, creștem mișcarea. Căldura este mișcare de agitație — atomii sunt în mișcare perpetuă, mișcându-se mai repede când sunt mai fierbinți."
+</div>
+
+<h2>De ce se topește gheața?</h2>
+
+<p>Feynman explică topirea la nivel atomic:</p>
+
+<blockquote>
+    <p>„At low temperatures, molecules lock into crystalline patterns. As temperature increases, vibration amplitude increases until molecules 'shake themselves out of place.' When heated enough, molecules break apart from each other."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „La temperaturi scăzute, moleculele se blochează în tipare cristaline. Pe măsură ce temperatura crește, amplitudinea vibrației crește până când moleculele «se scutură din poziție». Când sunt încălzite suficient, moleculele se desprind unele de altele."
+</div>
+
+<h2>Evaporarea și răcirea</h2>
+
+<p>Despre răcirea prin evaporare, Feynman explică:</p>
+
+<blockquote>
+    <p>„Molecules that escape the liquid have more energy than average, leaving behind molecules with less average motion — the liquid gradually cools if it evaporates. When vapor molecules return to liquid, attraction speeds them up, generating heat."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Moleculele care scapă din lichid au mai multă energie decât media, lăsând în urmă molecule cu o mișcare medie mai mică — lichidul se răcește treptat dacă se evaporă. Când moleculele de vapori revin în lichid, atracția le accelerează, generând căldură."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Temperatura nu este o substanță misterioasă — este pur și simplu <strong>cât de repede vibrează atomii</strong>. Toate fenomenele termice — topire, fierbere, răcire — se reduc la accelerarea sau încetinirea mișcării moleculare.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este temperatura?</h2>
+
+<p><strong>Temperatura</strong> măsoară cât de repede vibrează atomii și moleculele unui corp.</p>
+
+<ul>
+    <li><strong>Corp fierbinte</strong> = atomi care vibrează rapid</li>
+    <li><strong>Corp rece</strong> = atomi care vibrează lent</li>
+    <li><strong>Zero absolut</strong> (-273°C) = mișcare minimă posibilă</li>
+</ul>
+
+<div class="info-box">
+    <strong>Analogie:</strong> Imaginează-ți o cutie plină cu bile care sar. „Temperatura" cutiei e cât de repede sar bilele. Dacă le lovești cu o paletă (încălzești), sar mai repede. Dacă le lași în pace, treptat se liniștesc (se răcesc).
+</div>
+
+<h2>Ce este căldura?</h2>
+
+<p><strong>Căldura</strong> (Q) este energia transferată de la un corp la altul din cauza diferenței de temperatură.</p>
+
+<ul>
+    <li>Căldura CURGE întotdeauna de la cald spre rece</li>
+    <li>Când atomii „rapizi" (calzi) lovesc atomii „lenți" (reci), îi accelerează</li>
+    <li>Transferul continuă până când toți atomii au aceeași viteză medie (echilibru termic)</li>
+</ul>
+
+<h2>Cele trei stări ale materiei — explicație termică</h2>
+
+<table>
+    <tr>
+        <th>Stare</th>
+        <th>Ce fac moleculele</th>
+        <th>Temperatură</th>
+    </tr>
+    <tr>
+        <td><strong>SOLID</strong></td>
+        <td>Vibrează în poziții fixe</td>
+        <td>Scăzută</td>
+    </tr>
+    <tr>
+        <td><strong>LICHID</strong></td>
+        <td>Alunecă unele peste altele, vibrează moderat</td>
+        <td>Medie</td>
+    </tr>
+    <tr>
+        <td><strong>GAZ</strong></td>
+        <td>Zboară liber, se ciocnesc, vibrează rapid</td>
+        <td>Ridicată</td>
+    </tr>
+</table>
+
+<h2>Transformări de stare (schimbări de fază)</h2>
+
+<table>
+    <tr>
+        <th>Transformare</th>
+        <th>De la → La</th>
+        <th>Ce se întâmplă</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td><strong>Topire</strong></td>
+        <td>Solid → Lichid</td>
+        <td>Moleculele se „scutură" din poziții</td>
+        <td>Gheață → Apă</td>
+    </tr>
+    <tr>
+        <td><strong>Solidificare</strong></td>
+        <td>Lichid → Solid</td>
+        <td>Moleculele se „blochează" în cristal</td>
+        <td>Apă → Gheață</td>
+    </tr>
+    <tr>
+        <td><strong>Vaporizare</strong></td>
+        <td>Lichid → Gaz</td>
+        <td>Moleculele „sar" din lichid</td>
+        <td>Apă → Abur</td>
+    </tr>
+    <tr>
+        <td><strong>Condensare</strong></td>
+        <td>Gaz → Lichid</td>
+        <td>Moleculele se „liniștesc" în lichid</td>
+        <td>Abur → Picături</td>
+    </tr>
+    <tr>
+        <td><strong>Sublimare</strong></td>
+        <td>Solid → Gaz</td>
+        <td>Moleculele „sar" direct din cristal</td>
+        <td>Gheață → Vapori (la frig)</td>
+    </tr>
+</table>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul (Feynman)</th>
+    </tr>
+    <tr>
+        <td>„Căldura și temperatura sunt același lucru"</td>
+        <td>Temperatura = cât de repede vibrează; Căldura = energie transferată</td>
+    </tr>
+    <tr>
+        <td>„Frigul intră în casă iarna"</td>
+        <td>Căldura IESE din casă; frigul nu există ca entitate fizică</td>
+    </tr>
+    <tr>
+        <td>„Apa fierbe întotdeauna la 100°C"</td>
+        <td>La altitudine mare (presiune mică), fierbe sub 100°C</td>
+    </tr>
+    <tr>
+        <td>„La topire, temperatura crește"</td>
+        <td>La topire, temperatura rămâne constantă — energia merge în ruperea legăturilor</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: De ce transpirația te răcorește</h2>
+
+<p><strong>Situația:</strong> Într-o zi călduroasă, transpiri. Când bate vântul, simți răcoare.</p>
+
+<p><strong>Explicația fizică (Feynman):</strong></p>
+<ul>
+    <li>Moleculele de apă de pe piele au viteze diferite</li>
+    <li>Cele mai rapide au suficientă energie să „scape" (evaporare)</li>
+    <li>Rămân pe piele moleculele mai lente (mai reci)</li>
+    <li>Pielea se răcește pentru că moleculele „fierbinți" au plecat!</li>
+</ul>
+
+<blockquote>
+    <p>„Molecules that escape have more energy than average, leaving behind molecules with less average motion — the liquid gradually cools."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Moleculele care scapă au mai multă energie decât media, lăsând în urmă molecule cu o mișcare medie mai mică — lichidul se răcește treptat."
+</div>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce simți mai multă răcoare când bate vântul?</em></p>
+
+<div class="answer">
+    Vântul îndepărtează vaporii de deasupra pielii, permițând mai multor molecule să evaporeze. Mai multă evaporare = mai multă răcire!
+</div>
+
+<h2>Exemplul 2: De ce metalul pare mai rece decât lemnul</h2>
+
+<p><strong>Situația:</strong> Atingi un obiect de metal și unul de lemn în aceeași cameră. Metalul pare mult mai rece.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Ambele au aceeași temperatură (temperatura camerei)!</li>
+    <li>Metalul conduce căldura foarte bine</li>
+    <li>Când atingi metalul, căldura din mâna ta se transferă rapid în metal</li>
+    <li>Mâna pierde căldură repede → simți „rece"</li>
+    <li>Lemnul conduce slab căldura → mâna pierde căldură încet → pare „cald"</li>
+</ul>
+
+<div class="info-box">
+    <strong>Concluzie:</strong> Nu simți temperatura obiectului — simți cât de repede pierzi căldură!
+</div>
+
+<h2>Exemplul 3: De ce apa fierbe mai repede la munte</h2>
+
+<p><strong>Situația:</strong> Pe vârful Everestului, apa fierbe la ~70°C, nu la 100°C.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Fierberea apare când moleculele au suficientă energie să „scape" de presiunea aerului</li>
+    <li>La altitudine mare, presiunea aerului e mai mică</li>
+    <li>Moleculele trebuie să „lupte" mai puțin → pot scăpa la temperatură mai joasă</li>
+    <li>La nivel mare de presiune (oală sub presiune), apa fierbe peste 100°C</li>
+</ul>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce mâncarea se gătește mai greu la munte?</em></p>
+
+<div class="answer">
+    Apa fierbe la temperatură mai mică, deci nu poate încălzi mâncarea atât de mult. Cartofii trebuie fierți mai mult timp!
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Răcirea prin evaporare</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea răcirii cauzate de evaporare (principiul lui Feynman).</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Alcool sau apă de colonie</li>
+        <li>Vată sau hârtie</li>
+        <li>Termometru (opțional)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune câteva picături de alcool pe dosul palmei</li>
+        <li>Suflă ușor peste alcool</li>
+        <li>Observă senzația de răcoare</li>
+        <li>Dacă ai termometru, măsoară temperatura pielii înainte și după</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Pielea se răcește simțitor când alcoolul se evaporă</li>
+        <li>Suflatul intensifică efectul</li>
+        <li>Alcoolul „dispare" — se evaporă</li>
+    </ul>
+
+    <div class="result">Concluzie: Moleculele cele mai „fierbinți" pleacă, lăsând în urmă molecule mai „reci" — răcire prin evaporare!</div>
+
+    <p><strong>Varianta avansată:</strong> Compară evaporarea apei și alcoolului. Care răcește mai mult? (Alcoolul se evaporă mai repede!)</p>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Temperatura constantă la topire</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că temperatura rămâne constantă în timpul topirii.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Cuburi de gheață</li>
+        <li>Pahar cu apă</li>
+        <li>Termometru</li>
+        <li>Cronometru</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune cuburi de gheață într-un pahar</li>
+        <li>Introdu termometrul în amestec</li>
+        <li>Notează temperatura la fiecare 2 minute</li>
+        <li>Continuă până când toată gheața s-a topit</li>
+        <li>Continuă să notezi până când temperatura crește semnificativ</li>
+    </ol>
+
+    <p><strong>Tabel de rezultate (exemplu):</strong></p>
+    <table>
+        <tr>
+            <th>Timp (min)</th>
+            <th>Temperatură (°C)</th>
+            <th>Stare gheață</th>
+        </tr>
+        <tr><td>0</td><td>0</td><td>Gheață + apă</td></tr>
+        <tr><td>2</td><td>0</td><td>Gheață + apă</td></tr>
+        <tr><td>4</td><td>0</td><td>Gheață + apă</td></tr>
+        <tr><td>6</td><td>0</td><td>Puțină gheață</td></tr>
+        <tr><td>8</td><td>0</td><td>Gheață dispărută</td></tr>
+        <tr><td>10</td><td>2</td><td>Doar apă</td></tr>
+        <tr><td>12</td><td>5</td><td>Doar apă</td></tr>
+    </table>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Temperatura rămâne la 0°C cât timp există gheață</li>
+        <li>Energia (căldura) merge în ruperea legăturilor, nu în creșterea temperaturii</li>
+        <li>După topirea completă, temperatura începe să crească</li>
+    </ul>
+
+    <div class="result">Concluzie: Căldura absorbită la topire (căldură latentă) nu schimbă temperatura — rupe legăturile moleculare!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Conducția termică — Metal vs. Lemn</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea diferenței de conductivitate termică.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Lingură de metal</li>
+        <li>Lingură de lemn</li>
+        <li>Apă fierbinte într-un pahar</li>
+        <li>Cuburi de gheață</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune ambele linguri în apa fierbinte</li>
+        <li>După 30 de secunde, atinge mânerul fiecărei linguri</li>
+        <li>Repetă experimentul invers: pune gheață pe ambele linguri și observă care topește gheața mai repede</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Mânerul metalic devine fierbinte rapid</li>
+        <li>Mânerul de lemn rămâne rece</li>
+        <li>Gheața se topește mult mai repede pe metal</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Explicație:</strong> Metalul are electroni liberi care transportă energie rapid de la un atom la altul. În lemn, energia se transmite doar prin vibrații directe — mult mai lent.
+    </div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Ce este temperatura:</strong> Măsura agitației termice a moleculelor — cât de repede vibrează.</p>
+
+<p><strong>Ce este căldura:</strong> Energia transferată între corpuri cu temperaturi diferite.</p>
+
+<p><strong>Echilibru termic:</strong> Când două corpuri ajung la aceeași temperatură, transferul de căldură se oprește.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>Scale de temperatură:</h3>
+
+<table>
+    <tr>
+        <th>Scală</th>
+        <th>Punct de îngheț</th>
+        <th>Punct de fierbere</th>
+        <th>Zero absolut</th>
+    </tr>
+    <tr>
+        <td>Celsius (°C)</td>
+        <td>0°C</td>
+        <td>100°C</td>
+        <td>-273°C</td>
+    </tr>
+    <tr>
+        <td>Kelvin (K)</td>
+        <td>273 K</td>
+        <td>373 K</td>
+        <td>0 K</td>
+    </tr>
+    <tr>
+        <td>Fahrenheit (°F)</td>
+        <td>32°F</td>
+        <td>212°F</td>
+        <td>-460°F</td>
+    </tr>
+</table>
+
+<h3>Conversii:</h3>
+
+<div class="formula-box">
+    T(K) = T(°C) + 273<br><br>
+    T(°C) = T(K) - 273
+</div>
+
+<h3>Căldura absorbită sau cedată:</h3>
+
+<div class="formula-box">
+    Q = m · c · ΔT
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>Q</strong> = căldura (în Joule, J)</li>
+    <li><strong>m</strong> = masa (în kg)</li>
+    <li><strong>c</strong> = căldura specifică (J/kg·°C)</li>
+    <li><strong>ΔT</strong> = variația temperaturii (°C sau K)</li>
+</ul>
+
+<h3>Călduri specifice importante:</h3>
+
+<table>
+    <tr>
+        <th>Substanță</th>
+        <th>c (J/kg·°C)</th>
+    </tr>
+    <tr><td>Apă</td><td>4186</td></tr>
+    <tr><td>Gheață</td><td>2090</td></tr>
+    <tr><td>Aluminiu</td><td>900</td></tr>
+    <tr><td>Fier</td><td>450</td></tr>
+    <tr><td>Cupru</td><td>390</td></tr>
+</table>
+
+<div class="info-box">
+    <strong>De notat:</strong> Apa are căldura specifică foarte mare — de aceea oceanele moderează clima și de aceea apa e folosită la răcire!
+</div>
+
+<h3>Căldura latentă (la schimbarea de stare):</h3>
+
+<div class="formula-box">
+    Q = m · L
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>L</strong> = căldura latentă (J/kg)</li>
+    <li><strong>L<sub>topire</sub></strong> (gheață) = 334.000 J/kg</li>
+    <li><strong>L<sub>vaporizare</sub></strong> (apă) = 2.260.000 J/kg</li>
+</ul>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Energia cinetică medie și temperatura (Feynman):</h3>
+
+<div class="formula-box">
+    E<sub>cinetică medie</sub> = ³⁄₂ · k · T
+</div>
+
+<p>Unde k = 1,38 × 10⁻²³ J/K (constanta Boltzmann)</p>
+
+<p>Aceasta este legătura directă dintre temperatură (macroscopică) și mișcarea moleculară (microscopică)!</p>
+
+<h3>Transferul de căldură — cele trei moduri:</h3>
+
+<table>
+    <tr>
+        <th>Mod</th>
+        <th>Mecanism</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td><strong>Conducție</strong></td>
+        <td>Vibrațiile atomilor se transmit de la vecin la vecin</td>
+        <td>Lingura se încălzește în ceai</td>
+    </tr>
+    <tr>
+        <td><strong>Convecție</strong></td>
+        <td>Materia caldă se mișcă fizic</td>
+        <td>Aerul cald urcă, cel rece coboară</td>
+    </tr>
+    <tr>
+        <td><strong>Radiație</strong></td>
+        <td>Unde electromagnetice (nu e nevoie de materie)</td>
+        <td>Căldura de la Soare</td>
+    </tr>
+</table>
+
+<h3>Feynman despre banda de cauciuc:</h3>
+
+<p>Experiment surprinzător: întinde rapid o bandă de cauciuc și pune-o la buze — e CALDĂ! Relaxează-o rapid — e RECE!</p>
+
+<blockquote>
+    <p>„Stretching rubber heats it; releasing tension cools it. Heating stretched rubber causes contraction."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Întinderea cauciucului îl încălzește; eliberarea tensiunii îl răcește. Încălzirea cauciucului întins provoacă contracția acestuia."
+</div>
+
+<p>Explicația: Moleculele de cauciuc sunt lanțuri încâlcite. La întindere, se aliniază; agitația termică le face să vrea să revină la încâlceală → contracție.</p>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Când gheața se topește, temperatura ei crește de la 0°C."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> În timpul topirii, temperatura rămâne constantă la 0°C. Căldura absorbită rupe legăturile moleculare (căldură latentă), nu crește agitația.
+</div>
+
+<p><strong>2. „Frigul poate trece de la un obiect rece la unul cald."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> „Frigul" nu există ca entitate fizică. Căldura trece de la cald la rece, nu invers. Simțim „frig" când corpul nostru pierde căldură.
+</div>
+
+<p><strong>3. „Evaporarea poate avea loc la orice temperatură, nu doar la fierbere."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Moleculele cu energie peste medie pot „scăpa" din lichid la orice temperatură. De aceea rufele se usucă și la 20°C, nu doar la 100°C!
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce simțim răcoare când ieșim din piscină într-o zi însorită?</strong></p>
+<div class="answer">
+    <strong>Răspuns (Feynman):</strong> Apa de pe piele se evaporă. Moleculele cele mai energetice (calde) părăsesc pielea, lăsând în urmă molecule mai lente (reci). Soarele accelerează evaporarea → răcire mai intensă!
+</div>
+
+<p><strong>5. De ce o oală de apă fierbinte se răcește mai repede dacă o pui în curent de aer?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Curentul de aer îndepărtează aerul cald din jurul oalei și îl înlocuiește cu aer rece. Diferența mare de temperatură între oală și aerul proaspăt menține un transfer rapid de căldură. Plus, accelerează evaporarea de la suprafață.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Câtă căldură e necesară pentru a încălzi 2 kg de apă de la 20°C la 80°C?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong></p>
+    <ul>
+        <li>Masa: m = 2 kg</li>
+        <li>Căldura specifică a apei: c = 4186 J/kg·°C</li>
+        <li>Temperatura inițială: T₁ = 20°C</li>
+        <li>Temperatura finală: T₂ = 80°C</li>
+    </ul>
+
+    <p><strong>Calcul:</strong></p>
+    <p class="formula">ΔT = T₂ - T₁ = 80 - 20 = 60°C</p>
+    <p class="formula">Q = m · c · ΔT = 2 × 4186 × 60</p>
+    <p class="formula">Q = 502.320 J ≈ 502 kJ</p>
+
+    <div class="result">Căldura necesară: Q ≈ 502 kJ (sau ~0,14 kWh)</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Maria pune gheață în limonadă. După 5 minute, gheața s-a topit pe jumătate, dar temperatura limonadei e tot 0°C. Ea spune că gheața „nu funcționează". Are dreptate?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong> Maria NU are dreptate. Gheața funcționează perfect!
+    <ul>
+        <li>Limonada caldă cedează căldură gheții</li>
+        <li>Această căldură topește gheața (căldură latentă)</li>
+        <li>Cât timp există gheață, temperatura rămâne la 0°C</li>
+        <li>Gheața absoarbe căldură FĂRĂ să-și schimbe temperatura</li>
+        <li>Când gheața se va topi complet, abia atunci temperatura va crește</li>
+    </ul>
+    <p>De fapt, gheața face exact ce trebuie — menține băutura rece absorbind căldura prin topire!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 1</strong> „Atoms in Motion" — căldura ca mișcare moleculară</li>
+    <li><strong>Vol. I, Cap. 44</strong> „The Laws of Thermodynamics" — procese termice</li>
+    <li><strong>Vol. I, Cap. 45</strong> „Illustrations of Thermodynamics" — aplicații</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu fenomenele termice</th>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Reglarea temperaturii corpului, transpirație, metabolismul</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Clima, curenții oceanici, ciclul apei</td>
+    </tr>
+    <tr>
+        <td><strong>Chimie</strong></td>
+        <td>Reacții endoterme și exoterme, energie de legătură</td>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Frigidere, motoare termice, izolația caselor</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>TEMPERATURA</strong> = măsura agitației moleculare (cât de repede vibrează atomii)</p>
+    <p><strong>CĂLDURA</strong> = energia transferată din cauza diferenței de temperatură</p>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Căldura absorbită: Q = m · c · ΔT<br><br>
+        Căldura latentă: Q = m · L<br><br>
+        Conversie: T(K) = T(°C) + 273
+    </div>
+
+    <h3>TRANSFORMĂRI DE STARE:</h3>
+    <table>
+        <tr>
+            <th>Solid → Lichid</th>
+            <th>Lichid → Gaz</th>
+            <th>Gaz → Lichid</th>
+        </tr>
+        <tr>
+            <td>TOPIRE</td>
+            <td>VAPORIZARE</td>
+            <td>CONDENSARE</td>
+        </tr>
+    </table>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Căldura este mișcare de agitație — atomii se mișcă mai repede când sunt mai fierbinți."</p>
+
+    <h3>PUNCTE CHEIE:</h3>
+    <ul>
+        <li>La topire/fierbere, temperatura rămâne constantă</li>
+        <li>Evaporarea răcește (moleculele rapide pleacă)</li>
+        <li>Căldura curge DOAR de la cald spre rece</li>
+    </ul>
+</div>
+
+<footer>
+        <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em> © Caltech</p>
+    </footer>
+
+        </main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

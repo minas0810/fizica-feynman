@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 3: Mișcarea corpurilor</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'\$\$',right:'\$\$',display:true},{left:'\$',right:'\$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="3">
+
+    <!-- ===== NAVIGAȚIE ===== -->
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+
+
+    <!-- Header -->
+    <section class="hero">
+        <h1>Fizica cu Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="module-nav module-nav--top"></div>
+
+    <!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 3</div>
+    <h1>MIȘCAREA CORPURILOR</h1>
+    <div class="subtitle">„Unde ești? Depinde de cine întreabă."</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental</h2>
+
+<p>În capitolul despre mișcare, Feynman introduce descrierea matematică a mișcării într-un mod captivant, pornind de la observații simple:</p>
+
+<blockquote>
+    <p>„In order to find the laws governing the various changes that take place in bodies over time, we must be able to describe the changes and have some way to record them. The simplest change to observe in a body is the apparent change in its position with time, which we call motion."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Pentru a găsi legile care guvernează diversele schimbări ce au loc în corpuri de-a lungul timpului, trebuie să putem descrie aceste schimbări și să avem o metodă de a le înregistra. Cea mai simplă schimbare de observat la un corp este schimbarea aparentă a poziției sale în timp, pe care o numim <strong>mișcare</strong>."
+</div>
+
+<h2>Paradoxul lui Zenon</h2>
+
+<p>Feynman menționează că grecii antici s-au chinuit să înțeleagă viteza. Paradoxul lui Zenon despre Ahile și broasca țestoasă ilustrează dificultatea:</p>
+
+<blockquote>
+    <p>„Zeno's Achilles paradox demonstrates that infinite division of finite time is possible. Achilles can never catch the tortoise, for he must first reach where the tortoise was, but by then the tortoise has moved ahead..."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Paradoxul lui Ahile al lui Zenon demonstrează că divizarea infinită a timpului finit este posibilă. Ahile nu poate niciodată să prindă broasca țestoasă, căci trebuie mai întâi să ajungă acolo unde era broasca, dar până atunci broasca s-a mai deplasat..."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Mișcarea pare simplă, dar definiția precisă a vitezei necesită gândire atentă. Când spunem că o mașină merge cu 60 km/h, ce înseamnă exact la un moment dat, dacă în acel moment nu parcurge nicio distanță?
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este mișcarea?</h2>
+
+<p><strong>Mișcarea</strong> este schimbarea poziției unui corp față de un <strong>reper</strong> (un punct sau obiect de referință), pe măsură ce timpul trece.</p>
+
+<p>Dar atenție: <strong>mișcarea este relativă!</strong> Asta înseamnă că depinde de cine privește.</p>
+
+<h2>Relativitatea mișcării</h2>
+
+<p>Imaginează-ți că stai într-un tren care pleacă din gară:</p>
+
+<table>
+    <tr>
+        <th>Observator</th>
+        <th>Ce vede</th>
+        <th>Cine e în mișcare?</th>
+    </tr>
+    <tr>
+        <td>Tu, în tren</td>
+        <td>Peronul se depărtează</td>
+        <td>Peronul se mișcă</td>
+    </tr>
+    <tr>
+        <td>Prietenul tău pe peron</td>
+        <td>Trenul se depărtează</td>
+        <td>Tu te miști</td>
+    </tr>
+    <tr>
+        <td>Un astronaut</td>
+        <td>Ambii vă mișcați odată cu Pământul</td>
+        <td>Toți vă mișcați!</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Concluzie:</strong> Nu există mișcare „absolută". Spunem că un corp se mișcă doar <strong>față de ceva</strong> (un sistem de referință).
+</div>
+
+<h2>Repaus și mișcare</h2>
+
+<p><strong>Repaus</strong> = poziția corpului NU se schimbă față de reper</p>
+<p><strong>Mișcare</strong> = poziția corpului SE schimbă față de reper</p>
+
+<p>Un corp poate fi simultan în repaus față de un reper și în mișcare față de altul!</p>
+
+<h2>Traiectoria și deplasarea</h2>
+
+<table>
+    <tr>
+        <th>Concept</th>
+        <th>Definiție</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td><strong>Traiectorie</strong></td>
+        <td>Linia descrisă de un corp în mișcare (toate pozițiile prin care trece)</td>
+        <td>Urma lăsată de un avion în cer</td>
+    </tr>
+    <tr>
+        <td><strong>Drum parcurs (d)</strong></td>
+        <td>Lungimea totală a traiectoriei</td>
+        <td>Dacă mergi de acasă la școală ocolind, drumul e mai lung</td>
+    </tr>
+    <tr>
+        <td><strong>Deplasare (Δx)</strong></td>
+        <td>Distanța „în linie dreaptă" de la start la finish</td>
+        <td>Distanța directă casă-școală</td>
+    </tr>
+</table>
+
+<h2>Tipuri de traiectorii</h2>
+
+<table>
+    <tr>
+        <th>Tip</th>
+        <th>Descriere</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td><strong>Rectilinie</strong></td>
+        <td>Linie dreaptă</td>
+        <td>Mașină pe autostradă dreaptă</td>
+    </tr>
+    <tr>
+        <td><strong>Curbilinie</strong></td>
+        <td>Linie curbă</td>
+        <td>Minge aruncată</td>
+    </tr>
+    <tr>
+        <td><strong>Circulară</strong></td>
+        <td>Cerc</td>
+        <td>Carusel, roată de bicicletă</td>
+    </tr>
+</table>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul</th>
+    </tr>
+    <tr>
+        <td>„Dacă stau pe loc, nu mă mișc"</td>
+        <td>Te miști odată cu Pământul (~1670 km/h la ecuator!)</td>
+    </tr>
+    <tr>
+        <td>„Drumul parcurs = deplasarea"</td>
+        <td>Doar pe traiectorie dreaptă, fără întoarcere</td>
+    </tr>
+    <tr>
+        <td>„Viteza e mereu constantă"</td>
+        <td>De obicei variază; vorbim de viteză medie sau instantanee</td>
+    </tr>
+    <tr>
+        <td>„Un corp în repaus nu are energie"</td>
+        <td>Are energie potențială și energie internă (atomii vibrează!)</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Escalatorul din mall</h2>
+
+<p><strong>Situația concretă:</strong> Stai pe un escalator care urcă. Un prieten te privește de jos, altul merge lângă tine pe escalator.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Față de prietenul de jos: ești în <strong>mișcare</strong> (te ridici)</li>
+    <li>Față de prietenul de pe escalator: ești în <strong>repaus</strong> (nu te miști față de el)</li>
+    <li>Față de Pământ: ești în mișcare</li>
+    <li>Față de Soare: ești în mișcare rapidă (Pământul se învârte)</li>
+</ul>
+
+<p><strong>Întrebare de reflecție:</strong> <em>Dacă mergi în sens opus pe escalator, cu exact aceeași viteză cu care urcă scările, ce se întâmplă?</em></p>
+
+<h2>Exemplul 2: GPS-ul mașinii</h2>
+
+<p><strong>Situația concretă:</strong> GPS-ul arată că mai ai 30 km până la destinație, dar timpul estimat este 45 minute. De ce nu 30 minute (la 60 km/h)?</p>
+
+<p><strong>Explicația fizică:</strong> GPS-ul calculează drumul real (cu toate curbele și ocolitoarele), nu distanța în linie dreaptă. De asemenea, estimează viteza medie ținând cont de semafoare, trafic, limite de viteză.</p>
+
+<ul>
+    <li><strong>Deplasarea</strong> (linia dreaptă) ar putea fi doar 20 km</li>
+    <li><strong>Drumul parcurs</strong> (pe șosea) este 30 km</li>
+    <li><strong>Viteza medie estimată</strong> = 30 km ÷ 0,75 h = 40 km/h</li>
+</ul>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce viteza medie pe drum e mai mică decât viteza maximă permisă?</em></p>
+
+<h2>Exemplul 3: Alergătorul pe stadion</h2>
+
+<p><strong>Situația concretă:</strong> Un alergător face 4 tururi complete pe o pistă de 400 m. Care e drumul parcurs și care e deplasarea?</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li><strong>Drumul parcurs:</strong> 4 × 400 m = <strong>1600 m</strong></li>
+    <li><strong>Deplasarea:</strong> A plecat și a ajuns în același loc → <strong>0 m</strong></li>
+</ul>
+
+<div class="info-box">
+    <strong>Observație:</strong> Deplasarea poate fi zero chiar dacă ai alergat mult! Deplasarea măsoară „cât de departe ai ajuns", nu „cât ai muncit".
+</div>
+
+<p><strong>Întrebare de reflecție:</strong> <em>Dacă alergătorul s-ar opri la jumătatea turului 3, care ar fi deplasarea?</em></p>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Mișcarea relativă — Trenul de jucărie</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea faptului că mișcarea depinde de sistemul de referință ales.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un trenuleț de jucărie (sau o mașinuță pe baterii)</li>
+        <li>O figurină mică (de pus pe tren)</li>
+        <li>O bilă mică</li>
+        <li>O masă sau suprafață plană</li>
+        <li>Un telefon pentru filmare (opțional)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune figurina pe trenuleț</li>
+        <li>Pornește trenulețul să meargă cu viteză constantă</li>
+        <li>Observă figurina din camera ta (față de masă)</li>
+        <li>Imaginează-ți ce vede figurina (față de tren)</li>
+        <li>Aruncă ușor bila pe tren în timp ce se mișcă</li>
+        <li>Observă traiectoria bilei față de tren și față de cameră</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <table>
+        <tr>
+            <th>Observator</th>
+            <th>Ce vede</th>
+        </tr>
+        <tr>
+            <td>Tu (față de masă)</td>
+            <td>Figurina se mișcă odată cu trenul</td>
+        </tr>
+        <tr>
+            <td>Figurina (față de tren)</td>
+            <td>Ea stă pe loc, masa se mișcă</td>
+        </tr>
+        <tr>
+            <td>Bila (văzută din cameră)</td>
+            <td>Traiectorie curbă (parabolă)</td>
+        </tr>
+        <tr>
+            <td>Bila (văzută din tren)</td>
+            <td>Cade „drept în jos"</td>
+        </tr>
+    </table>
+
+    <p><strong>Interpretare:</strong> Același eveniment fizic arată diferit din perspective diferite. Legile fizicii sunt aceleași, dar descrierea mișcării depinde de sistemul de referință.</p>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Traiectorie și deplasare — Traseu pe hartă</h3>
+
+    <p><strong>Obiectiv:</strong> Înțelegerea diferenței dintre drum parcurs și deplasare.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O foaie de hârtie milimetrică (sau caroiată)</li>
+        <li>Creion colorat</li>
+        <li>Riglă</li>
+        <li>Sfoară sau ață</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Marchează un punct A (Start) și un punct B (Finish)</li>
+        <li>Desenează un traseu sinuos de la A la B (ca un drum de munte)</li>
+        <li>Măsoară <strong>drumul parcurs</strong>: pune sfoara pe traseu, apoi măsoar-o cu rigla</li>
+        <li>Măsoară <strong>deplasarea</strong>: trasează linia dreaptă A→B și măsoar-o</li>
+        <li>Compară cele două valori</li>
+    </ol>
+
+    <p><strong>Exemplu de date:</strong></p>
+    <table>
+        <tr>
+            <th>Mărime</th>
+            <th>Valoare</th>
+        </tr>
+        <tr>
+            <td>Drum parcurs (cu sfoara)</td>
+            <td>23,5 cm</td>
+        </tr>
+        <tr>
+            <td>Deplasare (linie dreaptă)</td>
+            <td>12,0 cm</td>
+        </tr>
+        <tr>
+            <td>Raport</td>
+            <td>Drumul ≈ 2× deplasarea</td>
+        </tr>
+    </table>
+
+    <div class="result">Concluzie: Drumul parcurs ≥ Deplasarea (egal doar pe traiectorie dreaptă)</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Calculul vitezei medii</h3>
+
+    <p><strong>Obiectiv:</strong> Măsurarea vitezei medii a unui corp în mișcare.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O bilă sau mașinuță</li>
+        <li>Un plan înclinat (scândură pe cărți)</li>
+        <li>Cronometru (telefonul)</li>
+        <li>Riglă sau metru</li>
+        <li>Bandă adezivă pentru marcaje</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Construiește un plan înclinat de ~30 cm lungime</li>
+        <li>Marchează punctul de start și punctul de sosire</li>
+        <li>Măsoară distanța: d = ______ cm</li>
+        <li>Dă drumul bilei și măsoară timpul de coborâre (repetă de 5 ori)</li>
+        <li>Calculează timpul mediu</li>
+        <li>Calculează viteza medie: v = d / t</li>
+    </ol>
+
+    <p><strong>Tabel de date:</strong></p>
+    <table>
+        <tr>
+            <th>Încercarea</th>
+            <th>Timpul (s)</th>
+        </tr>
+        <tr><td>1</td><td>1,2</td></tr>
+        <tr><td>2</td><td>1,3</td></tr>
+        <tr><td>3</td><td>1,2</td></tr>
+        <tr><td>4</td><td>1,1</td></tr>
+        <tr><td>5</td><td>1,2</td></tr>
+        <tr><td><strong>Media</strong></td><td><strong>1,2 s</strong></td></tr>
+    </table>
+
+    <p><strong>Calcul:</strong></p>
+    <p>d = 30 cm = 0,30 m</p>
+    <p>t = 1,2 s</p>
+    <p>v = d / t = 0,30 / 1,2 = <strong>0,25 m/s = 25 cm/s</strong></p>
+
+    <div class="result">Viteza medie a bilei = 0,25 m/s</div>
+
+    <p><strong>Interpretare:</strong> Aceasta este viteza <strong>medie</strong>. În realitate, bila accelerează: la start merge încet, la final merge repede. Viteza medie e o valoare „de compromis".</p>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Sistemul de referință:</strong> Un obiect sau punct față de care descriem mișcarea altor corpuri.</p>
+
+<p><strong>Poziția:</strong> Locul unde se află un corp la un moment dat, descris față de un reper.</p>
+
+<p><strong>Deplasarea:</strong> Schimbarea poziției = poziția finală minus poziția inițială.</p>
+
+<div class="formula-box">
+    $$\Delta\vec{x} = x_2 - x_1$$
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">(mărime vectorială — are sens și direcție)</small>
+</div>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>Formula vitezei medii:</h3>
+
+<div class="formula-box">
+    v = d / t
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">(viteză medie scalară — raportul distanță/timp)</small>
+</div>
+
+<p>unde:</p>
+<ul>
+    <li><strong>v</strong> = viteza medie (scalar, m/s)</li>
+    <li><strong>d</strong> = distanța parcursă pe traiectorie (m)</li>
+    <li><strong>t</strong> = intervalul de timp (s)</li>
+</ul>
+
+<div class="info-box">
+    <strong>Notă vectorială:</strong> Viteza este o mărime vectorială: $\vec{v} = \dfrac{\Delta\vec{x}}{\Delta t}$.
+    Formula scalară v = d/t dă <em>valoarea numerică</em> (modulul) vitezei medii.
+</div>
+
+<h3>Unitățile de măsură:</h3>
+
+<table>
+    <tr>
+        <th>Mărime</th>
+        <th>Unitate SI</th>
+        <th>Alte unități</th>
+    </tr>
+    <tr>
+        <td>Distanța (d)</td>
+        <td>metru (m)</td>
+        <td>km, cm, mm</td>
+    </tr>
+    <tr>
+        <td>Timpul (t)</td>
+        <td>secunda (s)</td>
+        <td>min, h</td>
+    </tr>
+    <tr>
+        <td>Viteza (v)</td>
+        <td>m/s</td>
+        <td>km/h</td>
+    </tr>
+</table>
+
+<h3>Transformări de unități pentru viteză:</h3>
+
+<div class="formula-box">
+    1 m/s = 3,6 km/h<br><br>
+    1 km/h = 1/3,6 m/s ≈ 0,28 m/s
+</div>
+
+<p><strong>Explicație:</strong></p>
+<p>1 m/s înseamnă 1 metru în 1 secundă</p>
+<p>În 1 oră (3600 s) parcurge: 1 × 3600 = 3600 m = 3,6 km</p>
+<p>Deci 1 m/s = 3,6 km/h ✓</p>
+
+<h3>Formule derivate:</h3>
+
+<div class="formula-box">
+    d = v · t &nbsp;&nbsp;&nbsp; (distanța)<br><br>
+    t = d / v &nbsp;&nbsp;&nbsp; (timpul)
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Viteza instantanee vs. viteza medie:</h3>
+
+<p>Feynman explică diferența prin „doamna cu radar":</p>
+
+<blockquote>
+    <p>„If a speeding lady is caught doing 60 miles per hour, she cannot argue that she was only averaging 30 mph for the day. It is the instantaneous speed that matters."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Dacă o doamnă care merge cu viteză este prinsă cu 60 de mile pe oră, ea nu poate argumenta că în medie a mers cu doar 30 mph în acea zi. Contează viteza instantanee."
+</div>
+
+<ul>
+    <li><strong>Viteza medie</strong> = distanța totală / timpul total</li>
+    <li><strong>Viteza instantanee</strong> = viteza la un moment precis (ce arată vitezometrul)</li>
+</ul>
+
+<h3>Mișcarea uniform accelerată:</h3>
+
+<p>Feynman descrie mișcarea unei bile care cade:</p>
+
+<div class="formula-box">
+    s = ½ · g · t²
+</div>
+
+<p>unde g ≈ 10 m/s² (accelerația gravitațională, valoarea numerică)</p>
+
+<p><strong>Exemplu:</strong> După 2 secunde de cădere liberă:</p>
+<p>s = ½ × 10 × 2² = ½ × 10 × 4 = <strong>20 m</strong></p>
+
+<h3>Graficul poziție-timp:</h3>
+
+<table>
+    <tr>
+        <th>Forma graficului</th>
+        <th>Tipul mișcării</th>
+    </tr>
+    <tr>
+        <td>Linie orizontală</td>
+        <td>Repaus</td>
+    </tr>
+    <tr>
+        <td>Linie dreaptă oblică</td>
+        <td>Mișcare uniformă (v = constantă)</td>
+    </tr>
+    <tr>
+        <td>Curbă (parabolă)</td>
+        <td>Mișcare accelerată</td>
+    </tr>
+</table>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Dacă stau nemișcat în cameră, sunt în repaus absolut."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Ești în repaus față de cameră, dar te miști odată cu Pământul (rotație + revoluție), cu Sistemul Solar (în jurul galaxiei) și cu galaxia (prin univers). Nu există repaus absolut.
+</div>
+
+<p><strong>2. „Drumul parcurs este întotdeauna mai mare sau egal cu deplasarea."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Deplasarea este linia dreaptă dintre start și finish. Orice altă traiectorie va fi mai lungă sau, cel mult, egală (dacă traiectoria chiar e o linie dreaptă).
+</div>
+
+<p><strong>3. „Dacă viteza medie a unei mașini este 60 km/h, înseamnă că a mers tot timpul cu 60 km/h."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Viteza medie este o valoare calculată. Mașina poate fi oprită la semafoare (0 km/h) și a mers cu 80 km/h pe porțiuni, iar media să fie 60 km/h.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce pasagerii dintr-un avion care zboară cu 900 km/h nu simt că se mișcă?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Noi simțim doar <strong>schimbările</strong> de viteză (accelerația), nu viteza în sine. Când avionul zboară cu viteză constantă, totul din interior (inclusiv aerul) se mișcă odată cu el. Față de avion, pasagerii sunt în repaus. E ca și cum ai sta în cameră — nu simți că Pământul se rotește.
+</div>
+
+<p><strong>5. De ce GPS-ul arată uneori un timp de parcurs mai mare decât ai calcula simplu din distanță și viteză?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Pentru că GPS-ul calculează drumul real (cu curbe și ocolișuri) și estimează viteza medie ținând cont de: semafoare, trafic, limite de viteză variabile, sensuri unice. Formula simplă d/v presupune mers direct, cu viteză constantă — ceea ce nu se întâmplă niciodată în realitate.
+</div>
+
+<h2>Probleme cantitative</h2>
+
+<p><strong>6. Un biciclist parcurge 15 km în 45 de minute. Care este viteza lui medie în km/h și în m/s?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong></p>
+    <ul>
+        <li>d = 15 km</li>
+        <li>t = 45 min = 45/60 h = 0,75 h</li>
+    </ul>
+
+    <p><strong>Calculăm viteza în km/h:</strong></p>
+    <p class="formula">v = d / t = 15 km / 0,75 h = <strong>20 km/h</strong></p>
+
+    <p><strong>Transformăm în m/s:</strong></p>
+    <p class="formula">v = 20 / 3,6 = <strong>5,56 m/s</strong></p>
+
+    <div class="result">Răspuns: v = 20 km/h = 5,56 m/s</div>
+</div>
+
+<p><strong>7. Un tren pleacă din gara A la ora 8:00 și ajunge în gara B la ora 10:30. Distanța dintre cele două gări este 200 km. Ce viteză medie a avut trenul?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong></p>
+    <ul>
+        <li>d = 200 km</li>
+        <li>t = 10:30 − 8:00 = 2 h 30 min = 2,5 h</li>
+    </ul>
+
+    <p><strong>Calculăm viteza medie:</strong></p>
+    <p class="formula">v = d / t = 200 km / 2,5 h = <strong>80 km/h</strong></p>
+
+    <div class="result">Răspuns: Viteza medie = 80 km/h</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>8. Ion aleargă un tur complet de stadion (400 m) în 80 de secunde, apoi se oprește exact unde a început. Maria aleargă pe un drum drept de 400 m în același timp. Compară: a) drumul parcurs, b) deplasarea, c) viteza medie pentru fiecare.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <table>
+        <tr>
+            <th>Mărime</th>
+            <th>Ion (stadion)</th>
+            <th>Maria (drum drept)</th>
+        </tr>
+        <tr>
+            <td>Drum parcurs</td>
+            <td>400 m</td>
+            <td>400 m</td>
+        </tr>
+        <tr>
+            <td>Deplasare</td>
+            <td><strong>0 m</strong> (revine la start)</td>
+            <td><strong>400 m</strong></td>
+        </tr>
+        <tr>
+            <td>Viteza medie (d/t)</td>
+            <td>400/80 = 5 m/s</td>
+            <td>400/80 = 5 m/s</td>
+        </tr>
+    </table>
+
+    <div class="result">Observație: Deși au aceeași viteză medie și același drum parcurs, deplasarea lui Ion este zero!</div>
+
+    <p><strong>Concluzie:</strong> Viteza medie calculată cu drumul parcurs este aceeași. Dar dacă am calcula „viteza medie de deplasare" (deplasare/timp), Ion ar avea 0 m/s, iar Maria 5 m/s.</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 8</strong> „Motion" — complet, pentru profesori</li>
+    <li><strong>Vol. I, Cap. 8, Secțiunea 8-1</strong> „Description of motion" — accesibil, despre descrierea mișcării</li>
+    <li><strong>Vol. I, Cap. 8, Secțiunea 8-2</strong> „Speed" — despre paradoxul lui Zenon și definiția vitezei</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea</th>
+    </tr>
+    <tr>
+        <td><strong>Matematică</strong></td>
+        <td>Rapoarte, proporții, grafice funcții, ecuații</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Rotația Pământului, fusuri orare, deplasări pe hartă</td>
+    </tr>
+    <tr>
+        <td><strong>Sport</strong></td>
+        <td>Viteze în atletism, ciclism, înot; recorduri mondiale</td>
+    </tr>
+    <tr>
+        <td><strong>Filosofie</strong></td>
+        <td>Paradoxurile lui Zenon (Ahile și broasca țestoasă)</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>IDEEA CHEIE:</strong> Mișcarea este relativă — depinde de sistemul de referință!</p>
+
+    <h3>DEFINIȚII:</h3>
+    <table>
+        <tr>
+            <th>Concept</th>
+            <th>Definiție</th>
+        </tr>
+        <tr>
+            <td>Mișcare</td>
+            <td>Schimbarea poziției față de un reper</td>
+        </tr>
+        <tr>
+            <td>Repaus</td>
+            <td>Poziția nu se schimbă față de reper</td>
+        </tr>
+        <tr>
+            <td>Traiectorie</td>
+            <td>Linia descrisă de corp</td>
+        </tr>
+        <tr>
+            <td>Deplasare</td>
+            <td>Distanța „în linie dreaptă" start → finish</td>
+        </tr>
+    </table>
+
+    <h3>FORMULA VITEZEI:</h3>
+    <div class="formula-box">
+        v = d / t<br><br>
+        Unități: m/s sau km/h<br><br>
+        Conversie: 1 m/s = 3,6 km/h
+    </div>
+
+    <h3>TIPURI DE TRAIECTORII:</h3>
+    <ul>
+        <li><strong>Rectilinie</strong> — linie dreaptă</li>
+        <li><strong>Curbilinie</strong> — linie curbă</li>
+        <li><strong>Circulară</strong> — cerc</li>
+    </ul>
+
+    <h3>REGULA DE AUR:</h3>
+    <p><em>Drumul parcurs ≥ Deplasarea</em></p>
+    <p>(Egalitate doar pe traiectorie dreaptă!)</p>
+</div>
+
+<footer>
+        <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em> © Caltech</p>
+    </footer>
+
+        </main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

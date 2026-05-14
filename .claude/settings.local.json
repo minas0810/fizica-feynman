@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3)",
+      "Bash(python3 -c ':*)",
+      "Bash(grep -l 'katex' /Users/minas/Documents/CLAUDE_CODE/fizica-feynman-mm/modules/*.html)",
+      "Bash(grep -n '\\\\$\\\\$\\\\|\\\\\\\\vec{' /Users/minas/Documents/CLAUDE_CODE/fizica-feynman-mm/modules/Modulul_6_Tipuri_de_Forte.html)",
+      "Bash(wc -l /Users/minas/Documents/CLAUDE_CODE/fizica-feynman-mm/modules/*.html)"
+    ]
+  }
+}

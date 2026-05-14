@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 4: Inerția</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'\$\$',right:'\$\$',display:true},{left:'\$',right:'\$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="4">
+
+    <!-- ===== NAVIGAȚIE ===== -->
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+
+
+    <!-- Header -->
+    <section class="hero">
+        <h1>Fizica cu Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="module-nav module-nav--top"></div>
+
+    <!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 4</div>
+    <h1>INERȚIA</h1>
+    <div class="subtitle">„De ce corpurile nu vor să-și schimbe starea"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental</h2>
+
+<p>Feynman explică că principiul inerției a fost descoperit de Galileo, nu de Newton, și a reprezentat o revoluție în gândire:</p>
+
+<blockquote>
+    <p>„The First Law, originally discovered by Galileo, states the Principle of Inertia: if an object is left alone, is not disturbed, it continues to move with a constant velocity in a straight line if it was originally moving, or it continues to stand still if it was just standing still."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Prima Lege, descoperită inițial de Galileo, enunță Principiul Inerției: dacă un obiect este lăsat singur, neperturbat, el continuă să se miște cu viteză constantă în linie dreaptă dacă se mișca inițial, sau continuă să stea nemișcat dacă stătea nemișcat."
+</div>
+
+<h2>De ce a fost revoluționar</h2>
+
+<p>Feynman subliniază că înainte de Galileo, oamenii credeau (după Aristotel) că trebuie să împingi continuu un obiect ca să se miște. Dacă nu mai împingi, se oprește.</p>
+
+<blockquote>
+    <p>„Before Newton's time, the motions of things like the planets were a mystery, but after Newton there was complete understanding."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Înainte de Newton, mișcările unor lucruri precum planetele erau un mister, dar după Newton a existat o înțelegere completă."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Mișcarea naturală NU necesită forță. Forța este necesară doar pentru a <strong>schimba</strong> mișcarea (a accelera, a încetini sau a schimba direcția).
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este inerția?</h2>
+
+<p><strong>Inerția</strong> este „lenea" corpurilor — tendința lor de a se opune oricărei schimbări a stării de mișcare.</p>
+
+<ul>
+    <li>Un corp în <strong>repaus</strong> vrea să rămână în repaus</li>
+    <li>Un corp în <strong>mișcare</strong> vrea să continue să se miște la fel</li>
+</ul>
+
+<p>Pentru a schimba această stare (a pune în mișcare ceva nemișcat sau a opri ceva care se mișcă), trebuie să aplici o <strong>forță</strong>.</p>
+
+<h2>Prima Lege a lui Newton (Principiul Inerției)</h2>
+
+<div class="formula-box">
+    Dacă $\sum\vec{F} = \vec{0}$<br>
+    → corpul rămâne în repaus sau în mișcare rectilinie uniformă
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">
+    (suma vectorială a forțelor = zero ⟺ viteza nu se schimbă)
+    </small>
+</div>
+
+<h2>Ce determină inerția? — MASA</h2>
+
+<p><strong>Masa</strong> este măsura inerției unui corp. Cu cât un corp are masă mai mare, cu atât:</p>
+<ul>
+    <li>E mai greu să-l pui în mișcare</li>
+    <li>E mai greu să-l oprești</li>
+    <li>E mai greu să-i schimbi direcția</li>
+</ul>
+
+<h2>Masă vs. Greutate</h2>
+
+<p>Feynman subliniază că masa și greutatea sunt concepte diferite:</p>
+
+<table>
+    <tr>
+        <th>Caracteristică</th>
+        <th>MASA (m)</th>
+        <th>GREUTATEA (G)</th>
+    </tr>
+    <tr>
+        <td><strong>Ce este</strong></td>
+        <td>Măsura inerției (cantitate de materie)</td>
+        <td>Forța cu care ești atras de Pământ</td>
+    </tr>
+    <tr>
+        <td><strong>Unitate SI</strong></td>
+        <td>kilogram (kg)</td>
+        <td>newton (N)</td>
+    </tr>
+    <tr>
+        <td><strong>Variază cu locul?</strong></td>
+        <td>NU — constantă peste tot</td>
+        <td>DA — depinde de unde ești</td>
+    </tr>
+    <tr>
+        <td><strong>Pe Lună</strong></td>
+        <td>Aceeași (70 kg)</td>
+        <td>De 6 ori mai mică (~117 N)</td>
+    </tr>
+    <tr>
+        <td><strong>În spațiu cosmic</strong></td>
+        <td>Aceeași (70 kg)</td>
+        <td>Aproape zero (imponderabilitate)</td>
+    </tr>
+</table>
+
+<div class="formula-box">
+    $$\vec{G} = m \cdot \vec{g}$$
+    $|\vec{g}| \approx 10 \text{ m/s}^2$ (direcție: vertical în jos)
+</div>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul</th>
+    </tr>
+    <tr>
+        <td>„Pentru a se mișca, un corp trebuie împins continuu"</td>
+        <td>Forța e necesară doar pentru a schimba mișcarea, nu pentru a o menține</td>
+    </tr>
+    <tr>
+        <td>„Corpurile se opresc singure"</td>
+        <td>Se opresc din cauza frecării (o forță!), nu „de la sine"</td>
+    </tr>
+    <tr>
+        <td>„Masa și greutatea sunt același lucru"</td>
+        <td>Masa e constantă; greutatea depinde de gravitație</td>
+    </tr>
+    <tr>
+        <td>„Obiectele ușoare nu au inerție"</td>
+        <td>Toate corpurile au inerție, proporțională cu masa lor</td>
+    </tr>
+    <tr>
+        <td>„În spațiu, astronauții nu au masă"</td>
+        <td>Au aceeași masă, dar greutate aproape zero</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Centura de siguranță</h2>
+
+<p><strong>Situația concretă:</strong> O mașină frânează brusc. Pasagerii sunt aruncați înainte dacă nu poartă centura.</p>
+
+<p><strong>Explicația fizică:</strong> Când mașina frânează, ea se oprește, dar corpul pasagerului vrea să continue să se miște (inerție). Centura de siguranță aplică o forță care oprește și pasagerul odată cu mașina.</p>
+
+<p><strong>De ce e periculos fără centură:</strong></p>
+<ul>
+    <li>La 50 km/h, impactul cu parbrizul e ca o cădere de la etajul 3</li>
+    <li>Inerția face ca un om de 70 kg să „cântărească" aparent sute de kg în momentul impactului</li>
+</ul>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce scaunele pentru copii sunt montate cu spatele la direcția de mers?</em></p>
+
+<h2>Exemplul 2: Magia cu fața de masă</h2>
+
+<p><strong>Situația concretă:</strong> Un magician trage rapid fața de masă de sub farfurii, iar acestea rămân pe loc.</p>
+
+<p><strong>Explicația fizică:</strong> Farfuriile au inerție — vor să rămână în repaus. Dacă tragi suficient de repede, forța de frecare dintre față de masă și farfurii acționează doar o fracțiune de secundă — prea puțin pentru a învinge inerția farfuriilor.</p>
+
+<p><strong>De ce funcționează:</strong></p>
+<ul>
+    <li>Tragi <strong>rapid</strong> → timp scurt de contact</li>
+    <li>Forța de frecare × timp scurt = impuls mic</li>
+    <li>Impuls mic nu poate mișca semnificativ farfuriile grele</li>
+</ul>
+
+<p><strong>Întrebare de reflecție:</strong> <em>De ce trucul eșuează dacă tragi încet?</em></p>
+
+<h2>Exemplul 3: Oul fiert vs. oul crud</h2>
+
+<p><strong>Situația concretă:</strong> Cum deosebești un ou fiert de unul crud fără să-l spargi? Îl învârti!</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li><strong>Oul fiert</strong> se învârte uniform (e solid în interior)</li>
+    <li><strong>Oul crud</strong> se învârte greu și se oprește repede (lichidul din interior are inerție proprie și „frânează" coaja)</li>
+</ul>
+
+<p>Dacă oprești scurt oul crud și îl eliberezi, <strong>va continua să se miște</strong> — lichidul din interior, care nu s-a oprit, îl pune iar în mișcare!</p>
+
+<p><strong>Întrebare de reflecție:</strong> <em>Ce crezi că se întâmplă cu cafeaua dintr-o ceașcă când oprești brusc mașina?</em></p>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Moneda și cartonul</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea inerției unui corp în repaus.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un pahar</li>
+        <li>Un carton mic (sau o carte de joc)</li>
+        <li>O monedă mare (sau jetonuri)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune cartonul pe marginea paharului</li>
+        <li>Pune moneda pe carton, deasupra gurii paharului</li>
+        <li>Cu degetul, lovește rapid cartonul orizontal</li>
+        <li>Observă ce se întâmplă cu moneda</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Cartonul zboară lateral</li>
+        <li>Moneda cade <strong>în pahar</strong>, nu zboară cu cartonul</li>
+    </ul>
+
+    <p><strong>Interpretare:</strong> Moneda are inerție — vrea să rămână în repaus. Lovitura rapidă aplică o forță cartonului, dar moneda primește doar o forță mică (frecare) pentru un timp foarte scurt. Această forță nu e suficientă pentru a o mișca lateral. Rămâne pe loc și cade în pahar datorită gravitației.</p>
+
+    <div class="result">Concluzia: Corpurile în repaus tind să rămână în repaus (Prima Lege a lui Newton)</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Bila pe masă</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea inerției unui corp în mișcare.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O bilă sau minge mică</li>
+        <li>O masă netedă sau un coridor</li>
+        <li>Diverse suprafețe: covor, lemn lustruit, hârtie de șlefuit</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Rostogolește bila cu aceeași forță pe fiecare suprafață</li>
+        <li>Măsoară (aproximativ) distanța până se oprește</li>
+        <li>Compară rezultatele</li>
+    </ol>
+
+    <p><strong>Tabel de observații:</strong></p>
+    <table>
+        <tr>
+            <th>Suprafață</th>
+            <th>Frecare</th>
+            <th>Distanța parcursă</th>
+        </tr>
+        <tr>
+            <td>Covor</td>
+            <td>Mare</td>
+            <td>~30 cm</td>
+        </tr>
+        <tr>
+            <td>Lemn</td>
+            <td>Medie</td>
+            <td>~100 cm</td>
+        </tr>
+        <tr>
+            <td>Sticlă/Gresie</td>
+            <td>Mică</td>
+            <td>~200 cm</td>
+        </tr>
+    </table>
+
+    <p><strong>Interpretare:</strong> Bila ar continua la infinit dacă nu ar exista frecare. Cu cât frecarea e mai mică, cu atât bila merge mai departe. Pe gheață sau în vid, ar merge și mai mult!</p>
+
+    <div class="result">Concluzia: Corpurile în mișcare continuă să se miște până când o forță le oprește</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Compararea maselor prin inerție</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că masa este măsura inerției.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Două sticle de plastic identice</li>
+        <li>Apă sau nisip pentru umplere</li>
+        <li>Sfoară (~1 m pentru fiecare)</li>
+        <li>Suport pentru atârnare</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Umple o sticlă complet (m₁ = mare) și una pe jumătate (m₂ = mică)</li>
+        <li>Atârnă fiecare sticlă de o sfoară de aceeași lungime</li>
+        <li>Trage fiecare sticlă lateral și dă-i drumul</li>
+        <li>Observă câte oscilații face fiecare în 30 de secunde</li>
+        <li>Încearcă să oprești fiecare sticlă cu mâna</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Ambele pendule oscilează cu aceeași perioadă (surpriză!)</li>
+        <li>DAR sticla plină e mult mai greu de oprit</li>
+        <li>Sticla plină „împinge" mai tare mâna când o oprești</li>
+    </ul>
+
+    <p><strong>Interpretare:</strong></p>
+    <ul>
+        <li>Perioada pendulului NU depinde de masă (descoperirea lui Galileo)</li>
+        <li>Dar forța necesară pentru a opri pendulul DEPINDE de masă</li>
+        <li>Masa mare = inerție mare = mai greu de oprit</li>
+    </ul>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Inerția:</strong> Proprietatea corpurilor de a se opune schimbării stării de mișcare.</p>
+
+<p><strong>Prima Lege a lui Newton:</strong> Un corp rămâne în repaus sau în mișcare rectilinie uniformă dacă nu acționează forțe asupra lui.</p>
+
+<p><strong>Masa:</strong> Măsura inerției. Se măsoară în kilograme (kg).</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>Greutatea:</h3>
+
+<div class="formula-box">
+    $$\vec{G} = m \cdot \vec{g}$$
+</div>
+
+<p>unde:</p>
+<ul>
+    <li>$\vec{G}$ = greutatea — vector, unitate: newton (N)</li>
+    <li><strong>m</strong> = masa — scalar, unitate: kilogram (kg)</li>
+    <li>$\vec{g}$ = accelerația gravitațională — vector, $|\vec{g}| \approx 10 \text{ m/s}^2$, direcție: vertical în jos</li>
+</ul>
+
+<h3>Valori ale lui g în diferite locuri:</h3>
+
+<table>
+    <tr>
+        <th>Locul</th>
+        <th>g (m/s²)</th>
+        <th>Greutatea unui om de 60 kg</th>
+    </tr>
+    <tr>
+        <td>Pământ</td>
+        <td>~10</td>
+        <td>600 N</td>
+    </tr>
+    <tr>
+        <td>Lună</td>
+        <td>~1,6</td>
+        <td>96 N (de 6× mai mică)</td>
+    </tr>
+    <tr>
+        <td>Marte</td>
+        <td>~3,7</td>
+        <td>222 N</td>
+    </tr>
+    <tr>
+        <td>Jupiter</td>
+        <td>~25</td>
+        <td>1500 N (de 2,5× mai mare)</td>
+    </tr>
+</table>
+
+<h3>Transformări masă-greutate:</h3>
+
+<div class="formula-box">
+    G = m · g &nbsp;&nbsp;&nbsp;și&nbsp;&nbsp;&nbsp; m = G / g
+    <br><small style="font-family:sans-serif;font-size:0.75em;color:#555">(G și g reprezintă modulele vectorilor $\vec{G}$ și $\vec{g}$)</small>
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Impulsul (cantitatea de mișcare):</h3>
+
+<p>Feynman introduce conceptul de impuls:</p>
+
+<div class="formula-box">
+    $$\vec{p} = m \cdot \vec{v}$$
+</div>
+
+<p>unde:</p>
+<ul>
+    <li>$\vec{p}$ = impulsul — vector, unitate: kg·m/s</li>
+    <li><strong>m</strong> = masa — scalar, unitate: kg</li>
+    <li>$\vec{v}$ = viteza — vector, unitate: m/s</li>
+</ul>
+
+<p><strong>Interpretare:</strong> Un camion de 10.000 kg la 10 m/s are același impuls ca o mașină de 1.000 kg la 100 m/s!</p>
+
+<table>
+    <tr>
+        <th>Obiect</th>
+        <th>Masa</th>
+        <th>Viteza</th>
+        <th>Impuls (p = mv)</th>
+    </tr>
+    <tr>
+        <td>Camion</td>
+        <td>10.000 kg</td>
+        <td>10 m/s (36 km/h)</td>
+        <td>100.000 kg·m/s</td>
+    </tr>
+    <tr>
+        <td>Mașină</td>
+        <td>1.000 kg</td>
+        <td>100 m/s (360 km/h)</td>
+        <td>100.000 kg·m/s</td>
+    </tr>
+</table>
+
+<h3>De ce contează impulsul:</h3>
+
+<p>Pentru a opri un corp, trebuie să-i anulezi impulsul. Cu cât impulsul e mai mare, cu atât e mai greu de oprit — indiferent dacă e cauzat de masă mare sau viteză mare.</p>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Un corp mare are întotdeauna greutate mai mare decât unul mic."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Depinde de masă, nu de mărime. Un balon uriaș umplut cu heliu poate fi mai ușor decât o bilă mică de plumb.
+</div>
+
+<p><strong>2. „Dacă nu acționează nicio forță asupra unui corp, acesta stă pe loc."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Poate sta pe loc SAU se poate mișca cu viteză constantă în linie dreaptă. Ambele situații sunt posibile fără forță.
+</div>
+
+<p><strong>3. „Un astronaut pe Stația Spațială Internațională nu are greutate, dar are masă."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Masa e aceeași (cantitatea de materie nu s-a schimbat). Greutatea e aproape zero pentru că stația e în cădere liberă continuă în jurul Pământului.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce e mai greu să oprești un tren decât o bicicletă, chiar dacă ambele merg cu 20 km/h?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Trenul are masă mult mai mare, deci inerție mult mai mare. Impulsul trenului (m·v) este enorm comparativ cu al bicicletei. Pentru a opri trenul, trebuie să aplici o forță mult mai mare sau să o aplici timp mult mai îndelungat.
+</div>
+
+<p><strong>5. De ce când autobuzul frânează brusc, pasagerii cad înainte, dar când accelerează, cad pe spate?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> La frânare, autobuzul se oprește, dar corpul pasagerilor vrea să continue să se miște înainte (inerția mișcării). La accelerare, autobuzul pornește, dar corpul pasagerilor vrea să rămână în repaus (inerția repausului). În ambele cazuri, corpul „rămâne în urmă" față de autobuz.
+</div>
+
+<h2>Probleme cantitative</h2>
+
+<p><strong>6. Care este greutatea unui elefant de 5000 kg pe Pământ? Dar pe Lună (g = 1,6 m/s²)?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Date:</strong> m = 5000 kg</p>
+
+    <p><strong>Pe Pământ (g = 10 m/s²):</strong></p>
+    <p class="formula">G = m · g = 5000 × 10 = <strong>50.000 N = 50 kN</strong></p>
+
+    <p><strong>Pe Lună (g = 1,6 m/s²):</strong></p>
+    <p class="formula">G = m · g = 5000 × 1,6 = <strong>8.000 N = 8 kN</strong></p>
+
+    <div class="result">Pe Lună, elefantul cântărește de ~6 ori mai puțin, dar masa rămâne 5000 kg!</div>
+</div>
+
+<p><strong>7. O minge de tenis (m = 60 g) se mișcă cu 50 m/s. O minge de bowling (m = 6 kg) se mișcă cu 5 m/s. Care are impuls mai mare?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+
+    <p><strong>Minge de tenis:</strong></p>
+    <p>m₁ = 60 g = 0,06 kg, v₁ = 50 m/s</p>
+    <p class="formula">p₁ = m₁ · v₁ = 0,06 × 50 = <strong>3 kg·m/s</strong></p>
+
+    <p><strong>Minge de bowling:</strong></p>
+    <p>m₂ = 6 kg, v₂ = 5 m/s</p>
+    <p class="formula">p₂ = m₂ · v₂ = 6 × 5 = <strong>30 kg·m/s</strong></p>
+
+    <div class="result">Mingea de bowling are impuls de 10× mai mare, deci e mult mai greu de oprit!</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>8. Maria spune: „Pe Lună aș putea sări de 6 ori mai sus pentru că greutatea e de 6 ori mai mică." Are dreptate? Argumentează.</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong> Maria are parțial dreptate, dar situația e mai complexă:
+    <ul>
+        <li>✓ Greutatea e de ~6× mai mică pe Lună</li>
+        <li>✓ Forța musculară e aceeași (mușchii nu depind de gravitație)</li>
+        <li>✓ Deci ar putea sări mai sus</li>
+        <li>⚠️ DAR nu exact de 6×, pentru că:
+            <ul>
+                <li>Costumul spațial adaugă masă și îngreunează mișcarea</li>
+                <li>Lipsa aerului schimbă tehnica săriturii</li>
+                <li>Masa (inerția) e aceeași — trebuie aceeași forță pentru a accelera corpul</li>
+            </ul>
+        </li>
+    </ul>
+    <p>În practică, astronauții pe Lună au sărit de 3-4 ori mai sus decât pe Pământ, nu de 6 ori.</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 9</strong> „Newton's Laws of Dynamics" — complet, pentru profesori</li>
+    <li><strong>Vol. I, Cap. 9, Secțiunea 9-1</strong> — despre impuls și a doua lege</li>
+    <li><strong>Vol. I, Cap. 7</strong> „The Theory of Gravitation" — despre masă și greutate</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea</th>
+    </tr>
+    <tr>
+        <td><strong>Educație rutieră</strong></td>
+        <td>Centura de siguranță, distanța de frânare, airbag-uri</td>
+    </tr>
+    <tr>
+        <td><strong>Sport</strong></td>
+        <td>De ce sportivii grei sunt greu de oprit (rugby, sumo)</td>
+    </tr>
+    <tr>
+        <td><strong>Astronomie</strong></td>
+        <td>Imponderabilitatea pe ISS, greutatea pe alte planete</td>
+    </tr>
+    <tr>
+        <td><strong>Istorie</strong></td>
+        <td>Galileo Galilei, Isaac Newton și revoluția științifică</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>PRINCIPIUL INERȚIEI (Prima Lege a lui Newton):</strong></p>
+    <p><em>„Un corp rămâne în repaus sau în mișcare rectilinie uniformă dacă nu acționează forțe asupra lui."</em></p>
+
+    <h3>CONCEPTE CHEIE:</h3>
+    <table>
+        <tr>
+            <th>Concept</th>
+            <th>Definiție</th>
+            <th>Unitate</th>
+        </tr>
+        <tr>
+            <td>Inerția</td>
+            <td>Rezistența la schimbarea mișcării</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>Masa (m)</td>
+            <td>Măsura inerției</td>
+            <td>kg</td>
+        </tr>
+        <tr>
+            <td>Greutatea (G)</td>
+            <td>Forța gravitațională</td>
+            <td>N</td>
+        </tr>
+    </table>
+
+    <h3>FORMULE:</h3>
+    <div class="formula-box">
+        $\vec{G} = m \cdot \vec{g}$ &nbsp;&nbsp;&nbsp;($|\vec{g}| \approx 10 \text{ m/s}^2$, vertical în jos)<br><br>
+        $\vec{p} = m \cdot \vec{v}$ &nbsp;&nbsp;&nbsp;(impulsul)
+    </div>
+
+    <h3>REGULA DE AUR:</h3>
+    <ul>
+        <li>MASA = constantă peste tot în univers</li>
+        <li>GREUTATEA = variază cu locul (depinde de g)</li>
+    </ul>
+
+    <h3>EXEMPLE DE INERȚIE:</h3>
+    <ul>
+        <li>Centura de siguranță — oprește corpul când mașina frânează</li>
+        <li>Trucul cu fața de masă — farfuriile rămân pe loc</li>
+        <li>Cafea vărsată — lichidul continuă să se miște când cana se oprește</li>
+    </ul>
+</div>
+
+<footer>
+        <p>Material didactic bazat pe <em>The Feynman Lectures on Physics</em> © Caltech</p>
+    </footer>
+
+        </main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

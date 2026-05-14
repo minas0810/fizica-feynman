@@ -1,0 +1,315 @@
+/* ===========================================
+   FIZICA CU FEYNMAN — nav.js
+   Sistem de navigație profesional
+   =========================================== */
+
+(function () {
+  'use strict';
+
+  /* ——— DATE MODULE ——— */
+  const MODULES = [
+    { n: 1, icon: '🔬', title: 'Ce Este Fizica?',                  short: 'Ce Este Fizica?',          file: 'Modulul_1_Ce_Este_Fizica.html' },
+    { n: 2, icon: '📏', title: 'Mărimi Fizice și Măsurare',        short: 'Mărimi Fizice',             file: 'Modulul_2_Marimi_Fizice_Masurare.html' },
+    { n: 3, icon: '🏃', title: 'Mișcarea Corpurilor',              short: 'Mișcarea Corpurilor',       file: 'Modulul_3_Miscarea_Corpurilor.html' },
+    { n: 4, icon: '⚖️', title: 'Inerția',                         short: 'Inerția',                   file: 'Modulul_4_Inertia.html' },
+    { n: 5, icon: '🧱', title: 'Densitatea',                       short: 'Densitatea',                file: 'Modulul_5_Densitatea.html' },
+    { n: 6, icon: '💪', title: 'Tipuri de Forțe',                  short: 'Tipuri de Forțe',           file: 'Modulul_6_Tipuri_de_Forte.html' },
+    { n: 7, icon: '🌡️', title: 'Fenomene Termice',                short: 'Fenomene Termice',          file: 'Modulul_7_Fenomene_Termice.html' },
+    { n: 8, icon: '⚡', title: 'Fenomene Electrice și Magnetice',   short: 'Electrice & Magnetice',    file: 'Modulul_8_Fenomene_Electrice_Magnetice.html' },
+    { n: 9, icon: '🌈', title: 'Fenomene Optice',                  short: 'Fenomene Optice',           file: 'Modulul_9_Fenomene_Optice.html' },
+  ];
+
+  const body = document.body;
+  const modNum   = parseInt(body.getAttribute('data-module'), 10) || 0;
+  const isIndex  = body.getAttribute('data-page') === 'index';
+  const isModule = modNum > 0;
+
+  /* —— Căi relative —— */
+  function modHref(file) { return isIndex ? 'modules/' + file : file; }
+  function homeHref()    { return isIndex ? 'index.html' : '../index.html'; }
+
+  /* ================================================
+     1. NAVBAR GLOBALĂ
+  ================================================ */
+  function buildNavbar() {
+    const nav = document.querySelector('.site-nav');
+    if (!nav) return;
+
+    const dropItems = MODULES.map(m => {
+      const active = m.n === modNum ? ' nav-active' : '';
+      return `
+        <a href="${modHref(m.file)}" class="${active.trim()}" role="menuitem">
+          <span class="drop-num">${m.n}</span>
+          <span class="drop-icon">${m.icon}</span>
+          <span class="drop-title">${m.title}</span>
+        </a>`;
+    }).join('');
+
+    nav.innerHTML = `
+      <div class="site-nav__inner">
+        <a href="${homeHref()}" class="site-nav__brand">⚛ Fizica cu Feynman</a>
+        <div class="site-nav__spacer"></div>
+        <a href="${homeHref()}" class="site-nav__home">Acasă</a>
+        <div class="site-nav__dropdown-wrap">
+          <button class="site-nav__modules-btn" id="nav-modules-btn"
+                  aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown">
+            Module <span class="nav-arrow">▾</span>
+          </button>
+          <div class="site-nav__dropdown" id="nav-dropdown" role="menu" aria-label="Liste module">
+            ${dropItems}
+          </div>
+        </div>
+        <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
+      </div>`;
+
+    /* — Dropdown toggle — */
+    const btn      = document.getElementById('nav-modules-btn');
+    const dropdown = document.getElementById('nav-dropdown');
+    const hamBtn   = document.getElementById('nav-hamburger');
+
+    function openDropdown() {
+      dropdown.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      dropdown.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    function toggleDropdown(e) {
+      e.stopPropagation();
+      dropdown.classList.contains('open') ? closeDropdown() : openDropdown();
+    }
+
+    btn.addEventListener('click', toggleDropdown);
+    hamBtn.addEventListener('click', toggleDropdown);
+    document.addEventListener('click', closeDropdown);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDropdown(); });
+
+    /* Scroll la elementul activ din dropdown */
+    const activeItem = dropdown.querySelector('.nav-active');
+    if (activeItem) {
+      requestAnimationFrame(() => activeItem.scrollIntoView({ block: 'nearest' }));
+    }
+  }
+
+  /* ================================================
+     2. TOPBAR (breadcrumb + progres)
+  ================================================ */
+  function buildTopbar() {
+    const bar = document.querySelector('.mod-topbar');
+    if (!bar || !isModule) return;
+
+    const cur = MODULES.find(m => m.n === modNum);
+
+    const dots = MODULES.map(m => {
+      let cls = 'mod-progress__dot';
+      if (m.n < modNum)  cls += ' done';
+      if (m.n === modNum) cls += ' current';
+      return `<span class="${cls}" title="Modulul ${m.n}: ${m.title}"></span>`;
+    }).join('');
+
+    bar.innerHTML = `
+      <div class="mod-topbar__inner">
+        <nav class="breadcrumb" aria-label="Fir Ariadnă">
+          <a href="../index.html">Acasă</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="breadcrumb__current">Modulul ${modNum}: ${cur.title}</span>
+        </nav>
+        <div class="mod-progress" role="progressbar" aria-valuenow="${modNum}"
+             aria-valuemin="1" aria-valuemax="9" aria-label="Progres curs">
+          ${dots}
+          <span class="mod-progress__label">Modulul ${modNum} din 9</span>
+        </div>
+      </div>`;
+  }
+
+  /* ================================================
+     3. BUTOANE PREV / NEXT
+  ================================================ */
+  function buildModuleNav(container) {
+    if (!container || !isModule) return;
+
+    const prev = MODULES.find(m => m.n === modNum - 1);
+    const next = MODULES.find(m => m.n === modNum + 1);
+
+    const prevBtn = prev
+      ? `<a href="${prev.file}" class="module-nav__btn prev" aria-label="Modulul anterior: ${prev.title}">
+           <span class="nav-arrow">←</span>
+           <span class="btn-label">
+             <span class="btn-meta">Modulul anterior</span>
+             <span>${prev.icon} ${prev.short}</span>
+           </span>
+         </a>`
+      : `<span class="module-nav__placeholder"></span>`;
+
+    const nextBtn = next
+      ? `<a href="${next.file}" class="module-nav__btn next" aria-label="Modulul următor: ${next.title}">
+           <span class="btn-label">
+             <span class="btn-meta">Modulul următor</span>
+             <span>${next.icon} ${next.short}</span>
+           </span>
+           <span class="nav-arrow">→</span>
+         </a>`
+      : `<span class="module-nav__placeholder"></span>`;
+
+    container.innerHTML = prevBtn + nextBtn;
+  }
+
+  /* ================================================
+     4. CUPRINS (TOC)
+  ================================================ */
+  function buildTOC() {
+    const tocList = document.getElementById('toc-list');
+    if (!tocList) return;
+
+    const main = document.querySelector('.module-main');
+    if (!main) return;
+
+    const headings = Array.from(main.querySelectorAll('h1, h2'));
+    if (headings.length === 0) return;
+
+    /* Atribuie id-uri dacă lipsesc */
+    headings.forEach((h, i) => {
+      if (!h.id) {
+        const slug = h.textContent.trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9\u00C0-\u017F\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .substring(0, 50);
+        h.id = slug || ('sec-' + i);
+      }
+    });
+
+    headings.forEach(h => {
+      const li  = document.createElement('li');
+      li.className = h.tagName === 'H2' ? 'toc-h2' : 'toc-h1';
+
+      const a   = document.createElement('a');
+      a.href    = '#' + h.id;
+      a.textContent = h.textContent.trim();
+
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const top = h.getBoundingClientRect().top + window.scrollY - 64;
+        window.scrollTo({ top, behavior: 'smooth' });
+        closeMobileTOC();
+        /* actualizăm manual clasa active la click */
+        tocList.querySelectorAll('a').forEach(l => l.classList.remove('toc-active'));
+        a.classList.add('toc-active');
+        history.replaceState(null, '', '#' + h.id);
+      });
+
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+  }
+
+  /* ================================================
+     5. SCROLL SPY
+  ================================================ */
+  function setupScrollSpy() {
+    const tocLinks = Array.from(document.querySelectorAll('#toc-list a'));
+    if (!tocLinks.length) return;
+
+    const ids      = tocLinks.map(a => a.getAttribute('href').slice(1));
+    const targets  = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+    let lastActive = null;
+
+    const observer = new IntersectionObserver(entries => {
+      /* Reținem cel mai de sus heading vizibil */
+      let topEntry = null;
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!topEntry || entry.boundingClientRect.top < topEntry.boundingClientRect.top) {
+            topEntry = entry;
+          }
+        }
+      });
+      if (!topEntry) return;
+
+      const newActive = document.querySelector(`#toc-list a[href="#${topEntry.target.id}"]`);
+      if (newActive && newActive !== lastActive) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        newActive.classList.add('toc-active');
+        newActive.scrollIntoView({ block: 'nearest' });
+        lastActive = newActive;
+      }
+    }, { rootMargin: '-10% 0px -75% 0px', threshold: 0 });
+
+    targets.forEach(t => observer.observe(t));
+  }
+
+  /* ================================================
+     6. BACK TO TOP
+  ================================================ */
+  function setupBackToTop() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 300);
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ================================================
+     7. TOC MOBILE
+  ================================================ */
+  function closeMobileTOC() {
+    const toc     = document.getElementById('toc');
+    const overlay = document.getElementById('toc-overlay');
+    if (toc)     toc.classList.remove('mobile-open');
+    if (overlay) overlay.classList.remove('visible');
+  }
+
+  function setupTocMobile() {
+    const toggleBtn = document.querySelector('.toc-toggle-btn');
+    const toc       = document.getElementById('toc');
+    if (!toggleBtn || !toc) return;
+
+    /* Adăugăm butonul de închidere ÎNĂUNTRUL sidebar-ului */
+    const closeBtn = document.createElement('button');
+    closeBtn.className   = 'toc-close-btn';
+    closeBtn.textContent = '✕';
+    closeBtn.setAttribute('aria-label', 'Închide cuprins');
+    toc.insertBefore(closeBtn, toc.firstChild);
+
+    /* Overlay */
+    const overlay = document.createElement('div');
+    overlay.className = 'toc-overlay';
+    overlay.id        = 'toc-overlay';
+    document.body.appendChild(overlay);
+
+    toggleBtn.addEventListener('click', () => {
+      const open = toc.classList.toggle('mobile-open');
+      overlay.classList.toggle('visible', open);
+    });
+    closeBtn.addEventListener('click', closeMobileTOC);
+    overlay.addEventListener('click', closeMobileTOC);
+  }
+
+  /* ================================================
+     INIT
+  ================================================ */
+  document.addEventListener('DOMContentLoaded', () => {
+    buildNavbar();
+
+    if (isModule) {
+      buildTopbar();
+      buildModuleNav(document.querySelector('.module-nav--top'));
+      buildModuleNav(document.querySelector('.module-nav--bottom'));
+      buildTOC();
+      setupScrollSpy();
+      setupTocMobile();
+    }
+
+    setupBackToTop();
+  });
+
+})();
