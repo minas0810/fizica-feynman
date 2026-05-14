@@ -426,3 +426,46 @@ footer em { font-style: italic; }
     .module-page { padding: 0 14px 32px; }
     .cover-page h1 { font-size: 1.8em; }
 }
+
+/* ——— BIOGRAPHY PAGE STYLES ——— */
+.biography-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.biography-section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary-medium);
+}
+
+.biography-section h3 {
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    border: none;
+    padding: 0;
+}
+
+.biography-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.biography-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.biography-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.biography-section strong {
+    color: var(--primary-dark);
+    font-weight: 600;
+}

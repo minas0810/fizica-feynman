@@ -22,11 +22,13 @@
   const body = document.body;
   const modNum   = parseInt(body.getAttribute('data-module'), 10) || 0;
   const isIndex  = body.getAttribute('data-page') === 'index';
+  const isModulesPage = body.getAttribute('data-page') === 'modules';
+  const isAboutFeynman = body.getAttribute('data-page') === 'despre-feynman';
   const isModule = modNum > 0;
 
   /* —— Căi relative —— */
-  function modHref(file) { return isIndex ? 'modules/' + file : file; }
-  function homeHref()    { return isIndex ? 'index.html' : '../index.html'; }
+  function modHref(file) { return (isIndex || isModulesPage || isAboutFeynman) ? 'modules/' + file : file; }
+  function homeHref()    { return (isIndex || isModulesPage || isAboutFeynman) ? 'index.html' : '../index.html'; }
 
   /* ================================================
      1. NAVBAR GLOBALĂ
@@ -59,6 +61,7 @@
             ${dropItems}
           </div>
         </div>
+        <a href="despre-feynman.html" class="site-nav__despre-feynman">Despre Feynman</a>
         <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" class="site-nav__simulari" target="_blank" rel="noopener noreferrer">Simulări</a>
         <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
       </div>`;
