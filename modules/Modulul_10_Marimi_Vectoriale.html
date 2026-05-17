@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 10: Mărimi scalare și vectoriale — Săgețile care mișcă lumea</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="10">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 10 · MIȘCARE</div>
+    <h1>MĂRIMI SCALARE ȘI VECTORIALE</h1>
+    <div class="subtitle">„Săgețile care mișcă lumea — de ce direcția contează"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Despre vectori și fizică</h2>
+
+<p>Feynman explică de ce matematica vectorilor este indispensabilă fizicii:</p>
+
+<blockquote>
+    <p>„The whole machinery of physics uses vectors — position, velocity, acceleration, force, momentum. A vector has both magnitude and direction, and you must keep track of both. Forgetting the direction is like forgetting half the story."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Întregul mecanism al fizicii folosește vectori — poziție, viteză, accelerație, forță, moment. Un vector are atât magnitudine cât și direcție, și trebuie să ții cont de ambele. A uita direcția e ca și cum ai uita jumătate din poveste."
+</div>
+
+<h2>De ce nu e suficient un număr?</h2>
+
+<blockquote>
+    <p>„If I tell you I pushed with 10 newtons, you don't know anything useful unless I also tell you which way. The direction is not a luxury — it is essential. Two equal forces in opposite directions cancel completely."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Dacă îți spun că am împins cu 10 newtoni, nu știi nimic util dacă nu îți spun și în ce direcție. Direcția nu e un lux — e esențială. Două forțe egale în direcții opuse se anulează complet."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Unele mărimi fizice sunt complet descrise de un singur număr (temperatură, masă, timp). Altele necesită și o direcție — un <strong>vector</strong>. Suma a două forțe de câte 5 N poate fi 10 N, 0 N sau orice valoare între ele, în funcție de direcții!
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Mărimi scalare</h2>
+
+<p><strong>O mărime scalară</strong> este complet definită de valoarea sa numerică și unitatea de măsură.</p>
+
+<table>
+    <tr>
+        <th>Mărime scalară</th>
+        <th>Simbol</th>
+        <th>Unitate SI</th>
+    </tr>
+    <tr><td>Masa</td><td>m</td><td>kg</td></tr>
+    <tr><td>Temperatura</td><td>T</td><td>°C sau K</td></tr>
+    <tr><td>Timpul</td><td>t</td><td>s</td></tr>
+    <tr><td>Energia</td><td>E</td><td>J</td></tr>
+    <tr><td>Volumul</td><td>V</td><td>m³</td></tr>
+    <tr><td>Distanța parcursă</td><td>d</td><td>m</td></tr>
+</table>
+
+<h2>Mărimi vectoriale</h2>
+
+<p><strong>O mărime vectorială</strong> este complet definită de: valoare numerică (modul), direcție și sens.</p>
+
+<table>
+    <tr>
+        <th>Mărime vectorială</th>
+        <th>Simbol</th>
+        <th>Unitate SI</th>
+    </tr>
+    <tr><td>Forța</td><td>$\vec{F}$</td><td>N</td></tr>
+    <tr><td>Viteza</td><td>$\vec{v}$</td><td>m/s</td></tr>
+    <tr><td>Accelerația</td><td>$\vec{a}$</td><td>m/s²</td></tr>
+    <tr><td>Deplasarea</td><td>$\vec{d}$</td><td>m</td></tr>
+    <tr><td>Greutatea</td><td>$\vec{G}$</td><td>N</td></tr>
+    <tr><td>Impulsul</td><td>$\vec{p}$</td><td>kg·m/s</td></tr>
+</table>
+
+<h2>Reprezentarea unui vector</h2>
+
+<p>Un vector se reprezintă ca o <strong>săgeată</strong>:</p>
+<ul>
+    <li><strong>Lungimea săgeții</strong> = modulul (valoarea numerică), la o scară aleasă</li>
+    <li><strong>Direcția săgeții</strong> = direcția mărimii (ex: orizontal, vertical, 30°)</li>
+    <li><strong>Sensul săgeții</strong> = spre dreapta, în sus, spre nord etc.</li>
+    <li><strong>Originea</strong> = punctul de aplicație al vectorului</li>
+</ul>
+
+<div class="info-box">
+    <strong>Notație:</strong> Vectorii se notează cu săgeată deasupra: $\vec{F}$, $\vec{v}$. Modulul (valoarea) se notează fără săgeată sau cu bare: $F$ sau $|\vec{F}|$.
+</div>
+
+<h2>Adunarea vectorilor — Regula paralelogramului</h2>
+
+<p>Când doi vectori acționează simultan pe un corp, efectul lor combinat este <strong>vectorul rezultant</strong>.</p>
+
+<p><strong>Regula paralelogramului:</strong></p>
+<ol>
+    <li>Desenează ambii vectori cu același punct de origine</li>
+    <li>Completează paralelogramul (trasează paralele la fiecare vector)</li>
+    <li>Diagonala paralelogramului = <strong>vectorul rezultant</strong> $\vec{R}$</li>
+</ol>
+
+<p><strong>Regula triunghiului (alternativă):</strong></p>
+<ol>
+    <li>Desenează primul vector</li>
+    <li>Aplică al doilea vector la capătul primului</li>
+    <li>Rezultanta = vectorul de la originea primului la capătul celui de-al doilea</li>
+</ol>
+
+<h2>Cazuri speciale de adunare</h2>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>Modulul rezultantei</th>
+        <th>Exemplu</th>
+    </tr>
+    <tr>
+        <td>Vectori în același sens</td>
+        <td>R = F₁ + F₂</td>
+        <td>Doi oameni împing în aceeași direcție</td>
+    </tr>
+    <tr>
+        <td>Vectori în sens opus</td>
+        <td>R = |F₁ − F₂|</td>
+        <td>Forțe de sens contrar pe un corp</td>
+    </tr>
+    <tr>
+        <td>Vectori perpendiculari</td>
+        <td>R = √(F₁² + F₂²)</td>
+        <td>Vânt lateral + propulsie înainte</td>
+    </tr>
+    <tr>
+        <td>Orice unghi α</td>
+        <td>R = √(F₁² + F₂² + 2F₁F₂cosα)</td>
+        <td>Caz general</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Barca care traversează râul</h2>
+
+<p><strong>Situația:</strong> O barcă înaintează cu 3 m/s perpendicular pe maluri, dar curentul râului o împinge lateral cu 4 m/s. Unde ajunge?</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Viteza bărcii față de apă: $\vec{v_b}$ = 3 m/s (spre malul opus)</li>
+    <li>Viteza curentului: $\vec{v_c}$ = 4 m/s (de-a lungul râului)</li>
+    <li>Viteza față de mal = rezultanta celor doi vectori perpendiculari</li>
+</ul>
+
+<div class="formula-box">
+    v = √(3² + 4²) = √(9 + 16) = √25 = <strong>5 m/s</strong>
+</div>
+
+<div class="result">Barca ajunge la mal cu 5 m/s, dar deplasată în aval față de punctul vizat!</div>
+
+<h2>Exemplul 2: Avionul în vânt lateral</h2>
+
+<p><strong>Situația:</strong> Un avion zboară spre est cu 800 km/h. Un vânt din nord îl împinge cu 100 km/h. Pilotul trebuie să corecteze direcția pentru a ajunge la destinație.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Vectorii vitezei avionului și vântului se compun</li>
+    <li>Viteza reală față de sol este rezultanta lor</li>
+    <li>Pilotul orientează avionul ușor spre nord (contravânt) pentru ca rezultanta să fie exact spre est</li>
+</ul>
+
+<div class="info-box">
+    <strong>Aplicație navigație:</strong> Navigatorii, piloții și marinarii lucrează constant cu adunarea de vectori. Un navigator care ignoră curentul marin poate rata portul cu zeci de kilometri!
+</div>
+
+<h2>Exemplul 3: Remorcarea mașinii — unghiul contează!</h2>
+
+<p><strong>Situația:</strong> Două mașini de tractare trag o mașină blocată. Una trage cu 3000 N spre dreapta, alta cu 4000 N spre înainte. Ce forță rezultantă acționează?</p>
+
+<p><strong>Explicația:</strong></p>
+<ul>
+    <li>Forțele sunt perpendiculare → teorema lui Pitagora</li>
+    <li>R = √(3000² + 4000²) = √(9.000.000 + 16.000.000) = √25.000.000 = 5000 N</li>
+    <li>Dacă ambele ar trage în același sens: R = 7000 N — mai mult, dar nu întotdeauna posibil</li>
+    <li>Dacă ar trage în sens opus: R = 1000 N — ineficient!</li>
+</ul>
+
+<div class="result">Concluzie: Direcția forțelor este la fel de importantă ca magnitudinea lor!</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Adunarea forțelor cu dinamometre</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că forțele se adună vectorial, nu aritmetic.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>2 dinamometre</li>
+        <li>Un inel de metal sau o bilă suspendate de un fir</li>
+        <li>Raportor și riglă</li>
+        <li>Foaie de hârtie pe tablă/suport</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Suspendă inelul de două fire conectate la cele două dinamometre</li>
+        <li>Ține dinamometrele în unghiuri diferite și citește forțele</li>
+        <li>Notează direcțiile și valorile fiecărui dinamometru</li>
+        <li>Construiește grafic paralelogramul forțelor</li>
+        <li>Compară rezultanta grafică cu greutatea inelului (echilibru!)</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Suma aritmetică a forțelor ≠ greutatea inelului (în general)</li>
+        <li>Rezultanta vectorială = exact greutatea inelului (echilibru)</li>
+        <li>Când unghiul dintre forțe crește, fiecare dinamometru arată mai mult!</li>
+    </ul>
+
+    <div class="result">Concluzie: Forțele se compun vectorial — direcția este esențială!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Barca pe masă — mișcarea compusă</h3>
+
+    <p><strong>Obiectiv:</strong> Vizualizarea compoziției de viteze.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O foaie de hârtie mare pe masă</li>
+        <li>O cutie mică (barca)</li>
+        <li>Un creion</li>
+        <li>Riglă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Trage hârtia uniform spre tine cu viteză constantă (curentul)</li>
+        <li>Simultan, mișcă cutia perpendicular pe hârtie (propulsia bărcii)</li>
+        <li>Observă urma lăsată de creion pe hârtie vs. mișcarea față de masă</li>
+        <li>Măsoară deplasările și compară cu predicția vectorială</li>
+    </ol>
+
+    <div class="result">Concluzie: Mișcarea rezultantă față de masă este diagonala paralelogramului format de cele două viteze!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Descompunerea forței pe plan înclinat</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea descompunerii unui vector în componente.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un plan înclinat (carte groasă sub o scândurică)</li>
+        <li>O bilă sau mașinuță</li>
+        <li>Dinamometru</li>
+        <li>Raportor pentru măsurarea unghiului</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune obiectul pe planul înclinat — măsoară forța necesară să-l țină în loc cu dinamometrul paralel la plan</li>
+        <li>Calculează componenta greutății de-a lungul planului: F = G·sin α</li>
+        <li>Compară valoarea calculată cu citirea dinamometrului</li>
+        <li>Mărește unghiul și repetă</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Observație:</strong> La α=0° (plan orizontal), forța de-a lungul planului = 0. La α=90° (vertical), forța = greutatea întreagă. Greutatea se „descompune" în funcție de unghi!
+    </div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Scalar:</strong> Complet descris de un număr. Exemplu: „temperatura e 25°C".</p>
+<p><strong>Vector:</strong> Necesită și direcție și sens. Exemplu: „forța e 10 N spre dreapta".</p>
+<p><strong>Rezultanta:</strong> Vectorul echivalent cu suma tuturor vectorilor ce acționează.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>Modulul rezultantei — vectori coliniari:</h3>
+<div class="formula-box">
+    Același sens: R = F₁ + F₂<br><br>
+    Sens opus: R = |F₁ − F₂|
+</div>
+
+<h3>Modulul rezultantei — vectori perpendiculari:</h3>
+<div class="formula-box">
+    $$R = \sqrt{F_1^2 + F_2^2}$$
+</div>
+
+<h3>Cazul general (unghi α între vectori):</h3>
+<div class="formula-box">
+    $$R = \sqrt{F_1^2 + F_2^2 + 2F_1 F_2 \cos\alpha}$$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>Două forțe de 6 N și 8 N acționează perpendicular pe un corp. Care e rezultanta?</p>
+    <p>R = √(6² + 8²) = √(36 + 64) = √100 = <strong>10 N</strong></p>
+    <div class="result">Rezultanta = 10 N (tripletul pitagoreic 6-8-10!)</div>
+</div>
+
+<h3>Descompunerea unui vector pe două direcții perpendiculare:</h3>
+<div class="formula-box">
+    $$F_x = F \cdot \cos\alpha \qquad F_y = F \cdot \sin\alpha$$
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Echilibrul de forțe (condiția vectorială):</h3>
+<div class="formula-box">
+    $$\vec{F_1} + \vec{F_2} + \vec{F_3} + \ldots = \vec{0}$$
+</div>
+
+<p>Un corp este în echilibru dacă suma vectorială a tuturor forțelor ce acționează asupra lui este zero.</p>
+
+<h3>Forța Feynman — interpretare profundă:</h3>
+<blockquote>
+    <p>„The vector is the most economical description of a physical quantity that has direction. Instead of carrying three separate numbers (x, y, z components), we carry one object — the vector — and operate on it geometrically."</p>
+</blockquote>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Dacă două forțe de 5 N acționează pe același corp, rezultanta este întotdeauna 10 N."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Rezultanta depinde de unghiul dintre forțe. Poate fi orice valoare de la 0 N (forțe opuse) la 10 N (forțe în același sens). De exemplu, perpendiculare: R = √50 ≈ 7,07 N.
+</div>
+
+<p><strong>2. „Masa este o mărime vectorială."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Masa este scalară — are doar valoare numerică, fără direcție. Greutatea însă este vectorială (are direcție: vertical, spre centrul Pământului).
+</div>
+
+<p><strong>3. „Vectorul rezultant al două forțe egale și opuse este zero."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Dacă F₁ = F₂ ca modul dar sunt în sens opus, suma lor vectorială este $\vec{0}$. Corpul se comportă ca și cum nu ar exista nicio forță.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce un om care împinge orizontal o masă grea nu reușește, dar doi oameni care împing din direcții ușor diferite reușesc?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Dacă ambii împing aproximativ în același sens (unghi mic între forțe), rezultanta este aproape suma lor aritmetică. Dacă ar împinge exact opus, s-ar anula. Unghiurile mici dau forțe utile mari!
+</div>
+
+<p><strong>5. De ce pilotul de avion în vânt lateral trebuie să-și orienteze botul spre vânt pentru a merge drept înainte?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Vântul adaugă o componentă laterală vitezei avionului. Pentru ca rezultanta (viteza față de sol) să fie exact spre destinație, componenta vitezei avionului față de aer trebuie să compenseze vântul lateral — deci avionul trebuie orientat puțin „contravânt".
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. O forță de 40 N acționează la 30° față de orizontală. Calculează componentele orizontală și verticală.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>Componenta orizontală: Fx = F·cos30° = 40 × 0,866 = <strong>34,6 N</strong></li>
+        <li>Componenta verticală: Fy = F·sin30° = 40 × 0,5 = <strong>20 N</strong></li>
+    </ul>
+    <div class="result">Verificare: √(34,6² + 20²) = √(1197 + 400) = √1597 ≈ 40 N ✓</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Ana trage o sanie cu o forță de 50 N la un unghi de 37° față de orizontală. Câtă din această forță e utilă (mișcă sania înainte)?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong> Componenta orizontală = forța utilă pentru înaintare.<br>
+    F_orizontal = 50 × cos37° = 50 × 0,8 = <strong>40 N</strong><br>
+    Componenta verticală = 50 × sin37° = 50 × 0,6 = 30 N — ridică ușor sania, reducând frecarea.<br>
+    <p>Concluzie: Doar 40 din cei 50 N mișcă sania înainte. Dacă Ana ar trage orizontal, toți 50 N ar fi utili — dar ar fi mai greu fizic!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 11</strong> „Vectors" — introducerea formală a vectorilor</li>
+    <li><strong>Vol. I, Cap. 12</strong> „Characteristics of Force" — forța ca vector</li>
+    <li><strong>Vol. I, Cap. 9</strong> „Newton's Laws of Dynamics" — legile vectoriale ale mișcării</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu vectorii</th>
+    </tr>
+    <tr>
+        <td><strong>Matematică</strong></td>
+        <td>Geometrie vectorială, produs scalar, sisteme de coordonate</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Curenți oceanici, vânturi, navigație — toate necesită vectori</td>
+    </tr>
+    <tr>
+        <td><strong>Inginerie</strong></td>
+        <td>Calculul structurilor — fiecare grindă suportă forțe vectoriale</td>
+    </tr>
+    <tr>
+        <td><strong>Informatică</strong></td>
+        <td>Grafica 3D, jocuri video — mișcarea personajelor folosește vectori</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>SCALAR</strong> = număr + unitate (masă, temperatură, timp)</p>
+    <p><strong>VECTOR</strong> = număr + unitate + direcție + sens (forță, viteză, accelerație)</p>
+
+    <h3>ADUNAREA VECTORILOR:</h3>
+    <div class="formula-box">
+        Coliniari același sens: R = F₁ + F₂<br><br>
+        Coliniari sens opus: R = |F₁ − F₂|<br><br>
+        Perpendiculari: $R = \sqrt{F_1^2 + F_2^2}$<br><br>
+        General: $R = \sqrt{F_1^2 + F_2^2 + 2F_1F_2\cos\alpha}$
+    </div>
+
+    <h3>DESCOMPUNEREA VECTORULUI:</h3>
+    <div class="formula-box">
+        $F_x = F\cos\alpha$ &nbsp;&nbsp;&nbsp; $F_y = F\sin\alpha$
+    </div>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Vectorul are magnitudine ȘI direcție — niciuna nu e opțională."</p>
+
+    <h3>REPREZENTARE GRAFICĂ:</h3>
+    <p>Săgeată: lungime = modul (la scară), direcție + sens = proprietatea fizică.</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

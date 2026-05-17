@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 17: Gazele și termodinamica elementară — Atomii în mișcare liberă</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="17">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 17 · CĂLDURĂ ȘI TERMODINAMICĂ</div>
+    <h1>GAZELE ȘI TERMODINAMICA ELEMENTARĂ</h1>
+    <div class="subtitle">„Atomii în mișcare liberă — legile care guvernează aerul, aburul și motoarele"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Gazul ideal văzut de Feynman</h2>
+
+<blockquote>
+    <p>„A gas is a large number of molecules moving at high speed in all directions, bouncing off each other and off walls. The pressure is the result of these impacts. The temperature is the average kinetic energy of the molecules. The simplest gas — the ideal gas — obeys a very elegant law connecting pressure, volume and temperature."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Un gaz este un număr mare de molecule care se mișcă cu viteză mare în toate direcțiile, ciocnindu-se unele de altele și de pereți. Presiunea este rezultatul acestor impacturi. Temperatura este energia cinetică medie a moleculelor. Cel mai simplu gaz — gazul ideal — ascultă o lege foarte elegantă care conectează presiunea, volumul și temperatura."
+</div>
+
+<h2>De ce sunt atât de utile legile gazelor</h2>
+
+<blockquote>
+    <p>„The great power of the gas laws is that they apply to ALL gases, regardless of chemical composition. Hydrogen, oxygen, air, steam — all follow the same equations, because the laws depend only on the motion of molecules, not on what kind of molecules they are."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Marea putere a legilor gazelor este că se aplică TUTUROR gazelor, indiferent de compoziția chimică. Hidrogen, oxigen, aer, abur — toate urmează aceleași ecuații, deoarece legile depind numai de mișcarea moleculelor, nu de ce fel de molecule sunt."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Comportamentul unui gaz depinde de trei mărimi: presiunea (p), volumul (V) și temperatura absolută (T). Legile gazelor descriu cum se modifică una dintre ele când celelalte două variază.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Starea unui gaz — cele trei mărimi de stare</h2>
+
+<table>
+    <tr>
+        <th>Mărime</th>
+        <th>Simbol</th>
+        <th>Unitate SI</th>
+        <th>Semnificație moleculară</th>
+    </tr>
+    <tr>
+        <td><strong>Presiunea</strong></td>
+        <td>p</td>
+        <td>Pascal (Pa)</td>
+        <td>Forța loviturilor moleculare pe unitate de arie</td>
+    </tr>
+    <tr>
+        <td><strong>Volumul</strong></td>
+        <td>V</td>
+        <td>m³</td>
+        <td>Spațiul disponibil moleculelor</td>
+    </tr>
+    <tr>
+        <td><strong>Temperatura absolută</strong></td>
+        <td>T</td>
+        <td>Kelvin (K)</td>
+        <td>Energia cinetică medie a moleculelor</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Temperatura absolută:</strong> T(K) = T(°C) + 273. În legile gazelor se folosește MEREU temperatura în Kelvin! La 0 K (−273°C), moleculele sunt complet imobile — temperatura minimă posibilă.
+</div>
+
+<h2>Legea lui Boyle-Mariotte (izotermă: T = const.)</h2>
+
+<p>La temperatură constantă, produsul presiune × volum rămâne constant.</p>
+
+<div class="formula-box">
+    $$p \cdot V = \text{const.} \qquad \Rightarrow \qquad p_1 V_1 = p_2 V_2$$
+</div>
+
+<div class="info-box">
+    <strong>Explicație moleculară:</strong> La T constant, moleculele au aceeași viteză. Dacă comprimăm gazul (V scade), moleculele lovesc mai des pereții (mai apropiați) → presiunea crește. p↑ ↔ V↓.
+</div>
+
+<h2>Legea lui Charles (izobară: p = const.)</h2>
+
+<p>La presiune constantă, volumul gazului este proporțional cu temperatura absolută.</p>
+
+<div class="formula-box">
+    $$\frac{V}{T} = \text{const.} \qquad \Rightarrow \qquad \frac{V_1}{T_1} = \frac{V_2}{T_2}$$
+</div>
+
+<div class="info-box">
+    <strong>Explicație moleculară:</strong> La T mai mare, moleculele se mișcă mai repede → lovesc pereții mai tare → dacă presiunea rămâne la fel, pereții (pistonul) se vor deplasa → V crește. T↑ ↔ V↑.
+</div>
+
+<h2>Legea lui Gay-Lussac (izocoră: V = const.)</h2>
+
+<p>La volum constant, presiunea gazului este proporțională cu temperatura absolută.</p>
+
+<div class="formula-box">
+    $$\frac{p}{T} = \text{const.} \qquad \Rightarrow \qquad \frac{p_1}{T_1} = \frac{p_2}{T_2}$$
+</div>
+
+<div class="info-box">
+    <strong>Exemplu practic:</strong> Anvelopa mașinii are presiunea mai mare vara (T mare) decât iarna — același volum, temperaturi diferite. De aceea se recomandă verificarea presiunii la rece!
+</div>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul</th>
+    </tr>
+    <tr>
+        <td>„La 0°C, gazele nu mai au presiune"</td>
+        <td>La 0°C = 273 K — moleculele se mișcă viu. Presiunea = 0 numai la 0 K = −273°C</td>
+    </tr>
+    <tr>
+        <td>„Dacă dublăm temperatura Celsius, dublăm volumul"</td>
+        <td>Trebuie dublată temperatura Kelvin! 20°C→40°C nu dublează T în Kelvin (293→313K)</td>
+    </tr>
+    <tr>
+        <td>„Gazele se comportă la fel ca solidele la comprimare"</td>
+        <td>Solidele sunt incompresibile; gazele se comprimă ușor — spațiu mare între molecule</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Anvelopa de bicicletă — Boyle și Gay-Lussac în acțiune</h2>
+
+<p><strong>Situația:</strong> Pompezi o anvelopă goală și ea se umflă. Vara, presiunea din ea crește față de iarnă.</p>
+
+<p><strong>Analiza:</strong></p>
+<ul>
+    <li><strong>Pomparea</strong> (Boyle): comprimi aerul din pompă → V₁ (pompă) → V₂ (anvelopă mai mică) → p crește</li>
+    <li><strong>Vara vs. iarna</strong> (Gay-Lussac): V constant (anvelopa rigidă), T_vara > T_iarna → p_vara > p_iarna</li>
+    <li>La 0°C (273K) → 30°C (303K): creștere de ~10% în presiune</li>
+</ul>
+
+<div class="result">Recomandare: verifică presiunea anvelopelor dimineața, înainte de a rula, când temperatura e stabilizată la temperatura ambiantă.</div>
+
+<h2>Exemplul 2: Motorul cu aburi — energia termică → mecanică</h2>
+
+<p><strong>Situația:</strong> Motorul cu aburi al lui Watt a declanșat Revoluția Industrială. Cum funcționează?</p>
+
+<p><strong>Principiu termodinamic:</strong></p>
+<ol>
+    <li>Apa se transformă în abur la temperatura ridicată (T₁ înaltă) — absoarbe căldura Q₁</li>
+    <li>Aburul se dilată → mișcă pistonul → efectuează <strong>lucru mecanic L</strong></li>
+    <li>Aburul se răcește și se condensează la temperatura joasă (T₂ < T₁) — cedează căldura Q₂</li>
+    <li>Ciclul se reia</li>
+</ol>
+
+<div class="formula-box">
+    Randamentul termic: $\eta = \dfrac{L}{Q_1} = 1 - \dfrac{T_2}{T_1}$ &nbsp;&nbsp; (Carnot)
+</div>
+
+<div class="info-box">
+    <strong>Feynman:</strong> „Niciun motor termic nu poate transforma toată căldura în lucru mecanic. Există mereu un reziduu termic Q₂. Randamentul maxim depinde de diferența de temperatură — cu cât T₁ mai mare și T₂ mai mic, cu atât mai eficient."
+</div>
+
+<h2>Exemplul 3: Balonul cu aer cald — Charles în zbor</h2>
+
+<p><strong>Situația:</strong> Un balon cu aer cald se ridică. De ce?</p>
+
+<p><strong>Analiza (Charles + Arhimede):</strong></p>
+<ul>
+    <li>Aerul interior e încălzit → T crește → V crește (dacă balonul e deschis, p rămâne aproximativ egală cu presiunea atmosferică)</li>
+    <li>Densitatea aerului cald: ρ = m/V → V crește, m rămâne → ρ scade</li>
+    <li>Aerul cald e mai puțin dens decât aerul rece → forța Arhimedică > greutatea balonului → urcă!</li>
+</ul>
+
+<div class="result">Balonul cu aer cald aplică simultan legea lui Charles (V↑ la T↑) și principiul lui Arhimede (ρ mai mică → plutire).</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Legea Boyle-Mariotte — seringă sigilată</h3>
+
+    <p><strong>Obiectiv:</strong> Verificarea că p·V = const. la temperatură constantă.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O seringă mare (20–60 ml) cu capătul sigilat (deget sau dop)</li>
+        <li>Riglă</li>
+        <li>Opțional: manometru simplu</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Trage pistonul la 40 ml de aer, sigilează capătul</li>
+        <li>Apasă pistonul la 20 ml — ce se întâmplă cu rezistența?</li>
+        <li>Apasă la 10 ml — rezistența s-a dublat din nou?</li>
+        <li>Eliberează — pistonul revine? (procesul e reversibil!)</li>
+    </ol>
+
+    <div class="result">Concluzie: La volum înjumătățit, presiunea s-a dublat. p₁V₁ = p₂V₂ verificat calitativ!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Legea Charles — balonul în apă fierbinte și rece</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că volumul gazului crește cu temperatura.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un balon mic de cauciuc</li>
+        <li>Vas cu apă caldă (~60°C) și vas cu apă rece (~5°C)</li>
+        <li>Termometru</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Umflă balonul la dimensiune normală la temperatura camerei — marchează circumferința cu un fir</li>
+        <li>Pune balonul în apa caldă — observă după 1–2 minute</li>
+        <li>Mută balonul în apa rece — observă după 1–2 minute</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>În apă caldă: balonul se umflă (V crește)</li>
+        <li>În apă rece: balonul se micșorează (V scade)</li>
+        <li>La temperatura camerei: revine la dimensiunea inițială</li>
+    </ul>
+
+    <div class="result">Concluzie: V crește cu T — legea lui Charles verificată experimental!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Motorul termic simplu — turbina cu aburi</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea conversiei energie termică → mecanică.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un ibric cu apă fierbinte</li>
+        <li>O morișcă ușoară de hârtie sau plastic (turbinuță)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Fierbe apa în ibric</li>
+        <li>Ține morișca în jetul de aburi care iese din gură</li>
+        <li>Observă că morișca se rotește!</li>
+        <li>Crește sau micșorează distanța față de jet — cum se schimbă viteza?</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Principiu:</strong> Aburul (gaz la T înaltă, presiune înaltă) se dilată și cedează energie cinetică paletelor turbinei. Aceasta este esența oricărui motor termic: cădere de temperatură → lucru mecanic.
+    </div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Gaz ideal:</strong> Model teoretic al unui gaz cu molecule punctiforme care nu interacționează.</p>
+<p><strong>Legi izoprocese:</strong> Transformări în care una din cele trei mărimi (p, V, T) rămâne constantă.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    Boyle (izotermă, T=ct): $p_1 V_1 = p_2 V_2$<br><br>
+    Charles (izobară, p=ct): $\dfrac{V_1}{T_1} = \dfrac{V_2}{T_2}$<br><br>
+    Gay-Lussac (izocoră, V=ct): $\dfrac{p_1}{T_1} = \dfrac{p_2}{T_2}$<br><br>
+    Legea generală: $\dfrac{p_1 V_1}{T_1} = \dfrac{p_2 V_2}{T_2}$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>O cantitate de gaz are p₁=200 kPa, V₁=3 L, T₁=300 K. Se comprimă izoterm la V₂=1 L. Ce presiune rezultă?</p>
+    <ul>
+        <li>p₁V₁ = p₂V₂ → 200×3 = p₂×1 → p₂ = <strong>600 kPa</strong></li>
+    </ul>
+    <div class="result">La volum de 3 ori mai mic, presiunea e de 3 ori mai mare.</div>
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Legea gazului ideal (Clapeyron-Mendeleev):</h3>
+<div class="formula-box">
+    $$pV = nRT$$
+</div>
+<p>Unde n = numărul de moli de gaz, R = 8,314 J/(mol·K) = constanta universală a gazelor.</p>
+
+<h3>Energia cinetică medie și temperatura (Feynman):</h3>
+<div class="formula-box">
+    $$\bar{E}_c = \frac{3}{2}kT \qquad \text{(per moleculă)}$$
+</div>
+<p>k = 1,38×10⁻²³ J/K (constanta Boltzmann). Temperatura = energia cinetică medie!</p>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „La comprimarea unui gaz la temperatură constantă, temperatura lui crește."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Procesul este izoterm (T = constant, prin definiție). Presiunea crește, volumul scade, temperatura rămâne neschimbată. (Dacă comprimarea e rapidă și fără schimb de căldură, temperatura ar crește — dar acela e un proces adiabatic, nu izoterm.)
+</div>
+
+<p><strong>2. „Dacă temperatura unui gaz crește de la 10°C la 20°C, volumul lui se dublează."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Trebuie folosite temperaturi Kelvin! T₁=283K, T₂=293K. V₂/V₁ = 293/283 ≈ 1,035 — crește cu doar 3,5%, nu se dublează!
+</div>
+
+<p><strong>3. „La volum constant, dublarea temperaturii absolute dublează presiunea."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Legea Gay-Lussac: p/T = const. → T de 2 ori mai mare (în Kelvin!) → p de 2 ori mai mare. Exemplu: de la 150 K la 300 K → presiunea se dublează.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce pungile de chipsuri se umflă la altitudine mare (în avion sau la munte)?</strong></p>
+<div class="answer">
+    <strong>Răspuns (Boyle):</strong> Punga e sigilată la presiunea atmosferică de la sol (~100 kPa). La altitudine, presiunea exterioară scade (~75 kPa în avion). Presiunea din interior rămâne 100 kPa → presiunea interioară > presiunea exterioară → punga se umflă!
+</div>
+
+<p><strong>5. De ce nu se poate construi un motor termic cu randament 100%?</strong></p>
+<div class="answer">
+    <strong>Răspuns (al II-lea principiu al termodinamicii):</strong> Un motor termic produce lucru mecanic din diferența de temperatură. O parte din căldura absorbită trebuie cedată la temperatura joasă — e imposibil să convertești totul în lucru. η_max = 1 − T₂/T₁ < 1 întotdeauna (T₂ > 0 K).
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un gaz ocupă V₁ = 5 L la T₁ = 27°C și p₁ = 100 kPa. Este încălzit la T₂ = 127°C, menținând presiunea constantă. Ce volum ocupă?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>T₁ = 27+273 = 300 K; T₂ = 127+273 = 400 K</li>
+        <li>Lege Charles (p=ct): V₁/T₁ = V₂/T₂</li>
+        <li>V₂ = V₁·T₂/T₁ = 5 × 400/300 = <strong>6,67 L</strong></li>
+    </ul>
+    <div class="result">Volumul crește de la 5 L la 6,67 L (cu ⅓ mai mult — T crescut cu ⅓ în Kelvin).</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. O centrală termoelectrică absoarbe căldură la T₁=500°C și o cedează la T₂=50°C. Care e randamentul maxim teoretic (Carnot)? Dacă produce 1000 MW de putere electrică, câtă căldură consumă pe secundă?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>T₁ = 500+273 = 773 K; T₂ = 50+273 = 323 K</li>
+        <li>η = 1 − T₂/T₁ = 1 − 323/773 ≈ <strong>0,582 = 58,2%</strong></li>
+        <li>P_util = η × P_total → P_total = P_util/η = 1000/0,582 ≈ <strong>1718 MW</strong></li>
+        <li>Căldura consumată: Q₁ = 1718 MJ pe secundă; din care 718 MJ se pierd ca căldură reziduală!</li>
+    </ul>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 39</strong> „The Kinetic Theory of Gases" — teoria cinetică moleculară</li>
+    <li><strong>Vol. I, Cap. 44</strong> „The Laws of Thermodynamics" — principiile termodinamicii</li>
+    <li><strong>Vol. I, Cap. 45</strong> „Illustrations of Thermodynamics"</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea</th>
+    </tr>
+    <tr>
+        <td><strong>Chimie</strong></td>
+        <td>Legea gazelor ideale — stoichiometrie, volume molare</td>
+    </tr>
+    <tr>
+        <td><strong>Meteorologie</strong></td>
+        <td>Presiunea atmosferică, vântul, curenții de aer — toate sunt gaze</td>
+    </tr>
+    <tr>
+        <td><strong>Inginerie</strong></td>
+        <td>Motoare termice, turbine cu gaz, refrigerare</td>
+    </tr>
+    <tr>
+        <td><strong>Astronomie</strong></td>
+        <td>Stelele sunt gaze la temperaturi extreme — aceleași legi se aplică</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>LEGILE GAZELOR:</h3>
+    <div class="formula-box">
+        Boyle (T=ct): $p_1V_1 = p_2V_2$<br><br>
+        Charles (p=ct): $V_1/T_1 = V_2/T_2$<br><br>
+        Gay-Lussac (V=ct): $p_1/T_1 = p_2/T_2$<br><br>
+        Generală: $p_1V_1/T_1 = p_2V_2/T_2$
+    </div>
+
+    <h3>REGULA DE AUR:</h3>
+    <p>Temperatura în Kelvin: T(K) = T(°C) + 273. Niciodată în Celsius în formule!</p>
+
+    <h3>RANDAMENTUL MOTORULUI TERMIC (Carnot):</h3>
+    <div class="formula-box">
+        $\eta = 1 - T_2/T_1 < 1$ &nbsp;&nbsp; (mereu sub 100%)
+    </div>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Temperatura = energia cinetică medie a moleculelor. Legile gazelor sunt consecința statisticii mișcărilor moleculare."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

@@ -1,34 +1,66 @@
 /* ===========================================
    FIZICA CU FEYNMAN — nav.js
-   Sistem de navigație profesional
+   Sistem de navigație — 24 module
    =========================================== */
 
 (function () {
   'use strict';
 
-  /* ——— DATE MODULE ——— */
+  /* ——— TOATE MODULELE ÎN ORDINEA FEYNMAN ——— */
   const MODULES = [
-    { n: 1, icon: '🔬', title: 'Ce Este Fizica?',                  short: 'Ce Este Fizica?',          file: 'Modulul_1_Ce_Este_Fizica.html' },
-    { n: 2, icon: '📏', title: 'Mărimi Fizice și Măsurare',        short: 'Mărimi Fizice',             file: 'Modulul_2_Marimi_Fizice_Masurare.html' },
-    { n: 3, icon: '🏃', title: 'Mișcarea Corpurilor',              short: 'Mișcarea Corpurilor',       file: 'Modulul_3_Miscarea_Corpurilor.html' },
-    { n: 4, icon: '⚖️', title: 'Inerția',                         short: 'Inerția',                   file: 'Modulul_4_Inertia.html' },
-    { n: 5, icon: '🧱', title: 'Densitatea',                       short: 'Densitatea',                file: 'Modulul_5_Densitatea.html' },
-    { n: 6, icon: '💪', title: 'Tipuri de Forțe',                  short: 'Tipuri de Forțe',           file: 'Modulul_6_Tipuri_de_Forte.html' },
-    { n: 7, icon: '🌡️', title: 'Fenomene Termice',                short: 'Fenomene Termice',          file: 'Modulul_7_Fenomene_Termice.html' },
-    { n: 8, icon: '⚡', title: 'Fenomene Electrice și Magnetice',   short: 'Electrice & Magnetice',    file: 'Modulul_8_Fenomene_Electrice_Magnetice.html' },
-    { n: 9, icon: '🌈', title: 'Fenomene Optice',                  short: 'Fenomene Optice',           file: 'Modulul_9_Fenomene_Optice.html' },
+    /* I — Fundamentele fizicii */
+    { n: 1,  icon: '🔬', title: 'Ce este fizica?',                        short: 'Ce este fizica?',        file: 'Modulul_1_Ce_Este_Fizica.html',                      bloc: 'I — Fundamentele fizicii' },
+    { n: 2,  icon: '📏', title: 'Mărimi fizice și măsurare',              short: 'Mărimi fizice',          file: 'Modulul_2_Marimi_Fizice_Masurare.html',              bloc: 'I — Fundamentele fizicii' },
+    /* II — Mișcare */
+    { n: 3,  icon: '🏃', title: 'Mișcarea corpurilor',                    short: 'Mișcarea corpurilor',    file: 'Modulul_3_Miscarea_Corpurilor.html',                 bloc: 'II — Mișcare' },
+    { n: 10, icon: '➡️', title: 'Mărimi scalare și vectoriale',           short: 'Mărimi vectoriale',      file: 'Modulul_10_Marimi_Vectoriale.html',                  bloc: 'II — Mișcare' },
+    /* III — Forțe și dinamică */
+    { n: 4,  icon: '⚖️', title: 'Inerția',                                short: 'Inerția',                file: 'Modulul_4_Inertia.html',                            bloc: 'III — Forțe și dinamică' },
+    { n: 6,  icon: '💪', title: 'Tipuri de forțe',                        short: 'Tipuri de forțe',        file: 'Modulul_6_Tipuri_de_Forte.html',                    bloc: 'III — Forțe și dinamică' },
+    { n: 11, icon: '🍎', title: 'Legile lui Newton',                      short: 'Legile lui Newton',      file: 'Modulul_11_Legile_Newton.html',                     bloc: 'III — Forțe și dinamică' },
+    /* IV — Energie și lucru mecanic */
+    { n: 12, icon: '⚙️', title: 'Lucrul mecanic și puterea',              short: 'Lucru mecanic',          file: 'Modulul_12_Lucru_Mecanic_Putere.html',               bloc: 'IV — Energie și lucru mecanic' },
+    { n: 13, icon: '🎢', title: 'Energia mecanică',                       short: 'Energia mecanică',       file: 'Modulul_13_Energia_Mecanica.html',                   bloc: 'IV — Energie și lucru mecanic' },
+    { n: 14, icon: '⚖️', title: 'Echilibrul corpurilor și pârghiile',     short: 'Echilibru și pârghii',   file: 'Modulul_14_Echilibru_Parghii.html',                  bloc: 'IV — Energie și lucru mecanic' },
+    /* V — Materie și fluide */
+    { n: 5,  icon: '🧱', title: 'Densitatea',                             short: 'Densitatea',             file: 'Modulul_5_Densitatea.html',                         bloc: 'V — Materie și fluide' },
+    { n: 15, icon: '🌊', title: 'Presiunea și statica fluidelor',         short: 'Presiune și fluide',     file: 'Modulul_15_Presiunea_Fluide.html',                   bloc: 'V — Materie și fluide' },
+    /* VI — Căldură și termodinamică */
+    { n: 7,  icon: '🌡️', title: 'Fenomene termice',                      short: 'Fenomene termice',       file: 'Modulul_7_Fenomene_Termice.html',                    bloc: 'VI — Căldură și termodinamică' },
+    { n: 17, icon: '💨', title: 'Gazele și termodinamica',                short: 'Gaze și termodinamică',  file: 'Modulul_17_Gazele_Termodinamica.html',               bloc: 'VI — Căldură și termodinamică' },
+    /* VII — Unde: sunet și lumină */
+    { n: 16, icon: '🔊', title: 'Sunetul',                                short: 'Sunetul',                file: 'Modulul_16_Sunetul.html',                            bloc: 'VII — Unde: sunet și lumină' },
+    { n: 9,  icon: '🌈', title: 'Fenomene optice',                        short: 'Fenomene optice',        file: 'Modulul_9_Fenomene_Optice.html',                    bloc: 'VII — Unde: sunet și lumină' },
+    { n: 23, icon: '👁️', title: 'Lentile și ochiul uman',                short: 'Lentile și ochi',        file: 'Modulul_23_Lentile_Ochiul_Uman.html',                bloc: 'VII — Unde: sunet și lumină' },
+    /* VIII — Electricitate și magnetism */
+    { n: 8,  icon: '⚡', title: 'Fenomene electrice și magnetice',        short: 'Electricitate — intro',  file: 'Modulul_8_Fenomene_Electrice_Magnetice.html',        bloc: 'VIII — Electricitate și magnetism' },
+    { n: 18, icon: '🔋', title: 'Circuitul electric și Legea lui Ohm',   short: 'Legea lui Ohm',          file: 'Modulul_18_Circuit_Electric_Ohm.html',               bloc: 'VIII — Electricitate și magnetism' },
+    { n: 19, icon: '🔌', title: 'Circuite serie și paralel',              short: 'Serie și paralel',       file: 'Modulul_19_Circuite_Serie_Paralel.html',             bloc: 'VIII — Electricitate și magnetism' },
+    { n: 20, icon: '🔥', title: 'Energia electrică și efectul Joule',    short: 'Efect Joule',            file: 'Modulul_20_Energia_Electrica_Joule.html',            bloc: 'VIII — Electricitate și magnetism' },
+    { n: 21, icon: '🧲', title: 'Câmpul magnetic și inducția',            short: 'Câmp magnetic',          file: 'Modulul_21_Camp_Magnetic_Inductie.html',             bloc: 'VIII — Electricitate și magnetism' },
+    { n: 22, icon: '〰️', title: 'Curentul alternativ și transformatorul',short: 'Curent alternativ',      file: 'Modulul_22_Curent_Alternativ_Transformator.html',    bloc: 'VIII — Electricitate și magnetism' },
+    /* IX — Structura materiei */
+    { n: 24, icon: '⚛️', title: 'Structura atomului și radioactivitatea', short: 'Structura atomului',     file: 'Modulul_24_Structura_Atomului_Radioactivitate.html', bloc: 'IX — Structura materiei' },
   ];
 
-  const body = document.body;
-  const modNum   = parseInt(body.getAttribute('data-module'), 10) || 0;
-  const isIndex  = body.getAttribute('data-page') === 'index';
-  const isModulesPage = body.getAttribute('data-page') === 'modules';
+  const TOTAL = MODULES.length; /* 24 */
+
+  const body   = document.body;
+  const modNum = parseInt(body.getAttribute('data-module'), 10) || 0;
+  const isIndex        = body.getAttribute('data-page') === 'index';
+  const isModulesPage  = body.getAttribute('data-page') === 'modules';
   const isAboutFeynman = body.getAttribute('data-page') === 'despre-feynman';
-  const isModule = modNum > 0;
+  const isModule       = modNum > 0;
+
+  /* Indexul curent în array-ul Feynman (pentru prev/next) */
+  const curIdx = MODULES.findIndex(m => m.n === modNum);
 
   /* —— Căi relative —— */
-  function modHref(file) { return (isIndex || isModulesPage || isAboutFeynman) ? 'modules/' + file : file; }
-  function homeHref()    { return (isIndex || isModulesPage || isAboutFeynman) ? 'index.html' : '../index.html'; }
+  const isTopLevel = isIndex || isModulesPage || isAboutFeynman;
+  function modHref(file)  { return isTopLevel ? 'modules/' + file : file; }
+  function homeHref()     { return isTopLevel ? 'index.html'          : '../index.html'; }
+  function aboutHref()    { return isTopLevel ? 'despre-feynman.html' : '../despre-feynman.html'; }
+  function modulesHref()  { return isTopLevel ? 'modules.html'        : '../modules.html'; }
 
   /* ================================================
      1. NAVBAR GLOBALĂ
@@ -37,32 +69,55 @@
     const nav = document.querySelector('.site-nav');
     if (!nav) return;
 
-    const dropItems = MODULES.map(m => {
+    /* Construiește dropdown cu headere de bloc */
+    let dropHTML = '';
+    let lastBloc = null;
+    MODULES.forEach(m => {
+      if (m.bloc !== lastBloc) {
+        if (lastBloc !== null) dropHTML += '<hr>';
+        dropHTML += `<div class="drop-bloc-label">${m.bloc}</div>`;
+        lastBloc = m.bloc;
+      }
       const active = m.n === modNum ? ' nav-active' : '';
-      return `
+      dropHTML += `
         <a href="${modHref(m.file)}" class="${active.trim()}" role="menuitem">
           <span class="drop-num">${m.n}</span>
           <span class="drop-icon">${m.icon}</span>
           <span class="drop-title">${m.title}</span>
         </a>`;
-    }).join('');
+    });
+
+    const mobileLinksHTML = `
+      <hr>
+      <a href="${aboutHref()}" class="drop-mobile-link">
+        <span class="drop-icon">👨‍🔬</span>
+        <span class="drop-title">Despre Feynman</span>
+      </a>
+      <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/"
+         class="drop-mobile-link" target="_blank" rel="noopener noreferrer">
+        <span class="drop-icon">🧪</span>
+        <span class="drop-title">Simulări interactive</span>
+      </a>`;
 
     nav.innerHTML = `
       <div class="site-nav__inner">
-        <a href="${homeHref()}" class="site-nav__brand">⚛ Fizica cu Feynman</a>
+        <a href="${homeHref()}" class="site-nav__brand">⚛ Fizica lui Feynman</a>
         <div class="site-nav__spacer"></div>
         <a href="${homeHref()}" class="site-nav__home">Acasă</a>
+        <a href="${modulesHref()}" class="site-nav__module-list">Module</a>
         <div class="site-nav__dropdown-wrap">
           <button class="site-nav__modules-btn" id="nav-modules-btn"
                   aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown">
-            Module <span class="nav-arrow">▾</span>
+            Caută modul <span class="nav-arrow">▾</span>
           </button>
-          <div class="site-nav__dropdown" id="nav-dropdown" role="menu" aria-label="Liste module">
-            ${dropItems}
+          <div class="site-nav__dropdown" id="nav-dropdown" role="menu" aria-label="Lista module">
+            ${dropHTML}
+            ${mobileLinksHTML}
           </div>
         </div>
-        <a href="despre-feynman.html" class="site-nav__despre-feynman">Despre Feynman</a>
-        <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" class="site-nav__simulari" target="_blank" rel="noopener noreferrer">Simulări</a>
+        <a href="${aboutHref()}" class="site-nav__despre-feynman">Despre Feynman</a>
+        <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/"
+           class="site-nav__simulari" target="_blank" rel="noopener noreferrer">Simulări</a>
         <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
       </div>`;
 
@@ -71,7 +126,7 @@
     const dropdown = document.getElementById('nav-dropdown');
     const hamBtn   = document.getElementById('nav-hamburger');
 
-    function openDropdown() {
+    function openDropdown()  {
       dropdown.classList.add('open');
       btn.classList.add('open');
       btn.setAttribute('aria-expanded', 'true');
@@ -106,10 +161,11 @@
     if (!bar || !isModule) return;
 
     const cur = MODULES.find(m => m.n === modNum);
+    if (!cur) return;
 
-    const dots = MODULES.map(m => {
+    const dots = MODULES.map((m, idx) => {
       let cls = 'mod-progress__dot';
-      if (m.n < modNum)  cls += ' done';
+      if (idx < curIdx)  cls += ' done';
       if (m.n === modNum) cls += ' current';
       return `<span class="${cls}" title="Modulul ${m.n}: ${m.title}"></span>`;
     }).join('');
@@ -117,26 +173,28 @@
     bar.innerHTML = `
       <div class="mod-topbar__inner">
         <nav class="breadcrumb" aria-label="Fir Ariadnă">
-          <a href="../index.html">Acasă</a>
+          <a href="${homeHref()}">Acasă</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <a href="${modulesHref()}">Module</a>
           <span class="breadcrumb__sep" aria-hidden="true">›</span>
           <span class="breadcrumb__current">Modulul ${modNum}: ${cur.title}</span>
         </nav>
-        <div class="mod-progress" role="progressbar" aria-valuenow="${modNum}"
-             aria-valuemin="1" aria-valuemax="9" aria-label="Progres curs">
+        <div class="mod-progress" role="progressbar" aria-valuenow="${curIdx + 1}"
+             aria-valuemin="1" aria-valuemax="${TOTAL}" aria-label="Progres curs">
           ${dots}
-          <span class="mod-progress__label">Modulul ${modNum} din 9</span>
+          <span class="mod-progress__label">${curIdx + 1} / ${TOTAL}</span>
         </div>
       </div>`;
   }
 
   /* ================================================
-     3. BUTOANE PREV / NEXT
+     3. BUTOANE PREV / NEXT (după ordinea Feynman)
   ================================================ */
   function buildModuleNav(container) {
-    if (!container || !isModule) return;
+    if (!container || !isModule || curIdx < 0) return;
 
-    const prev = MODULES.find(m => m.n === modNum - 1);
-    const next = MODULES.find(m => m.n === modNum + 1);
+    const prev = curIdx > 0            ? MODULES[curIdx - 1] : null;
+    const next = curIdx < TOTAL - 1    ? MODULES[curIdx + 1] : null;
 
     const prevBtn = prev
       ? `<a href="${prev.file}" class="module-nav__btn prev" aria-label="Modulul anterior: ${prev.title}">
@@ -174,12 +232,11 @@
     const headings = Array.from(main.querySelectorAll('h1, h2'));
     if (headings.length === 0) return;
 
-    /* Atribuie id-uri dacă lipsesc */
     headings.forEach((h, i) => {
       if (!h.id) {
         const slug = h.textContent.trim()
           .toLowerCase()
-          .replace(/[^a-z0-9\u00C0-\u017F\s-]/g, '')
+          .replace(/[^a-z0-9À-ſ\s-]/g, '')
           .replace(/\s+/g, '-')
           .substring(0, 50);
         h.id = slug || ('sec-' + i);
@@ -187,11 +244,11 @@
     });
 
     headings.forEach(h => {
-      const li  = document.createElement('li');
+      const li = document.createElement('li');
       li.className = h.tagName === 'H2' ? 'toc-h2' : 'toc-h1';
 
-      const a   = document.createElement('a');
-      a.href    = '#' + h.id;
+      const a = document.createElement('a');
+      a.href = '#' + h.id;
       a.textContent = h.textContent.trim();
 
       a.addEventListener('click', e => {
@@ -199,7 +256,6 @@
         const top = h.getBoundingClientRect().top + window.scrollY - 64;
         window.scrollTo({ top, behavior: 'smooth' });
         closeMobileTOC();
-        /* actualizăm manual clasa active la click */
         tocList.querySelectorAll('a').forEach(l => l.classList.remove('toc-active'));
         a.classList.add('toc-active');
         history.replaceState(null, '', '#' + h.id);
@@ -217,13 +273,12 @@
     const tocLinks = Array.from(document.querySelectorAll('#toc-list a'));
     if (!tocLinks.length) return;
 
-    const ids      = tocLinks.map(a => a.getAttribute('href').slice(1));
-    const targets  = ids.map(id => document.getElementById(id)).filter(Boolean);
+    const ids     = tocLinks.map(a => a.getAttribute('href').slice(1));
+    const targets = ids.map(id => document.getElementById(id)).filter(Boolean);
 
     let lastActive = null;
 
     const observer = new IntersectionObserver(entries => {
-      /* Reținem cel mai de sus heading vizibil */
       let topEntry = null;
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -277,14 +332,12 @@
     const toc       = document.getElementById('toc');
     if (!toggleBtn || !toc) return;
 
-    /* Adăugăm butonul de închidere ÎNĂUNTRUL sidebar-ului */
     const closeBtn = document.createElement('button');
     closeBtn.className   = 'toc-close-btn';
     closeBtn.textContent = '✕';
     closeBtn.setAttribute('aria-label', 'Închide cuprins');
     toc.insertBefore(closeBtn, toc.firstChild);
 
-    /* Overlay */
     const overlay = document.createElement('div');
     overlay.className = 'toc-overlay';
     overlay.id        = 'toc-overlay';

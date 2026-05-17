@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 11: Legile lui Newton — De ce se mișcă corpurile</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="11">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 11 · FORȚE ȘI DINAMICĂ</div>
+    <h1>LEGILE LUI NEWTON</h1>
+    <div class="subtitle">„Toată mecanica în trei legi — cele mai importante propoziții din fizică"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Cele trei legi</h2>
+
+<p>Feynman descrie importanța covârșitoare a legilor lui Newton:</p>
+
+<blockquote>
+    <p>„The whole of classical mechanics is summarized in three laws. The first law says that things keep doing what they are doing. The second law, F=ma, is the whole of mechanics in one equation. The third law says forces come in pairs."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Toată mecanica clasică este rezumată în trei legi. Prima lege spune că lucrurile continuă să facă ceea ce fac. A doua lege, F=ma, este toată mecanica într-o singură ecuație. A treia lege spune că forțele vin în perechi."
+</div>
+
+<h2>De ce F = ma este o revelație</h2>
+
+<blockquote>
+    <p>„Before Newton, no one knew why the planets moved as they did, why things fell, why the tides rose. With F=ma and the law of gravity, all these become consequences of the same idea. That is the power of a truly deep law."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Înainte de Newton, nimeni nu știa de ce se mișcau planetele cum se mișcau, de ce cădeau lucrurile, de ce creșteau mareele. Cu F=ma și legea gravitației, toate acestea devin consecințe ale aceluiași principiu. Aceasta este puterea unei legi cu adevărat profunde."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Newton a descoperit că mișcarea nu are nevoie de explicație — <em>schimbarea</em> mișcării da. Un corp care stă pe loc sau merge drept și uniform nu are nicio forță netă asupra lui. Forța = schimbare de mișcare.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Prima lege a lui Newton — Legea inerției</h2>
+
+<div class="formula-box">
+    „Un corp rămâne în repaus sau în mișcare rectilinie uniformă dacă suma forțelor care acționează asupra lui este zero."
+</div>
+
+<p><strong>Ce înseamnă asta:</strong></p>
+<ul>
+    <li>Corpurile nu se opresc singure — au nevoie de o forță (frecarea!) pentru a se opri</li>
+    <li>Corpurile nu pornesc singure — au nevoie de o forță pentru a porni</li>
+    <li>Un corp în mișcare în spațiu (fără frecare, fără aer) merge la nesfârșit!</li>
+</ul>
+
+<div class="info-box">
+    <strong>Analogie Feynman:</strong> Dacă ai putea scoate toată frecarea și aerul dintr-o cameră, o bilă lovită o dată ar merge la nesfârșit. E ceva ce nu vedem niciodată pe Pământ — de aceea vechii greci credeau că mișcarea necesită forță continuă.
+</div>
+
+<h2>A doua lege a lui Newton — Legea fundamentală a dinamicii</h2>
+
+<div class="formula-box">
+    $$\vec{F} = m \cdot \vec{a}$$
+</div>
+
+<p><strong>Ce înseamnă asta:</strong></p>
+<ul>
+    <li><strong>Forța</strong> produce <strong>accelerație</strong>, nu viteză!</li>
+    <li>Cu cât masa e mai mare, cu atât e mai greu de accelerat (mai multă inerție)</li>
+    <li>Cu cât forța e mai mare, cu atât accelerația e mai mare</li>
+    <li>Forța și accelerația sunt în aceeași direcție</li>
+</ul>
+
+<table>
+    <tr>
+        <th>Forța crește</th>
+        <th>Masa rămâne</th>
+        <th>Accelerația</th>
+    </tr>
+    <tr><td>2×</td><td>același</td><td>2× mai mare</td></tr>
+    <tr><td>3×</td><td>același</td><td>3× mai mare</td></tr>
+    <tr><td>același</td><td>2×</td><td>2× mai mică</td></tr>
+    <tr><td>2×</td><td>2×</td><td>neschimbată</td></tr>
+</table>
+
+<h2>A treia lege a lui Newton — Acțiune și reacțiune</h2>
+
+<div class="formula-box">
+    „Dacă un corp A exercită o forță asupra corpului B,<br>
+    corpul B exercită o forță egală și de sens opus asupra corpului A."<br><br>
+    $\vec{F}_{A \to B} = -\vec{F}_{B \to A}$
+</div>
+
+<p><strong>Ce înseamnă asta:</strong></p>
+<ul>
+    <li>Forțele există întotdeauna în <strong>perechi</strong></li>
+    <li>Cele două forțe acționează pe corpuri <strong>diferite</strong> — de aceea nu se anulează!</li>
+    <li>Nu există forță fără contraforță</li>
+</ul>
+
+<table>
+    <tr>
+        <th>Acțiunea</th>
+        <th>Reacțiunea</th>
+    </tr>
+    <tr><td>Piciorul împinge podeaua înapoi</td><td>Podeaua împinge piciorul înainte → mersul</td></tr>
+    <tr><td>Racheta expulzează gaze în jos</td><td>Gazele împing racheta în sus → zborul</td></tr>
+    <tr><td>Pământul atrage luna</td><td>Luna atrage Pământul la fel</td></tr>
+    <tr><td>Înotătorul împinge apa înapoi</td><td>Apa împinge înotătorul înainte</td></tr>
+</table>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul (Newton + Feynman)</th>
+    </tr>
+    <tr>
+        <td>„Pentru mișcare e nevoie de forță continuă"</td>
+        <td>Forța e nevoie doar pentru SCHIMBAREA mișcării (accelerare, frânare)</td>
+    </tr>
+    <tr>
+        <td>„Acțiunea și reacțiunea se anulează"</td>
+        <td>Nu! Acționează pe corpuri DIFERITE — nu se pot anula</td>
+    </tr>
+    <tr>
+        <td>„Un obiect mai greu cade mai repede"</td>
+        <td>Fals în vid! F=mg și a=F/m=g — masa se anulează</td>
+    </tr>
+    <tr>
+        <td>„Forța = viteză"</td>
+        <td>Forța = masă × ACCELERAȚIE (schimbarea vitezei, nu viteza)</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Centura de siguranță — Prima lege în acțiune</h2>
+
+<p><strong>Situația:</strong> Mașina frânează brusc. Pasagerul necenturat continuă să se miște înainte și lovește parbrizul.</p>
+
+<p><strong>Explicația fizică (Prima lege):</strong></p>
+<ul>
+    <li>Mașina se oprește brusc → o forță (frânele) acționează asupra ei</li>
+    <li>Pasagerul nu are forță care să îl oprească dacă nu e centurat</li>
+    <li>Prin inerție, corpul continuă mișcarea rectilinie uniformă</li>
+    <li>Centura aplică forța de oprire distribuită pe corp</li>
+</ul>
+
+<div class="result">Prima lege salvează vieți! Inerția ucide pasagerii necenturați.</div>
+
+<h2>Exemplul 2: Lansarea rachetei — A treia lege</h2>
+
+<p><strong>Situația:</strong> Racheta spațială nu are pe ce să se „împingă" în spațiu. Cum se mișcă?</p>
+
+<p><strong>Explicația fizică (A treia lege):</strong></p>
+<ul>
+    <li>Motorul arde combustibil și expulzează gaze cu forță mare <strong>în jos</strong></li>
+    <li>Prin legea a III-a, gazele exercită o forță egală asupra rachetei <strong>în sus</strong></li>
+    <li>Nu e nevoie de aer sau sol — forța de reacție acționează indiferent!</li>
+    <li>Cu cât gazele sunt expulzate mai repede și mai multă masă, cu atât forța e mai mare</li>
+</ul>
+
+<div class="info-box">
+    <strong>Feynman:</strong> „Racheta funcționează mai bine în vid! Pe Pământ, aerul rezistă. În spațiu, nu există rezistență și forța de reacție propulsează racheta eficient."
+</div>
+
+<h2>Exemplul 3: Frânarea mașinii — A doua lege</h2>
+
+<p><strong>Situația:</strong> O mașină de 1000 kg frânează de la 20 m/s la 0 în 4 secunde. Ce forță aplică frânele?</p>
+
+<p><strong>Rezolvare:</strong></p>
+<ul>
+    <li>Accelerația: a = Δv/Δt = (0 − 20)/4 = −5 m/s²</li>
+    <li>Forța: F = m·a = 1000 × (−5) = −5000 N</li>
+    <li>Semnul minus = forța e în sens opus mișcării (frânare)</li>
+</ul>
+
+<div class="result">Frânele aplică o forță de 5000 N — echivalentul greutății a 500 kg!</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Inerția — moneda și cartonul</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea inerției (Prima lege Newton).</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O monedă</li>
+        <li>Un pahar</li>
+        <li>O bucată de carton</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune cartonul pe gura paharului</li>
+        <li>Pune moneda pe carton, deasupra paharului</li>
+        <li>Trage cartonul rapid și orizontal</li>
+        <li>Observă că moneda cade în pahar!</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Cartonul dispare rapid — forța de frecare pe monedă e mică și de scurtă durată</li>
+        <li>Moneda nu apucă să dobândească viteză orizontală semnificativă</li>
+        <li>Inerția o ține în loc — cade vertical în pahar</li>
+    </ul>
+
+    <div class="result">Concluzie: Moneda rezistă schimbării stării de repaus — inerție în acțiune!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: F = ma — mașinuța și greutățile</h3>
+
+    <p><strong>Obiectiv:</strong> Verificarea relației dintre forță, masă și accelerație.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O mașinuță (sau skateboard mic)</li>
+        <li>Fire și greutăți diferite</li>
+        <li>Cronometru și riglă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Trage mașinuța cu o greutate de 100g — măsoară distanța și timpul, calculează accelerația</li>
+        <li>Dublează greutatea (200g) — aceeași masă a mașinuței — repetă</li>
+        <li>Revino la 100g, dar pune greutăți pe mașinuță — dublează masa ei — repetă</li>
+        <li>Compară accelerațiile</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Predicție:</strong> La forță dublă → accelerație dublă. La masă dublă → accelerație la jumătate. Verifică!
+    </div>
+
+    <div class="result">Concluzie: a ∝ F și a ∝ 1/m — legea a doua verificată experimental!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Acțiune-reacție — baloanele</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea legii a III-a Newton.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Două baloane umflate</li>
+        <li>Suprafață netedă (masă sau gheață)</li>
+        <li>Opțional: cărucioare mici</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Umflă două baloane și ține-le lipite față în față</li>
+        <li>Dă-le drumul simultan</li>
+        <li>Observă că ambele se deplasează în direcții opuse!</li>
+        <li>Alternativ: pune două persoane pe role față în față — una împinge pe cealaltă</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Fiecare balon e împins înapoi de aerul expulzat</li>
+        <li>Aerul e expulzat înainte — prin a treia lege, balonul se mișcă înapoi</li>
+        <li>La role: dacă împingi pe celălalt, TU te mișți și el se mișcă</li>
+    </ul>
+
+    <div class="result">Concluzie: Nu poți aplica o forță fără să primești una egală și opusă!</div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Legea I:</strong> Fără forță → nicio schimbare a mișcării.</p>
+<p><strong>Legea II:</strong> Forța produce accelerație proporțional cu masa.</p>
+<p><strong>Legea III:</strong> Orice forță are o reacție egală și opusă pe celălalt corp.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<h3>A doua lege — forma scalară și vectorială:</h3>
+<div class="formula-box">
+    $$\vec{F} = m \cdot \vec{a} \qquad \text{sau} \qquad F = m \cdot a$$
+</div>
+
+<h3>Greutatea — aplicație directă a legii a II-a:</h3>
+<div class="formula-box">
+    $$G = m \cdot g \qquad (g \approx 10 \; \text{m/s}^2 \text{ pe Pământ})$$
+</div>
+
+<h3>A treia lege:</h3>
+<div class="formula-box">
+    $$\vec{F}_{12} = -\vec{F}_{21}$$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>Un corp de 5 kg este accelerat de la repaus la 12 m/s în 3 secunde. Ce forță netă acționează?</p>
+    <ul>
+        <li>a = Δv/Δt = (12 − 0)/3 = 4 m/s²</li>
+        <li>F = m·a = 5 × 4 = <strong>20 N</strong></li>
+    </ul>
+    <div class="result">Forța netă = 20 N în direcția mișcării.</div>
+</div>
+
+<h3>Relația masă-greutate pe planete diferite:</h3>
+<table>
+    <tr>
+        <th>Planetă/loc</th>
+        <th>g (m/s²)</th>
+        <th>Greutatea unui om de 60 kg</th>
+    </tr>
+    <tr><td>Pământ</td><td>9,8 ≈ 10</td><td>600 N</td></tr>
+    <tr><td>Lună</td><td>1,6</td><td>96 N</td></tr>
+    <tr><td>Marte</td><td>3,7</td><td>222 N</td></tr>
+    <tr><td>Jupiter</td><td>24,8</td><td>1488 N</td></tr>
+</table>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Impulsul și legea a doua — forma generală:</h3>
+<div class="formula-box">
+    $$\vec{F} = \frac{\Delta \vec{p}}{\Delta t} \qquad \text{unde} \quad \vec{p} = m\vec{v} \; \text{(impulsul)}$$
+</div>
+
+<p>Această formă mai generală arată că forța = rata de schimbare a impulsului. Pentru masă constantă, revine la F=ma.</p>
+
+<h3>Feynman despre F=ma:</h3>
+<blockquote>
+    <p>„The law F=ma is a differential equation: knowing the forces, we can compute the acceleration at every instant, then integrate to find velocity and position. This is the entire program of classical mechanics."</p>
+</blockquote>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Un corp care se mișcă cu viteză constantă are forța netă zero."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Prima lege Newton: mișcarea rectilinie uniformă (v = const) → ΣF = 0. Forța e necesară pentru schimbarea vitezei, nu pentru menținerea ei.
+</div>
+
+<p><strong>2. „Forța de acțiune și forța de reacție se anulează, deci corpul stă în loc."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Acțiunea și reacțiunea acționează pe corpuri DIFERITE — nu pot fi sumate pentru același corp. Fiecare corp are propriul bilanț de forțe.
+</div>
+
+<p><strong>3. „Pe Lună, o piatră cade mai greu decât pe Pământ."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Pe Lună, g ≈ 1,6 m/s² față de 10 m/s² pe Pământ. Accelerația gravitațională e mai mică → piatra cade mai lent și mai ușor. Masa ei rămâne aceeași.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce pasagerii dintr-un autobuz care pornește brusc se înclină spre spate?</strong></p>
+<div class="answer">
+    <strong>Răspuns (Prima lege):</strong> Autobuzul pornește → podea accelerează înainte. Picioarele sunt trase cu autobuzul, dar corpul (din inerție) rămâne în urmă. Relativ față de autobuz, pasagerii par să se „incline înapoi".
+</div>
+
+<p><strong>5. De ce e mai greu să oprești un camion decât o bicicletă la aceeași viteză?</strong></p>
+<div class="answer">
+    <strong>Răspuns (A doua lege + inerție):</strong> Masa camionului e mult mai mare. Prin F=ma, pentru aceeași forță de frânare, accelerația camionului (negativa → frânare) e mult mai mică. Distanța de frânare e mult mai lungă.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un corp de 4 kg pornește din repaus sub acțiunea unei forțe de 20 N. Ce viteză atinge după 6 secunde?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>a = F/m = 20/4 = 5 m/s²</li>
+        <li>v = v₀ + a·t = 0 + 5 × 6 = <strong>30 m/s</strong></li>
+    </ul>
+    <div class="result">Viteza după 6 s = 30 m/s</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Mihai (60 kg) stă pe o balanță în lift. Balanța arată 720 N când liftul accelerează. Calculează accelerația liftului și sensul acesteia.</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>Greutatea normală: G = m·g = 60 × 10 = 600 N</li>
+        <li>Balanța arată 720 N → forța aparentă > greutatea reală → liftul accelerează <strong>în sus</strong></li>
+        <li>F_net = 720 − 600 = 120 N (în sus)</li>
+        <li>a = F/m = 120/60 = <strong>2 m/s² în sus</strong></li>
+    </ul>
+    <p>Dacă balanța ar arăta mai puțin de 600 N, liftul ar accelera în jos.</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 9</strong> „Newton's Laws of Dynamics" — legile fundamentale</li>
+    <li><strong>Vol. I, Cap. 10</strong> „Conservation of Momentum" — impulsul și a treia lege</li>
+    <li><strong>Vol. I, Cap. 12</strong> „Characteristics of Force" — natura forțelor</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu legile Newton</th>
+    </tr>
+    <tr>
+        <td><strong>Astronomie</strong></td>
+        <td>Orbitele planetelor, lansarea sateliților, gravitația</td>
+    </tr>
+    <tr>
+        <td><strong>Medicină</strong></td>
+        <td>Biomecanica mersului, impactul în accidente, centura de siguranță</td>
+    </tr>
+    <tr>
+        <td><strong>Sport</strong></td>
+        <td>Aruncarea mingii, boxul, înotul — toate aplică legile Newton</td>
+    </tr>
+    <tr>
+        <td><strong>Inginerie</strong></td>
+        <td>Calculul structurilor, proiectarea vehiculelor, rachete</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>CELE TREI LEGI:</h3>
+    <div class="formula-box">
+        <strong>I (Inerția):</strong> ΣF = 0 → v = const (sau repaus)<br><br>
+        <strong>II (Dinamica):</strong> $\vec{F} = m\vec{a}$<br><br>
+        <strong>III (Acțiune-Reacție):</strong> $\vec{F}_{12} = -\vec{F}_{21}$
+    </div>
+
+    <h3>GREUTATEA:</h3>
+    <div class="formula-box">
+        G = m · g &nbsp;&nbsp;&nbsp; (g ≈ 10 m/s² pe Pământ)
+    </div>
+
+    <h3>CONCEPȚIE GREȘITĂ CHEIE:</h3>
+    <p>Forța nu produce viteză — produce <strong>accelerație</strong> (schimbare de viteză)!</p>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„F=ma este toată mecanica — dă-mi forțele și îți calculez tot viitorul sistemului."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 21: Câmpul magnetic și inducția electromagnetică — Legătura dintre electricitate și magnetism</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="21">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 21 · ELECTRICITATE ȘI MAGNETISM</div>
+    <h1>CÂMPUL MAGNETIC ȘI INDUCȚIA ELECTROMAGNETICĂ</h1>
+    <div class="subtitle">„Electricitatea produce magnetism și magnetismul produce electricitate — cea mai elegantă simetrie a naturii"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Unificarea câmpurilor</h2>
+
+<blockquote>
+    <p>„The discovery that changing magnetic fields produce electric fields, and changing electric fields produce magnetic fields, is one of the greatest intellectual achievements in the history of physics. Maxwell unified electricity and magnetism into a single theory, and out of that theory fell the prediction that light itself is an electromagnetic wave."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Descoperirea că câmpurile magnetice variabile produc câmpuri electrice, și că câmpurile electrice variabile produc câmpuri magnetice, este una din cele mai mari realizări intelectuale din istoria fizicii. Maxwell a unificat electricitatea și magnetismul într-o singură teorie, și din acea teorie a rezultat predicția că lumina însăși este o undă electromagnetică."
+</div>
+
+<h2>Descoperirea lui Oersted — Curentul produce câmp magnetic</h2>
+
+<blockquote>
+    <p>„Oersted noticed by accident that a compass needle near a wire carrying current deflected. That accidental observation launched the entire field of electromagnetism. The universe had been hiding a deep connection between electricity and magnetism, and a compass needle gave it away."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Oersted a observat accidental că un ac de busolă lângă un fir parcurs de curent se devia. Acea observație accidentală a lansat întregul domeniu al electromagnetismului. Universul ascundea o conexiune profundă între electricitate și magnetism, și un ac de busolă a dat-o în vileag."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Curentul electric creează câmp magnetic. Un câmp magnetic variabil creează curent electric (inducție electromagnetică). Această simetrie stă la baza motorului electric, generatorului, transformatorului și comunicațiilor moderne.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Câmpul magnetic</h2>
+
+<p>Câmpul magnetic este o proprietate a spațiului din jurul unui magnet sau conductor parcurs de curent. Se reprezintă prin <strong>linii de câmp magnetic</strong> (linii de inducție):</p>
+
+<table>
+    <tr>
+        <th>Proprietate</th>
+        <th>Câmp electric</th>
+        <th>Câmp magnetic</th>
+    </tr>
+    <tr>
+        <td>Sursa</td>
+        <td>Sarcini electrice</td>
+        <td>Magneți / curenți electrici</td>
+    </tr>
+    <tr>
+        <td>Linii de câmp</td>
+        <td>De la + la −</td>
+        <td>Bucle închise (fără capete)</td>
+    </tr>
+    <tr>
+        <td>Mărime</td>
+        <td>$\vec{E}$ [V/m]</td>
+        <td>$\vec{B}$ [T] (tesla)</td>
+    </tr>
+    <tr>
+        <td>Acțiunea asupra</td>
+        <td>Sarcinilor electrice</td>
+        <td>Curenților și magneților</td>
+    </tr>
+</table>
+
+<h2>Regula mâinii drepte</h2>
+
+<p>Pentru a determina sensul câmpului magnetic în jurul unui conductor drept:</p>
+
+<div class="info-box">
+    <strong>Regula mâinii drepte:</strong> Dacă degetul mare al mâinii drepte indică sensul curentului (de la + la −), degetele îndoite indică sensul liniilor de câmp magnetic (cercuri în jurul conductorului).
+</div>
+
+<h2>Electromagnetul și solenoidul</h2>
+
+<p>Un solenoid (spiră de sârmă înfășurată în formă de cilindru) parcurs de curent se comportă ca un magnet drept (bară):</p>
+
+<table>
+    <tr>
+        <th>Parametru</th>
+        <th>Efect asupra câmpului</th>
+    </tr>
+    <tr>
+        <td>Curent $I$ mai mare</td>
+        <td>Câmp $B$ mai intens</td>
+    </tr>
+    <tr>
+        <td>Mai multe spire $N$</td>
+        <td>Câmp $B$ mai intens</td>
+    </tr>
+    <tr>
+        <td>Miez de fier</td>
+        <td>Câmp $B$ mult amplificat (×1000)</td>
+    </tr>
+</table>
+
+<h2>Forța asupra unui conductor în câmp magnetic</h2>
+
+<p>Un conductor de lungime $L$, parcurs de curent $I$, plasat într-un câmp magnetic $B$ (perpendicular pe curent) este supus unei forțe:</p>
+
+<div class="formula-box">
+    $$F = B \cdot I \cdot L \quad [N]$$
+</div>
+
+<p>Sensul forței se determină cu <strong>regula mâinii stângi</strong> (motorul electric):</p>
+
+<div class="info-box">
+    <strong>Regula mâinii stângi:</strong> Cele patru degete indică sensul curentului, liniile de câmp magnetic intră în palmă — degetul mare indică sensul forței (direcția mișcării conductorului).
+</div>
+
+<h2>Inducția electromagnetică — Legea lui Faraday</h2>
+
+<p>Când fluxul magnetic $\Phi$ printr-o spiră se modifică, în spiră apare o tensiune electromotoare indusă:</p>
+
+<div class="formula-box">
+    $$\varepsilon = -\frac{\Delta \Phi}{\Delta t} \quad [V]$$
+</div>
+
+<p>Semnul minus reflectă <strong>legea lui Lenz</strong>: curentul indus se opune modificării care l-a produs.</p>
+
+<h2>Legea lui Lenz</h2>
+
+<div class="info-box">
+    <strong>Legea lui Lenz:</strong> Curentul indus are întotdeauna un sens astfel încât câmpul magnetic pe care îl produce să se opună variației fluxului care l-a generat. Este o consecință a conservării energiei — nu poți obține energie din nimic.
+</div>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<table>
+    <tr>
+        <th>Aplicație</th>
+        <th>Principiu</th>
+        <th>Transformare</th>
+    </tr>
+    <tr>
+        <td>Motorul electric</td>
+        <td>Forța asupra conductorului în câmp magnetic</td>
+        <td>Electricitate → mișcare</td>
+    </tr>
+    <tr>
+        <td>Generatorul electric</td>
+        <td>Inducție electromagnetică (Faraday)</td>
+        <td>Mișcare → electricitate</td>
+    </tr>
+    <tr>
+        <td>Transformatorul</td>
+        <td>Flux magnetic variabil în miez de fier</td>
+        <td>Tensiune ↑ sau ↓</td>
+    </tr>
+    <tr>
+        <td>Plita cu inducție</td>
+        <td>Curenți Foucault induși în oală</td>
+        <td>Electricitate → căldură directă</td>
+    </tr>
+    <tr>
+        <td>Frâna electromagnetică</td>
+        <td>Legea Lenz — opoziție la mișcare</td>
+        <td>Mișcare → electricitate (frânare)</td>
+    </tr>
+    <tr>
+        <td>Cartela de metrou (RFID)</td>
+        <td>Inducție fără contact</td>
+        <td>Câmp oscilant → curent în antenă</td>
+    </tr>
+</table>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experiment 1 — Câmpul magnetic al unui fir parcurs de curent</h3>
+    <p><strong>Materiale:</strong> baterie 4,5 V, fir conductor drept, busolă.</p>
+    <p><strong>Procedura:</strong></p>
+    <ol>
+        <li>Ține firul deasupra busolei, paralel cu acul acesteia.</li>
+        <li>Conectează firul la baterie — acul busolei se rotește.</li>
+        <li>Inversează conexiunile — acul se rotește în sens invers.</li>
+    </ol>
+    <p><strong>Concluzie:</strong> Curentul electric creează câmp magnetic. Sensul câmpului depinde de sensul curentului (experiența lui Oersted, 1820).</p>
+</div>
+
+<div class="experiment">
+    <h3>Experiment 2 — Inducția electromagnetică</h3>
+    <p><strong>Materiale:</strong> bobină cu multe spire, magnet bară, galvanometru.</p>
+    <p><strong>Procedura:</strong></p>
+    <ol>
+        <li>Conectează galvanometrul la bobină.</li>
+        <li>Introdu magnetul repede în bobină — acul galvanometrului deviază.</li>
+        <li>Ține magnetul nemișcat — acul revine la zero.</li>
+        <li>Scoate magnetul repede — acul deviază în sens opus.</li>
+    </ol>
+    <p><strong>Concluzie:</strong> Doar variația fluxului magnetic produce curent indus — legea lui Faraday.</p>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivelul 1 — Forța electromagnetică</h2>
+
+<div class="formula-box">
+    Forța pe conductor: $F = B \cdot I \cdot L$<br><br>
+    Unitate: $[B] = T \text{ (tesla)}$, $[F] = N$
+</div>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> Un conductor de lungime $L = 0{,}5 \, \text{m}$ este parcurs de curent $I = 2 \, \text{A}$ și plasat perpendicular pe un câmp magnetic $B = 0{,}3 \, \text{T}$. Ce forță acționează asupra lui?
+
+    <div class="answer">
+        $F = B \cdot I \cdot L = 0{,}3 \times 2 \times 0{,}5 = 0{,}3 \, \text{N}$
+    </div>
+</div>
+
+<h2>Nivelul 2 — Tensiunea electromotoare indusă</h2>
+
+<div class="formula-box">
+    $$\varepsilon = B \cdot L \cdot v$$
+    (pentru un conductor de lungime $L$ care se mișcă cu viteza $v$ perpendicular pe câmpul $B$)
+</div>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> Un conductor de $L = 1 \, \text{m}$ se mișcă cu $v = 10 \, \text{m/s}$ perpendicular pe un câmp $B = 0{,}2 \, \text{T}$. Ce tensiune electromotoare se induce?
+
+    <div class="answer">
+        $\varepsilon = B \cdot L \cdot v = 0{,}2 \times 1 \times 10 = 2 \, \text{V}$
+    </div>
+</div>
+
+<h2>Nivelul 3 — Fluxul magnetic</h2>
+
+<div class="formula-box">
+    $$\Phi = B \cdot A \cdot \cos\theta \quad [Wb \text{ — weber}]$$
+    $$\varepsilon = -N \cdot \frac{\Delta\Phi}{\Delta t}$$
+</div>
+
+<p>unde $N$ este numărul de spire ale bobinei, $A$ este aria spirei, $\theta$ este unghiul dintre $\vec{B}$ și normala la spiră.</p>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> O bobină cu $N = 100$ spire și aria $A = 10 \, \text{cm}^2 = 10^{-3} \, \text{m}^2$ se află perpendicular pe un câmp magnetic care variază de la $B_1 = 0$ la $B_2 = 0{,}5 \, \text{T}$ în $\Delta t = 0{,}1 \, \text{s}$. Ce tensiune se induce?
+
+    <div class="answer">
+        $\Delta\Phi = B_2 \cdot A - B_1 \cdot A = 0{,}5 \times 10^{-3} - 0 = 5 \times 10^{-4} \, \text{Wb}$<br><br>
+        $|\varepsilon| = N \cdot \frac{\Delta\Phi}{\Delta t} = 100 \times \frac{5 \times 10^{-4}}{0{,}1} = 0{,}5 \, \text{V}$
+    </div>
+</div>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<div class="experiment">
+    <strong>Întrebare 1:</strong> De ce un magnet care cade printr-un tub de cupru cade mai lent decât prin aer, deși cuprul nu este magnetic?
+    <div class="answer">Pe măsură ce magnetul cade, fluxul magnetic prin secțiunea tubului se modifică. Prin legea lui Faraday se induc curenți în tub (curenți Foucault). Prin legea lui Lenz, acești curenți produc un câmp care se opune mișcării magnetului — forță de frânare fără contact fizic direct.</div>
+</div>
+
+<div class="experiment">
+    <strong>Întrebare 2:</strong> Un motor electric și un generator electric sunt construite aproape identic. Care este diferența în modul de funcționare?
+    <div class="answer">Motorul primește energie electrică și o transformă în energie mecanică (curentul din câmpul magnetic produce forță/rotație). Generatorul primește energie mecanică și o transformă în energie electrică (mișcarea conductorului în câmpul magnetic induce tensiune/curent). Sunt procese inverse, ambele bazate pe electromagnetism.</div>
+</div>
+
+<div class="experiment">
+    <strong>Întrebare 3:</strong> Ce se întâmplă cu tensiunea indusă dacă bobina se rotește de două ori mai repede în generatorul electric?
+    <div class="answer">Rata de variație a fluxului $\Delta\Phi/\Delta t$ se dublează. Prin legea Faraday, $\varepsilon = -N \cdot \Delta\Phi/\Delta t$, tensiunea electromotoare se dublează și ea.</div>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Conexiuni cu alte module</h2>
+<ul>
+    <li><strong>Modulul 8</strong> — Fenomene electrice și magnetice: introducerea câmpului magnetic</li>
+    <li><strong>Modulul 18</strong> — Legea lui Ohm: curentul indus urmează aceeași lege</li>
+    <li><strong>Modulul 22</strong> — Curentul alternativ: generat prin inducție electromagnetică</li>
+    <li><strong>Modulul 9</strong> — Fenomene optice: lumina este undă electromagnetică (Maxwell)</li>
+</ul>
+
+<h2>Curiozitate Feynman</h2>
+
+<div class="info-box">
+    <strong>Electromagnetismul și relativitatea:</strong> Feynman a subliniat că forța magnetică este, în fond, o consecință a relativității speciale aplicate forței electrice. Un câmp magnetic văzut de un observator în repaus devine un câmp electric pentru un observator în mișcare. „Magnetismul și electricitatea nu sunt două lucruri separate — sunt același lucru văzut din sisteme de referință diferite."
+</div>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+    <p><strong>IDEE CHEIE:</strong> Electricitatea și magnetismul sunt două fețe ale aceleiași forțe — un curent produce câmp magnetic, iar un câmp magnetic variabil produce curent.</p>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Forța pe conductor: $F = B \cdot I \cdot L$ [N]<br>
+        Fluxul magnetic: $\Phi = B \cdot A \cdot \cos\theta$ [Wb]<br>
+        Legea lui Faraday: $\varepsilon = -N \cdot \dfrac{\Delta\Phi}{\Delta t}$ [V]<br>
+        FEM de mișcare: $\varepsilon = B \cdot L \cdot v$ [V]
+    </div>
+
+    <h3>APLICAȚII:</h3>
+    <table>
+        <tr><th>Dispozitiv</th><th>Principiu</th><th>Conversie energetică</th></tr>
+        <tr><td>Motor electric</td><td>$F = BIL$ (forță pe conductor)</td><td>Electrică → mecanică</td></tr>
+        <tr><td>Generator / dinam</td><td>Inducție Faraday ($\varepsilon = BLv$)</td><td>Mecanică → electrică</td></tr>
+        <tr><td>Transformator</td><td>Inducție mutuală</td><td>Electrică → electrică (altă tensiune)</td></tr>
+        <tr><td>Plita cu inducție</td><td>Curenți Foucault</td><td>Electrică → termică (în oală)</td></tr>
+    </table>
+
+    <h3>IDEI CHEIE:</h3>
+    <ul>
+        <li><strong>Legea lui Lenz:</strong> curentul indus se opune întotdeauna variației care l-a produs (conservarea energiei)</li>
+        <li>Câmpul magnetic al Pământului ne protejează de vântul solar</li>
+        <li>Nu există <strong>monopoli magnetici</strong> — orice magnet are întotdeauna un pol N și un pol S</li>
+        <li>Maxwell a unificat electricitatea și magnetismul: lumina este ea însăși o undă electromagnetică</li>
+    </ul>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Când Faraday a descoperit inducția electromagnetică, nimeni nu știa la ce ar putea folosi. Când cineva l-a întrebat, Faraday a răspuns: «La ce folosește un copil nou-născut?» Astăzi, toată energia electrică din lume se produce prin inducție electromagnetică."</p>
+</div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tocList = document.getElementById("toc-list");
+            const headings = document.querySelectorAll(".module-main h1, .module-main h2");
+            headings.forEach(function(h, i) {
+                if (!h.id) h.id = "heading-" + i;
+                const li = document.createElement("li");
+                li.className = h.tagName === "H1" ? "toc-h1" : "toc-h2";
+                const a = document.createElement("a");
+                a.href = "#" + h.id;
+                a.textContent = h.textContent;
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+            const btn = document.querySelector(".toc-toggle-btn");
+            const sidebar = document.getElementById("toc");
+            if (btn && sidebar) {
+                btn.addEventListener("click", function() {
+                    sidebar.classList.toggle("open");
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 14: Echilibrul corpurilor și pârghiile — Arta de a echilibra</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="14">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 14 · ENERGIE ȘI LUCRU MECANIC</div>
+    <h1>ECHILIBRUL CORPURILOR ȘI PÂRGHIILE</h1>
+    <div class="subtitle">„Dă-mi un punct de sprijin și voi mișca Pământul — Arhimede"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Principiul lucrului virtual</h2>
+
+<p>Feynman descrie eleganța principiului echilibrului:</p>
+
+<blockquote>
+    <p>„The principle of virtual work is a beautiful general principle. If a system is in equilibrium, then if we give it any small displacement, the total virtual work done by all forces is zero. This one principle contains all conditions of equilibrium."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Principiul lucrului virtual este un principiu general frumos. Dacă un sistem este în echilibru, atunci dacă îi dăm orice mică deplasare, lucrul virtual total efectuat de toate forțele este zero. Acest unic principiu conține toate condițiile de echilibru."
+</div>
+
+<h2>De ce pârghia este o invenție fundamentală</h2>
+
+<blockquote>
+    <p>„A lever does not create energy — it redistributes force and distance. You get more force at the cost of more distance, or more speed at the cost of more force. The product force × distance is conserved. This is the conservation of energy applied to simple machines."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „O pârghie nu creează energie — redistribuie forța și distanța. Obții mai multă forță cu prețul mai multei distanțe, sau mai multă viteză cu prețul mai multei forțe. Produsul forță × distanță este conservat. Aceasta este conservarea energiei aplicată la mașinile simple."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Echilibrul nu înseamnă absența forțelor — înseamnă că forțele și momentele lor se anulează. Pârghia permite multiplicarea forței prin modificarea distanței față de punctul de sprijin.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Condiții de echilibru</h2>
+
+<p>Un corp rigid este în echilibru dacă sunt îndeplinite <strong>două condiții simultan</strong>:</p>
+
+<div class="formula-box">
+    <strong>Condiția 1 (translație):</strong> $\sum \vec{F} = \vec{0}$<br><br>
+    Suma vectorială a tuturor forțelor = zero<br><br>
+    <strong>Condiția 2 (rotație):</strong> $\sum M = 0$<br><br>
+    Suma momentelor tuturor forțelor față de orice punct = zero
+</div>
+
+<h2>Momentul forței (momentul față de un punct)</h2>
+
+<p><strong>Momentul forței</strong> (M) față de un punct O este produsul dintre forță și distanța perpendiculară de la O la linia de acțiune a forței.</p>
+
+<div class="formula-box">
+    $$M = F \cdot d$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>F</strong> = forța (N)</li>
+    <li><strong>d</strong> = brațul forței — distanța perpendiculară de la punctul de sprijin la linia de acțiune a forței (m)</li>
+    <li><strong>M</strong> = momentul forței (N·m)</li>
+</ul>
+
+<div class="info-box">
+    <strong>Sens de rotire:</strong> Prin convenție, momentele care produc rotație în sens trigonometric (contra acelor ceasornicului) sunt pozitive; cele în sens orar sunt negative.
+</div>
+
+<h2>Pârghia — mașina simplă fundamentală</h2>
+
+<p>O <strong>pârghie</strong> este o bară rigidă care se poate roti în jurul unui punct fix numit <strong>fulcru</strong> (punct de sprijin).</p>
+
+<p><strong>Legea pârghiei (echilibrul pârghiei):</strong></p>
+
+<div class="formula-box">
+    $$F_1 \cdot d_1 = F_2 \cdot d_2$$
+</div>
+
+<h3>Cele trei genuri de pârghii:</h3>
+
+<table>
+    <tr>
+        <th>Gen</th>
+        <th>Poziție fulcru</th>
+        <th>Avantaj</th>
+        <th>Exemple</th>
+    </tr>
+    <tr>
+        <td><strong>Genul I</strong></td>
+        <td>Între forțele F₁ și F₂</td>
+        <td>Poate fi motor sau rezistent</td>
+        <td>Foarfece, clește, balanță, roabă răsturnată</td>
+    </tr>
+    <tr>
+        <td><strong>Genul II</strong></td>
+        <td>La un capăt — rezistența la mijloc</td>
+        <td>Avantaj mecanic > 1 (forță amplificată)</td>
+        <td>Roaba, spărgătorul de nuci, cleștele de usturoi</td>
+    </tr>
+    <tr>
+        <td><strong>Genul III</strong></td>
+        <td>La un capăt — motorul la mijloc</td>
+        <td>Amplificarea vitezei și distanței</td>
+        <td>Pensetă, forceps, brațul uman (biceps)</td>
+    </tr>
+</table>
+
+<h2>Centrul de greutate</h2>
+
+<p><strong>Centrul de greutate</strong> (CG) este punctul în care poate fi considerată că acționează întreaga greutate a corpului.</p>
+
+<ul>
+    <li>La corpuri omogene cu forme regulate: centrul geometric</li>
+    <li>Un corp se răstoarnă dacă verticala prin CG cade în afara bazei de susținere</li>
+    <li>Cu cât baza e mai largă și CG mai jos, cu atât corpul e mai stabil</li>
+</ul>
+
+<table>
+    <tr>
+        <th>Corp</th>
+        <th>Poziția CG</th>
+        <th>Stabilitate</th>
+    </tr>
+    <tr><td>Cub omogen</td><td>Centrul geometric</td><td>Stabilă</td></tr>
+    <tr><td>Con cu baza jos</td><td>1/4 din înălțime</td><td>Foarte stabilă</td></tr>
+    <tr><td>Con cu vârful jos</td><td>3/4 din înălțime</td><td>Instabilă</td></tr>
+    <tr><td>Scaun cu 4 picioare</td><td>La mijloc, jos</td><td>Stabilă (baza largă)</td></tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Brațul uman — pârghie de genul III</h2>
+
+<p><strong>Situația:</strong> Bicepsul se atașează la antebraț la ~5 cm de cot. Antebrațul are lungimea de ~35 cm. Ții o greutate de 10 kg în mână.</p>
+
+<p><strong>Analiza pârghiei:</strong></p>
+<ul>
+    <li>Fulcrul = cotul</li>
+    <li>Rezistența = 100 N (greutatea) la d₂ = 35 cm = 0,35 m</li>
+    <li>Forța motoare (bicepsul) la d₁ = 5 cm = 0,05 m</li>
+    <li>F₁ × 0,05 = 100 × 0,35 → F₁ = 700 N</li>
+</ul>
+
+<div class="result">Bicepsul trebuie să exercite 700 N pentru a ține 100 N! Natura ne-a construit cu dezavantaj mecanic — câștigăm viteză și amplitudine de mișcare în locul forței.</div>
+
+<h2>Exemplul 2: Roaba — pârghie de genul II</h2>
+
+<p><strong>Situația:</strong> O roabă transportă 300 N de pământ. Distanța de la roată (fulcru) la centrul sarcinii = 0,4 m. Distanța de la roată la mânere = 1,2 m.</p>
+
+<p><strong>Calculul forței necesare:</strong></p>
+<ul>
+    <li>F_mânere × 1,2 = 300 × 0,4</li>
+    <li>F_mânere = 120/1,2 = <strong>100 N</strong></li>
+</ul>
+
+<div class="info-box">
+    <strong>Avantaj mecanic = 3:</strong> Cu o forță de 100 N poți transporta o sarcină de 300 N. Roaba triplează forța ta!
+</div>
+
+<h2>Exemplul 3: Balanța — aplicație a echilibrului momentelor</h2>
+
+<p><strong>Situația:</strong> O balanță cu brațe egale este în echilibru cu o piatră necunoscută pe o parte și 250 g pe cealaltă.</p>
+
+<p><strong>Aplicarea legii pârghiei:</strong></p>
+<ul>
+    <li>Momentul stânga = G_piatra × d = Momentul dreapta = 2,5 N × d</li>
+    <li>Dacă brațele sunt egale (d identic), atunci G_piatra = 2,5 N</li>
+    <li>Masa pietrei = G/g = 2,5/10 = <strong>0,25 kg = 250 g</strong></li>
+</ul>
+
+<div class="result">Balanța compară momente — la brațe egale, compară direct greutăți (și mase)!</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Verificarea legii momentelor</h3>
+
+    <p><strong>Obiectiv:</strong> Verificarea condiției de echilibru a pârghiei (legea momentelor).</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Riglă de 30 cm cu gaură la mijloc</li>
+        <li>Greutăți cunoscute (monede, piulițe)</li>
+        <li>Ac sau tac pentru suport</li>
+        <li>Riglă pentru măsurarea distanțelor</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Suspendă rigla de centru (ea trebuie să fie orizontală — echilibrată)</li>
+        <li>Atârnă 2 greutăți (G₁) la distanța d₁ = 10 cm la stânga</li>
+        <li>Echilibrează cu G₂ la distanța d₂ variabilă la dreapta</li>
+        <li>Notează valorile: G₁·d₁ = G₂·d₂?</li>
+        <li>Încearcă diferite combinații de greutăți și distanțe</li>
+    </ol>
+
+    <div class="result">Concluzie: Pârghia e în echilibru dacă și numai dacă suma momentelor = 0!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Centrul de greutate al corpurilor neregulate</h3>
+
+    <p><strong>Obiectiv:</strong> Determinarea experimentală a centrului de greutate.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Carton gros tăiat în formă neregulată</li>
+        <li>Ac, fir cu greutate (fir cu plumb)</li>
+        <li>Creion</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Fă 3 găuri în carton, în locuri diferite</li>
+        <li>Suspendă cartonul de prima gaură — atârnă firul cu plumb</li>
+        <li>Marchează linia firului pe carton</li>
+        <li>Repetă pentru celelalte 2 găuri</li>
+        <li>Intersecția celor 3 drepte = centrul de greutate!</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Verificare:</strong> Balansează cartonul pe vârful unui creion în punctul găsit — dacă e corect, cartonul stă în echilibru!
+    </div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Stabilitate și poziția centrului de greutate</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea influenței CG asupra stabilității.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O sticlă goală (PET)</li>
+        <li>Apă</li>
+        <li>Suprafață înclinabilă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Încearcă să echilibrezi sticla goală pe o suprafață ușor înclinată</li>
+        <li>Umple sticla pe sfert cu apă — observă stabilitatea</li>
+        <li>Umple pe jumătate, pe trei sferturi, complet — compară</li>
+        <li>Observă la ce nivel de umplere sticla e cel mai greu de răsturnat</li>
+    </ol>
+
+    <div class="result">Concluzie: Sticla plină (CG jos) e cea mai stabilă. Sticla goală (CG sus) se răstoarnă ușor. Cu CG sub jumătate din baza de susținere = cel mai stabil!</div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Echilibru:</strong> Forțele se anulează vectorial ȘI momentele se anulează față de orice punct.</p>
+<p><strong>Moment:</strong> „Tendința" unei forțe de a roti un corp față de un punct.</p>
+<p><strong>Pârghie:</strong> Instrument care schimbă raportul forță/distanță, conservând produsul lor.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    Momentul forței: $M = F \cdot d_\perp$<br><br>
+    Echilibru rotație: $M_1 = M_2$ (sau $\sum M = 0$)<br><br>
+    Legea pârghiei: $F_1 \cdot d_1 = F_2 \cdot d_2$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>O pârghie de genul I are F₁ = 200 N la d₁ = 30 cm de fulcru. Ce forță de rezistență F₂ echilibrează la d₂ = 20 cm?</p>
+    <ul>
+        <li>F₁·d₁ = F₂·d₂</li>
+        <li>200 × 0,30 = F₂ × 0,20</li>
+        <li>F₂ = 60/0,20 = <strong>300 N</strong></li>
+    </ul>
+    <div class="result">O forță de 200 N poate echilibra 300 N (avantaj mecanic: braț mai lung!)</div>
+</div>
+
+<h3>Avantajul mecanic al pârghiei:</h3>
+<div class="formula-box">
+    $$AM = \frac{F_{rezistentă}}{F_{motoare}} = \frac{d_{motor}}{d_{rezistent}}$$
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Principiul lucrului virtual (Feynman):</h3>
+
+<p>La echilibru, lucrul virtual total = 0:</p>
+<div class="formula-box">
+    $$\delta L = F_1 \cdot \delta x_1 + F_2 \cdot \delta x_2 = 0$$
+    $$\Rightarrow F_1 \cdot d_1 = F_2 \cdot d_2$$
+</div>
+
+<p>Aceasta derivă legea pârghiei direct din conservarea energiei — elegant și general!</p>
+
+<h3>Echilibrul corpului pe plan înclinat:</h3>
+<div class="formula-box">
+    $$F_{frecare} = G\sin\alpha \qquad N = G\cos\alpha$$
+</div>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „O pârghie poate multiplica forța la infinit dacă mărim suficient brațul."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS (parțial).</strong> Forța poate fi multiplicată oricât de mult prin mărirea brațului motor. Dar nu există câștig de energie — ce câștigi în forță pierzi în distanță! Legea pârghiei: F₁·d₁ = F₂·d₂.
+</div>
+
+<p><strong>2. „Un corp este în echilibru dacă suma forțelor care acționează e zero."</strong></p>
+<div class="answer">
+    ✗ <strong>INCOMPLET.</strong> Condiția de translație (ΣF=0) e necesară dar nu suficientă. Trebuie și condiția de rotație (ΣM=0). Un corp poate să nu se transleze dar să se rotească dacă momentele nu se echilibrează.
+</div>
+
+<p><strong>3. „Centrul de greutate al unui corp nu se poate afla în afara materialului corpului."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> La corpuri goale pe interior (inel, coroană, potcoavă), centrul de greutate se află în locul gol. Exemplu: CG-ul unui inel circular este în centrul inelului — unde nu există material.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce macaralele au o contragreutate masivă în spatele brațului?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Brațul lung al macaralei cu sarcina pe el produce un moment mare față de coloana macaralei. Contragreutatea produce un moment opus (echilibrare). Fără contragreutate, macara s-ar răsturna lateral!
+</div>
+
+<p><strong>5. De ce e mai greu să deschizi o ușă împingând lângă balamale decât la mâner?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Balamaua = punctul de sprijin (fulcru). Momentul = F × d. La mâner (d mare), o forță mică produce moment mare. Lângă balama (d mic), trebuie o forță mult mai mare pentru același moment de rotație.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un copil de 40 kg stă pe o balanță la 1,5 m de fulcru. Unde trebuie să stea un adult de 75 kg pentru echilibru?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>M<sub>copil</sub> = G<sub>c</sub> × d<sub>c</sub> = 400 × 1,5 = 600 N·m</li>
+        <li>M<sub>adult</sub> = G<sub>a</sub> × d<sub>a</sub> = 750 × d<sub>a</sub></li>
+        <li>Echilibru: 750 × d<sub>a</sub> = 600 → d<sub>a</sub> = 600/750 = <strong>0,8 m</strong></li>
+    </ul>
+    <div class="result">Adultul trebuie să stea la 0,8 m de fulcru — mai aproape, deoarece e mai greu.</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Arhimede spunea: „Dați-mi un punct de sprijin și voi mișca Pământul." Este fizic posibil? Ce braț ar trebui?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>Masa Pământului: M_P = 6 × 10²⁴ kg → G_P = 6 × 10²⁵ N</li>
+        <li>Forța unui om: F_om = 1000 N (max)</li>
+        <li>Legea pârghiei: 1000 × d₁ = 6×10²⁵ × d₂</li>
+        <li>Dacă d₂ = 1 m (Pământul se mișcă 1 m): d₁ = 6×10²² m</li>
+        <li>Distanța Pământ-Soare ≈ 1,5×10¹¹ m → brațul ar trebui de 400 de miliarde de ori mai lung!</li>
+    </ul>
+    <p>Fizic posibil în principiu, practic absolut imposibil. Dar ideea lui Arhimede — că forța se poate amplifica oricât cu o pârghie — este corectă!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 4</strong> „Conservation of Energy" — principiul lucrului virtual</li>
+    <li><strong>Vol. I, Cap. 12</strong> „Characteristics of Force" — echilibrul forțelor</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu echilibrul și pârghiile</th>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Sistemul muscular-osos = sistem de pârghii; oasele, mușchii, articulațiile</td>
+    </tr>
+    <tr>
+        <td><strong>Arhitectură</strong></td>
+        <td>Calculul echilibrului structurilor, podurilor, clădirilor</td>
+    </tr>
+    <tr>
+        <td><strong>Sport</strong></td>
+        <td>Echilibrul gimnastelor, biomechanica aruncărilor</td>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Roabe, macarale, clești, foarfece, frâne — toate sunt pârghii</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>CONDIȚII DE ECHILIBRU:</h3>
+    <div class="formula-box">
+        Translație: $\sum \vec{F} = \vec{0}$<br><br>
+        Rotație: $\sum M = 0$ (adică $\sum F_i \cdot d_i = 0$)
+    </div>
+
+    <h3>LEGEA PÂRGHIEI:</h3>
+    <div class="formula-box">
+        $F_1 \cdot d_1 = F_2 \cdot d_2$
+    </div>
+
+    <h3>CELE 3 GENURI DE PÂRGHII:</h3>
+    <table>
+        <tr>
+            <th>Gen I</th>
+            <th>Gen II</th>
+            <th>Gen III</th>
+        </tr>
+        <tr>
+            <td>Fulcru la mijloc (foarfece)</td>
+            <td>Rezistența la mijloc (roabă)</td>
+            <td>Motorul la mijloc (brațul uman)</td>
+        </tr>
+    </table>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Pârghia conservă energia: câștigul în forță = pierderea în distanță."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

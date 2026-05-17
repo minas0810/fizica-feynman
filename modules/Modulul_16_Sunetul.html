@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 16: Sunetul — Undele care ne vorbesc</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="16">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 16 · UNDE — SUNET ȘI LUMINĂ</div>
+    <h1>SUNETUL</h1>
+    <div class="subtitle">„Undele care ne vorbesc — oscilațiile aerului care ajung la ureche"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Sunetul ca mișcare moleculară</h2>
+
+<p>Feynman descrie esența sunetului cu claritate moleculară:</p>
+
+<blockquote>
+    <p>„Sound is a wave of compressions and rarefactions in air. When something vibrates, it pushes the air molecules, which push their neighbors, which push theirs — a wave of pressure disturbance travels outward at the speed of sound. The ear detects these pressure fluctuations."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Sunetul este o undă de comprimări și rarefieri ale aerului. Când ceva vibrează, împinge moleculele de aer, care le împing pe ale lor vecine, care le împing pe ale lor — o undă de perturbare a presiunii se propagă spre exterior cu viteza sunetului. Urechea detectează aceste fluctuații de presiune."
+</div>
+
+<h2>De ce sunetul nu se propagă în vid</h2>
+
+<blockquote>
+    <p>„In space, no one can hear you scream — and this is entirely correct physics. Sound requires a medium — molecules to push against each other. Without matter, there is no sound. Light, on the other hand, propagates perfectly well through vacuum because it is an electromagnetic wave, not a mechanical one."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „În spațiu, nimeni nu te poate auzi strigând — și aceasta este fizică complet corectă. Sunetul necesită un mediu — molecule care să se împingă una pe alta. Fără materie, nu există sunet. Lumina, pe de altă parte, se propagă perfect prin vid, deoarece este o undă electromagnetică, nu mecanică."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Sunetul este energie mecanică transportată prin oscilațiile moleculelor unui mediu. Frecvența oscilației determină înălțimea sunetului (grav/acut), amplitudinea determină intensitatea (tare/slab), iar viteza de propagare depinde de mediu.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este sunetul?</h2>
+
+<p><strong>Sunetul</strong> este o undă mecanică longitudinală — moleculele oscilează în direcția propagării undei.</p>
+
+<ul>
+    <li>O sursă vibrantă (coardă, membrană, corzi vocale) comprimă și rarefiază alternativ aerul vecin</li>
+    <li>Perturbarea se propagă sub formă de undă până la receptor (urechea)</li>
+    <li>Moleculele nu se deplasează odată cu unda — oscilează în jurul poziției de echilibru</li>
+</ul>
+
+<div class="info-box">
+    <strong>Analogie Feynman:</strong> Imaginați-vă un șir de bile legate prin arcuri. Lovești prima bilă → ea lovește pe a doua → șamd. Unda de lovitură se propagă, dar bilele rămân (aproximativ) pe loc. La fel funcționează sunetul în aer!
+</div>
+
+<h2>Caracteristicile sunetului</h2>
+
+<table>
+    <tr>
+        <th>Caracteristică fizică</th>
+        <th>Ce determină</th>
+        <th>Percepție auditivă</th>
+    </tr>
+    <tr>
+        <td><strong>Frecvența</strong> (Hz)</td>
+        <td>Câte oscilații pe secundă</td>
+        <td>Înălțimea sunetului (grav ↔ acut)</td>
+    </tr>
+    <tr>
+        <td><strong>Amplitudinea</strong></td>
+        <td>Cât de mare e compresia/rareficarea</td>
+        <td>Intensitatea (slab ↔ tare)</td>
+    </tr>
+    <tr>
+        <td><strong>Lungimea de undă</strong> (m)</td>
+        <td>Distanța dintre două comprimări consecutive</td>
+        <td>Legată de frecvență și viteză</td>
+    </tr>
+    <tr>
+        <td><strong>Viteza</strong> (m/s)</td>
+        <td>Cât de repede se propagă unda</td>
+        <td>Nu se percepe direct (ecoul, da)</td>
+    </tr>
+</table>
+
+<h2>Viteza sunetului</h2>
+
+<table>
+    <tr>
+        <th>Mediu</th>
+        <th>Viteza sunetului (m/s)</th>
+        <th>Observație</th>
+    </tr>
+    <tr><td>Vid</td><td>0</td><td>Nu se propagă!</td></tr>
+    <tr><td>Aer (20°C)</td><td>343</td><td>~340 m/s în calcule</td></tr>
+    <tr><td>Apă</td><td>1480</td><td>De ~4 ori mai repede ca în aer</td></tr>
+    <tr><td>Fier/oțel</td><td>5100</td><td>De ~15 ori mai repede ca în aer</td></tr>
+    <tr><td>Sticlă</td><td>5600</td><td>Solidele conduc bine sunetul</td></tr>
+</table>
+
+<div class="info-box">
+    <strong>Regulă practică:</strong> Sunetul se propagă mai repede în medii mai dense și mai rigide. Solidele > lichide > gaze. Cu temperatura, viteza crește ușor în gaze (moleculele se mișcă mai repede).
+</div>
+
+<h2>Domenii de frecvență</h2>
+
+<table>
+    <tr>
+        <th>Domeniu</th>
+        <th>Frecvență</th>
+        <th>Perceptibil de om</th>
+    </tr>
+    <tr><td>Infrasunete</td><td>&lt; 20 Hz</td><td>Nu (elefanți, balene)</td></tr>
+    <tr><td><strong>Sunete audibile</strong></td><td><strong>20 Hz – 20.000 Hz</strong></td><td><strong>Da</strong></td></tr>
+    <tr><td>Ultrasunete</td><td>&gt; 20.000 Hz</td><td>Nu (lilieci, câini, ecografie)</td></tr>
+</table>
+
+<h2>Reflexia sunetului — Ecoul</h2>
+
+<p>Sunetul se reflectă pe obstacole, la fel ca lumina pe oglinzi. Dacă reflexia vine de la distanță suficientă, o auzim separat de sunetul original = <strong>ecou</strong>.</p>
+
+<ul>
+    <li>Viteza sunetului în aer ≈ 340 m/s</li>
+    <li>Urechea distinge ecoul dacă întârzierea e mai mare de 0,1 s</li>
+    <li>Distanța minimă pentru ecou: d = 340 × 0,1/2 = <strong>17 m</strong> (dus-întors)</li>
+</ul>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul (Feynman)</th>
+    </tr>
+    <tr>
+        <td>„Sunetul călătorește prin vid"</td>
+        <td>Imposibil — sunetul e undă mecanică, necesită materie</td>
+    </tr>
+    <tr>
+        <td>„Moleculele de aer se deplasează cu sunetul"</td>
+        <td>Moleculele oscilează local — unda se propagă, nu moleculele</td>
+    </tr>
+    <tr>
+        <td>„Sunetul mai tare = frecvență mai mare"</td>
+        <td>Intensitatea = amplitudine; înălțimea = frecvență — sunt independente</td>
+    </tr>
+    <tr>
+        <td>„Viteza sunetului e aceeași în orice mediu"</td>
+        <td>Depinde de mediu: mai repede în solide, mai lent în gaze</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Ecografia medicală — ultrasunetele salvează vieți</h2>
+
+<p><strong>Situația:</strong> Medicul folosește un aparat de ecografie pentru a vedea un copil nenăscut.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Aparatul emite ultrasunete (2–18 MHz, inaudibile) în corpul pacientului</li>
+    <li>Ultrasunetele se reflectă diferit pe organe cu densități diferite</li>
+    <li>Aparatul detectează ultrasunetele reflectate și calculează distanțele</li>
+    <li>Din timpii de retur, se reconstituie imaginea internă</li>
+</ul>
+
+<div class="result">Principiul e similar cu ecoul — dar cu frecvențe de milioane de Hz și rezoluție milimetrică. Niciun pericol de radiații ionizante!</div>
+
+<h2>Exemplul 2: Tunetul și fulgerul — calculul distanței</h2>
+
+<p><strong>Situația:</strong> Fulgerul se vede instantaneu (lumina e aproape instantanee), dar tunetul vine după câteva secunde.</p>
+
+<p><strong>Calculul distanței:</strong></p>
+<ul>
+    <li>Viteza sunetului: v ≈ 340 m/s</li>
+    <li>Dacă tunetul vine la t = 6 secunde după fulger:</li>
+    <li>d = v × t = 340 × 6 = 2040 m ≈ <strong>2 km</strong></li>
+    <li>Regula practică: 3 secunde ≈ 1 km</li>
+</ul>
+
+<div class="info-box">
+    <strong>Siguranță:</strong> Dacă intervalul e mai mic de 30 s (furtuna la sub 10 km), caută adăpost! Dacă intervalul scade → furtuna se apropie; dacă crește → se îndepărtează.
+</div>
+
+<h2>Exemplul 3: Efectul Doppler — de ce sirenele sună diferit</h2>
+
+<p><strong>Situația:</strong> O ambulanță se apropie cu sirena pornită — sunetul e mai acut. Trece pe lângă tine — sunetul devine mai grav brusc.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Când ambulanța se apropie, fiecare emisie sonoră urmărește (parțial) pe cea anterioară → undele sunt „comprimate" → frecvență aparentă mai mare → sunet mai acut</li>
+    <li>Când se îndepărtează, undele sunt „întinse" → frecvență aparentă mai mică → sunet mai grav</li>
+    <li>Același efect Doppler se aplică undelor de lumină → astronomii detectează expansiunea universului!</li>
+</ul>
+
+<div class="result">Efectul Doppler explică de ce frecvența percepută diferă de cea emisă când sursa sau receptorul se mișcă.</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Sunetul nu se propagă în vid</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că sunetul necesită mediu material.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un clopoțel (sau telefon cu alarmă) într-un borcan de sticlă</li>
+        <li>Pompă de vid (sau sigilare cu vid parțial)</li>
+        <li>Alternativ: borcan sigilat cu o baterie vibrantă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune clopoțelul în borcan, ascultă sunetul cu capacul deschis</li>
+        <li>Sigilează borcanul și pompează aerul</li>
+        <li>Observă că sunetul devine din ce în ce mai slab pe măsură ce presiunea scade</li>
+        <li>Reintroduceți aerul — sunetul revine</li>
+    </ol>
+
+    <div class="result">Concluzie: Fără aer = fără sunet. Sunetul necesită un mediu material pentru a se propaga!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Frecvența și înălțimea sunetului</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea relației frecvență ↔ înălțimea sunetului perceput.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Pahare cu apă la niveluri diferite</li>
+        <li>O lingură de metal</li>
+        <li>Riglă flexibilă</li>
+    </ul>
+
+    <p><strong>Procedură (pahare cu apă):</strong></p>
+    <ol>
+        <li>Umple 5 pahare identice cu niveluri de apă diferite</li>
+        <li>Lovește fiecare pahar ușor cu lingura</li>
+        <li>Observă că paharul cu mai puțină apă are sunet mai acut (frecvență mai mare)</li>
+        <li>Cel cu multă apă are sunet mai grav</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Explicație:</strong> Mai puțină apă → sistem mai puțin masiv → oscilează mai repede → frecvență mai mare → sunet mai acut!
+    </div>
+
+    <div class="result">Concluzie: Frecvența oscilației determină înălțimea sunetului (acut = frecvență mare, grav = frecvență mică).</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Măsurarea vitezei sunetului prin ecou</h3>
+
+    <p><strong>Obiectiv:</strong> Determinarea experimentală a vitezei sunetului.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un perete mare sau clădire la distanță cunoscută (minimum 50 m)</li>
+        <li>Două plăci de lemn (pentru zgomot sec)</li>
+        <li>Cronometru de precizie (sau telefon)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Măsoară distanța până la perete: d</li>
+        <li>Lovește plăcile de lemn și ascultă ecoul</li>
+        <li>Cronometrează timpul dintre sunetul produs și ecou: t</li>
+        <li>v = 2d/t (dus-întors)</li>
+        <li>Pentru precizie: lovește repetat în ritm cu ecoul și cronometrează 10 lovituri</li>
+    </ol>
+
+    <div class="result">Concluzie: Viteza calculată ar trebui să fie ~340 m/s la temperatura camerei!</div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Undă sonoră:</strong> Perturbație mecanică periodică care se propagă prin materie.</p>
+<p><strong>Frecvența:</strong> Numărul de oscilații pe secundă — determină înălțimea sunetului.</p>
+<p><strong>Amplitudinea:</strong> Amploarea oscilației — determină intensitatea sunetului.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    Relația fundamentală a undelor: $v = \lambda \cdot f$<br><br>
+    unde: $v$ = viteza undei (m/s), $\lambda$ = lungimea de undă (m), $f$ = frecvența (Hz)<br><br>
+    Perioada: $T = \dfrac{1}{f}$ &nbsp;&nbsp;&nbsp; [T în secunde, f în Hz]
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>Un sunet cu frecvența f = 680 Hz se propagă în aer cu v = 340 m/s. Care este lungimea de undă?</p>
+    <ul>
+        <li>λ = v/f = 340/680 = <strong>0,5 m = 50 cm</strong></li>
+    </ul>
+    <div class="result">Lungimea de undă = 50 cm. Lungimile de undă ale sunetelor audibile: 1,7 cm–17 m.</div>
+</div>
+
+<h3>Intensitatea sunetului — scara decibel:</h3>
+<table>
+    <tr>
+        <th>Sunet</th>
+        <th>Intensitate (dB)</th>
+    </tr>
+    <tr><td>Prag auz uman</td><td>0 dB</td></tr>
+    <tr><td>Foșnet de frunze</td><td>20 dB</td></tr>
+    <tr><td>Conversație normală</td><td>60 dB</td></tr>
+    <tr><td>Trafic intens</td><td>80 dB</td></tr>
+    <tr><td>Concert rock</td><td>110 dB</td></tr>
+    <tr><td>Prag durere</td><td>120–130 dB</td></tr>
+</table>
+
+<div class="info-box">
+    <strong>Atenție:</strong> Scala decibel este logaritmică! +10 dB = de 10 ori mai multă intensitate energetică. Concert rock (110 dB) e de 10.000 de ori mai intens ca conversația (60 dB)!
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Efectul Doppler (formulă simplificată):</h3>
+<div class="formula-box">
+    $$f_{perceput} = f_{emis} \cdot \frac{v_{sunet}}{v_{sunet} \mp v_{sursa}}$$
+</div>
+<p>− dacă sursa se apropie (frecvența percepută crește); + dacă se îndepărtează (scade).</p>
+
+<h3>Feynman despre sunet și muzică:</h3>
+<blockquote>
+    <p>„Music is a wave phenomenon, and sound has all the properties of waves: reflection, refraction, interference, diffraction. When two musical notes interfere, you get beats — a periodic swelling and fading that musicians use to tune their instruments."</p>
+</blockquote>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Sunetul se propagă mai repede în apă decât în aer."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> În apă, v ≈ 1480 m/s față de 340 m/s în aer. Moleculele din lichide sunt mai apropiate și transmit perturbația mai rapid. De aceea balenele comunică la distanțe de mii de km!
+</div>
+
+<p><strong>2. „Un sunet mai tare are frecvență mai mare."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Intensitatea (tare/slab) depinde de amplitudine. Frecvența determină înălțimea (acut/grav). Sunt proprietăți independente: poți avea sunete grave tari sau acute slabe.
+</div>
+
+<p><strong>3. „Ecoul are aceeași frecvență ca sunetul original."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Reflexia sunetului nu modifică frecvența — modifică doar direcția și, parțial, intensitatea. Ecoul este reproducerea exactă a sunetului original, cu o întârziere de timp.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce se aude tunetul după fulger, deși se produc simultan?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Viteza luminii (3×10⁸ m/s) este de aproape un milion de ori mai mare decât viteza sunetului (340 m/s). Lumina ajunge la ochi practic instantaneu, sunetul are nevoie de câteva secunde. La 1 km distanță: lumina ajunge în 3 microsecunde, sunetul în ~3 secunde.
+</div>
+
+<p><strong>5. De ce prin urechea lipită de șine de cale ferată auzi trenul înainte să-l auzi prin aer?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Sunetul se propagă în oțel cu ~5100 m/s față de 340 m/s în aer. Vibrațiile trenului ajung prin metalul șinei de ~15 ori mai repede decât prin aer. Nativii americani și exploratorii cunoșteau acest truc!
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un turist strigă în apropierea unui munte și aude ecoul după 3 secunde. La ce distanță se află muntele? (v_sunet = 340 m/s)</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>Sunetul parcurge distanța dus-întors în t = 3 s</li>
+        <li>Distanța totală parcursă = v × t = 340 × 3 = 1020 m</li>
+        <li>Distanța până la munte = 1020/2 = <strong>510 m</strong></li>
+    </ul>
+    <div class="result">Muntele se află la 510 m distanță.</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Un rechin detectează prada prin vibrații la 2 km distanță. Dacă vibrațiile se propagă în apă cu 1480 m/s, după cât timp ajung la rechin? Compară cu ce s-ar auzi în aer.</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>Timp în apă: t = d/v = 2000/1480 ≈ <strong>1,35 s</strong></li>
+        <li>Timp în aer: t = 2000/340 ≈ <strong>5,88 s</strong> — de 4 ori mai mult!</li>
+    </ul>
+    <p>Rechinul primește informația de 4 ori mai repede decât dacă ar fi în aer. Urechea internă a rechinului (linia laterală) detectează vibrații la frecvențe foarte joase (infrasunete) — exact ce produce o pradă în suferință la sute de metri distanță!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 47</strong> „Sound. The Wave Equation" — ecuația undei sonore</li>
+    <li><strong>Vol. I, Cap. 48</strong> „Beats" — interferența sunetelor, acordarea instrumentelor</li>
+    <li><strong>Vol. I, Cap. 49</strong> „Modes" — modul de vibrație, rezonanța</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu sunetul</th>
+    </tr>
+    <tr>
+        <td><strong>Muzică</strong></td>
+        <td>Frecvențele notelor, rezonanța instrumentelor, acustica sălilor</td>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Anatomia urechii, ecolocația liliecilor și balenelor</td>
+    </tr>
+    <tr>
+        <td><strong>Medicină</strong></td>
+        <td>Ecografia, audiologia, ultrasunetele terapeutice</td>
+    </tr>
+    <tr>
+        <td><strong>Geologie</strong></td>
+        <td>Seismografia — undele seismice ca „sunete" ale Pământului</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>SUNETUL</strong> = undă mecanică longitudinală de presiune în materie</p>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Viteza undei: $v = \lambda \cdot f$<br><br>
+        Perioada: $T = 1/f$<br><br>
+        Distanța ecou: $d = v \cdot t / 2$
+    </div>
+
+    <h3>VITEZA SUNETULUI:</h3>
+    <table>
+        <tr>
+            <th>Aer</th>
+            <th>Apă</th>
+            <th>Oțel</th>
+            <th>Vid</th>
+        </tr>
+        <tr>
+            <td>340 m/s</td>
+            <td>1480 m/s</td>
+            <td>5100 m/s</td>
+            <td>0 (nu se propagă)</td>
+        </tr>
+    </table>
+
+    <h3>DOMENIU AUDIBIL:</h3>
+    <p>20 Hz – 20.000 Hz · Sub 20 Hz = infrasunete · Peste 20 kHz = ultrasunete</p>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Sunetul e undă de presiune — moleculele oscilează, perturbarea se propagă."</p>
+
+    <h3>FĂRĂ MEDIU = FĂRĂ SUNET:</h3>
+    <p>În vid nu există sunet. Lumina da — sunetul nu.</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

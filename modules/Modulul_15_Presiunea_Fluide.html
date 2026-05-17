@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 15: Presiunea și statica fluidelor — De ce plutesc corăbiile</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="15">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 15 · MATERIE ȘI FLUIDE</div>
+    <h1>PRESIUNEA ȘI STATICA FLUIDELOR</h1>
+    <div class="subtitle">„De ce plutesc corăbiile — forța apei împotriva gravitației"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Despre presiune și fluide</h2>
+
+<p>Feynman explică presiunea dintr-o perspectivă moleculară:</p>
+
+<blockquote>
+    <p>„The pressure of a gas is due to the constant bombardment of molecules on the walls of a container. Each molecule hits the wall and bounces back, transferring momentum. Billions of such collisions per second produce a steady, measurable force per unit area — pressure."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Presiunea unui gaz este dată de bombardamentul constant al moleculelor pe pereții unui recipient. Fiecare moleculă lovește peretele și sare înapoi, transferând impuls. Miliarde de astfel de ciocniri pe secundă produc o forță constantă, măsurabilă pe unitate de arie — presiunea."
+</div>
+
+<h2>De ce plutesc corăbiile de oțel?</h2>
+
+<blockquote>
+    <p>„A ship floats because the water pushes up with a force exactly equal to the weight of the water displaced by the ship's hull. If you push a ship down, you displace more water, increasing the upward force. The ship finds equilibrium when the buoyancy equals its weight."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „O corabie plutește pentru că apa împinge în sus cu o forță exact egală cu greutatea apei deplasate de carena corăbiei. Dacă împingi corabia în jos, deplasezi mai multă apă, crescând forța de împingere. Corabia găsește echilibrul când împingerea Arhimedică egalează greutatea ei."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Presiunea acționează în toate direcțiile și crește cu adâncimea. Diferența de presiune cu adâncimea produce forța Arhimedică — singura responsabilă pentru plutire. O corabie de oțel plutește nu pentru că oțelul e „ușor", ci pentru că forma ei deplasează mai multă apă decât cântărește!
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Presiunea — definiție și unitate</h2>
+
+<p><strong>Presiunea</strong> (p) este forța exercitată pe unitatea de arie:</p>
+
+<div class="formula-box">
+    $$p = \frac{F}{A}$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>F</strong> = forța perpendiculară pe suprafață (N)</li>
+    <li><strong>A</strong> = aria suprafeței (m²)</li>
+    <li><strong>p</strong> = presiunea (Pascal, Pa = N/m²)</li>
+</ul>
+
+<div class="info-box">
+    <strong>De reținut:</strong> Aceeași forță pe suprafață mică → presiune mare. Aceeași forță pe suprafață mare → presiune mică. De aceea cuțitele ascuțite taie mai bine (arie mică) și schiurile nu te afundă în zăpadă (arie mare)!
+</div>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>Forța (N)</th>
+        <th>Aria (m²)</th>
+        <th>Presiunea (Pa)</th>
+    </tr>
+    <tr><td>Toc cui (tocul pantofului)</td><td>600</td><td>0,0001</td><td>6.000.000</td></tr>
+    <tr><td>Talpă plată</td><td>600</td><td>0,03</td><td>20.000</td></tr>
+    <tr><td>Ski</td><td>700</td><td>0,14</td><td>5.000</td></tr>
+    <tr><td>Presiunea atmosferică</td><td>—</td><td>—</td><td>101.325</td></tr>
+</table>
+
+<h2>Presiunea hidrostatică</h2>
+
+<p>Într-un fluid în repaus, presiunea crește cu adâncimea:</p>
+
+<div class="formula-box">
+    $$p = \rho \cdot g \cdot h$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>ρ</strong> (rho) = densitatea fluidului (kg/m³)</li>
+    <li><strong>g</strong> = accelerația gravitațională (10 m/s²)</li>
+    <li><strong>h</strong> = adâncimea față de suprafața liberă (m)</li>
+</ul>
+
+<table>
+    <tr>
+        <th>Fluid</th>
+        <th>Densitate ρ (kg/m³)</th>
+    </tr>
+    <tr><td>Aer (la sol)</td><td>1,29</td></tr>
+    <tr><td>Apă dulce</td><td>1000</td></tr>
+    <tr><td>Apă de mare</td><td>1025</td></tr>
+    <tr><td>Mercur</td><td>13.600</td></tr>
+    <tr><td>Ulei</td><td>~900</td></tr>
+</table>
+
+<h2>Principiul lui Arhimede — forța de împingere</h2>
+
+<p>Orice corp scufundat (total sau parțial) într-un fluid primește o forță de împingere verticală în sus, egală cu greutatea fluidului dezlocuit.</p>
+
+<div class="formula-box">
+    $$F_A = \rho_{fluid} \cdot g \cdot V_{scufundat}$$
+</div>
+
+<p>Unde <strong>V_scufundat</strong> = volumul corpului aflat sub suprafața fluidului.</p>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>F_A vs. G_corp</th>
+        <th>Comportament</th>
+    </tr>
+    <tr><td>FA > G</td><td>Împingerea > Greutatea</td><td>Corpul urcă (plutire)</td></tr>
+    <tr><td>FA = G</td><td>Împingerea = Greutatea</td><td>Corp în echilibru (levitare în fluid)</td></tr>
+    <tr><td>FA < G</td><td>Împingerea < Greutatea</td><td>Corpul se scufundă</td></tr>
+</table>
+
+<h2>Principiul lui Pascal</h2>
+
+<p>O presiune aplicată unui fluid închis se transmite integral și egal în toate direcțiile.</p>
+
+<div class="formula-box">
+    $$\frac{F_1}{A_1} = \frac{F_2}{A_2}$$
+</div>
+
+<div class="info-box">
+    <strong>Aplicații:</strong> Frânele hidraulice, presele hidraulice, cricurile auto — toate funcționează pe principiul lui Pascal. O forță mică pe o suprafață mică produce presiune mare, care se transmite și poate ridica obiecte grele pe o suprafață mai mare.
+</div>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Submarinul — maestrul plutirii controlate</h2>
+
+<p><strong>Situația:</strong> Submarinul poate urca, coborî sau menține adâncimea la comandă. Cum?</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Submarinul are rezervoare speciale numite <strong>cisterne de balast</strong></li>
+    <li><strong>Scufundare:</strong> Pompează apă în cisterne → masa crește → G > FA → coboară</li>
+    <li><strong>Plutire neutră:</strong> Reglează cantitatea de apă până când G = FA → rămâne la adâncime</li>
+    <li><strong>Urcare:</strong> Expulzează apa cu aer comprimat → masa scade → FA > G → urcă</li>
+</ul>
+
+<div class="result">Submarinul nu schimbă volumul (FA = const.) — schimbă masa pentru a controla raportul G/FA!</div>
+
+<h2>Exemplul 2: Presiunea atmosferică — coloana de aer</h2>
+
+<p><strong>Situația:</strong> Nu simțim presiunea atmosferică de ~100.000 Pa (10 tone pe metru pătrat!). De ce?</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Presiunea atmosferică = greutatea coloanei de aer de deasupra noastră (înaltă de ~100 km)</li>
+    <li>Nu simțim presiunea pentru că lichidul din corp e la aceeași presiune — echilibru intern</li>
+    <li>La altitudine, presiunea scade (mai puțin aer deasupra)</li>
+    <li>Dacă ai urca brusc la 10 km altitudine fără echipament: presiunea scade la ~26.000 Pa — corpul s-ar „umfla" dramatic</li>
+</ul>
+
+<div class="info-box">
+    <strong>Demonstrație Torricelli:</strong> O eprubetă plină cu mercur, răsturnată într-un vas, lasă o coloană de 760 mm mercur — greutatea acestei coloane = presiunea atmosferică. Acesta este barometrul!
+</div>
+
+<h2>Exemplul 3: Presa hidraulică — Pascal în garaj</h2>
+
+<p><strong>Situația:</strong> Un mecanic auto ridică o mașină de 1500 kg cu o forță de 150 N. Cum?</p>
+
+<p><strong>Calculul (Principiul Pascal):</strong></p>
+<ul>
+    <li>Forța de ridicat: F₂ = G = 1500 × 10 = 15.000 N</li>
+    <li>Forța aplicată: F₁ = 150 N → raport forță = 100</li>
+    <li>Principiul Pascal: F₁/A₁ = F₂/A₂ → A₂/A₁ = 100</li>
+    <li>Dacă pistonul mic are diametrul 1 cm → pistonul mare are diametrul 10 cm</li>
+</ul>
+
+<div class="result">Presa hidraulică multiplică forța de 100 de ori! Dar pistonul mare se mișcă de 100 de ori mai puțin — energia se conservă.</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Presiunea crește cu adâncimea</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că presiunea hidrostatică depinde de adâncime.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O sticlă PET de 1,5 L</li>
+        <li>Ac pentru perforat</li>
+        <li>Apă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Fă 3 găuri pe aceeași coloană verticală a sticlei (sus, mijloc, jos)</li>
+        <li>Acoperă găurile cu degetul, umple sticla cu apă</li>
+        <li>Dezlipește degetele simultan și observă jeturile</li>
+        <li>Compară lungimea jeturilor de la diferite adâncimi</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Jetul de jos ajunge cel mai departe — presiune mai mare</li>
+        <li>Jetul de sus e cel mai slab — presiune mai mică</li>
+        <li>Presiunea p = ρgh → cu cât h mai mare, cu atât viteza jetului mai mare</li>
+    </ul>
+
+    <div class="result">Concluzie: Presiunea hidrostatică crește direct proporțional cu adâncimea!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Forța Arhimedică — cântărirea în apă</h3>
+
+    <p><strong>Obiectiv:</strong> Măsurarea forței Arhimedice și verificarea principiului Arhimede.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Dinamometru</li>
+        <li>Un corp metalic (piatră, bilă)</li>
+        <li>Vas cu apă</li>
+        <li>Vas gradat (pentru volumul apei dezlocuite)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Cântărește corpul în aer cu dinamometrul: notează G</li>
+        <li>Cufundă corpul în apă (ținut de dinamometru): notează G'</li>
+        <li>FA = G − G' (aparenta pierdere de greutate)</li>
+        <li>Cântărește apa dezlocuită: notează G<sub>apă</sub></li>
+        <li>Verifică: F<sub>A</sub> = G<sub>apă</sub> ?</li>
+    </ol>
+
+    <div class="result">Concluzie: FA = greutatea fluidului dezlocuit — Principiul Arhimede verificat experimental!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Principiul lui Pascal — vase comunicante</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că presiunea se transmite egal în toate direcțiile.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Două pahare de mărimi diferite conectate cu un tub de plastic flexibil</li>
+        <li>Apă colorată</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Umple sistemul cu apă colorată</li>
+        <li>Observă că nivelul apei este identic în ambele vase, indiferent de dimensiune</li>
+        <li>Ridică un vas — apa din celălalt urcă</li>
+        <li>Observă că nivelurile sunt mereu egale</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Aplicație:</strong> Instalațiile de apă din case folosesc același principiu — presiunea apei în rețea e dată de înălțimea rezervorului, nu de grosimea conductelor!
+    </div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Presiunea:</strong> Forța pe unitate de arie — cu cât aria mai mică, cu atât presiunea mai mare la aceeași forță.</p>
+<p><strong>Principiul Arhimede:</strong> Corpul scufundat „simte" că e mai ușor — lichidul îl împinge în sus.</p>
+<p><strong>Principiul Pascal:</strong> Presiunea se transmite integral în orice direcție într-un fluid închis.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    Presiunea: $p = \dfrac{F}{A}$ &nbsp;&nbsp; [Pa = N/m²]<br><br>
+    Presiunea hidrostatică: $p = \rho g h$<br><br>
+    Forța Arhimedică: $F_A = \rho_{fluid} \cdot g \cdot V_{scufundat}$<br><br>
+    Pascal (presa hidraulică): $\dfrac{F_1}{A_1} = \dfrac{F_2}{A_2}$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>Un corp de 500 cm³ = 5×10⁻⁴ m³ e scufundat total în apă (ρ=1000 kg/m³). Calculează FA.</p>
+    <ul>
+        <li>FA = ρ·g·V = 1000 × 10 × 5×10⁻⁴ = <strong>5 N</strong></li>
+        <li>Dacă G = 4 N → corp plutește (FA > G)</li>
+        <li>Dacă G = 7 N → corp se scufundă (FA < G)</li>
+        <li>Dacă G = 5 N → levitează în fluid (FA = G)</li>
+    </ul>
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Presiunea totală la adâncime h:</h3>
+<div class="formula-box">
+    $$p_{total} = p_{atm} + \rho g h$$
+</div>
+
+<h3>Condiția de plutire — densitate relativă:</h3>
+<div class="formula-box">
+    Plutire dacă: $\rho_{corp} < \rho_{fluid}$<br><br>
+    Scufundare dacă: $\rho_{corp} > \rho_{fluid}$
+</div>
+
+<h3>Feynman despre presiunea atomică:</h3>
+<blockquote>
+    <p>„The pressure of water at depth h reflects the weight of all the water above it — each layer pressing down on the next. At 10 meters depth, the pressure doubles (one atm from air + one atm from 10m of water)."</p>
+</blockquote>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „O corabie din oțel plutește pentru că oțelul e mai puțin dens decât apa."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Oțelul (ρ ≈ 7800 kg/m³) e mult mai dens decât apa (ρ = 1000 kg/m³). Corabia plutește pentru că forma ei (goală pe interior) face ca densitatea medie a întregului sistem (oțel + aer + marfă) să fie mai mică decât apa.
+</div>
+
+<p><strong>2. „La adâncimea de 20 m în apă, presiunea e de aproximativ 3 ori presiunea atmosferică."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> p = patm + ρgh = 100.000 + 1000×10×20 = 100.000 + 200.000 = 300.000 Pa = 3 atm. La fiecare 10 m adâncime, presiunea crește cu ~1 atm.
+</div>
+
+<p><strong>3. „Forța Arhimedică depinde de masa corpului scufundat."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> FA = ρ_fluid × g × V_scufundat. Depinde de densitatea fluidului și de volumul scufundat, NU de masa sau densitatea corpului. Un balon plin cu mercur și unul plin cu plută, dacă au același volum, au aceeași FA!
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce e mai ușor să înoți în mare (apă sărată) decât în lacuri?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Apa sărată are densitate mai mare (ρ ≈ 1025 kg/m³) față de apă dulce (ρ = 1000 kg/m³). FA = ρ·g·V → forța Arhimedică e mai mare în apă sărată la același volum scufundat. Corpul uman plutește mai ușor și mai sus în apă sărată.
+</div>
+
+<p><strong>5. De ce îți pleznesc urechile când urci rapid la munte sau cobori cu avionul?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Timpanul separă urechea internă (la presiunea de la sol) de urechea externă (la presiunea curentă). La urcare/coborâre rapidă, presiunea externă se schimbă brusc, dar presiunea internă rămâne momentan constantă → diferența de presiune împinge timpanul → durere. „Plesnitura" = egalizarea prin trompa lui Eustachio.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. O presă hidraulică are pistonul mic cu aria de 2 cm² și pistonul mare cu aria de 200 cm². Ce forță produce pistonul mare dacă pe cel mic se aplică 50 N?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>Principiul Pascal: F₁/A₁ = F₂/A₂</li>
+        <li>50/2 = F₂/200</li>
+        <li>F₂ = 50 × 200/2 = <strong>5000 N</strong></li>
+    </ul>
+    <div class="result">Presa multiplică forța de 100 de ori: 50 N → 5000 N!</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Un scafandru coboară la 30 m adâncime în mare (ρ = 1025 kg/m³). Calculează presiunea totală la această adâncime și explică de ce scafandrul trebuie să respire aer sub presiune.</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>p = p_atm + ρgh = 100.000 + 1025 × 10 × 30 = 100.000 + 307.500 = <strong>407.500 Pa ≈ 4 atm</strong></li>
+        <li>Plămânii scafandrului sunt înconjurați de apă la 4 atm</li>
+        <li>Pentru a putea respira, aerul furnizat de butelie trebuie să fie la ACEEAȘI presiune (4 atm)</li>
+        <li>Altfel, presiunea apei ar comprima complet plămânii → imposibil de respirat</li>
+        <li>La urcare, scafandrul trebuie să urce lent — altfel azotul dizolvat în sânge la 4 atm formează bule la presiune normală (boala de decompresie)!</li>
+    </ul>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. II, Cap. 40</strong> „The Flow of Dry Water" — fluidele și presiunea</li>
+    <li><strong>Vol. I, Cap. 1</strong> „Atoms in Motion" — presiunea ca bombardament molecular</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu presiunea și fluidele</th>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Presiunea sângelui, sistemul limfatic, respirația</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Presiunea atmosferică și vremea, curenții oceanici, oceanografie</td>
+    </tr>
+    <tr>
+        <td><strong>Inginerie</strong></td>
+        <td>Construcția de baraje, submarine, avioane, instalații hidraulice</td>
+    </tr>
+    <tr>
+        <td><strong>Medicină</strong></td>
+        <td>Tensiometrul, boala de decompresie, chirurgia laparoscopică</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Presiunea: $p = F/A$ &nbsp; [Pa]<br><br>
+        Hidrostatică: $p = \rho g h$<br><br>
+        Arhimede: $F_A = \rho_{fluid} \cdot g \cdot V_{scuf.}$<br><br>
+        Pascal: $F_1/A_1 = F_2/A_2$
+    </div>
+
+    <h3>CONDIȚII DE PLUTIRE:</h3>
+    <table>
+        <tr>
+            <th>ρ_corp vs ρ_fluid</th>
+            <th>Comportament</th>
+        </tr>
+        <tr><td>ρ_corp &lt; ρ_fluid</td><td>Plutire</td></tr>
+        <tr><td>ρ_corp = ρ_fluid</td><td>Levitare neutră</td></tr>
+        <tr><td>ρ_corp &gt; ρ_fluid</td><td>Scufundare</td></tr>
+    </table>
+
+    <h3>IDEI CHEIE:</h3>
+    <ul>
+        <li>Presiunea crește cu adâncimea: +1 atm la fiecare 10 m de apă</li>
+        <li>FA depinde de volumul scufundat și densitatea fluidului, NU de masa corpului</li>
+        <li>Pascal: presiunea se transmite egal în toate direcțiile</li>
+    </ul>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Presiunea atmosferică este greutatea întregii coloane de aer de deasupra ta. Trăim la fundul unui ocean de aer, la fel cum crustaceele trăiesc la fundul oceanului de apă — pur și simplu suntem obișnuiți cu ea."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

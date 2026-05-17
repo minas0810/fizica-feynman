@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 12: Lucrul mecanic și puterea — Energia pusă la muncă</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="12">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 12 · ENERGIE ȘI LUCRU MECANIC</div>
+    <h1>LUCRUL MECANIC ȘI PUTEREA</h1>
+    <div class="subtitle">„Energia pusă la muncă — ce înseamnă cu adevărat să «faci ceva»"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Ce este energia?</h2>
+
+<p>Feynman deschide celebrul capitol despre energie cu o reflecție profundă:</p>
+
+<blockquote>
+    <p>„There is a fact, or if you wish, a law, governing all natural phenomena that is known to date. There is no known exception to this law — it is exact so far as we know. The law is called the conservation of energy. It states that there is a certain quantity, which we call energy, that does not change in the manifold changes which nature undergoes."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Există un fapt, sau dacă vreți, o lege, care guvernează toate fenomenele naturale cunoscute până acum. Nu există nicio excepție cunoscută de la această lege — este exactă pe cât știm. Legea se numește conservarea energiei. Ea afirmă că există o anumită cantitate, pe care o numim energie, care nu se schimbă în multitudinea de schimbări prin care trece natura."
+</div>
+
+<h2>Lucrul mecanic — fizic vs. cotidian</h2>
+
+<blockquote>
+    <p>„Work in physics is not the same as work in everyday language. Holding a heavy weight perfectly still does no work in the physics sense — you exert force, but nothing moves. Work requires both force AND displacement in the direction of the force."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Lucrul în fizică nu e același cu munca în limbajul cotidian. Ținerea unei greutăți complet nemișcate nu efectuează niciun lucru în sensul fizic — aplici forță, dar nimic nu se deplasează. Lucrul necesită atât forță CÂT ȘI deplasare în direcția forței."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Lucrul mecanic măsoară cât de multă energie este transferată de o forță. Puterea măsoară cât de repede se face acest transfer. Un motor puternic nu face neapărat mai mult lucru — îl face mai repede!
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Ce este lucrul mecanic?</h2>
+
+<p><strong>Lucrul mecanic</strong> (L sau W) este energia transferată de o forță când produce deplasare.</p>
+
+<div class="formula-box">
+    $$L = F \cdot d \cdot \cos\theta$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>F</strong> = forța aplicată (N)</li>
+    <li><strong>d</strong> = deplasarea corpului (m)</li>
+    <li><strong>θ</strong> = unghiul dintre forță și direcția deplasării</li>
+    <li><strong>L</strong> = lucrul mecanic (Joule, J)</li>
+</ul>
+
+<h2>Cazuri speciale ale lucrului mecanic</h2>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>Unghi θ</th>
+        <th>cos θ</th>
+        <th>Lucrul mecanic</th>
+    </tr>
+    <tr>
+        <td>Forța în direcția mișcării</td>
+        <td>0°</td>
+        <td>1</td>
+        <td>L = F·d (maxim, pozitiv)</td>
+    </tr>
+    <tr>
+        <td>Forța perpendiculară pe mișcare</td>
+        <td>90°</td>
+        <td>0</td>
+        <td>L = 0 (nul!)</td>
+    </tr>
+    <tr>
+        <td>Forța opusă mișcării (frecare)</td>
+        <td>180°</td>
+        <td>−1</td>
+        <td>L = −F·d (negativ)</td>
+    </tr>
+    <tr>
+        <td>Forța la unghi oarecare</td>
+        <td>θ</td>
+        <td>cos θ</td>
+        <td>L = F·d·cos θ</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Lucru mecanic nul — 3 cazuri:</strong>
+    <ul>
+        <li>Forța zero (nu se aplică nicio forță)</li>
+        <li>Deplasarea zero (corpul nu se mișcă — ții o geantă pe loc)</li>
+        <li>Forța perpendiculară pe deplasare (reacțiunea normală nu face lucru)</li>
+    </ul>
+</div>
+
+<h2>Ce este puterea?</h2>
+
+<p><strong>Puterea</strong> (P) măsoară viteza cu care se efectuează lucru mecanic.</p>
+
+<div class="formula-box">
+    $$P = \frac{L}{t} = F \cdot v$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>P</strong> = puterea (Watt, W)</li>
+    <li><strong>L</strong> = lucrul mecanic (J)</li>
+    <li><strong>t</strong> = timpul (s)</li>
+    <li><strong>v</strong> = viteza (m/s) — când forța e constantă și în direcția mișcării</li>
+</ul>
+
+<table>
+    <tr>
+        <th>Dispozitiv/fenomen</th>
+        <th>Putere tipică</th>
+    </tr>
+    <tr><td>Om care merge</td><td>~80 W</td></tr>
+    <tr><td>Bec LED</td><td>10–15 W</td></tr>
+    <tr><td>Calculator laptop</td><td>50–100 W</td></tr>
+    <tr><td>Mașină (motor)</td><td>50.000–200.000 W</td></tr>
+    <tr><td>Centrală electrică</td><td>~10⁹ W (1 GW)</td></tr>
+    <tr><td>Soarele (total)</td><td>~4 × 10²⁶ W</td></tr>
+</table>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul (Feynman)</th>
+    </tr>
+    <tr>
+        <td>„Dacă ții o geantă grea, faci mult lucru"</td>
+        <td>Lucru mecanic = 0 dacă deplasarea = 0, indiferent de forță</td>
+    </tr>
+    <tr>
+        <td>„Motor mai puternic = mai mult lucru"</td>
+        <td>Motor mai puternic = același lucru în timp MAI SCURT</td>
+    </tr>
+    <tr>
+        <td>„Lucrul e întotdeauna pozitiv"</td>
+        <td>Forța de frecare face lucru mecanic NEGATIV (frânează, ia energie)</td>
+    </tr>
+    <tr>
+        <td>„Reacțiunea normală face lucru"</td>
+        <td>Perpendiculară pe mișcare → cos90° = 0 → lucru nul</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Urcatul scărilor — puterea corpului uman</h2>
+
+<p><strong>Situația:</strong> Un elev de 50 kg urcă un etaj (înălțimea 3 m) în 10 secunde.</p>
+
+<p><strong>Calculul lucrului mecanic:</strong></p>
+<ul>
+    <li>Forța necesară = greutatea: G = m·g = 50 × 10 = 500 N</li>
+    <li>Deplasarea verticală: d = 3 m</li>
+    <li>L = F·d = 500 × 3 = 1500 J</li>
+</ul>
+
+<p><strong>Calculul puterii:</strong></p>
+<ul>
+    <li>P = L/t = 1500/10 = <strong>150 W</strong></li>
+</ul>
+
+<div class="info-box">
+    <strong>Comparație:</strong> Omul produce ~150 W urcând scările. Un bec vechi de 100W consumă mai puțin! Mașina ta are un motor de ~100.000 W — de 670 de ori mai puternic decât urcatul scărilor.
+</div>
+
+<h2>Exemplul 2: Frânarea mașinii — lucru mecanic negativ</h2>
+
+<p><strong>Situația:</strong> O mașină de 1000 kg merge cu 20 m/s și frânează pe o distanță de 40 m.</p>
+
+<p><strong>Explicația fizică:</strong></p>
+<ul>
+    <li>Forța de frânare acționează <strong>opus</strong> mișcării (θ = 180°)</li>
+    <li>Lucrul mecanic al frânei este <strong>negativ</strong> — ia energie din mașină</li>
+    <li>Energia cinetică a mașinii se transformă în căldură (frânele se încălzesc!)</li>
+</ul>
+
+<div class="result">Lucrul negativ al frânei = scăderea energiei cinetice a mașinii — conservarea energiei în acțiune!</div>
+
+<h2>Exemplul 3: Aparatele electrice — puterea ca indicator practic</h2>
+
+<p><strong>Situația:</strong> Pe orice aparat electric scrie puterea în Watt (sau kW).</p>
+
+<p><strong>Calculul costului energiei:</strong></p>
+<ul>
+    <li>Energie consumată = Putere × Timp → E = P·t</li>
+    <li>Un radiator de 2000 W funcționând 5 ore: E = 2000 × 5×3600 = 36.000.000 J = 10 kWh</li>
+    <li>Dacă 1 kWh costă 0,80 lei → costul = 8 lei</li>
+</ul>
+
+<div class="info-box">
+    <strong>Unitatea kWh:</strong> Kilowatt-ora (kWh) e unitatea de energie de pe factura electrică. 1 kWh = 3.600.000 J. E lucrul mecanic efectuat de un aparat de 1 kW în decurs de o oră.
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Lucrul mecanic cu dinamometrul</h3>
+
+    <p><strong>Obiectiv:</strong> Măsurarea lucrului mecanic efectuat de o forță.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Dinamometru</li>
+        <li>Un corp cu cârlig (cărticică, cutie)</li>
+        <li>Riglă sau metru</li>
+        <li>Plan orizontal și plan înclinat</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Trage corpul orizontal cu dinamometrul pe o distanță de 0,5 m. Notează F și d.</li>
+        <li>Calculează lucrul mecanic: L = F·d</li>
+        <li>Ridică același corp vertical pe aceeași înălțime</li>
+        <li>Compară lucrul mecanic în ambele cazuri</li>
+        <li>Ridică același corp pe un plan înclinat la aceeași înălțime</li>
+    </ol>
+
+    <p><strong>Ce observăm:</strong></p>
+    <ul>
+        <li>Pe plan înclinat, forța necesară e mai mică, dar distanța e mai mare</li>
+        <li>Lucrul mecanic total (L = F·d) este același! — planul înclinat nu economisește energie</li>
+    </ul>
+
+    <div class="result">Concluzie: Planul înclinat reduce forța, dar mărește distanța — lucrul mecanic total e conservat!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Măsurarea puterii corpului uman</h3>
+
+    <p><strong>Obiectiv:</strong> Calcularea puterii musculare la urcatul scărilor.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Scări (minim un etaj)</li>
+        <li>Cronometru</li>
+        <li>Cântar (pentru masa corporală)</li>
+        <li>Riglă sau metru (pentru înălțimea etajului)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Măsoară masa ta (sau estimează)</li>
+        <li>Măsoară înălțimea unui etaj</li>
+        <li>Urcă etajul cât de repede poți — cronometrează</li>
+        <li>Urcă și la mers normal — cronometrează</li>
+        <li>Calculează L = mgh și P = L/t pentru ambele cazuri</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Concluzie așteptată:</strong> Lucrul mecanic e același! Dar puterea e mai mare când urci mai repede — faci același lucru în mai puțin timp.
+    </div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Forța perpendiculară nu face lucru</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea lucrului mecanic nul al forței perpendiculare.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O carte pusă pe masă</li>
+        <li>Dinamometru</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Trage cartea orizontal pe masă cu dinamometrul (forța orizontală = direcția mișcării)</li>
+        <li>Notează forța și calculează L = F·d</li>
+        <li>Apasă cartea în jos cu aceeași forță în timp ce o tragi orizontal</li>
+        <li>Observă că forța verticală (apăsarea) nu influențează deplasarea orizontală</li>
+        <li>Concluzie: forța verticală efectuează L = 0 (deplasarea ei verticală = 0)</li>
+    </ol>
+
+    <div class="result">Concluzie: Numai componenta forței în direcția deplasării efectuează lucru mecanic!</div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Lucrul mecanic:</strong> Energia transferată de o forță când produce deplasare în direcția ei.</p>
+<p><strong>Puterea:</strong> Viteza cu care se efectuează lucrul mecanic (energie pe unitate de timp).</p>
+<p><strong>Joule:</strong> Lucrul mecanic al unei forțe de 1 N pe o distanță de 1 m: 1 J = 1 N·m.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    Lucrul mecanic: $L = F \cdot d \cdot \cos\theta$<br><br>
+    Puterea: $P = \dfrac{L}{t}$<br><br>
+    Puterea instantanee: $P = F \cdot v$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>Un motor ridică o masă de 200 kg la înălțimea de 5 m în 20 de secunde. Ce putere are motorul?</p>
+    <ul>
+        <li>Forța = G = m·g = 200 × 10 = 2000 N</li>
+        <li>L = F·d = 2000 × 5 = 10.000 J</li>
+        <li>P = L/t = 10.000/20 = <strong>500 W</strong></li>
+    </ul>
+    <div class="result">Puterea motorului = 500 W</div>
+</div>
+
+<h3>Unitățile de energie:</h3>
+<table>
+    <tr>
+        <th>Unitate</th>
+        <th>Echivalent</th>
+        <th>Utilizare</th>
+    </tr>
+    <tr><td>Joule (J)</td><td>1 N·m</td><td>Fizică — standard SI</td></tr>
+    <tr><td>kJ</td><td>1000 J</td><td>Alimentație, chimie</td></tr>
+    <tr><td>kWh</td><td>3.600.000 J</td><td>Factură electrică</td></tr>
+    <tr><td>Cal (kcal)</td><td>4186 J</td><td>Nutriție</td></tr>
+</table>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Teorema energiei cinetice:</h3>
+<div class="formula-box">
+    $$L_{total} = \Delta E_c = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$$
+</div>
+
+<p>Lucrul total al tuturor forțelor care acționează pe un corp = variația energiei sale cinetice. Aceasta este una dintre cele mai puternice relații din mecanică.</p>
+
+<h3>Feynman despre energie:</h3>
+<blockquote>
+    <p>„It is important to realize that in physics today, we have no knowledge of what energy IS. We do not have a picture of energy as a material substance. Energy is an abstract quantity — a number that happens to be conserved."</p>
+</blockquote>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Un om care ține o ladă grea nemișcată efectuează lucru mecanic."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Lucru mecanic = F·d·cosθ. Dacă deplasarea d = 0, atunci L = 0, indiferent de cât de mare e forța. Mușchii obosesc, dar fizic nu se efectuează lucru mecanic!
+</div>
+
+<p><strong>2. „Doi elevi ridică aceeași geantă la același etaj — cel care urcă mai repede efectuează mai mult lucru mecanic."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Lucrul mecanic depinde de forță și deplasare, nu de timp. Ambii efectuează același lucru L = m·g·h. Cel mai rapid are putere mai mare, nu lucru mai mare.
+</div>
+
+<p><strong>3. „Forța de frecare efectuează lucru mecanic negativ."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Frecarea acționează opus mișcării (θ = 180°, cos180° = −1) → L = −F_f·d. Energia se transformă în căldură — de aceea frânele se încălzesc!
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce o persoană care cară o greutate pe orizontală nu efectuează lucru mecanic împotriva gravitației, deși se ostenește?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Gravitația acționează vertical (în jos). Deplasarea este orizontală. Unghiul dintre forța gravitațională și deplasare = 90° → cos90° = 0 → lucrul gravitației = 0. Efortul uman e real, dar prin fricțiunea interioară a mușchilor — nu lucru mecanic util.
+</div>
+
+<p><strong>5. De ce macaralele și lifturile au motoare mai puternice dacă vor să ridice aceeași greutate mai repede?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Lucrul mecanic L = mgh rămâne fix (aceeași masă, aceeași înălțime). Dar P = L/t — dacă timpul t scade (ridicare mai rapidă), puterea P trebuie să crească proporțional.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un elev de 60 kg urcă un etaj de 3 m în 5 secunde. Calculează lucrul mecanic efectuat și puterea dezvoltată.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>G = m·g = 60 × 10 = 600 N</li>
+        <li>L = G·h = 600 × 3 = <strong>1800 J</strong></li>
+        <li>P = L/t = 1800/5 = <strong>360 W</strong></li>
+    </ul>
+    <div class="result">Lucru mecanic = 1800 J; Puterea = 360 W</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Un motor electric de 2 kW ridică o masă la înălțimea de 10 m. Știind că motorul are randamentul de 80% (pierde 20% energie prin căldură), cât timp îi trebuie să ridice 500 kg?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>Lucru mecanic util: L = m·g·h = 500 × 10 × 10 = 50.000 J</li>
+        <li>Putere utilă: P_util = 2000 × 0,8 = 1600 W (80% din 2 kW)</li>
+        <li>Timp: t = L/P_util = 50.000/1600 = <strong>31,25 s ≈ 31 s</strong></li>
+    </ul>
+    <p>Randamentul = raportul dintre energia utilă și energia totală consumată.</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 4</strong> „Conservation of Energy" — cel mai important capitol despre energie</li>
+    <li><strong>Vol. I, Cap. 13</strong> „Work and Potential Energy" — lucrul mecanic formal</li>
+    <li><strong>Vol. I, Cap. 14</strong> „Work and Potential Energy (conclusion)"</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu lucrul mecanic și puterea</th>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Metabolismul — corpul convertește energie chimică în lucru mecanic</td>
+    </tr>
+    <tr>
+        <td><strong>Economie</strong></td>
+        <td>Factura electrică — energia consumată = putere × timp</td>
+    </tr>
+    <tr>
+        <td><strong>Inginerie</strong></td>
+        <td>Proiectarea motoarelor, macaralelor, lifturilor</td>
+    </tr>
+    <tr>
+        <td><strong>Ecologie</strong></td>
+        <td>Eficiența energetică, surse regenerabile (vânt, apă)</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Lucrul mecanic: $L = F \cdot d \cdot \cos\theta$<br><br>
+        Puterea: $P = \dfrac{L}{t} = F \cdot v$<br><br>
+        Unități: L în Joule (J), P în Watt (W)
+    </div>
+
+    <h3>CAZURI SPECIALE:</h3>
+    <table>
+        <tr>
+            <th>Unghi θ</th>
+            <th>Lucru mecanic</th>
+        </tr>
+        <tr><td>0° (forța în sens mișcării)</td><td>L = F·d (maxim)</td></tr>
+        <tr><td>90° (forța ⊥ mișcării)</td><td>L = 0</td></tr>
+        <tr><td>180° (forța contra mișcării)</td><td>L = −F·d (negativ)</td></tr>
+    </table>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Energia este o cantitate abstractă care se conservă — nu știm CE este, dar știm că rămâne constantă."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

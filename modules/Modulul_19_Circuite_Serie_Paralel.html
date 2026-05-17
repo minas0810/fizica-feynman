@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 19: Circuite serie și paralel — Cum se conectează lumea electrică</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="19">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 19 · ELECTRICITATE ȘI MAGNETISM</div>
+    <h1>CIRCUITE SERIE ȘI PARALEL</h1>
+    <div class="subtitle">„Cum se conectează lumea electrică — reguli simple, efecte profunde"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Simplitatea legilor circuitelor</h2>
+
+<blockquote>
+    <p>„The great beauty of circuit theory is that two simple rules — Kirchhoff's current law and voltage law — can solve any electrical network, no matter how complex. All the elaborate circuits of modern electronics ultimately obey these two rules, derived directly from conservation of charge and conservation of energy."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Marea frumusețe a teoriei circuitelor este că două reguli simple — legea curentului și legea tensiunii lui Kirchhoff — pot rezolva orice rețea electrică, oricât de complexă. Toate circuitele elaborate ale electronicii moderne ascultă în final aceste două reguli, derivate direct din conservarea sarcinii și conservarea energiei."
+</div>
+
+<h2>De ce instalațiile electrice casnice sunt în paralel</h2>
+
+<blockquote>
+    <p>„Houses are wired in parallel so that each device receives the full supply voltage and operates independently. If one lamp burns out, the others keep working. Series wiring would be both inefficient and impractical for household use."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Casele sunt conectate în paralel pentru ca fiecare dispozitiv să primească tensiunea completă de alimentare și să funcționeze independent. Dacă un bec se arde, celelalte continuă să funcționeze. Conectarea în serie ar fi atât ineficientă cât și impractică pentru uz casnic."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Circuitul serie = singur drum pentru curent; circuitul paralel = mai multe drumuri. Alegerea tipului de circuit determină cum se împart tensiunea și curentul între componente.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Circuitul serie</h2>
+
+<p>În circuitul <strong>serie</strong>, elementele sunt conectate unul după altul pe un singur fir.</p>
+
+<div class="formula-box">
+    Curentul: $I_1 = I_2 = I_3 = I$ &nbsp; (același curent prin toate)<br><br>
+    Tensiunea: $U = U_1 + U_2 + U_3$ &nbsp; (se împarte)<br><br>
+    Rezistența totală: $R_T = R_1 + R_2 + R_3$
+</div>
+
+<table>
+    <tr>
+        <th>Proprietate</th>
+        <th>Circuitul serie</th>
+    </tr>
+    <tr><td>Curentul</td><td>Același prin toate elementele</td></tr>
+    <tr><td>Tensiunea</td><td>Se împarte proporțional cu rezistența</td></tr>
+    <tr><td>Rezistența totală</td><td>Mai mare decât cea mai mare rezistență</td></tr>
+    <tr><td>Defect la un element</td><td>Întregul circuit se întrerupe!</td></tr>
+    <tr><td>Exemplu</td><td>Becurile de brad (clasice), siguranța fuzibilă</td></tr>
+</table>
+
+<h2>Circuitul paralel</h2>
+
+<p>În circuitul <strong>paralel</strong>, elementele sunt conectate între aceleași două noduri — fiecare pe ramura proprie.</p>
+
+<div class="formula-box">
+    Tensiunea: $U_1 = U_2 = U_3 = U$ &nbsp; (aceeași la toate)<br><br>
+    Curentul: $I = I_1 + I_2 + I_3$ &nbsp; (se împarte)<br><br>
+    Rezistența totală: $\dfrac{1}{R_T} = \dfrac{1}{R_1} + \dfrac{1}{R_2} + \dfrac{1}{R_3}$
+</div>
+
+<table>
+    <tr>
+        <th>Proprietate</th>
+        <th>Circuitul paralel</th>
+    </tr>
+    <tr><td>Tensiunea</td><td>Aceeași la toate elementele</td></tr>
+    <tr><td>Curentul</td><td>Se împarte invers proporțional cu rezistența</td></tr>
+    <tr><td>Rezistența totală</td><td>Mai mică decât cea mai mică rezistență</td></tr>
+    <tr><td>Defect la un element</td><td>Restul continuă să funcționeze!</td></tr>
+    <tr><td>Exemplu</td><td>Instalațiile electrice casnice, becurile LED de brad</td></tr>
+</table>
+
+<h2>Comparație rapidă</h2>
+
+<table>
+    <tr>
+        <th>Aspect</th>
+        <th>Serie</th>
+        <th>Paralel</th>
+    </tr>
+    <tr><td>Curent</td><td>Identic (un singur drum)</td><td>Se împarte la ramificații</td></tr>
+    <tr><td>Tensiune</td><td>Se împarte</td><td>Identică (aceleași noduri)</td></tr>
+    <tr><td>R_total</td><td>R₁+R₂+…</td><td>1/R_T = 1/R₁+1/R₂+…</td></tr>
+    <tr><td>Pană</td><td>Oprește totul</td><td>Oprește doar acea ramură</td></tr>
+    <tr><td>Utilizare</td><td>Siguranțe, termostate, senzori</td><td>Prize, lămpi, aparate casnice</td></tr>
+</table>
+
+<h2>Legile lui Kirchhoff</h2>
+
+<p><strong>Legea I (a nodurilor):</strong> Suma curenților care intră într-un nod = suma curenților care ies.</p>
+<div class="formula-box">
+    $\sum I_{intru} = \sum I_{iese}$ &nbsp; (conservarea sarcinii)
+</div>
+
+<p><strong>Legea II (a ochiurilor):</strong> Suma algebrică a tensiunilor pe un ochi de circuit = 0.</p>
+<div class="formula-box">
+    $\sum U = 0$ &nbsp; (conservarea energiei)
+</div>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Becurile de brad — serie vs. paralel</h2>
+
+<p><strong>Situația:</strong> Ghirlandele clasice de brad (serie) se stricau toate dacă un bec ardea. Cele moderne (paralel) nu.</p>
+
+<p><strong>Analiza serie (clasic):</strong></p>
+<ul>
+    <li>20 becuri × 12V fiecare = 240V total → potrivit pentru 230V</li>
+    <li>Dacă un bec se arde (filament întrerupt), circuitul se deschide → curent 0 → toate becurile se sting</li>
+    <li>Era greu să găsești becul defect!</li>
+</ul>
+
+<p><strong>Analiza paralel (modern):</strong></p>
+<ul>
+    <li>Fiecare LED primește direct 230V (sau printr-un transformator mic)</li>
+    <li>Un LED defect nu afectează celelalte ramuri</li>
+    <li>R_total mai mică → curent total mai mare → nevoie de siguranță</li>
+</ul>
+
+<div class="result">Trecerea la becuri LED în paralel a rezolvat problema „ghirlandei moarte" complet!</div>
+
+<h2>Exemplul 2: Instalația electrică a casei — mereu paralel</h2>
+
+<p><strong>Situația:</strong> Toate prizele și becurile din casă sunt conectate la 230V.</p>
+
+<p><strong>Analiza:</strong></p>
+<ul>
+    <li>Fiecare priză/bec e o ramură paralelă → tensiunea la fiecare = 230V</li>
+    <li>Curentul total = suma curenților prin toate aparatele conectate</li>
+    <li>Dacă I_total > I_siguranta → siguranța sare (protecție!)</li>
+    <li>De aceea nu trebuie conectate prea multe aparate pe același circuit</li>
+</ul>
+
+<div class="info-box">
+    <strong>Calculul sarcinii unui circuit:</strong> Fiecare priză e 16A. La 230V → P_max = 230×16 = 3680W per circuit. Nu conecta friteuza (2000W) + fierul de călcat (2500W) pe același circuit!
+</div>
+
+<h2>Exemplul 3: Rezistoarele în circuit mixt — serie + paralel</h2>
+
+<p><strong>Situația:</strong> Circuitul din majoritatea aparatelor electronice este o combinație de serie și paralel.</p>
+
+<p><strong>Metodă de rezolvare:</strong></p>
+<ol>
+    <li>Identifică grupele paralel și calculează R_echivalentă pentru fiecare</li>
+    <li>Înlocuiește fiecare grup paralel cu R_echivalentă</li>
+    <li>Rămâi cu un circuit serie simplu → aplică legile serie</li>
+</ol>
+
+<div class="solution">
+    <h4>Exemplu: R₁=6Ω în serie cu (R₂=12Ω ∥ R₃=4Ω) la U=12V</h4>
+    <ul>
+        <li>R_paralel: 1/R_p = 1/12 + 1/4 = 1/12 + 3/12 = 4/12 → R_p = 3 Ω</li>
+        <li>R_total = R₁ + R_p = 6 + 3 = 9 Ω</li>
+        <li>I_total = U/R_total = 12/9 = 1,33 A</li>
+        <li>U_R₁ = I × R₁ = 1,33 × 6 = 8 V</li>
+        <li>U_paralel = 12 − 8 = 4 V (cade pe R₂ și R₃)</li>
+    </ul>
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Becuri în serie — tot sau nimic</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea proprietăților circuitului serie.</p>
+
+    <p><strong>Materiale:</strong> 3 becuri identice, baterie 9V, fire, întrerupător.</p>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Conectează 3 becuri în serie la 9V — observă luminozitatea (mai slabă decât la 1 bec!)</li>
+        <li>Deconectează un bec — celelalte se sting</li>
+        <li>Adaugă un al 4-lea bec în serie — luminozitatea scade și mai mult</li>
+        <li>Măsoară tensiunea pe fiecare bec cu voltmetrul</li>
+    </ol>
+
+    <div class="result">Concluzie: Tensiunea se împarte egal (becuri identice); dacă un bec se deconectează, circuitul se deschide!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Becuri în paralel — independență totală</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea proprietăților circuitului paralel.</p>
+
+    <p><strong>Materiale:</strong> 3 becuri identice, baterie 9V, fire.</p>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Conectează 3 becuri în paralel la 9V — observă luminozitatea (aceeași ca la 1 bec!)</li>
+        <li>Deconectează un bec — celelalte rămân aprinse!</li>
+        <li>Măsoară curentul pe ramura principală și pe fiecare ramură</li>
+        <li>Verifică: I_total = I₁ + I₂ + I₃</li>
+    </ol>
+
+    <div class="result">Concluzie: Fiecare bec primește tensiunea completă și funcționează independent. Curenții se adună!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Legea lui Kirchhoff la un nod</h3>
+
+    <p><strong>Obiectiv:</strong> Verificarea experimentală a legii nodurilor.</p>
+
+    <p><strong>Materiale:</strong> 2 rezistoare diferite în paralel, baterie, ampermetru (3 bucăți sau repoziționat).</p>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Conectează R₁=100Ω și R₂=200Ω în paralel la baterie 9V</li>
+        <li>Măsoară I₁ (prin R₁), I₂ (prin R₂), I_total (din baterie)</li>
+        <li>Verifică dacă I_total = I₁ + I₂</li>
+        <li>Calculează și compară cu valorile așteptate: I₁=9/100=0,09A; I₂=9/200=0,045A</li>
+    </ol>
+
+    <div class="result">Concluzie: I_total = I₁ + I₂ — legea nodurilor (Kirchhoff I) verificată!</div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Serie:</strong> Un singur drum → curent identic, tensiune împărțită, R mai mare, o pană oprește totul.</p>
+<p><strong>Paralel:</strong> Mai multe drumuri → tensiune identică, curent împărțit, R mai mică, o pană nu oprește altele.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    Serie: $R_T = R_1 + R_2 + R_3$<br><br>
+    Paralel: $\dfrac{1}{R_T} = \dfrac{1}{R_1} + \dfrac{1}{R_2} + \dfrac{1}{R_3}$<br><br>
+    Paralel (2 rezistoare): $R_T = \dfrac{R_1 \cdot R_2}{R_1 + R_2}$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat — circuit mixt:</h4>
+    <p>R₁=10Ω în serie cu R₂=6Ω ∥ R₃=3Ω, la U=20V. Calculează I_total și U pe fiecare.</p>
+    <ul>
+        <li>R_paralel = (6×3)/(6+3) = 18/9 = 2 Ω</li>
+        <li>R_total = 10 + 2 = 12 Ω</li>
+        <li>I_total = 20/12 ≈ 1,67 A</li>
+        <li>U₁ = I × R₁ = 1,67 × 10 = 16,7 V</li>
+        <li>U_paralel = 20 − 16,7 = 3,3 V</li>
+        <li>I₂ = 3,3/6 = 0,55 A; I₃ = 3,3/3 = 1,1 A</li>
+    </ul>
+    <div class="result">Verificare: I₂+I₃ = 0,55+1,1 = 1,65 ≈ 1,67 A ✓</div>
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Divizorul de tensiune (circuit serie):</h3>
+<div class="formula-box">
+    $$U_k = U \cdot \frac{R_k}{R_T}$$
+</div>
+<p>Tensiunea pe fiecare rezistor e proporțională cu rezistența lui din totalul serie. Aplicat în potențiometre, senzori.</p>
+
+<h3>Teorema lui Thevenin:</h3>
+<p>Orice circuit liniar văzut dintr-un punct poate fi înlocuit cu o sursă de tensiune E_th în serie cu o rezistență R_th. Simplifică imens calculele de circuite complexe.</p>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Rezistența totală a unui circuit paralel este mereu mai mică decât cea mai mică rezistență individuală."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> 1/R_T = 1/R₁ + 1/R₂ + … → R_T < min(R₁, R₂, …). Adăugând ramuri în paralel, creezi mai multe „căi" pentru curent → rezistența globală scade.
+</div>
+
+<p><strong>2. „Dacă un bec dintr-un circuit paralel se stinge, ceilalți devin mai luminoși."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT (cu nuanțe).</strong> Tensiunea rămâne aceeași (aceleași noduri). Curentul prin celelalte ramuri rămâne neschimbat. Luminozitatea lor rămâne la fel. Dacă bateria are rezistență internă, curentul total scade ușor → tensiunea la borne crește puțin → ceilalți devin UȘOR mai luminoși.
+</div>
+
+<p><strong>3. „Prin toate rezistoarele dintr-un circuit serie trece același curent."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Există un singur fir (o singură cale) → aceleași sarcini trec prin fiecare rezistor → curent identic. Tensiunile se împart, nu curenții.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce instalațiile electrice casnice sunt conectate în paralel și nu în serie?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ol>
+        <li>La serie, tensiunea s-ar împărți — fiecare aparat ar primi mai puțin de 230V → nu ar funcționa corect</li>
+        <li>La serie, dacă un singur aparat se defectează → tot circuitul e întrerupt</li>
+        <li>La paralel, fiecare aparat primește 230V indiferent de celelalte, și funcționează independent</li>
+    </ol>
+</div>
+
+<p><strong>5. De ce rezistența totală în paralel scade când adăugăm mai multe rezistoare?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Fiecare rezistor adăugat în paralel oferă o cale suplimentară pentru curent. Mai multe căi → mai mult curent la aceeași tensiune → rezistența aparentă a grupului e mai mică. E ca deschiderea mai multor ghișee la bancă — servirea e mai rapidă!
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Trei rezistoare R₁=30Ω, R₂=60Ω, R₃=20Ω sunt conectate în paralel la o baterie de 12V. Calculează rezistența totală, curentul total și curentul prin fiecare rezistor.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>1/R_T = 1/30 + 1/60 + 1/20 = 2/60 + 1/60 + 3/60 = 6/60 → R_T = 10 Ω</li>
+        <li>I_total = U/R_T = 12/10 = <strong>1,2 A</strong></li>
+        <li>I₁ = 12/30 = <strong>0,4 A</strong>; I₂ = 12/60 = <strong>0,2 A</strong>; I₃ = 12/20 = <strong>0,6 A</strong></li>
+        <li>Verificare: 0,4+0,2+0,6 = 1,2 A ✓</li>
+    </ul>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. O priză de 16A alimentează simultan: TV (150W), laptop (90W), lampă (20W) și frigider (200W). Toate la 230V. Este circuitul în siguranță? Ce curent total circulă?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>I_TV = 150/230 ≈ 0,65 A</li>
+        <li>I_laptop = 90/230 ≈ 0,39 A</li>
+        <li>I_lampa = 20/230 ≈ 0,087 A</li>
+        <li>I_frigider = 200/230 ≈ 0,87 A</li>
+        <li>I_total = 0,65 + 0,39 + 0,087 + 0,87 ≈ <strong>2 A</strong> — mult sub 16A</li>
+    </ul>
+    <p>Circuitul e în perfectă siguranță. Ar putea alimenta aparate de până la 16×230 = 3680W, din care s-au consumat 460W — mai rămân 3220W disponibili!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. II, Cap. 22</strong> „AC Circuits" — circuite electrice avansate</li>
+    <li><strong>Vol. II, Cap. 23</strong> „Cavity Resonators" — circuite rezonante</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea</th>
+    </tr>
+    <tr>
+        <td><strong>Informatică</strong></td>
+        <td>Tranzistoarele din procesor sunt circuite microscopice serie/paralel</td>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Instalațiile electrice, tablourile de distribuție, siguranțele</td>
+    </tr>
+    <tr>
+        <td><strong>Matematică</strong></td>
+        <td>Rezolvarea sistemelor de ecuații pentru circuite complexe</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>CIRCUIT SERIE:</h3>
+    <div class="formula-box">
+        $I$ identic; $U = U_1+U_2+\ldots$; $R_T = R_1+R_2+\ldots$
+    </div>
+
+    <h3>CIRCUIT PARALEL:</h3>
+    <div class="formula-box">
+        $U$ identică; $I = I_1+I_2+\ldots$; $1/R_T = 1/R_1+1/R_2+\ldots$
+    </div>
+
+    <h3>LEGILE KIRCHHOFF:</h3>
+    <p>K1 (noduri): $\sum I_{intru} = \sum I_{iese}$ &nbsp; (conservarea sarcinii)</p>
+    <p>K2 (ochiuri): $\sum U = 0$ &nbsp; (conservarea energiei)</p>
+
+    <h3>IDEI CHEIE:</h3>
+    <ul>
+        <li>Casă → paralel (independență). Serie → acolo unde vrei o secvență controlată (siguranță, senzor).</li>
+    </ul>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Circuitele electrice sunt ca rețelele de țevi cu apă — tensiunea e presiunea, curentul e debitul, rezistența e îngustarea țevii. Intuitiv, dar atât de precis încât poți calcula orice."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

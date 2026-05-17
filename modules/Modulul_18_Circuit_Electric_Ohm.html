@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 18: Circuitul electric. Legea lui Ohm — Curentul care luminează lumea</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="18">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 18 · ELECTRICITATE ȘI MAGNETISM</div>
+    <h1>CIRCUITUL ELECTRIC. LEGEA LUI OHM</h1>
+    <div class="subtitle">„Curentul care luminează lumea — tensiunea, intensitatea și rezistența"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Electronii în conductor</h2>
+
+<blockquote>
+    <p>„Electrical resistance is caused by electrons colliding with the atoms of the conductor. The electrons drift slowly through the wire — at millimeters per second — but the electric field propagates at nearly the speed of light. When you flip a switch, the field rearranges in the whole circuit almost instantly."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Rezistența electrică este cauzată de electronii care se ciocnesc de atomii conductorului. Electronii se deplasează lent prin fir — la milimetri pe secundă — dar câmpul electric se propagă aproape cu viteza luminii. Când apeși un întrerupător, câmpul se reorganizează în întreg circuitul aproape instantaneu."
+</div>
+
+<h2>Analogia hidraulică a lui Feynman</h2>
+
+<blockquote>
+    <p>„Electrical circuits are closely analogous to water circuits. Voltage is like pressure — the driving force. Current is like the flow rate of water. Resistance is like the narrowness of the pipe. Ohm's Law, V=IR, is then completely obvious from the analogy."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Circuitele electrice sunt strâns analoge circuitelor de apă. Tensiunea e ca presiunea — forța motrice. Curentul e ca debitul apei. Rezistența e ca îngustimea conductei. Legea lui Ohm, U=RI, devine complet evidentă din analogie."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Tensiunea (U) „împinge" electronii; curentul (I) e fluxul de electroni; rezistența (R) e opoziția la curgere. Legea lui Ohm leagă toate trei: U = R·I.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Tensiunea electrică (U)</h2>
+
+<p><strong>Tensiunea electrică</strong> (diferența de potențial) este „forța" care pune sarcinile electrice în mișcare. Se măsoară în <strong>Volt (V)</strong>.</p>
+
+<ul>
+    <li>Sursa de tensiune (baterie, priză) creează o diferență de potențial între bornele ei</li>
+    <li>Se măsoară cu <strong>voltmetrul</strong> — conectat în <strong>paralel</strong> cu elementul măsurat</li>
+    <li>Baterie AA: 1,5 V; baterie auto: 12 V; priză casnică: 230 V</li>
+</ul>
+
+<h2>Intensitatea curentului electric (I)</h2>
+
+<p><strong>Intensitatea curentului</strong> este cantitatea de sarcină electrică ce trece printr-o secțiune a conductorului în unitatea de timp. Se măsoară în <strong>Amper (A)</strong>.</p>
+
+<div class="formula-box">
+    $$I = \frac{q}{t}$$
+</div>
+
+<ul>
+    <li>Se măsoară cu <strong>ampermetrul</strong> — conectat în <strong>serie</strong> cu elementul măsurat</li>
+    <li>Bec LED: ~0,05 A; bec incandescent 100W: ~0,43 A; fierul de călcat: ~5 A</li>
+</ul>
+
+<h2>Rezistența electrică (R)</h2>
+
+<p><strong>Rezistența electrică</strong> este opoziția unui conductor la trecerea curentului. Se măsoară în <strong>Ohm (Ω)</strong>.</p>
+
+<p>Rezistența unui conductor depinde de:</p>
+<table>
+    <tr>
+        <th>Factor</th>
+        <th>Efect asupra rezistenței</th>
+    </tr>
+    <tr><td>Lungimea (l) mai mare</td><td>R crește (mai mult drum, mai multe ciocniri)</td></tr>
+    <tr><td>Secțiunea (A) mai mare</td><td>R scade (mai mult spațiu pentru electroni)</td></tr>
+    <tr><td>Material mai bun conductor</td><td>R scade (mai puține ciocniri)</td></tr>
+    <tr><td>Temperatura mai mare</td><td>R crește (atomii vibrează mai tare → mai multe ciocniri)</td></tr>
+</table>
+
+<div class="formula-box">
+    $$R = \rho \cdot \frac{l}{A}$$
+</div>
+<p>unde ρ (rho) = rezistivitatea materialului (Ω·m)</p>
+
+<h2>Legea lui Ohm</h2>
+
+<div class="formula-box">
+    $$U = R \cdot I \qquad \Leftrightarrow \qquad I = \frac{U}{R} \qquad \Leftrightarrow \qquad R = \frac{U}{I}$$
+</div>
+
+<div class="info-box">
+    <strong>Mnemotehnică — Triunghiul lui Ohm:</strong><br>
+    Acoperă mărimea dorită → formula apare automat:<br>
+    Acoperă U → U = R·I &nbsp;|&nbsp; Acoperă I → I = U/R &nbsp;|&nbsp; Acoperă R → R = U/I
+</div>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul</th>
+    </tr>
+    <tr>
+        <td>„Tensiunea și curentul sunt același lucru"</td>
+        <td>Tensiunea = cauza (forța motrice); curentul = efectul (fluxul de sarcini)</td>
+    </tr>
+    <tr>
+        <td>„Electronii se mișcă cu viteza luminii"</td>
+        <td>Electronii derivă cu mm/s; câmpul electric se propagă cu ~c</td>
+    </tr>
+    <tr>
+        <td>„Rezistența mare = bec mai luminos"</td>
+        <td>P = U²/R → la aceeași tensiune, rezistență mai mare = putere MAI MICĂ</td>
+    </tr>
+    <tr>
+        <td>„Voltmetrul se conectează în serie"</td>
+        <td>Voltmetrul în paralel! Ampermetrul în serie!</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: De ce rezistența unui bec crește la temperaturi înalte</h2>
+
+<p><strong>Situația:</strong> Un bec incandescent are filamentul din tungsten. La temperatura de lucru (~2500°C), rezistența filamentului e de ~10× mai mare decât la rece.</p>
+
+<p><strong>Explicația:</strong></p>
+<ul>
+    <li>La rece: atomii de tungsten vibrează lent → puțini electroni se ciocnesc → R mică</li>
+    <li>La fierbinte: atomii vibrează violent → mulți electroni se ciocnesc → R mare</li>
+    <li>Consecință: când aprinzi becul, curentul inițial e de ~10× mai mare! De aceea becurile ard la pornire.</li>
+</ul>
+
+<div class="result">Rezistența metalelor crește cu temperatura — de aceea becurile cu filament au „șoc termic" la pornire.</div>
+
+<h2>Exemplul 2: Cablurile electrice — grosimea contează</h2>
+
+<p><strong>Situația:</strong> Prelungitorul subțire de 5 A nu poate alimenta aparate de 2500 W (fierul de călcat). De ce?</p>
+
+<p><strong>Analiza:</strong></p>
+<ul>
+    <li>Fierul: P = 2500 W, U = 230 V → I = P/U = 2500/230 ≈ 11 A</li>
+    <li>Prelungitorul e calibrat pentru 5 A — secțiune mică → R mare → se încălzește prin efectul Joule</li>
+    <li>P_pierduta = I²·R → la 11 A prin un cablu pentru 5 A → putere disipată de ~5× mai mult decât proiectat</li>
+    <li>Cablul se poate topi sau lua foc!</li>
+</ul>
+
+<div class="result">Regula de siguranță: curentul prin cablu nu trebuie să depășească valoarea de pe etichetă. Grosimea cablului = limita de curent.</div>
+
+<h2>Exemplul 3: Bateriile auto — de ce nu pornesc în frig</h2>
+
+<p><strong>Situația:</strong> La temperaturi de −20°C, mașinile nu pornesc deși bateria e „plină".</p>
+
+<p><strong>Explicația:</strong></p>
+<ul>
+    <li>Bateria are rezistență internă r (rezistența chimică internă)</li>
+    <li>La frig, reacțiile chimice din baterie sunt lente → r crește mult</li>
+    <li>Tensiunea la bornele bateriei sub sarcină: U_born = E − I·r</li>
+    <li>La r mare, U_born scade sub minimul necesar motorului de pornire</li>
+    <li>Soluție: ținerea mașinii în garaj (T mai mare) sau baterie mai nouă</li>
+</ul>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Verificarea legii lui Ohm — graficul U-I</h3>
+
+    <p><strong>Obiectiv:</strong> Verificarea experimentală a relației liniare U = R·I.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Baterii de 1,5 V (1–4 bucăți)</li>
+        <li>Un rezistor de valoare cunoscută (ex: 100 Ω)</li>
+        <li>Voltmetru și ampermetru (sau multimetru)</li>
+        <li>Fire de conectare</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Conectează 1 baterie în serie cu rezistorul; măsoară U (voltmetru) și I (ampermetru)</li>
+        <li>Repetă cu 2, 3, 4 baterii → obții 4 perechi (U, I)</li>
+        <li>Trasează graficul U = f(I) pe hârtie milimetrică</li>
+        <li>Ce observi? Dreapta prin origine, cu panta R!</li>
+    </ol>
+
+    <div class="result">Concluzie: Graficul U = f(I) este o dreaptă — demonstrează că U = R·I (Ohm). Panta = rezistența!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Rezistența depinde de lungime și grosime</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea R = ρ·l/A calitativ.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Fire de diferite lungimi și grosimi (cupru, fier)</li>
+        <li>Baterie, bec de control (LED)</li>
+        <li>Crocodili metalici</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Conectează în circuit o baterie + LED + fir de 10 cm → notează luminozitatea</li>
+        <li>Înlocuiește cu fir de 50 cm din același material → luminozitatea scade (R mai mare)</li>
+        <li>Înlocuiește cu fir mai gros, aceeași lungime → luminozitate crește (R mai mică)</li>
+        <li>Înlocuiește cu fier vs. cupru (aceeași dimensiune) → diferență de luminozitate (ρ diferit)</li>
+    </ol>
+
+    <div class="result">Concluzie: R crește cu lungimea, scade cu secțiunea, depinde de material!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Voltmetrul și ampermetrul — conectarea corectă</h3>
+
+    <p><strong>Obiectiv:</strong> Exersarea conectării corecte a instrumentelor de măsură.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Baterie 9V, rezistor ~470 Ω, bec</li>
+        <li>Voltmetru, ampermetru (sau multimetru în ambele moduri)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Conectează ampermetrul <strong>în serie</strong> (întrerupe un fir, inserează ampermetrul)</li>
+        <li>Conectează voltmetrul <strong>în paralel</strong> (cuplat direct la bornele rezistorului)</li>
+        <li>Citește U și I → calculează R = U/I</li>
+        <li>Verifică cu rezistorul marcat → coincidență?</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Atenție:</strong> Dacă conectezi ampermetrul în paralel sau voltmetrul în serie, poți deteriora instrumentul sau sursa!
+    </div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Tensiunea (U):</strong> „Presiunea" electrică — forța motrice. Voltmetru → paralel.</p>
+<p><strong>Curentul (I):</strong> „Debitul" de sarcini. Ampermetru → serie.</p>
+<p><strong>Rezistența (R):</strong> Opoziția la curent. Depinde de material, lungime, secțiune, temperatură.</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    Legea lui Ohm: $U = R \cdot I$<br><br>
+    Rezistivitate: $R = \rho \cdot l/A$<br><br>
+    Curentul: $I = q/t$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>Un bec are rezistența R = 460 Ω la tensiunea U = 230 V. Ce curent îl parcurge?</p>
+    <ul>
+        <li>I = U/R = 230/460 = <strong>0,5 A</strong></li>
+        <li>Puterea: P = U·I = 230 × 0,5 = <strong>115 W</strong></li>
+    </ul>
+    <div class="result">Curentul prin bec = 0,5 A; Puterea = 115 W</div>
+</div>
+
+<h3>Rezistivitatea unor materiale:</h3>
+<table>
+    <tr>
+        <th>Material</th>
+        <th>ρ (Ω·m)</th>
+        <th>Tip</th>
+    </tr>
+    <tr><td>Argint</td><td>1,6×10⁻⁸</td><td>Cel mai bun conductor</td></tr>
+    <tr><td>Cupru</td><td>1,7×10⁻⁸</td><td>Conductor (cabluri)</td></tr>
+    <tr><td>Aluminiu</td><td>2,8×10⁻⁸</td><td>Conductor (linii aeriene)</td></tr>
+    <tr><td>Fier/oțel</td><td>~10×10⁻⁸</td><td>Conductor slab</td></tr>
+    <tr><td>Silicon</td><td>~640</td><td>Semiconductor</td></tr>
+    <tr><td>Sticlă</td><td>~10¹²</td><td>Izolator</td></tr>
+</table>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Legea lui Ohm pentru circuitul complet (cu rezistența internă):</h3>
+<div class="formula-box">
+    $$I = \frac{E}{R + r} \qquad U_{borne} = E - I \cdot r$$
+</div>
+<p>unde E = tensiunea electromotoare (fem), r = rezistența internă a sursei.</p>
+
+<h3>Feynman despre conducție:</h3>
+<blockquote>
+    <p>„The resistivity of a metal increases with temperature because the atoms vibrate more, scattering the conduction electrons more frequently. At low temperatures, some metals become superconductors — zero resistance, perfect conductivity."</p>
+</blockquote>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Dacă dublăm rezistența unui circuit (la aceeași tensiune), curentul se înjumătățește."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> I = U/R. La U constant, dacă R se dublează, I = U/(2R) = (1/2)·U/R → curentul se înjumătățește. Aceasta este legea lui Ohm aplicată direct.
+</div>
+
+<p><strong>2. „Voltmetrul se conectează în serie cu elementul de circuit măsurat."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Voltmetrul se conectează în PARALEL. Are rezistență internă foarte mare → nu perturbă curentul din circuit. Ampermetrul se conectează în serie (rezistență internă mică).
+</div>
+
+<p><strong>3. „Un conductor mai lung are rezistență mai mare."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> R = ρ·l/A. La același material (ρ) și secțiune (A), R e proporțional cu lungimea l. Dublu lungime → R dublă → curent înjumătățit.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce bateriile se descarcă mai repede la temperaturi scăzute?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> La frig, reacțiile chimice din baterie sunt mai lente → rezistența internă r crește → tensiunea la borne U = E − I·r scade → dispozitivul primește mai puțin curent. Bateria nu „se pierde" — energia e acolo, dar nu poate fi extrasă eficient.
+</div>
+
+<p><strong>5. De ce cablurile electrice se fac din cupru, nu din fier, deși fierul e mai ieftin?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> ρ_cupru ≈ 1,7×10⁻⁸ Ω·m față de ρ_fier ≈ 10×10⁻⁸ Ω·m — fierul are rezistivitate de ~6× mai mare. La aceeași secțiune: mai multă energie pierdută ca căldură (efect Joule) și mai multă tensiune pierdută pe cablu. Economii mari la cupru pentru instalații electrice mari.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un fir de cupru (ρ = 1,7×10⁻⁸ Ω·m) are lungimea 100 m și secțiunea 1 mm² = 10⁻⁶ m². Ce rezistență are? Ce tensiune se pierde pe el dacă îl parcurge un curent de 10 A?</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>R = ρ·l/A = 1,7×10⁻⁸ × 100 / 10⁻⁶ = <strong>1,7 Ω</strong></li>
+        <li>U_pierdut = R·I = 1,7 × 10 = <strong>17 V</strong></li>
+    </ul>
+    <div class="result">Pe 100 m de cablu 1 mm², se pierd 17 V! De aceea liniile de înaltă tensiune funcționează la sute de kV — pierd proporțional mai puțin.</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. O baterie are fem = 12 V și rezistența internă r = 0,5 Ω. La ea se conectează un motor cu rezistența R = 5,5 Ω. Calculează curentul din circuit și tensiunea la bornele bateriei.</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>I = E/(R+r) = 12/(5,5+0,5) = 12/6 = <strong>2 A</strong></li>
+        <li>U_borne = E − I·r = 12 − 2×0,5 = 12 − 1 = <strong>11 V</strong></li>
+        <li>Tensiunea „pierdută" intern = 1 V (se disipă ca căldură în baterie)</li>
+    </ul>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. II, Cap. 19</strong> „The Principle of Least Action" — analogia cu circuitele</li>
+    <li><strong>Vol. II, Cap. 22</strong> „AC Circuits" — circuite de curent alternativ</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea</th>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Proiectarea circuitelor electronice, PCB-uri, microprocesoare</td>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Impulsul nervos — semnal electric de ~70 mV pe membrana neuronului</td>
+    </tr>
+    <tr>
+        <td><strong>Chimie</strong></td>
+        <td>Electroliza — curent electric provoacă reacții chimice</td>
+    </tr>
+    <tr>
+        <td><strong>Economie</strong></td>
+        <td>Factura electrică — I²·R·t = energia pierdută pe fire</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>CELE TREI MĂRIMI ELECTRICE:</h3>
+    <table>
+        <tr>
+            <th>Mărime</th>
+            <th>Simbol</th>
+            <th>Unitate</th>
+            <th>Instrument</th>
+            <th>Conectare</th>
+        </tr>
+        <tr><td>Tensiunea</td><td>U</td><td>V</td><td>Voltmetru</td><td>Paralel</td></tr>
+        <tr><td>Intensitatea</td><td>I</td><td>A</td><td>Ampermetru</td><td>Serie</td></tr>
+        <tr><td>Rezistența</td><td>R</td><td>Ω</td><td>Ohmetru/calcul</td><td>—</td></tr>
+    </table>
+
+    <h3>LEGEA LUI OHM:</h3>
+    <div class="formula-box">
+        $U = R \cdot I$ &nbsp;&nbsp; (sau I=U/R, sau R=U/I)
+    </div>
+
+    <h3>REZISTIVITATE:</h3>
+    <div class="formula-box">
+        $R = \rho \cdot l/A$
+    </div>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Tensiunea = analogul presiunii hidraulice; curentul = analogul debitului; rezistența = analogul îngustimii conductei."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 20: Energia electrică și efectul Joule — Căldura din curent</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="20">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 20 · ELECTRICITATE ȘI MAGNETISM</div>
+    <h1>ENERGIA ELECTRICĂ ȘI EFECTUL JOULE</h1>
+    <div class="subtitle">„Cum curentul electric produce căldură — de la becul cu incandescență la siguranța fuzibilă"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Energia și disiparea ei</h2>
+
+<blockquote>
+    <p>„When you run current through a resistor, you are doing work on the charges. They collide with the atoms of the conductor and give up their energy as heat. This is not a loss in some mystical sense — it is energy transforming from electrical form to thermal form, as required by the conservation of energy."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Când treci curent printr-un rezistor, efectuezi lucru mecanic asupra sarcinilor. Acestea se ciocnesc cu atomii conductorului și cedează energia lor ca căldură. Aceasta nu este o pierdere în vreun sens mistic — este energie care se transformă din formă electrică în formă termică, conform conservării energiei."
+</div>
+
+<h2>De ce becul se încălzește</h2>
+
+<blockquote>
+    <p>„The incandescent lamp is a beautiful example of the Joule effect. The tungsten filament has very high resistance. The enormous heat produced raises the filament to 2500°C, making it glow white-hot. You are using electrical energy to make light via heat — rather inefficiently, but understandably."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Becul cu incandescență este un exemplu frumos al efectului Joule. Filamentul de tungsten are rezistență foarte mare. Căldura enormă produsă ridică filamentul la 2500°C, făcându-l să lumineze alb-incandescent. Folosești energie electrică pentru a produce lumină prin căldură — destul de ineficient, dar de înțeles."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Curentul electric efectuează lucru mecanic asupra sarcinilor; acel lucru se transformă în energie internă (căldură) a conductorului. Cantitatea de căldură depinde de intensitatea curentului, rezistență și timp.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Lucrul mecanic al curentului electric</h2>
+
+<p>Când sursa menține o tensiune $U$ și prin circuit trece un curent de intensitate $I$ timp de $t$ secunde, lucrul mecanic efectuat de sursa electrică este:</p>
+
+<div class="formula-box">
+    $$L = U \cdot I \cdot t \quad [J]$$
+</div>
+
+<h2>Puterea electrică</h2>
+
+<p>Puterea electrică reprezintă energia electrică transferată în unitatea de timp:</p>
+
+<div class="formula-box">
+    $$P = \frac{L}{t} = U \cdot I \quad [W]$$
+</div>
+
+<p>Folosind legea lui Ohm ($U = R \cdot I$), obținem forme echivalente:</p>
+
+<div class="formula-box">
+    $$P = U \cdot I = I^2 \cdot R = \frac{U^2}{R}$$
+</div>
+
+<h2>Efectul Joule — Legea Joule-Lenz</h2>
+
+<p>Când curentul trece prin un conductor cu rezistență $R$, toată energia electrică se transformă în căldură:</p>
+
+<div class="formula-box">
+    $$Q = I^2 \cdot R \cdot t \quad [J]$$
+</div>
+
+<div class="info-box">
+    <strong>Atenție:</strong> Formula $Q = I^2 \cdot R \cdot t$ este valabilă pentru conductori pur rezistivi. Dacă circuitul conține și motoare sau baterii reîncărcate, nu toată energia devine căldură.
+</div>
+
+<table>
+    <tr>
+        <th>Mărime</th>
+        <th>Simbol</th>
+        <th>Unitate</th>
+        <th>Semnificație</th>
+    </tr>
+    <tr>
+        <td>Energie electrică</td>
+        <td>$L$ sau $W$</td>
+        <td>J (joule)</td>
+        <td>Lucrul mecanic al câmpului electric</td>
+    </tr>
+    <tr>
+        <td>Putere electrică</td>
+        <td>$P$</td>
+        <td>W (watt)</td>
+        <td>Energie pe unitatea de timp</td>
+    </tr>
+    <tr>
+        <td>Căldura Joule</td>
+        <td>$Q$</td>
+        <td>J (joule)</td>
+        <td>Căldura disipată în rezistor</td>
+    </tr>
+</table>
+
+<h2>Unități practice de energie electrică</h2>
+
+<table>
+    <tr>
+        <th>Unitate</th>
+        <th>Simbol</th>
+        <th>Echivalent în jouli</th>
+        <th>Utilizare</th>
+    </tr>
+    <tr>
+        <td>Joule</td>
+        <td>J</td>
+        <td>1 J</td>
+        <td>Fizică teoretică</td>
+    </tr>
+    <tr>
+        <td>Kilowatt-oră</td>
+        <td>kWh</td>
+        <td>3 600 000 J = 3,6 MJ</td>
+        <td>Factură electricitate</td>
+    </tr>
+    <tr>
+        <td>Watt-secundă</td>
+        <td>Ws</td>
+        <td>1 J</td>
+        <td>Electrotehnica</td>
+    </tr>
+</table>
+
+<div class="formula-box">
+    <strong>Conversie:</strong> $1 \text{ kWh} = 1000 \text{ W} \times 3600 \text{ s} = 3{,}6 \times 10^6 \text{ J}$
+</div>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Aparate electrocasnice și puterea lor</h2>
+
+<table>
+    <tr>
+        <th>Aparat</th>
+        <th>Putere tipică</th>
+        <th>Curent la 220 V</th>
+        <th>Energie în 1 oră</th>
+    </tr>
+    <tr>
+        <td>Bec LED</td>
+        <td>10 W</td>
+        <td>0,045 A</td>
+        <td>0,01 kWh</td>
+    </tr>
+    <tr>
+        <td>Televizor</td>
+        <td>100 W</td>
+        <td>0,45 A</td>
+        <td>0,1 kWh</td>
+    </tr>
+    <tr>
+        <td>Fier de călcat</td>
+        <td>2000 W</td>
+        <td>9,1 A</td>
+        <td>2 kWh</td>
+    </tr>
+    <tr>
+        <td>Cuptor cu microunde</td>
+        <td>800 W</td>
+        <td>3,6 A</td>
+        <td>0,8 kWh</td>
+    </tr>
+    <tr>
+        <td>Mașina de spălat</td>
+        <td>2200 W</td>
+        <td>10 A</td>
+        <td>2,2 kWh</td>
+    </tr>
+</table>
+
+<h2>Siguranța fuzibilă — efectul Joule ca protecție</h2>
+
+<p>Siguranța fuzibilă este un fir special (din plumb-staniu sau aliaje cu punct de topire scăzut) care se topește intenționat când curentul depășește o valoare limită. Prin efectul Joule ($Q = I^2 R t$), dacă $I$ crește mult, $Q$ crește rapid (cu pătratul curentului) și firul se topește, întrerupând circuitul înainte ca aparatele sau instalația să se deterioreze.</p>
+
+<div class="info-box">
+    <strong>Concluzie practică:</strong> Efectul Joule poate fi util (rezistențe de încălzire, becuri, fiare de călcat) sau nedorit (pierderi în liniile de transport). De aceea, liniile de înaltă tensiune transportă electricitate la tensiuni mari și curenți mici — puterea $P = U \cdot I$ rămâne aceeași, dar pierderile $Q = I^2 R t$ sunt mult reduse.
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experiment 1 — Firul care se încălzește</h3>
+    <p><strong>Materiale:</strong> baterie de 4,5 V, fir de nichelină sau rezistență de 10Ω, multimetru, termometru de contact.</p>
+    <p><strong>Procedura:</strong></p>
+    <ol>
+        <li>Conectează rezistența în serie cu bateria.</li>
+        <li>Măsoară curentul cu ampermetrul și tensiunea cu voltmetrul.</li>
+        <li>Ține rezistența 30 de secunde, simte căldura. Măsoară temperatura cu termometrul.</li>
+        <li>Calculează: $Q = I^2 \cdot R \cdot t$ și compară cu energia electrică $L = U \cdot I \cdot t$.</li>
+    </ol>
+    <p><strong>Concluzie:</strong> $Q \approx L$ — toată energia electrică devine căldură în rezistor.</p>
+</div>
+
+<div class="experiment">
+    <h3>Experiment 2 — Siguranța improvizată</h3>
+    <p><strong>Materiale:</strong> baterie 9 V, fir subțire de cupru (24 AWG), bec mic, cleme crocodil.</p>
+    <p><strong>Procedura:</strong></p>
+    <ol>
+        <li>Conectează becul în serie cu firul subțire de cupru.</li>
+        <li>Conectează la baterie — becul luminează.</li>
+        <li>Scurtcircuitează becul (conectează direct terminalele lui). Curentul crește, firul se încălzește intens și se poate arde.</li>
+    </ol>
+    <p><strong>Concluzie:</strong> Firul subțire acționează ca o siguranță. Efectul Joule protejează circuitul.</p>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivelul 1 — Calcule directe</h2>
+
+<div class="formula-box">
+    Energie: $L = U \cdot I \cdot t$<br><br>
+    Putere: $P = U \cdot I$<br><br>
+    Căldura Joule: $Q = I^2 \cdot R \cdot t$
+</div>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> Un fier de călcat cu rezistența $R = 24{,}2 \, \Omega$ este conectat la $U = 220 \, \text{V}$ și funcționează $t = 10 \, \text{min} = 600 \, \text{s}$. Calculați: puterea, curentul și căldura produsă.
+
+    <div class="answer">
+        $I = \frac{U}{R} = \frac{220}{24{,}2} \approx 9{,}1 \, \text{A}$<br><br>
+        $P = U \cdot I = 220 \times 9{,}1 \approx 2000 \, \text{W} = 2 \, \text{kW}$<br><br>
+        $Q = I^2 \cdot R \cdot t = 9{,}1^2 \times 24{,}2 \times 600 \approx 1{,}2 \times 10^6 \, \text{J} = 1{,}2 \, \text{MJ}$
+    </div>
+</div>
+
+<h2>Nivelul 2 — Conversii și calcule combinate</h2>
+
+<p>Energia electrică consumată în kWh de un aparat cu puterea $P$ [W] funcționând $t$ [h]:</p>
+
+<div class="formula-box">
+    $$W_{kWh} = \frac{P \cdot t}{1000}$$
+</div>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> O familie lasă televizorul (100 W) aprins 5 ore/zi, 30 de zile. Cât costă, dacă prețul energiei este 0,80 lei/kWh?
+
+    <div class="answer">
+        $W = \frac{100 \times 5 \times 30}{1000} = 15 \, \text{kWh}$<br><br>
+        Cost $= 15 \times 0{,}80 = 12 \, \text{lei}$
+    </div>
+</div>
+
+<h2>Nivelul 3 — Randamentul electric</h2>
+
+<p>Nu toată energia electrică se transformă în energie utilă. Randamentul unui aparat este:</p>
+
+<div class="formula-box">
+    $$\eta = \frac{L_{util}}{L_{total}} = \frac{P_{util}}{P_{total}} \cdot 100\%$$
+</div>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> Un motor electric are puterea absorbită $P = 500 \, \text{W}$ și produce o putere mecanică utilă de $450 \, \text{W}$. Care este randamentul? Câtă căldură produce în $t = 1 \, \text{min}$?
+
+    <div class="answer">
+        $\eta = \frac{450}{500} \times 100\% = 90\%$<br><br>
+        $P_{pierdut} = 500 - 450 = 50 \, \text{W}$<br><br>
+        $Q = P_{pierdut} \cdot t = 50 \times 60 = 3000 \, \text{J} = 3 \, \text{kJ}$
+    </div>
+</div>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<div class="experiment">
+    <strong>Întrebare 1:</strong> De ce liniile electrice de înaltă tensiune transportă electricitatea la tensiuni de sute de mii de volți?
+    <div class="answer">La putere fixă $P = U \cdot I$, tensiunea mare înseamnă curent mic. Pierderile Joule $Q = I^2 R t$ scad cu pătratul curentului — transportul devine mult mai eficient.</div>
+</div>
+
+<div class="experiment">
+    <strong>Întrebare 2:</strong> Două rezistoare identice sunt conectate mai întâi în serie, apoi în paralel, la aceeași tensiune. În care caz se produce mai multă căldură totală?
+    <div class="answer">
+        Serie: $R_T = 2R$, $I = U/(2R)$, $P_{serie} = U^2/(2R)$.<br>
+        Paralel: $R_T = R/2$, $P_{paralel} = U^2/(R/2) = 2U^2/R$.<br>
+        $P_{paralel} = 4 \cdot P_{serie}$ — conexiunea paralel produce de 4 ori mai multă căldură.
+    </div>
+</div>
+
+<div class="experiment">
+    <strong>Întrebare 3:</strong> Ce se întâmplă dacă înlocuiești o siguranță arsă cu un fir gros de cupru?
+    <div class="answer">Firul de cupru nu se mai topește. La scurtcircuit, curentul crește fără limită și poate aprinde instalația electrică. Este extrem de periculos — siguranța trebuie înlocuită cu una identică, nu improvizată.</div>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Conexiuni cu alte module</h2>
+<ul>
+    <li><strong>Modulul 18</strong> — Legea lui Ohm: $U = R \cdot I$ stă la baza calculelor de putere</li>
+    <li><strong>Modulul 19</strong> — Circuite serie/paralel: distribuția puterii în circuite complexe</li>
+    <li><strong>Modulul 7</strong> — Fenomene termice: căldura Joule urmează aceleași legi de transfer termic</li>
+    <li><strong>Modulul 13</strong> — Energia mecanică: randamentul transformărilor de energie</li>
+</ul>
+
+<h2>Curiozitate Feynman</h2>
+
+<div class="info-box">
+    <strong>De ce becul LED este mai eficient?</strong> Un bec cu incandescență transformă doar ~5% din energie în lumină; restul 95% este căldură (efectul Joule nedorit). Un LED transformă ~40-50% din energie direct în lumină, cu mult mai puțin efect Joule. Feynman ar spune: „Natura nu ne obligă să facem căldură pentru a face lumină — electronica modernă a găsit calea mai scurtă."
+</div>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+    <p><strong>IDEE CHEIE:</strong> Curentul electric transportă energie care se transformă în căldură (efect Joule), lumină sau mișcare — randamentul arată cât din energie este folosită util.</p>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Puterea electrică: $P = U \cdot I = I^2 R = \dfrac{U^2}{R}$ [W]<br>
+        Energia electrică: $L = P \cdot t = U \cdot I \cdot t$ [J] &nbsp;|&nbsp; $L_{kWh} = \dfrac{P \cdot t}{1000}$ [kWh]<br>
+        Efectul Joule: $Q = I^2 \cdot R \cdot t$ [J]<br>
+        Randament: $\eta = \dfrac{L_{util}}{L_{total}} \leq 1$
+    </div>
+
+    <h3>APLICAȚII:</h3>
+    <table>
+        <tr><th>Aplicație</th><th>Efect Joule</th><th>Observație</th></tr>
+        <tr><td>Rezistență de încălzire, fier de călcat</td><td>Util</td><td>Toată energia → căldură</td></tr>
+        <tr><td>Siguranță fuzibilă</td><td>Util</td><td>Se topește la supracurent — protecție</td></tr>
+        <tr><td>Bec incandescent</td><td>Parțial util</td><td>~5% lumină, ~95% căldură</td></tr>
+        <tr><td>Linii de transport (HV)</td><td>Nedorit</td><td>Tensiune mare → curent mic → $I^2R$ mic</td></tr>
+    </table>
+
+    <h3>IDEI CHEIE:</h3>
+    <ul>
+        <li>Puterea se măsoară în <strong>wați (W)</strong>; energia în <strong>jouli (J)</strong> sau <strong>kWh</strong> (1 kWh = 3 600 000 J)</li>
+        <li>Efectul Joule crește cu <strong>pătratul curentului</strong> — dublând curentul, căldura crește de 4 ori</li>
+        <li>Randamentul real este întotdeauna <strong>sub 100%</strong> — o parte din energie se pierde ca căldură</li>
+        <li>Transportul energiei la tensiune înaltă <strong>minimizează pierderile</strong> pe linie</li>
+    </ul>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Energia nu se creează și nu se distruge — se transformă. Contorul electric din casă numără exact câtă energie din rețea a intrat în locuința ta. Joule a demonstrat că mecanicul, termalul și electricul sunt toate aceeași monedă."</p>
+</div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tocList = document.getElementById("toc-list");
+            const headings = document.querySelectorAll(".module-main h1, .module-main h2");
+            headings.forEach(function(h, i) {
+                if (!h.id) h.id = "heading-" + i;
+                const li = document.createElement("li");
+                li.className = h.tagName === "H1" ? "toc-h1" : "toc-h2";
+                const a = document.createElement("a");
+                a.href = "#" + h.id;
+                a.textContent = h.textContent;
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+            const btn = document.querySelector(".toc-toggle-btn");
+            const sidebar = document.getElementById("toc");
+            if (btn && sidebar) {
+                btn.addEventListener("click", function() {
+                    sidebar.classList.toggle("open");
+                });
+            }
+        });
+    </script>
+</body>
+</html>

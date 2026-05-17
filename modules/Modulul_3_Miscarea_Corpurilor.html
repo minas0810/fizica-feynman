@@ -22,7 +22,7 @@
 
     <!-- Header -->
     <section class="hero">
-        <h1>Fizica cu Feynman</h1>
+        <h1>Fizica lui Feynman</h1>
         <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
     </section><!-- ===== LAYOUT: TOC + CONȚINUT ===== -->
     <div class="with-toc-layout">
@@ -35,7 +35,7 @@
         <main class="module-main">
 
 <div class="cover-page">
-    <div class="class-label">MODULUL 3</div>
+    <div class="class-label">MODULUL 3 · MIȘCARE</div>
     <h1>MIȘCAREA CORPURILOR</h1>
     <div class="subtitle">„Unde ești? Depinde de cine întreabă."</div>
 </div>
@@ -63,7 +63,7 @@
 </blockquote>
 
 <div class="info-box">
-    <strong>Traducere:</strong> „Paradoxul lui Ahile al lui Zenon demonstrează că divizarea infinită a timpului finit este posibilă. Ahile nu poate niciodată să prindă broasca țestoasă, căci trebuie mai întâi să ajungă acolo unde era broasca, dar până atunci broasca s-a mai deplasat..."
+    <strong>Traducere:</strong> „Paradoxul lui Zenon despre Ahile demonstrează că divizarea infinită a timpului finit este posibilă. Ahile nu poate niciodată să prindă broasca țestoasă, căci trebuie mai întâi să ajungă acolo unde era broasca, dar până atunci broasca s-a mai deplasat..."
 </div>
 
 <div class="info-box">
@@ -463,6 +463,178 @@
     t = d / v &nbsp;&nbsp;&nbsp; (timpul)
 </div>
 
+<h3>Mișcarea rectilinie uniformă (MRU)</h3>
+
+<p><strong>Mișcarea rectilinie uniformă</strong> este mișcarea pe o traiectorie dreaptă cu viteză constantă.</p>
+
+<div class="info-box">
+    <strong>Condiție MRU:</strong> v = constant → corpul parcurge distanțe <em>egale</em> în intervale de timp <em>egale</em>.<br>
+    Exemplu: dacă în fiecare secundă parcurge câte 3 m, este MRU.
+</div>
+
+<p><strong>Legea mișcării pentru MRU:</strong></p>
+
+<div class="formula-box">
+    d = v · t
+</div>
+
+<p>unde <strong>v</strong> este constantă. Dacă știm viteza și orice moment de timp, putem calcula exact unde se află corpul.</p>
+
+<h3>Graficul distanță–timp (d-t)</h3>
+
+<p>Reprezentăm <strong>distanța parcursă</strong> pe axa verticală (ordonată) și <strong>timpul</strong> pe axa orizontală (abscisă).</p>
+
+<div style="display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; margin:18px 0;">
+
+    <div style="text-align:center;">
+        <svg width="160" height="140" viewBox="0 0 160 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;">
+            <line x1="20" y1="120" x2="150" y2="120" stroke="#1F4E79" stroke-width="1.5" marker-end="url(#arr)"/>
+            <line x1="20" y1="120" x2="20" y2="10" stroke="#1F4E79" stroke-width="1.5" marker-end="url(#arr)"/>
+            <defs>
+                <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6 Z" fill="#1F4E79"/>
+                </marker>
+            </defs>
+            <line x1="20" y1="70" x2="145" y2="70" stroke="#E8A000" stroke-width="2.5"/>
+            <text x="80" y="135" text-anchor="middle" font-size="11" fill="#555">t (s)</text>
+            <text x="10" y="8" text-anchor="middle" font-size="11" fill="#555">d</text>
+            <text x="80" y="60" text-anchor="middle" font-size="10" fill="#2E75B6">d = const.</text>
+        </svg>
+        <div style="font-size:0.82em;color:#444;margin-top:4px;"><strong>Repaus</strong><br>linie orizontală</div>
+    </div>
+
+    <div style="text-align:center;">
+        <svg width="160" height="140" viewBox="0 0 160 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;">
+            <defs>
+                <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6 Z" fill="#1F4E79"/>
+                </marker>
+            </defs>
+            <line x1="20" y1="120" x2="150" y2="120" stroke="#1F4E79" stroke-width="1.5" marker-end="url(#arr2)"/>
+            <line x1="20" y1="120" x2="20" y2="10" stroke="#1F4E79" stroke-width="1.5" marker-end="url(#arr2)"/>
+            <line x1="20" y1="120" x2="140" y2="20" stroke="#E8A000" stroke-width="2.5"/>
+            <text x="80" y="135" text-anchor="middle" font-size="11" fill="#555">t (s)</text>
+            <text x="10" y="8" text-anchor="middle" font-size="11" fill="#555">d</text>
+            <text x="100" y="55" text-anchor="start" font-size="10" fill="#2E75B6">pantă = v</text>
+        </svg>
+        <div style="font-size:0.82em;color:#444;margin-top:4px;"><strong>MRU</strong><br>linie dreaptă oblică</div>
+    </div>
+
+    <div style="text-align:center;">
+        <svg width="160" height="140" viewBox="0 0 160 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;">
+            <defs>
+                <marker id="arr3" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6 Z" fill="#1F4E79"/>
+                </marker>
+            </defs>
+            <line x1="20" y1="120" x2="150" y2="120" stroke="#1F4E79" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <line x1="20" y1="120" x2="20" y2="10" stroke="#1F4E79" stroke-width="1.5" marker-end="url(#arr3)"/>
+            <path d="M20,118 Q60,115 100,90 T145,20" fill="none" stroke="#E8A000" stroke-width="2.5"/>
+            <text x="80" y="135" text-anchor="middle" font-size="11" fill="#555">t (s)</text>
+            <text x="10" y="8" text-anchor="middle" font-size="11" fill="#555">d</text>
+            <text x="90" y="80" text-anchor="start" font-size="10" fill="#2E75B6">curbă</text>
+        </svg>
+        <div style="font-size:0.82em;color:#444;margin-top:4px;"><strong>Mișcare accelerată</strong><br>curbă (parabolă)</div>
+    </div>
+
+</div>
+
+<div class="info-box">
+    <strong>Cum citești graficul d-t:</strong>
+    <ul>
+        <li><strong>Linie orizontală</strong> → repaus (distanța nu crește)</li>
+        <li><strong>Linie dreaptă oblică</strong> → MRU (viteza constantă)</li>
+        <li><strong>Pantă mai mare</strong> = corp mai rapid</li>
+        <li><strong>Curbă</strong> → viteza se schimbă (mișcare accelerată sau decelerată)</li>
+    </ul>
+</div>
+
+<p><strong>Exemplu numeric — tabel și grafic MRU:</strong></p>
+<p>Un corp se deplasează cu v = 4 m/s. Completează tabelul și trasează graficul:</p>
+
+<table>
+    <tr>
+        <th>Timp t (s)</th>
+        <th>0</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+    </tr>
+    <tr>
+        <td>Distanță d (m)</td>
+        <td>0</td>
+        <td>4</td>
+        <td>8</td>
+        <td>12</td>
+        <td>16</td>
+    </tr>
+</table>
+
+<p>Pe graficul d-t, aceste puncte se află pe o <strong>dreaptă</strong> care trece prin origine — acesta este semnul distinctiv al MRU.</p>
+
+<h3>Accelerația medie</h3>
+
+<p>Când viteza unui corp se schimbă (fie crește, fie scade), spunem că există <strong>accelerație</strong>.</p>
+
+<p><strong>Accelerația medie</strong> măsoară cât de repede se modifică viteza:</p>
+
+<div class="formula-box">
+    $$a = \frac{\Delta v}{\Delta t} = \frac{v_2 - v_1}{t_2 - t_1}$$
+</div>
+
+<p>unde:</p>
+<ul>
+    <li><strong>a</strong> = accelerația medie [m/s²]</li>
+    <li><strong>v₁</strong> = viteza la momentul inițial [m/s]</li>
+    <li><strong>v₂</strong> = viteza la momentul final [m/s]</li>
+    <li><strong>Δt = t₂ − t₁</strong> = intervalul de timp [s]</li>
+</ul>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>v₁ (m/s)</th>
+        <th>v₂ (m/s)</th>
+        <th>Δv (m/s)</th>
+        <th>a</th>
+    </tr>
+    <tr>
+        <td>Mașină pornită din loc</td>
+        <td>0</td>
+        <td>20</td>
+        <td>+20</td>
+        <td>pozitivă (accelerare)</td>
+    </tr>
+    <tr>
+        <td>Mașină frânată</td>
+        <td>20</td>
+        <td>0</td>
+        <td>−20</td>
+        <td>negativă (decelerare)</td>
+    </tr>
+    <tr>
+        <td>MRU — viteză constantă</td>
+        <td>10</td>
+        <td>10</td>
+        <td>0</td>
+        <td>zero</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Intuiție Feynman:</strong> Accelerația nu e „viteză mare" — e <em>schimbare</em> de viteză. Un avion de croazieră la 900 km/h dar cu viteză constantă are accelerația zero. O mașinuță de jucărie care pornește de pe loc are accelerație!
+</div>
+
+<p><strong>Exemplu de calcul al accelerației medii:</strong></p>
+<p>O mașină pornește de la v₁ = 0 m/s și ajunge la v₂ = 15 m/s în Δt = 5 s. Accelerația medie?</p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <p class="formula">a = Δv / Δt = (15 − 0) / 5 = <strong>3 m/s²</strong></p>
+    <div class="result">Mașina câștigă 3 m/s în fiecare secundă.</div>
+</div>
+
 <h2>Nivel 3 — Extindere</h2>
 
 <h3>Viteza instantanee vs. viteza medie:</h3>
@@ -686,21 +858,46 @@
 
     <h3>FORMULA VITEZEI:</h3>
     <div class="formula-box">
-        v = d / t<br><br>
-        Unități: m/s sau km/h<br><br>
-        Conversie: 1 m/s = 3,6 km/h
+        v = d / t &nbsp;&nbsp;&nbsp; d = v · t &nbsp;&nbsp;&nbsp; t = d / v<br><br>
+        Unități: m/s sau km/h &nbsp;&nbsp;&nbsp; Conversie: 1 m/s = 3,6 km/h
     </div>
 
-    <h3>TIPURI DE TRAIECTORII:</h3>
+    <h3>MIȘCAREA RECTILINIE UNIFORMĂ (MRU):</h3>
+    <p>Traiectorie dreaptă, viteză <strong>constantă</strong> → d = v · t</p>
+    <p>Pe graficul d-t: <strong>linie dreaptă oblică</strong> (pantă = viteza)</p>
+
+    <h3>ACCELERAȚIA MEDIE:</h3>
+    <div class="formula-box">
+        a = Δv / Δt = (v₂ − v₁) / (t₂ − t₁) &nbsp;&nbsp;&nbsp; [m/s²]
+    </div>
+
+    <h3>GRAFICUL d-t — CUM ARATĂ:</h3>
+    <table>
+        <tr>
+            <th>Forma graficului</th>
+            <th>Tipul mișcării</th>
+        </tr>
+        <tr>
+            <td>Linie orizontală</td>
+            <td>Repaus</td>
+        </tr>
+        <tr>
+            <td>Linie dreaptă oblică</td>
+            <td>MRU (v = constant)</td>
+        </tr>
+        <tr>
+            <td>Curbă</td>
+            <td>Mișcare accelerată / decelerată</td>
+        </tr>
+    </table>
+
+    <h3>IDEI CHEIE:</h3>
     <ul>
-        <li><strong>Rectilinie</strong> — linie dreaptă</li>
-        <li><strong>Curbilinie</strong> — linie curbă</li>
-        <li><strong>Circulară</strong> — cerc</li>
+        <li>Drumul parcurs ≥ Deplasarea (egalitate doar pe traiectorie dreaptă, fără întoarcere)</li>
     </ul>
 
-    <h3>REGULA DE AUR:</h3>
-    <p><em>Drumul parcurs ≥ Deplasarea</em></p>
-    <p>(Egalitate doar pe traiectorie dreaptă!)</p>
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Viteza nu există în mod absolut — există doar viteza relativă față de un observator. Paradoxurile grecilor despre mișcare s-au rezolvat în momentul în care am înțeles că infinitul poate fi sumat."</p>
 </div>
 
 </main>
@@ -711,7 +908,7 @@
         <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>Fizica cu Feynman</h3>
+                <h3>Fizica lui Feynman</h3>
                 <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
             </div>
             <div class="footer-section">

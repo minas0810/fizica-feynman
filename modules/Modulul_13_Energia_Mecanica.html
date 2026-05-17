@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 13: Energia mecanică — Conservarea celei mai prețioase cantități</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="13">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 13 · ENERGIE ȘI LUCRU MECANIC</div>
+    <h1>ENERGIA MECANICĂ</h1>
+    <div class="subtitle">„Conservarea celei mai prețioase cantități — energia nu se pierde niciodată"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Analogia cu blocurile lui Dennis</h2>
+
+<p>Feynman ilustrează conservarea energiei printr-o analogie genială:</p>
+
+<blockquote>
+    <p>„Imagine a child — Dennis the Menace — who has blocks which are absolutely indestructible. Each evening his mother counts the blocks. Sometimes she finds all 28. Sometimes she finds only 26 — but two are in a box under the bed. The number of blocks is conserved, but you have to look everywhere to count them."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Imaginați-vă un copil — Denizel — care are cuburi absolut indestructibile. În fiecare seară, mama lui numără cuburile. Uneori găsește toate 28. Uneori găsește doar 26 — dar două sunt într-o cutie sub pat. Numărul de cuburi este conservat, dar trebuie să cauți peste tot pentru a le număra."
+</div>
+
+<h2>Energia potențială — energia „ascunsă"</h2>
+
+<blockquote>
+    <p>„When we lift a weight, we do work against gravity — we store energy in what we call gravitational potential energy. When it falls, that energy returns as kinetic energy. The total is constant: this is the conservation of mechanical energy."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Când ridicăm o greutate, efectuăm lucru împotriva gravitației — stocăm energie în ceea ce numim energie potențială gravitațională. Când cade, acea energie revine ca energie cinetică. Totalul este constant: aceasta este conservarea energiei mecanice."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Energia nu dispare — se transformă. Energia cinetică (mișcare) și energia potențială (poziție) se schimbă între ele, dar suma lor — energia mecanică totală — rămâne constantă în absența frecării.
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Energia cinetică</h2>
+
+<p><strong>Energia cinetică</strong> (Ec) este energia pe care un corp o are datorită mișcării sale.</p>
+
+<div class="formula-box">
+    $$E_c = \frac{1}{2} m v^2$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>m</strong> = masa corpului (kg)</li>
+    <li><strong>v</strong> = viteza corpului (m/s)</li>
+    <li><strong>Ec</strong> = energia cinetică (Joule, J)</li>
+</ul>
+
+<div class="info-box">
+    <strong>Observație importantă:</strong> Energia cinetică depinde de <strong>pătratul vitezei</strong>! O mașină care merge de 2 ori mai repede are de <strong>4 ori</strong> mai multă energie cinetică — de aceea accidentele la viteză mare sunt atât de devastatoare.
+</div>
+
+<table>
+    <tr>
+        <th>Obiect</th>
+        <th>Masa (kg)</th>
+        <th>Viteza (m/s)</th>
+        <th>Ec (J)</th>
+    </tr>
+    <tr><td>Minge de tenis</td><td>0,06</td><td>50</td><td>75</td></tr>
+    <tr><td>Om care merge</td><td>70</td><td>1,5</td><td>78,75</td></tr>
+    <tr><td>Mașină pe autostradă</td><td>1000</td><td>30</td><td>450.000</td></tr>
+    <tr><td>Tren</td><td>500.000</td><td>55</td><td>756.250.000</td></tr>
+</table>
+
+<h2>Energia potențială gravitațională</h2>
+
+<p><strong>Energia potențială gravitațională</strong> (Ep) este energia stocată datorită poziției corpului față de un nivel de referință.</p>
+
+<div class="formula-box">
+    $$E_p = m \cdot g \cdot h$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>m</strong> = masa corpului (kg)</li>
+    <li><strong>g</strong> = accelerația gravitațională (≈ 10 m/s²)</li>
+    <li><strong>h</strong> = înălțimea față de nivelul de referință (m)</li>
+</ul>
+
+<div class="info-box">
+    <strong>Nivelul de referință:</strong> Putem alege orice nivel ca referință pentru h = 0 (podeaua camerei, nivelul mării etc.). Contează numai <em>diferența</em> de înălțime, nu valoarea absolută.
+</div>
+
+<h2>Energia mecanică și conservarea ei</h2>
+
+<div class="formula-box">
+    $$E_m = E_c + E_p = \frac{1}{2}mv^2 + mgh = \text{constant}$$
+</div>
+
+<p><strong>Condiție:</strong> Conservarea energiei mecanice este valabilă în absența frecării și a rezistenței aerului.</p>
+
+<table>
+    <tr>
+        <th>Situație</th>
+        <th>Ec</th>
+        <th>Ep</th>
+        <th>Em</th>
+    </tr>
+    <tr><td>Bila la înălțime maximă, în repaus</td><td>0</td><td>maximă</td><td>constantă</td></tr>
+    <tr><td>Bila la jumătatea coborârii</td><td>medie</td><td>medie</td><td>constantă</td></tr>
+    <tr><td>Bila la nivelul de referință (jos)</td><td>maximă</td><td>0</td><td>constantă</td></tr>
+</table>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr>
+        <th>Concepția greșită</th>
+        <th>Adevărul</th>
+    </tr>
+    <tr>
+        <td>„Energia se pierde la frecare"</td>
+        <td>Energia se transformă în căldură — se conservă, nu se pierde</td>
+    </tr>
+    <tr>
+        <td>„Un corp în repaus nu are energie"</td>
+        <td>Are energie potențială dacă e la înălțime, și energie de masă (E=mc²)</td>
+    </tr>
+    <tr>
+        <td>„La viteză dublă, energia e dublă"</td>
+        <td>Ec ∝ v² — la viteză dublă, energia e de 4 ori mai mare</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: Roller coaster — conversie continuă de energie</h2>
+
+<p><strong>Situația:</strong> Un roller coaster pornește din repaus de la înălțimea maximă și coboară prin urcușuri și coborâșuri.</p>
+
+<p><strong>Analiza energetică:</strong></p>
+<ul>
+    <li><strong>În vârf (h = max, v = 0):</strong> Ep maximă, Ec = 0</li>
+    <li><strong>La baza primei coborâri:</strong> Ep → Ec, viteza maximă</li>
+    <li><strong>La urcarea următorului deal:</strong> Ec → Ep, viteza scade</li>
+    <li><strong>Fiecare deal următor e mai jos</strong> — frecarea „fură" energie, deci dealurile trebuie să fie din ce în ce mai joase</li>
+</ul>
+
+<div class="result">Fără frecare, roller coaster-ul ar putea urca la aceeași înălțime de unde a plecat. Cu frecare, înălțimile descresc progresiv!</div>
+
+<h2>Exemplul 2: Pendulul — simetria conservării</h2>
+
+<p><strong>Situația:</strong> Un pendul este lăsat să oscileze liber.</p>
+
+<p><strong>Analiza energetică:</strong></p>
+<ul>
+    <li>La capătul oscilației (v = 0): toată energia e potențială</li>
+    <li>La punctul de jos (h = 0): toată energia e cinetică, viteza maximă</li>
+    <li>Feynman: „Pendulul atinge exact aceeași înălțime de cealaltă parte (fără frecare)!"</li>
+</ul>
+
+<div class="info-box">
+    <strong>Demonstrație celebră:</strong> Galileo a observat că pendulul atinge aceeași înălțime indiferent de obstacolele plasate pe cale (care scurtează firul). Energia potențială se conservă în cinetică și înapoi!
+</div>
+
+<h2>Exemplul 3: Impactul auto — de ce viteza dublă e letală</h2>
+
+<p><strong>Situația:</strong> Comparăm două mașini identice (1000 kg) — una la 30 km/h și alta la 60 km/h — care lovesc un perete.</p>
+
+<p><strong>Calculul:</strong></p>
+<ul>
+    <li>v₁ = 30 km/h ≈ 8,3 m/s → Ec₁ = ½ × 1000 × 8,3² ≈ 34.000 J</li>
+    <li>v₂ = 60 km/h ≈ 16,7 m/s → Ec₂ = ½ × 1000 × 16,7² ≈ 139.000 J</li>
+    <li>La viteză dublă → energie de 4 ori mai mare → daune de 4 ori mai mari</li>
+</ul>
+
+<div class="result">Dublarea vitezei NU dublează pericolul — îl multiplică cu 4! Acesta este argumentul fizic pentru limitele de viteză.</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Bila pe plan înclinat — conversie Ep→Ec</h3>
+
+    <p><strong>Obiectiv:</strong> Verificarea conservării energiei mecanice.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un plan înclinat (riglă sau scândurică)</li>
+        <li>O bilă metalică</li>
+        <li>Riglă pentru măsurarea înălțimilor</li>
+        <li>Hârtie de carbon (pentru marcarea punctului de aterizare)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Lasă bila să alunece de la înălțimea h₁ = 20 cm — măsoară viteza la bază (din distanța de zbor după plan)</li>
+        <li>Calculează Ep inițială = mgh₁ și Ec finală = ½mv²</li>
+        <li>Repetă de la h₂ = 40 cm</li>
+        <li>Compară rezultatele</li>
+    </ol>
+
+    <div class="result">Concluzie: Ep inițială ≈ Ec finală — energia mecanică se conservă!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Pendulul și conservarea energiei</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea reversibilității conversiei Ep↔Ec.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Sfoară (1–1,5 m)</li>
+        <li>Greutate mică (bilă, piuliță)</li>
+        <li>Suport fix</li>
+        <li>Riglă</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Construiește pendulul și marchează înălțimea inițială h</li>
+        <li>Lasă pendulul să oscileze și observă înălțimea atinsă de cealaltă parte</li>
+        <li>Plasează un cui în jumătatea firului — pendulul scurtează, dar atinge aceeași înălțime!</li>
+        <li>Măsoară înălțimile de ambele părți</li>
+    </ol>
+
+    <div class="result">Concluzie: Pendulul atinge aceeași înălțime indiferent de lungimea firului — Ep se conservă!</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Mingea de bowling — energia nu minte</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrare dramatică a conservării energiei (demo clasic Feynman).</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>O minge grea suspendată de tavan cu o sfoară</li>
+        <li>O persoană care stă cu fața lipită de minge</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Persoana stă cu spatele la perete, mingea atinge nasul</li>
+        <li>Mingea e eliberată (fără să fie împinsă!)</li>
+        <li>Mingea se duce, se întoarce — și se oprește exact înainte de nas</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Explicație (Feynman style):</strong> Mingea nu poate urca mai sus decât a plecat — ar viola conservarea energiei. Deci nu poate lovi nasul — dacă nu este împinsă! Demonstrația funcționează 100% dacă stai nemișcat.
+    </div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Energie cinetică:</strong> Energia mișcării — cu cât mai rapid, cu atât mai multă.</p>
+<p><strong>Energie potențială:</strong> Energia „stocată" în poziție — cu cât mai sus, cu atât mai multă.</p>
+<p><strong>Conservare:</strong> Ec + Ep = constant (fără frecare).</p>
+
+<h2>Nivel 2 — Formule de bază</h2>
+
+<div class="formula-box">
+    $E_c = \dfrac{1}{2}mv^2$ &nbsp;&nbsp;&nbsp; $E_p = mgh$<br><br>
+    $E_m = E_c + E_p = \text{const.}$<br><br>
+    La cădere liberă: $mgh = \dfrac{1}{2}mv^2 \Rightarrow v = \sqrt{2gh}$
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat:</h4>
+    <p>O bilă de 0,1 kg este lăsată să cadă de la h = 5 m. Ce viteză are la sol?</p>
+    <ul>
+        <li>Ep inițială = mgh = 0,1 × 10 × 5 = 5 J</li>
+        <li>La sol: Ep = 0, deci Ec = 5 J</li>
+        <li>½mv² = 5 → v² = 10/0,1 = 100 → v = <strong>10 m/s</strong></li>
+    </ul>
+    <div class="result">Viteza la sol = 10 m/s (independent de masă!)</div>
+</div>
+
+<h3>Aplicare la coborârea pe plan înclinat:</h3>
+<table>
+    <tr>
+        <th>Înălțime h (m)</th>
+        <th>Viteza la baza planului (m/s)</th>
+    </tr>
+    <tr><td>0,2</td><td>2</td></tr>
+    <tr><td>0,8</td><td>4</td></tr>
+    <tr><td>1,8</td><td>6</td></tr>
+    <tr><td>3,2</td><td>8</td></tr>
+    <tr><td>5</td><td>10</td></tr>
+</table>
+<p><small>Formula: v = √(2gh) cu g = 10 m/s²</small></p>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Conservarea energiei cu frecare:</h3>
+<div class="formula-box">
+    $$E_{m_1} = E_{m_2} + Q_{frecare}$$
+    $$mgh_1 + \frac{1}{2}mv_1^2 = mgh_2 + \frac{1}{2}mv_2^2 + Q_f$$
+</div>
+
+<p>Energia „pierdută" mecanic apare ca căldură (Qf = Ff·d). Total energie = conservată!</p>
+
+<h3>Feynman despre conservare:</h3>
+<blockquote>
+    <p>„The conservation of energy is not a description of a mechanism, but simply a statement that there is a quantity — energy — which doesn't change no matter what happens, and that is very powerful."</p>
+</blockquote>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „O mașină la 100 km/h are de două ori mai multă energie cinetică decât la 50 km/h."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Ec = ½mv². La viteză dublă, energia e de 2² = 4 ori mai mare, nu de 2 ori. De aceea accidentele la viteză mare sunt mult mai grave!
+</div>
+
+<p><strong>2. „O bilă în cădere liberă are energia mecanică constantă (fără aer)."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Pe măsură ce cade (h scade → Ep scade), viteza crește (Ec crește). Suma Ec + Ep rămâne constantă — aceasta este conservarea energiei mecanice.
+</div>
+
+<p><strong>3. „Când mingea unui pendul se întoarce, ea nu poate depăși înălțimea de plecare."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Pentru a urca mai sus, mingea ar necesita mai multă energie decât a pornit cu — imposibil (ar viola conservarea). Cu frecare, urcă chiar mai puțin!
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>4. De ce skateboard-urile trebuie să înceapă de sus pentru a face trucuri care necesită înălțime?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Energia potențială inițială (mgh) se transformă în energie cinetică. Cu cât înălțimea de start e mai mare, cu atât viteza la baza rampei e mai mare, și cu atât mai sus poate urca pe rampa opusă. Nu poți urca mai sus decât ai coborât (conservarea energiei)!
+</div>
+
+<p><strong>5. De ce centrala hidroelectrică are nevoie de un lac de acumulare sus?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Apa de la înălțime are energie potențială gravitațională (Ep = mgh). La coborârea prin turbine, Ep se transformă în energie cinetică (rotirea turbinei) → energie electrică. Cu cât lacul e mai sus (h mai mare), cu atât mai multă energie electrică se poate genera din aceeași masă de apă.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>6. Un corp de 2 kg cade de la înălțimea de 20 m. Calculează viteza la înălțimile de 20 m, 10 m și 0 m.</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare (conservarea energiei, Ep+Ec=const=mgh₀):</h4>
+    <p>Em = mgh₀ = 2 × 10 × 20 = 400 J</p>
+    <ul>
+        <li>La h=20 m: Ec=0, v = 0 m/s ✓</li>
+        <li>La h=10 m: Ep=200J → Ec=200J → v=√(2×200/2) = √200 ≈ <strong>14,1 m/s</strong></li>
+        <li>La h=0: Ep=0 → Ec=400J → v=√(2×400/2) = √400 = <strong>20 m/s</strong></li>
+    </ul>
+    <div class="result">v la sol = 20 m/s (independent de masă!)</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>7. Un copil coboară pe un tobogan de 3 m înălțime și ajunge la baza lui cu viteza de 6 m/s (nu 7,7 m/s cum ar prezice conservarea). Explică diferența și calculează energia pierdută prin frecare (masa = 30 kg).</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>Ep inițială = mgh = 30 × 10 × 3 = 900 J</li>
+        <li>Ec la bază = ½mv² = ½ × 30 × 36 = 540 J</li>
+        <li>Energia pierdută = 900 − 540 = <strong>360 J</strong> (transformat în căldură prin frecare pe tobogan)</li>
+    </ul>
+    <p>Randamentul toboganului = 540/900 = 60%. Frecarea a „luat" 40% din energie — de aceea toboganele de plastic sau cu apă sunt mai rapide (frecare mai mică)!</p>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 4</strong> „Conservation of Energy" — blocurile lui Dennis, energia ca abstract</li>
+    <li><strong>Vol. I, Cap. 13</strong> „Work and Potential Energy" — energia potențială</li>
+    <li><strong>Vol. I, Cap. 14</strong> „Work and Potential Energy (conclusion)"</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr>
+        <th>Disciplina</th>
+        <th>Conexiunea cu energia mecanică</th>
+    </tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Mișcarea animalelor — convertesc energie chimică în cinetică</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Hidrocentrale — energia potențială a apei</td>
+    </tr>
+    <tr>
+        <td><strong>Sport</strong></td>
+        <td>Săritura în înălțime, aruncarea cu prăjina — conservarea energiei</td>
+    </tr>
+    <tr>
+        <td><strong>Inginerie</strong></td>
+        <td>Proiectarea roller-coasterelor, testele de impact auto</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        $E_c = \dfrac{1}{2}mv^2$ &nbsp;&nbsp;&nbsp; (energia mișcării)<br><br>
+        $E_p = mgh$ &nbsp;&nbsp;&nbsp; (energia poziției)<br><br>
+        $E_m = E_c + E_p = \text{const.}$ &nbsp;&nbsp;&nbsp; (fără frecare)<br><br>
+        Cădere liberă: $v = \sqrt{2gh}$
+    </div>
+
+    <h3>REGULA DE AUR:</h3>
+    <p>Ce scade din Ep apare în Ec și invers — suma rămâne constantă!</p>
+
+    <h3>CU FRECARE:</h3>
+    <p>Em nu se conservă mecanic, dar energia totală da — diferența devine căldură.</p>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Energia nu dispare — trebuie doar să știi unde să o cauți."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>

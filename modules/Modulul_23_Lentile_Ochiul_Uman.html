@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 23: Lentile și ochiul uman — Cum vedem lumea</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="23">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 23 · UNDE — SUNET ȘI LUMINĂ</div>
+    <h1>LENTILE ȘI OCHIUL UMAN</h1>
+    <div class="subtitle">„Cum un disc de sticlă curbată poate concentra lumina soarelui, corecta vederea și extinde universul observabil"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Lumina și lentilele</h2>
+
+<blockquote>
+    <p>„The lens is a device that bends light rays in a controlled way. The eye is a lens system of extraordinary precision, capable of forming sharp images of objects from a few centimeters to infinity. When we understand how a glass lens works, we understand how we see — and why sometimes we see poorly."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „Lentila este un dispozitiv care deviază razele de lumină într-un mod controlat. Ochiul este un sistem de lentile de precizie extraordinară, capabil să formeze imagini clare ale obiectelor de la câțiva centimetri până la infinit. Când înțelegem cum funcționează o lentilă de sticlă, înțelegem cum vedem — și de ce uneori vedem prost."
+</div>
+
+<h2>Refracția stă la baza lentilelor</h2>
+
+<blockquote>
+    <p>„A lens works by refraction — bending light at each curved surface. The clever part is the curvature: a convex lens is thicker in the middle, so it bends rays inward toward a focal point. A concave lens is thinner in the middle, so it bends rays outward, as if they come from a virtual focal point."</p>
+</blockquote>
+
+<div class="info-box">
+    <strong>Traducere:</strong> „O lentilă funcționează prin refracție — devierea luminii la fiecare suprafață curbată. Partea ingenioasă este curbura: o lentilă convexă este mai groasă la mijloc, deci deviază razele spre interior, spre un punct focal. O lentilă concavă este mai subțire la mijloc, deci deviază razele spre exterior, ca și cum ar veni dintr-un punct focal virtual."
+</div>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Lentilele convexe (convergente) concentrează lumina — folosite în lupă, ochelari pentru hipermetropi, obiective foto. Lentilele concave (divergente) împrăștie lumina — folosite în ochelari pentru miopie. Ochiul uman este un sistem optic cu lentilă variabilă (cristalinul).
+</div>
+
+<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+
+<h2>Tipuri de lentile</h2>
+
+<table>
+    <tr>
+        <th>Proprietate</th>
+        <th>Lentilă convergentă (convexă)</th>
+        <th>Lentilă divergentă (concavă)</th>
+    </tr>
+    <tr>
+        <td>Forma</td>
+        <td>Mai groasă la mijloc</td>
+        <td>Mai subțire la mijloc</td>
+    </tr>
+    <tr>
+        <td>Efectul asupra razelor paralele</td>
+        <td>Le concentrează în focar $F$</td>
+        <td>Le împrăștie (par că vin din $F$)</td>
+    </tr>
+    <tr>
+        <td>Distanța focală $f$</td>
+        <td>Pozitivă ($f > 0$)</td>
+        <td>Negativă ($f < 0$)</td>
+    </tr>
+    <tr>
+        <td>Vergența</td>
+        <td>$V = 1/f > 0$ [dioptrii]</td>
+        <td>$V = 1/f < 0$ [dioptrii]</td>
+    </tr>
+    <tr>
+        <td>Aplicații</td>
+        <td>Lupă, ochelari hipermetropi, proiector</td>
+        <td>Ochelari miopie, vizor ușă</td>
+    </tr>
+</table>
+
+<h2>Ecuația lentilei subțiri</h2>
+
+<p>Dacă obiectul se află la distanța $d_o$ față de lentilă, imaginea se formează la distanța $d_i$:</p>
+
+<div class="formula-box">
+    $$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+</div>
+
+<p>Mărirea liniară a imaginii:</p>
+
+<div class="formula-box">
+    $$m = \frac{d_i}{d_o} = \frac{h_i}{h_o}$$
+</div>
+
+<p>unde $h_o$ este înălțimea obiectului și $h_i$ este înălțimea imaginii.</p>
+
+<h2>Vergența — dioptria</h2>
+
+<div class="formula-box">
+    $$V = \frac{1}{f} \quad [\text{dioptrii, dpt}]$$
+    $$f \text{ în metri}$$
+</div>
+
+<table>
+    <tr>
+        <th>Distanța focală $f$</th>
+        <th>Vergența $V$</th>
+        <th>Tip lentilă</th>
+    </tr>
+    <tr>
+        <td>+50 cm = +0,5 m</td>
+        <td>+2 dpt</td>
+        <td>Convergentă slabă</td>
+    </tr>
+    <tr>
+        <td>+10 cm = +0,1 m</td>
+        <td>+10 dpt</td>
+        <td>Convergentă puternică (lupă)</td>
+    </tr>
+    <tr>
+        <td>−25 cm = −0,25 m</td>
+        <td>−4 dpt</td>
+        <td>Divergentă (miopie −4)</td>
+    </tr>
+</table>
+
+<h2>Construcția imaginii în lentila convergentă</h2>
+
+<p>Se folosesc trei raze principale:</p>
+<ol>
+    <li>Raza paralelă cu axa optică → după lentilă trece prin focarul $F'$</li>
+    <li>Raza prin centrul optic $O$ → trece nedeviată</li>
+    <li>Raza prin focarul obiect $F$ → după lentilă iese paralelă cu axa</li>
+</ol>
+
+<table>
+    <tr>
+        <th>Poziția obiectului</th>
+        <th>Caracteristicile imaginii</th>
+        <th>Aplicație</th>
+    </tr>
+    <tr>
+        <td>$d_o > 2f$</td>
+        <td>Reală, inversată, micșorată</td>
+        <td>Aparatul foto, ochiul</td>
+    </tr>
+    <tr>
+        <td>$d_o = 2f$</td>
+        <td>Reală, inversată, egală</td>
+        <td>Fotocopiatorul</td>
+    </tr>
+    <tr>
+        <td>$f < d_o < 2f$</td>
+        <td>Reală, inversată, mărită</td>
+        <td>Proiectorul</td>
+    </tr>
+    <tr>
+        <td>$d_o = f$</td>
+        <td>La infinit (raze paralele)</td>
+        <td>Farul auto, farul de far</td>
+    </tr>
+    <tr>
+        <td>$d_o < f$</td>
+        <td>Virtuală, dreaptă, mărită</td>
+        <td>Lupa</td>
+    </tr>
+</table>
+
+<h2>Ochiul uman — sistem optic natural</h2>
+
+<p>Ochiul uman este un sistem optic format din:</p>
+
+<table>
+    <tr>
+        <th>Componentă</th>
+        <th>Rol optic</th>
+        <th>Analogie aparat foto</th>
+    </tr>
+    <tr>
+        <td>Corneea</td>
+        <td>Lentilă fixă (~43 dpt)</td>
+        <td>Lentilă frontală</td>
+    </tr>
+    <tr>
+        <td>Cristalinul</td>
+        <td>Lentilă variabilă (acomodare)</td>
+        <td>Zoom / focalizare</td>
+    </tr>
+    <tr>
+        <td>Irisul / Pupila</td>
+        <td>Reglează cantitatea de lumină</td>
+        <td>Diafragma</td>
+    </tr>
+    <tr>
+        <td>Retina</td>
+        <td>Detectează imaginea (conuri, bastonașe)</td>
+        <td>Senzorul / filmul</td>
+    </tr>
+    <tr>
+        <td>Nervul optic</td>
+        <td>Transmite semnalul la creier</td>
+        <td>Cablul USB / card SD</td>
+    </tr>
+</table>
+
+<h2>Defecte de vedere și corecția lor</h2>
+
+<table>
+    <tr>
+        <th>Defect</th>
+        <th>Cauza fizică</th>
+        <th>Imagine pe retină</th>
+        <th>Corecție</th>
+    </tr>
+    <tr>
+        <td>Miopia</td>
+        <td>Glob ocular prea lung sau cristalin prea bombat</td>
+        <td>Se formează în fața retinei</td>
+        <td>Lentilă divergentă (vergență negativă)</td>
+    </tr>
+    <tr>
+        <td>Hipermetropia</td>
+        <td>Glob ocular prea scurt sau cristalin prea plat</td>
+        <td>Se formează în spatele retinei</td>
+        <td>Lentilă convergentă (vergență pozitivă)</td>
+    </tr>
+    <tr>
+        <td>Astigmatismul</td>
+        <td>Cornee cu curburi inegale</td>
+        <td>Imagine distorsionată</td>
+        <td>Lentilă cilindrică (toric)</td>
+    </tr>
+    <tr>
+        <td>Presbiopia</td>
+        <td>Cristalin îmbătrânit, mai rigid</td>
+        <td>Obiectele apropiate neclare</td>
+        <td>Ochelari bifocali sau progresivi</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Instrumente optice</h2>
+
+<table>
+    <tr>
+        <th>Instrument</th>
+        <th>Lentile</th>
+        <th>Principiu</th>
+        <th>Aplicație</th>
+    </tr>
+    <tr>
+        <td>Lupa</td>
+        <td>1 convergentă</td>
+        <td>Obiect la $d_o < f$ → imagine virtuală mărită</td>
+        <td>Lectură, bijuterie</td>
+    </tr>
+    <tr>
+        <td>Microscopul optic</td>
+        <td>2 convergente (obiectiv + ocular)</td>
+        <td>Dubla mărire → 1000×</td>
+        <td>Biologie, medicină</td>
+    </tr>
+    <tr>
+        <td>Telescopul refractor</td>
+        <td>2 convergente</td>
+        <td>Obiectiv mare → imagine reală → ocular mărește</td>
+        <td>Astronomie</td>
+    </tr>
+    <tr>
+        <td>Aparatul foto</td>
+        <td>Sistem complex de lentile</td>
+        <td>Imagine reală, inversată, pe senzor</td>
+        <td>Fotografie</td>
+    </tr>
+    <tr>
+        <td>Proiectorul</td>
+        <td>Convergentă puternică</td>
+        <td>Obiect între $f$ și $2f$ → imagine reală mărită</td>
+        <td>Cinema, prezentări</td>
+    </tr>
+</table>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experiment 1 — Focarul lentilei convergente</h3>
+    <p><strong>Materiale:</strong> lentilă biconvexă (de ex. lupă), foaie de hârtie, soare sau lampă.</p>
+    <p><strong>Procedura:</strong></p>
+    <ol>
+        <li>Ține lupa între soare și foaia de hârtie.</li>
+        <li>Mișcă lupa aproape și departe de hârtie până obții cel mai mic punct luminos.</li>
+        <li>Acea distanță este distanța focală $f$.</li>
+        <li>Măsoară $f$ cu rigla.</li>
+    </ol>
+    <p><strong>Concluzie:</strong> Lentila convergentă concentrează razele paralele (de la soare, la „infinit") în focar. Intensitatea luminii în focar poate aprinde hârtia!</p>
+</div>
+
+<div class="experiment">
+    <h3>Experiment 2 — Modelul ochiului miop și hipermetrop</h3>
+    <p><strong>Materiale:</strong> lentilă convergentă (cristalin), ecran (retină), lumânare (obiect), lentilă corectoare.</p>
+    <p><strong>Procedura:</strong></p>
+    <ol>
+        <li>Formează o imagine clară a lumânării pe ecran — „ochi normal".</li>
+        <li>Mută ecranul mai aproape de lentilă — imaginea devine neclară pe ecran, dar s-ar clarifica dincolo → miopie (glob prea lung).</li>
+        <li>Adaugă o lentilă divergentă în față — imaginea revine clară.</li>
+        <li>Repetă cu ecranul mai departe — hipermetropie; corectează cu lentilă convergentă.</li>
+    </ol>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivelul 1 — Localizarea imaginii</h2>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> O lentilă convergentă are $f = 10 \, \text{cm}$. Un obiect este plasat la $d_o = 30 \, \text{cm}$. Unde se formează imaginea? Este mărită sau micșorată?
+
+    <div class="answer">
+        $\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{10} - \frac{1}{30} = \frac{3-1}{30} = \frac{2}{30}$<br><br>
+        $d_i = 15 \, \text{cm}$ (pozitiv → imagine reală, de aceeași parte cu lumina ieșită)<br><br>
+        $m = d_i/d_o = 15/30 = 0{,}5$ → imagine micșorată de 2 ori
+    </div>
+</div>
+
+<h2>Nivelul 2 — Lupa</h2>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> O lupă cu $f = 5 \, \text{cm}$ este folosită pentru a examina un obiect la $d_o = 4 \, \text{cm}$. Unde se formează imaginea? Ce caracter are?
+
+    <div class="answer">
+        $\frac{1}{d_i} = \frac{1}{5} - \frac{1}{4} = \frac{4-5}{20} = -\frac{1}{20}$<br><br>
+        $d_i = -20 \, \text{cm}$ (negativ → imagine virtuală, de aceeași parte cu obiectul)<br><br>
+        $m = |d_i/d_o| = 20/4 = 5$ → imagine virtuală, dreaptă, mărită de 5 ori
+    </div>
+</div>
+
+<h2>Nivelul 3 — Dioptria și prescripția ochelarilor</h2>
+
+<div class="solution">
+    <strong>Problemă rezolvată:</strong> Un miop vede clar doar până la 25 cm. Ochelarii trebuie să facă obiectele de la infinit ($d_o = \infty$) să pară că se află la 25 cm ($d_i = -25 \, \text{cm}$ — virtual, în față). Ce vergență trebuie să aibă lentilele?
+
+    <div class="answer">
+        $\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{\infty} + \frac{1}{-0{,}25} = 0 - 4 = -4 \, \text{dpt}$<br><br>
+        Prescripție: $-4$ dioptrii (lentilă divergentă)
+    </div>
+</div>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<div class="experiment">
+    <strong>Întrebare 1:</strong> De ce picăturile de apă pe o frunză pot arde frunza în lumina soarelui?
+    <div class="answer">Picăturile de apă acționează ca mici lentile convergente sferice. Ele concentrează razele solare paralele într-un focar mic pe suprafața frunzei. Intensitatea luminii în focar este suficient de mare pentru a încălzi și deteriora țesutul vegetal — același principiu ca lupa.</div>
+</div>
+
+<div class="experiment">
+    <strong>Întrebare 2:</strong> De ce la apus soarele pare mai mare decât la amiază, deși nu s-a schimbat dimensiunea reală?
+    <div class="answer">Este o iluzie optică (și parțial de refracție atmosferică). Creierul nostru compară soarele cu obiectele de pe orizont (clădiri, copaci) și îl percepe ca mai mare — efect psihologic. Atmosfera mai groasă la orizont refractă și ușor imaginea, dar dimensiunea aparentă unghiulară este aproape aceeași.</div>
+</div>
+
+<div class="experiment">
+    <strong>Întrebare 3:</strong> Un aparat foto cu focală $f = 50 \, \text{mm}$ fotografiază un om la $d_o = 5 \, \text{m}$. La ce distanță se formează imaginea pe senzor?
+    <div class="answer">
+        $\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{0{,}05} - \frac{1}{5} = 20 - 0{,}2 = 19{,}8 \, \text{m}^{-1}$<br>
+        $d_i \approx 50{,}5 \, \text{mm}$ — imaginea se formează practic la distanța focală, de aceea senzorul este plasat la $f$ față de obiectiv.
+    </div>
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Conexiuni cu alte module</h2>
+<ul>
+    <li><strong>Modulul 9</strong> — Fenomene optice: reflexia, refracția și propagarea luminii</li>
+    <li><strong>Modulul 2</strong> — Mărimi fizice: distanța focală, vergența, mărirea</li>
+    <li><strong>Modulul 24</strong> — Structura atomului: fotonii și interacțiunea cu materia</li>
+</ul>
+
+<h2>Curiozitate Feynman</h2>
+
+<div class="info-box">
+    <strong>Rezoluția ochiului și cuanta de lumină:</strong> Feynman a remarcat că ochiul uman poate detecta un singur foton în condiții ideale de întuneric. „Ochiul este un detector cuantic — retina funcționează la limita fizicii cuantice. Un con sau bastonaș poate fi activat de o singură particulă de lumină. Evoluția a creat un instrument care funcționează la limita de sensibilitate permisă de natura cuantică a luminii."
+</div>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+    <p><strong>IDEE CHEIE:</strong> Lentilele și ochiul funcționează pe același principiu — refracția luminii la suprafețe curbate formează imagini; vergența (puterea optică) măsoară capacitatea de convergere.</p>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Ecuația lentilei: $\dfrac{1}{f} = \dfrac{1}{d_o} + \dfrac{1}{d_i}$ [m$^{-1}$]<br>
+        Mărire liniară: $m = \dfrac{d_i}{d_o}$ (adimensional)<br>
+        Vergență: $V = \dfrac{1}{f}$ [dioptrii, dpt]
+    </div>
+
+    <h3>DEFECTE DE VEDERE:</h3>
+    <table>
+        <tr><th>Defect</th><th>Cauză</th><th>Imaginea formată</th><th>Corecție</th></tr>
+        <tr><td>Miopie</td><td>Ochi prea lung / cristalin prea convergent</td><td>În fața retinei</td><td>Lentilă divergentă ($V &lt; 0$)</td></tr>
+        <tr><td>Hipermetropie</td><td>Ochi prea scurt / cristalin prea slab</td><td>În spatele retinei</td><td>Lentilă convergentă ($V &gt; 0$)</td></tr>
+        <tr><td>Presbitie</td><td>Cristalinin rigid (vârstă)</td><td>Acomodare insuficientă</td><td>Lentile progresive</td></tr>
+    </table>
+
+    <h3>IDEI CHEIE:</h3>
+    <ul>
+        <li>Lentilă convergentă: $f > 0$, $V > 0$ — adună razele paralele într-un focar</li>
+        <li>Lentilă divergentă: $f < 0$, $V < 0$ — împrăștie razele paralele</li>
+        <li>Ochiul acomodează prin <strong>modificarea curburii cristalinului</strong> (mușchii ciliari)</li>
+        <li>Puterea totală a ochiului uman: ~60 dpt (cornee ~40 dpt + cristalin ~20 dpt)</li>
+    </ul>
+
+    <h3>IDEEA LUI FEYNMAN:</h3>
+    <p>„Ochiul uman este un instrument optic remarcabil, dar cu limite clare. Îmbunătățirile pe care le-am inventat — ochelari, microscoape, telescoape — sunt extensii ale aceluiași principiu fizic: refracția la o suprafață curbată."</p>
+</div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tocList = document.getElementById("toc-list");
+            const headings = document.querySelectorAll(".module-main h1, .module-main h2");
+            headings.forEach(function(h, i) {
+                if (!h.id) h.id = "heading-" + i;
+                const li = document.createElement("li");
+                li.className = h.tagName === "H1" ? "toc-h1" : "toc-h2";
+                const a = document.createElement("a");
+                a.href = "#" + h.id;
+                a.textContent = h.textContent;
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+            const btn = document.querySelector(".toc-toggle-btn");
+            const sidebar = document.getElementById("toc");
+            if (btn && sidebar) {
+                btn.addEventListener("click", function() {
+                    sidebar.classList.toggle("open");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
