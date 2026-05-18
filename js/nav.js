@@ -1,6 +1,6 @@
 /* ===========================================
-   FIZICA CU FEYNMAN — nav.js
-   Sistem de navigație — 24 module
+   FIZICA LUI FEYNMAN — nav.js
+   Sistem de navigație — 21 module
    =========================================== */
 
 (function () {
@@ -13,37 +13,33 @@
     { n: 2,  icon: '📏', title: 'Mărimi fizice și măsurare',              short: 'Mărimi fizice',          file: 'Modulul_2_Marimi_Fizice_Masurare.html',              bloc: 'I — Fundamentele fizicii' },
     /* II — Mișcare */
     { n: 3,  icon: '🏃', title: 'Mișcarea corpurilor',                    short: 'Mișcarea corpurilor',    file: 'Modulul_3_Miscarea_Corpurilor.html',                 bloc: 'II — Mișcare' },
-    { n: 10, icon: '➡️', title: 'Mărimi scalare și vectoriale',           short: 'Mărimi vectoriale',      file: 'Modulul_10_Marimi_Vectoriale.html',                  bloc: 'II — Mișcare' },
+    { n: 4,  icon: '➡️', title: 'Mărimi scalare și vectoriale',           short: 'Mărimi vectoriale',      file: 'Modulul_4_Marimi_Vectoriale.html',                   bloc: 'II — Mișcare' },
     /* III — Forțe și dinamică */
-    { n: 4,  icon: '⚖️', title: 'Inerția',                                short: 'Inerția',                file: 'Modulul_4_Inertia.html',                            bloc: 'III — Forțe și dinamică' },
+    { n: 5,  icon: '⚖️', title: 'Inerția',                                short: 'Inerția',                file: 'Modulul_5_Inertia.html',                            bloc: 'III — Forțe și dinamică' },
     { n: 6,  icon: '💪', title: 'Tipuri de forțe',                        short: 'Tipuri de forțe',        file: 'Modulul_6_Tipuri_de_Forte.html',                    bloc: 'III — Forțe și dinamică' },
-    { n: 11, icon: '🍎', title: 'Legile lui Newton',                      short: 'Legile lui Newton',      file: 'Modulul_11_Legile_Newton.html',                     bloc: 'III — Forțe și dinamică' },
+    { n: 7,  icon: '🍎', title: 'Legile lui Newton',                      short: 'Legile lui Newton',      file: 'Modulul_7_Legile_Newton.html',                      bloc: 'III — Forțe și dinamică' },
     /* IV — Energie și lucru mecanic */
-    { n: 12, icon: '⚙️', title: 'Lucrul mecanic și puterea',              short: 'Lucru mecanic',          file: 'Modulul_12_Lucru_Mecanic_Putere.html',               bloc: 'IV — Energie și lucru mecanic' },
-    { n: 13, icon: '🎢', title: 'Energia mecanică',                       short: 'Energia mecanică',       file: 'Modulul_13_Energia_Mecanica.html',                   bloc: 'IV — Energie și lucru mecanic' },
-    { n: 14, icon: '⚖️', title: 'Echilibrul corpurilor și pârghiile',     short: 'Echilibru și pârghii',   file: 'Modulul_14_Echilibru_Parghii.html',                  bloc: 'IV — Energie și lucru mecanic' },
+    { n: 8,  icon: '⚙️', title: 'Lucrul mecanic și puterea',              short: 'Lucru mecanic',          file: 'Modulul_8_Lucru_Mecanic_Putere.html',                bloc: 'IV — Energie și lucru mecanic' },
+    { n: 9,  icon: '🎢', title: 'Energia mecanică',                       short: 'Energia mecanică',       file: 'Modulul_9_Energia_Mecanica.html',                    bloc: 'IV — Energie și lucru mecanic' },
+    { n: 10, icon: '⚖️', title: 'Echilibrul corpurilor și pârghiile',     short: 'Echilibru și pârghii',   file: 'Modulul_10_Echilibru_Parghii.html',                  bloc: 'IV — Energie și lucru mecanic' },
     /* V — Materie și fluide */
-    { n: 5,  icon: '🧱', title: 'Densitatea',                             short: 'Densitatea',             file: 'Modulul_5_Densitatea.html',                         bloc: 'V — Materie și fluide' },
-    { n: 15, icon: '🌊', title: 'Presiunea și statica fluidelor',         short: 'Presiune și fluide',     file: 'Modulul_15_Presiunea_Fluide.html',                   bloc: 'V — Materie și fluide' },
+    { n: 11, icon: '🧱', title: 'Densitatea',                             short: 'Densitatea',             file: 'Modulul_11_Densitatea.html',                        bloc: 'V — Materie și fluide' },
+    { n: 12, icon: '🌊', title: 'Presiunea și statica fluidelor',         short: 'Presiune și fluide',     file: 'Modulul_12_Presiunea_Fluide.html',                   bloc: 'V — Materie și fluide' },
     /* VI — Căldură și termodinamică */
-    { n: 7,  icon: '🌡️', title: 'Fenomene termice',                      short: 'Fenomene termice',       file: 'Modulul_7_Fenomene_Termice.html',                    bloc: 'VI — Căldură și termodinamică' },
-    { n: 17, icon: '💨', title: 'Gazele și termodinamica',                short: 'Gaze și termodinamică',  file: 'Modulul_17_Gazele_Termodinamica.html',               bloc: 'VI — Căldură și termodinamică' },
+    { n: 13, icon: '🌡️', title: 'Fenomene termice',                      short: 'Fenomene termice',       file: 'Modulul_13_Fenomene_Termice.html',                   bloc: 'VI — Căldură și termodinamică' },
+    { n: 14, icon: '💨', title: 'Gazele și termodinamica',                short: 'Gaze și termodinamică',  file: 'Modulul_14_Gazele_Termodinamica.html',               bloc: 'VI — Căldură și termodinamică' },
     /* VII — Unde: sunet și lumină */
-    { n: 16, icon: '🔊', title: 'Sunetul',                                short: 'Sunetul',                file: 'Modulul_16_Sunetul.html',                            bloc: 'VII — Unde: sunet și lumină' },
-    { n: 9,  icon: '🌈', title: 'Fenomene optice',                        short: 'Fenomene optice',        file: 'Modulul_9_Fenomene_Optice.html',                    bloc: 'VII — Unde: sunet și lumină' },
-    { n: 23, icon: '👁️', title: 'Lentile și ochiul uman',                short: 'Lentile și ochi',        file: 'Modulul_23_Lentile_Ochiul_Uman.html',                bloc: 'VII — Unde: sunet și lumină' },
+    { n: 15, icon: '🔊', title: 'Sunetul',                                short: 'Sunetul',                file: 'Modulul_15_Sunetul.html',                            bloc: 'VII — Unde: sunet și lumină' },
+    { n: 16, icon: '🌈', title: 'Fenomene optice',                        short: 'Fenomene optice',        file: 'Modulul_16_Fenomene_Optice.html',                    bloc: 'VII — Unde: sunet și lumină' },
+    { n: 17, icon: '👁️', title: 'Lentile și ochiul uman',                short: 'Lentile și ochi',        file: 'Modulul_17_Lentile_Ochiul_Uman.html',                bloc: 'VII — Unde: sunet și lumină' },
     /* VIII — Electricitate și magnetism */
-    { n: 8,  icon: '⚡', title: 'Fenomene electrice și magnetice',        short: 'Electricitate — intro',  file: 'Modulul_8_Fenomene_Electrice_Magnetice.html',        bloc: 'VIII — Electricitate și magnetism' },
-    { n: 18, icon: '🔋', title: 'Circuitul electric și Legea lui Ohm',   short: 'Legea lui Ohm',          file: 'Modulul_18_Circuit_Electric_Ohm.html',               bloc: 'VIII — Electricitate și magnetism' },
-    { n: 19, icon: '🔌', title: 'Circuite serie și paralel',              short: 'Serie și paralel',       file: 'Modulul_19_Circuite_Serie_Paralel.html',             bloc: 'VIII — Electricitate și magnetism' },
-    { n: 20, icon: '🔥', title: 'Energia electrică și efectul Joule',    short: 'Efect Joule',            file: 'Modulul_20_Energia_Electrica_Joule.html',            bloc: 'VIII — Electricitate și magnetism' },
-    { n: 21, icon: '🧲', title: 'Câmpul magnetic și inducția',            short: 'Câmp magnetic',          file: 'Modulul_21_Camp_Magnetic_Inductie.html',             bloc: 'VIII — Electricitate și magnetism' },
-    { n: 22, icon: '〰️', title: 'Curentul alternativ și transformatorul',short: 'Curent alternativ',      file: 'Modulul_22_Curent_Alternativ_Transformator.html',    bloc: 'VIII — Electricitate și magnetism' },
-    /* IX — Structura materiei */
-    { n: 24, icon: '⚛️', title: 'Structura atomului și radioactivitatea', short: 'Structura atomului',     file: 'Modulul_24_Structura_Atomului_Radioactivitate.html', bloc: 'IX — Structura materiei' },
+    { n: 18, icon: '⚡', title: 'Fenomene electrice și magnetice',        short: 'Electricitate — intro',  file: 'Modulul_18_Fenomene_Electrice_Magnetice.html',       bloc: 'VIII — Electricitate și magnetism' },
+    { n: 19, icon: '🔋', title: 'Circuitul electric și Legea lui Ohm',   short: 'Legea lui Ohm',          file: 'Modulul_19_Circuit_Electric_Ohm.html',               bloc: 'VIII — Electricitate și magnetism' },
+    { n: 20, icon: '🔌', title: 'Circuite serie și paralel',              short: 'Serie și paralel',       file: 'Modulul_20_Circuite_Serie_Paralel.html',             bloc: 'VIII — Electricitate și magnetism' },
+    { n: 21, icon: '🔥', title: 'Energia electrică și efectul Joule',    short: 'Efect Joule',            file: 'Modulul_21_Energia_Electrica_Joule.html',            bloc: 'VIII — Electricitate și magnetism' },
   ];
 
-  const TOTAL = MODULES.length; /* 24 */
+  const TOTAL = MODULES.length; /* 21 */
 
   const body   = document.body;
   const modNum = parseInt(body.getAttribute('data-module'), 10) || 0;

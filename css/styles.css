@@ -293,6 +293,23 @@ body {
     display: block;
 }
 .footer-section a:hover { color: var(--accent); }
+.footer-credit {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4) !important;
+    margin-top: 0.5rem;
+    letter-spacing: 0.02em;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.footer-claude-logo {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    border-radius: 3px;
+    opacity: 0.6;
+}
 .footer-bottom {
     text-align: center;
     padding-top: 1.25rem;
