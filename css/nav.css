@@ -86,6 +86,22 @@
     color: #fff;
 }
 
+/* Despre autor link */
+.site-nav__despre-autor {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.site-nav__despre-autor:hover {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+}
+
 /* Module dropdown */
 .site-nav__dropdown-wrap { position: relative; }
 
@@ -552,6 +568,7 @@
     .site-nav__home { display: none; }
     .site-nav__module-list { display: none; }
     .site-nav__despre-feynman { display: none; }
+    .site-nav__despre-autor { display: none; }
     .site-nav__simulari { display: none; }
     .site-nav__hamburger { display: flex; }
 

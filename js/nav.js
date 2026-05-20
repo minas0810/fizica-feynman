@@ -14,20 +14,20 @@
     { n: 1,  icon: '🔬', title: 'Ce este fizica?',                        short: 'Ce este fizica?',        file: 'Modulul_1_Ce_Este_Fizica.html',                      bloc: 'Actul I — Marea idee' },
     { n: 2,  icon: '📏', title: 'Mărimi fizice și măsurare',              short: 'Mărimi fizice',          file: 'Modulul_2_Marimi_Fizice_Masurare.html',              bloc: 'Actul I — Marea idee' },
     /* Actul II — Atomii în mișcare */
-    { n: 11, icon: '🧱', title: 'Densitatea',                             short: 'Densitatea',             file: 'Modulul_11_Densitatea.html',                         bloc: 'Actul II — Atomii în mișcare' },
-    { n: 13, icon: '🌡️', title: 'Fenomene termice',                      short: 'Fenomene termice',       file: 'Modulul_13_Fenomene_Termice.html',                   bloc: 'Actul II — Atomii în mișcare' },
-    { n: 14, icon: '♨️', title: 'Calorimetria și transferul de căldură',  short: 'Calorimetrie',           file: 'Modulul_14_Calorimetria_Transfer_Caldura.html',      bloc: 'Actul II — Atomii în mișcare' },
-    { n: 12, icon: '🌊', title: 'Presiunea și statica fluidelor',         short: 'Presiune și fluide',     file: 'Modulul_12_Presiunea_Fluide.html',                   bloc: 'Actul II — Atomii în mișcare' },
+    { n: 3,  icon: '🧱', title: 'Densitatea',                             short: 'Densitatea',             file: 'Modulul_11_Densitatea.html',                         bloc: 'Actul II — Atomii în mișcare' },
+    { n: 4,  icon: '🌡️', title: 'Fenomene termice',                      short: 'Fenomene termice',       file: 'Modulul_13_Fenomene_Termice.html',                   bloc: 'Actul II — Atomii în mișcare' },
+    { n: 5,  icon: '♨️', title: 'Calorimetria și transferul de căldură',  short: 'Calorimetrie',           file: 'Modulul_14_Calorimetria_Transfer_Caldura.html',      bloc: 'Actul II — Atomii în mișcare' },
+    { n: 6,  icon: '🌊', title: 'Presiunea și statica fluidelor',         short: 'Presiune și fluide',     file: 'Modulul_12_Presiunea_Fluide.html',                   bloc: 'Actul II — Atomii în mișcare' },
     /* Actul III — Cum se mișcă lucrurile */
-    { n: 3,  icon: '🏃', title: 'Mișcarea corpurilor',                    short: 'Mișcarea corpurilor',    file: 'Modulul_3_Miscarea_Corpurilor.html',                 bloc: 'Actul III — Cum se mișcă lucrurile' },
-    { n: 4,  icon: '➡️', title: 'Mărimi scalare și vectoriale',           short: 'Mărimi vectoriale',      file: 'Modulul_4_Marimi_Vectoriale.html',                   bloc: 'Actul III — Cum se mișcă lucrurile' },
-    { n: 5,  icon: '⚖️', title: 'Inerția',                                short: 'Inerția',                file: 'Modulul_5_Inertia.html',                             bloc: 'Actul III — Cum se mișcă lucrurile' },
-    { n: 6,  icon: '💪', title: 'Tipuri de forțe',                        short: 'Tipuri de forțe',        file: 'Modulul_6_Tipuri_de_Forte.html',                     bloc: 'Actul III — Cum se mișcă lucrurile' },
-    { n: 7,  icon: '🍎', title: 'Legile lui Newton',                      short: 'Legile lui Newton',      file: 'Modulul_7_Legile_Newton.html',                       bloc: 'Actul III — Cum se mișcă lucrurile' },
+    { n: 7,  icon: '🏃', title: 'Mișcarea corpurilor',                    short: 'Mișcarea corpurilor',    file: 'Modulul_3_Miscarea_Corpurilor.html',                 bloc: 'Actul III — Cum se mișcă lucrurile' },
+    { n: 8,  icon: '➡️', title: 'Mărimi scalare și vectoriale',           short: 'Mărimi vectoriale',      file: 'Modulul_4_Marimi_Vectoriale.html',                   bloc: 'Actul III — Cum se mișcă lucrurile' },
+    { n: 9,  icon: '⚖️', title: 'Inerția',                                short: 'Inerția',                file: 'Modulul_5_Inertia.html',                             bloc: 'Actul III — Cum se mișcă lucrurile' },
+    { n: 10, icon: '💪', title: 'Tipuri de forțe',                        short: 'Tipuri de forțe',        file: 'Modulul_6_Tipuri_de_Forte.html',                     bloc: 'Actul III — Cum se mișcă lucrurile' },
+    { n: 11, icon: '🍎', title: 'Legile lui Newton',                      short: 'Legile lui Newton',      file: 'Modulul_7_Legile_Newton.html',                       bloc: 'Actul III — Cum se mișcă lucrurile' },
     /* Actul IV — Conservarea energiei */
-    { n: 8,  icon: '⚙️', title: 'Lucrul mecanic și puterea',              short: 'Lucru mecanic',          file: 'Modulul_8_Lucru_Mecanic_Putere.html',                bloc: 'Actul IV — Conservarea energiei' },
-    { n: 9,  icon: '🎢', title: 'Energia mecanică',                       short: 'Energia mecanică',       file: 'Modulul_9_Energia_Mecanica.html',                    bloc: 'Actul IV — Conservarea energiei' },
-    { n: 10, icon: '⚖️', title: 'Echilibrul corpurilor și pârghiile',     short: 'Echilibru și pârghii',   file: 'Modulul_10_Echilibru_Parghii.html',                  bloc: 'Actul IV — Conservarea energiei' },
+    { n: 12, icon: '⚙️', title: 'Lucrul mecanic și puterea',              short: 'Lucru mecanic',          file: 'Modulul_8_Lucru_Mecanic_Putere.html',                bloc: 'Actul IV — Conservarea energiei' },
+    { n: 13, icon: '🎢', title: 'Energia mecanică',                       short: 'Energia mecanică',       file: 'Modulul_9_Energia_Mecanica.html',                    bloc: 'Actul IV — Conservarea energiei' },
+    { n: 14, icon: '⚖️', title: 'Echilibrul corpurilor și pârghiile',     short: 'Echilibru și pârghii',   file: 'Modulul_10_Echilibru_Parghii.html',                  bloc: 'Actul IV — Conservarea energiei' },
     /* Actul V — Unde și lumină */
     { n: 15, icon: '🔊', title: 'Sunetul',                                short: 'Sunetul',                file: 'Modulul_15_Sunetul.html',                            bloc: 'Actul V — Unde și lumină' },
     { n: 16, icon: '🌈', title: 'Fenomene optice',                        short: 'Fenomene optice',        file: 'Modulul_16_Fenomene_Optice.html',                    bloc: 'Actul V — Unde și lumină' },
@@ -48,17 +48,21 @@
   const isIndex        = body.getAttribute('data-page') === 'index';
   const isModulesPage  = body.getAttribute('data-page') === 'modules';
   const isAboutFeynman = body.getAttribute('data-page') === 'despre-feynman';
+  const isSimulari     = body.getAttribute('data-page') === 'simulari';
+  const isAboutAuthor  = body.getAttribute('data-page') === 'despre-autor';
   const isModule       = modNum > 0;
 
   /* Indexul curent în array-ul Feynman (pentru prev/next) */
   const curIdx = MODULES.findIndex(m => m.n === modNum);
 
   /* —— Căi relative —— */
-  const isTopLevel = isIndex || isModulesPage || isAboutFeynman;
-  function modHref(file)  { return isTopLevel ? 'modules/' + file : file; }
-  function homeHref()     { return isTopLevel ? 'index.html'          : '../index.html'; }
-  function aboutHref()    { return isTopLevel ? 'despre-feynman.html' : '../despre-feynman.html'; }
-  function modulesHref()  { return isTopLevel ? 'modules.html'        : '../modules.html'; }
+  const isTopLevel = isIndex || isModulesPage || isAboutFeynman || isSimulari || isAboutAuthor;
+  function modHref(file)      { return isTopLevel ? 'modules/' + file : file; }
+  function homeHref()         { return isTopLevel ? 'index.html'          : '../index.html'; }
+  function aboutHref()        { return isTopLevel ? 'despre-feynman.html' : '../despre-feynman.html'; }
+  function modulesHref()      { return isTopLevel ? 'modules.html'        : '../modules.html'; }
+  function simulariHref()     { return isTopLevel ? 'simulari.html'       : '../simulari.html'; }
+  function authorHref()       { return 'https://mate-fizica.eu'; }
 
   /* ================================================
      1. NAVBAR GLOBALĂ
@@ -91,10 +95,13 @@
         <span class="drop-icon">👨‍🔬</span>
         <span class="drop-title">Despre Feynman</span>
       </a>
-      <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/"
-         class="drop-mobile-link" target="_blank" rel="noopener noreferrer">
+      <a href="${simulariHref()}" class="drop-mobile-link">
         <span class="drop-icon">🧪</span>
-        <span class="drop-title">Simulări interactive</span>
+        <span class="drop-title">Playground</span>
+      </a>
+      <a href="${authorHref()}" target="_blank" rel="noopener noreferrer" class="drop-mobile-link">
+        <span class="drop-icon">✍️</span>
+        <span class="drop-title">Despre autor</span>
       </a>`;
 
     nav.innerHTML = `
@@ -113,9 +120,9 @@
             ${mobileLinksHTML}
           </div>
         </div>
+        <a href="${simulariHref()}" class="site-nav__simulari">Playground</a>
         <a href="${aboutHref()}" class="site-nav__despre-feynman">Despre Feynman</a>
-        <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/"
-           class="site-nav__simulari" target="_blank" rel="noopener noreferrer">Simulări</a>
+        <a href="${authorHref()}" target="_blank" rel="noopener noreferrer" class="site-nav__despre-autor">Despre autor</a>
         <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
       </div>`;
 

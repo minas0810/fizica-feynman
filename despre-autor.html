@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre autor | Fizica lui Feynman</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <meta name="description" content="Mihai Victor Nasta — profesor de fizică, formator autorizat și specialist în coaching. Meditații personalizate la fizică și matematică pentru Evaluarea Națională și Bacalaureat, cercuri de experimentare, formare profesori și modelare informatică a fenomenelor fizice.">
+    <script src="js/nav.js" defer></script>
+    <style>
+        /* ——— HERO ——— */
+        .author-hero {
+            background: linear-gradient(145deg, #0f2d4a 0%, #1F4E79 50%, #2E75B6 100%);
+            color: #fff;
+            padding: 4.5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .author-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(90,180,255,0.13) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .author-hero__eyebrow {
+            font-size: 0.73rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            opacity: 0.65;
+            margin-bottom: 1.4rem;
+        }
+        .author-hero__title {
+            font-size: 2.7rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            color: #fff;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+            text-shadow: 0 2px 14px rgba(0,0,0,0.25);
+        }
+        .author-hero__title span {
+            color: #E8A000;
+        }
+        .author-hero__sub {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            opacity: 0.88;
+            max-width: 640px;
+            margin: 0 auto 2.4rem;
+        }
+        .author-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: #E8A000;
+            color: #1F4E79;
+            padding: 0.9rem 2.4rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: 0.01em;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .author-hero__cta:hover {
+            background: #d09000;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 22px rgba(0,0,0,0.28);
+        }
+
+        /* ——— BIO ——— */
+        .author-bio {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 1rem;
+        }
+        .author-bio h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1F4E79;
+            margin-bottom: 1.2rem;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+            text-align: center;
+        }
+        .author-bio p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #3a4a5a;
+            margin-bottom: 1.1rem;
+        }
+        .author-bio p strong { color: #1F4E79; }
+
+        .author-credentials {
+            max-width: 820px;
+            margin: 1.5rem auto 0;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .credential-badge {
+            background: #F0F5FB;
+            color: #1F4E79;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid #d9e5f0;
+        }
+
+        /* ——— SERVICII ——— */
+        .author-services {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 3rem;
+        }
+        .author-services__heading {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #1F4E79;
+            margin-bottom: 0.6rem;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+        }
+        .author-services__sub {
+            text-align: center;
+            color: #6C757D;
+            margin-bottom: 2.4rem;
+            font-size: 0.98rem;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.4rem;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.22s, box-shadow 0.22s;
+            border-top: 4px solid #2E75B6;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+        .service-card__header {
+            padding: 1.3rem 1.4rem 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+        .service-card__icon {
+            font-size: 2.1rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .service-card__title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #1F4E79;
+            line-height: 1.3;
+        }
+        .service-card__body {
+            padding: 0.4rem 1.4rem 1.4rem;
+        }
+        .service-card__desc {
+            font-size: 0.92rem;
+            color: #555;
+            line-height: 1.65;
+            margin-bottom: 0.9rem;
+        }
+        .service-card__audience {
+            font-size: 0.78rem;
+            color: #1F4E79;
+            font-weight: 600;
+            background: #F0F5FB;
+            display: inline-block;
+            padding: 0.25rem 0.7rem;
+            border-radius: 10px;
+        }
+
+        /* ——— APPROACH ——— */
+        .author-approach {
+            background: #F8FAFC;
+            padding: 3.5rem 2rem;
+        }
+        .author-approach__inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .author-approach h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1F4E79;
+            margin-bottom: 1rem;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+        }
+        .author-approach__lead {
+            font-size: 1.05rem;
+            color: #3a4a5a;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 2.4rem;
+        }
+        .approach-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.4rem;
+            margin-top: 1.5rem;
+        }
+        .approach-pillar {
+            background: #fff;
+            padding: 1.6rem 1.4rem;
+            border-radius: 10px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .approach-pillar__icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.7rem;
+            display: block;
+        }
+        .approach-pillar__title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1F4E79;
+            margin-bottom: 0.4rem;
+        }
+        .approach-pillar__text {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.65;
+        }
+
+        /* ——— CONTACT ——— */
+        .author-contact {
+            background: linear-gradient(135deg, #1F4E79, #2E75B6);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .author-contact__label {
+            font-size: 0.73rem;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            opacity: 0.55;
+            margin-bottom: 1rem;
+        }
+        .author-contact h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            border: none;
+            padding: 0;
+            margin: 0 0 0.9rem;
+        }
+        .author-contact p {
+            font-size: 1rem;
+            opacity: 0.85;
+            max-width: 520px;
+            margin: 0 auto 2.2rem;
+            line-height: 1.7;
+        }
+        .contact-channels {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #E8A000;
+            color: #1F4E79;
+            padding: 0.9rem 1.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .contact-btn:hover {
+            background: #d09000;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 22px rgba(0,0,0,0.28);
+        }
+        .contact-btn--ghost {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.35);
+            box-shadow: none;
+        }
+        .contact-btn--ghost:hover {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border-color: rgba(255,255,255,0.6);
+            box-shadow: none;
+        }
+
+        /* ——— RESPONSIVE ——— */
+        @media (max-width: 768px) {
+            .author-hero { padding: 3rem 1.5rem 3rem; }
+            .author-hero__title { font-size: 2rem; }
+            .author-bio, .author-services { padding-left: 1.2rem; padding-right: 1.2rem; }
+        }
+        @media (max-width: 480px) {
+            .author-hero__title { font-size: 1.7rem; }
+            .service-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body data-page="despre-autor">
+
+    <nav class="site-nav"></nav>
+
+    <!-- Hero -->
+    <section class="author-hero">
+        <div>
+            <p class="author-hero__eyebrow">Profesor · Formator · Coach</p>
+            <h1 class="author-hero__title">De la atomi la elevi,<br>cu aceeași <span>curiozitate</span></h1>
+            <p class="author-hero__sub">Inginer-fizician, formator autorizat și specialist în coaching educațional. <br>Construiesc punți între concepte abstracte și elevi reali — prin discuții focusate, experimente practice și instrumente digitale moderne.</p>
+            <a href="#contact" class="author-hero__cta">
+                <span>📩</span>
+                Hai să vorbim
+            </a>
+        </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="author-bio">
+        <h2>Cine sunt</h2>
+        <p>
+            Absolvent al Facultății de Fizică, inginer-fizician, cu experiență reală în activități de producție, management, consultanță software și formare corporativă — parcurs profesional care m-a învățat să traduc concepte tehnice pentru audiențe foarte diferite, cu un larg spectru de vârste și profesii.
+        </p>
+        <p>
+            Din 2025 m-am întors la prima pasiune, <strong>fizica</strong>, acest website reprezentând un proiect educațional inspirat de prima mea interacțiune, ca <strong>profesor de fizică</strong>, cu programa școlară și sistemul de învățământ. 
+            Totodată, sunt <strong>formator autorizat</strong> și <strong>specialist în coaching</strong>, certificat de Ministerul Muncii și Solidarității Sociale, domenii care completează și extind într-un mod integrator activitatea de predare la catedră.
+        </p>
+        <p>
+            Cred că <strong>fizica</strong> nu este o materie aridă, ci <em>o poveste despre cum este construită lumea</em>. Iar <strong>matematica</strong> nu este un set de reguli, ci <em>limba în care această poveste poate fi spusă cu precizie</em>. 
+        </p>
+        <p>
+            <strong>Misiunea mea</strong> — fie că lucrez cu un elev, cu un grup de cursanți sau cu o clasă întreagă — este să fac diferența dintre <em>a memora</em> și <em>a înțelege</em>, dintre <em>a reproduce</em> și <em>a descoperi</em>, dintre <em>a aplica mecanic</em> și <em>a gândi creativ</em>. 
+        </p>
+
+        <div class="author-credentials">
+            <span class="credential-badge">Profesor fizică</span>
+            <span class="credential-badge">Formator autorizat </span>
+            <span class="credential-badge">Specialist coaching </span>
+        </div>
+    </section>
+
+    <!-- Servicii -->
+    <section class="author-services">
+        <h2 class="author-services__heading">Ce ofer</h2>
+        <p class="author-services__sub">Servicii educaționale personalizate, adaptate vârstei, nivelului și obiectivelor fiecărui cursant sau grup de cursanți, față în față sau/și online.</p>
+
+        <div class="service-grid">
+
+            <!-- Meditații fizică -->
+            <div class="service-card">
+                <div class="service-card__header">
+                    <span class="service-card__icon">⚛️</span>
+                    <span class="service-card__title">Pregătire la fizică</span>
+                </div>
+                <div class="service-card__body">
+                    <p class="service-card__desc">
+                        Pregătire individuală sau în grup mic — de la fixarea noțiunilor de bază până la rezolvarea problemelor avansate. Metoda pleacă mereu de la <em>de ce funcționează</em>, nu de la <em>ce formulă se aplică</em>.
+                    </p>
+                    <span class="service-card__audience">Gimnaziu · Liceu</span>
+                </div>
+            </div>
+
+            <!-- Meditații matematică -->
+            <div class="service-card">
+                <div class="service-card__header">
+                    <span class="service-card__icon">📐</span>
+                    <span class="service-card__title">Pregătire la matematică</span>
+                </div>
+                <div class="service-card__body">
+                    <p class="service-card__desc">
+                        Algebră, analiză, geometrie — abordate ca instrument de modelare a realității, nu ca exercițiu mecanic. Ritm și conținut calibrate pe punctele slabe ale fiecărui elev.
+                    </p>
+                    <span class="service-card__audience">Gimnaziu · Liceu</span>
+                </div>
+            </div>
+
+            <!-- Evaluare națională / BAC -->
+            <div class="service-card">
+                <div class="service-card__header">
+                    <span class="service-card__icon">🎯</span>
+                    <span class="service-card__title">Evaluarea Națională &amp; Bacalaureat</span>
+                </div>
+                <div class="service-card__body">
+                    <p class="service-card__desc">
+                        Plan de pregătire personalizat după diagnoza inițială: ce știe elevul, ce îl blochează, ce trebuie consolidat. Simulări periodice și antrenament pe subiecte de tip examen.
+                    </p>
+                    <span class="service-card__audience">Clasele VIII și XII</span>
+                </div>
+            </div>
+
+            <!-- Coaching educațional -->
+            <div class="service-card">
+                <div class="service-card__header">
+                    <span class="service-card__icon">🧭</span>
+                    <span class="service-card__title">Coaching educațional</span>
+                </div>
+                <div class="service-card__body">
+                    <p class="service-card__desc">
+                        Sesiuni 1-la-1 pentru elevi și părinți: gestionarea anxietății de examen, organizarea timpului de învățare, alegerea unui parcurs școlar și profesional realist.
+                    </p>
+                    <span class="service-card__audience">Elevi · Părinți</span>
+                </div>
+            </div>
+
+            <!-- Formare profesori -->
+            <div class="service-card">
+                <div class="service-card__header">
+                    <span class="service-card__icon">👨‍🏫</span>
+                    <span class="service-card__title">Formare profesori</span>
+                </div>
+                <div class="service-card__body">
+                    <p class="service-card__desc">
+                        Cursuri practice pentru cadre didactice: integrarea instrumentelor AI în pregătirea lecțiilor și evaluare, crearea de resurse digitale și simulări interactive, gestionare portofoliu digital.
+                    </p>
+                    <span class="service-card__audience">Profesori · Școli</span>
+                </div>
+            </div>
+
+            <!-- Cercuri experimentare -->
+            <div class="service-card">
+                <div class="service-card__header">
+                    <span class="service-card__icon">🔬</span>
+                    <span class="service-card__title">Cercuri de experimentare</span>
+                </div>
+                <div class="service-card__body">
+                    <p class="service-card__desc">
+                        Ateliere extracurriculare în care elevii construiesc, măsoară și descoperă singuri legile fizicii — cu materiale ieftine, accesibile, dar cu rigoare științifică.
+                    </p>
+                    <span class="service-card__audience">Gimnaziu</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Abordare -->
+    <section class="author-approach">
+        <div class="author-approach__inner">
+            <h2>Cum lucrez</h2>
+            <p class="author-approach__lead">
+                Trei principii ghidează conceperea fiecărei lecții de pregătire și fiecărui curs de formare.
+            </p>
+
+            <div class="approach-pillars">
+                <div class="approach-pillar">
+                    <span class="approach-pillar__icon">🎯</span>
+                    <h3 class="approach-pillar__title">Personalizare reală</h3>
+                    <p class="approach-pillar__text">Fiecare elev pleacă de la nivelul lui actual, nu de la presupuneri. Prima ședință este o diagnoză — ce stăpânește, ce nu, unde apar blocaje.</p>
+                </div>
+                <div class="approach-pillar">
+                    <span class="approach-pillar__icon">🔬</span>
+                    <h3 class="approach-pillar__title">De la fenomen la formulă</h3>
+                    <p class="approach-pillar__text">Conceptele se construiesc dinspre realitate spre abstracție: experiment, intuiție, raționament și abia apoi formalismul matematic.</p>
+                </div>
+                <div class="approach-pillar">
+                    <span class="approach-pillar__icon">🤖</span>
+                    <h3 class="approach-pillar__title">Clasic și digital, împreună</h3>
+                    <p class="approach-pillar__text">Vizualizarea, simularea interactivă și AI-ul conversațional acompaniază tabla și creionul, ca parteneri de studiu. Instrumentele noi servesc înțelegerea, nu o înlocuiesc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="author-contact">
+        <p class="author-contact__label">Contact</p>
+        <h2>Hai să discutăm</h2>
+        <p>Indiferent dacă ești elev, părinte, profesor sau reprezentant al unei școli — prima conversație este gratuită și fără angajament. Stabilim împreună dacă pot fi de folos.</p>
+        <div class="contact-channels">
+            <a href="mailto:minas0810@gmail.com" class="contact-btn">
+                <span>✉️</span>
+                minas0810@gmail.com
+            </a>
+            <a href="tel:+40736554555" class="contact-btn contact-btn--ghost">
+                <span>📞</span>
+                +40 736 554 555
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe<br>Prelegerile lui Richard Feynman.</p>
+                <p class="footer-credit">Made with ❤️ and <img src="Images/favicon.ico" alt="Claude" class="footer-claude-logo"></p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="index.html">Acasă</a>
+                <a href="modules.html">Module</a>
+                <a href="simulari.html">Playground</a>
+                <a href="despre-feynman.html">Despre Feynman</a>
+                <a href="https://mate-fizica.eu" target="_blank" rel="noopener noreferrer">Despre autor</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+
+</body>
+</html>

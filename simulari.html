@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulări Interactive | Fizica lui Feynman</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <meta name="description" content="Feynman Physics Playground — simulări interactive de fizică pentru gimnaziu: mecanică, structura materiei, optică și electricitate.">
+    <script src="js/nav.js" defer></script>
+    <style>
+        /* ——— PLAYGROUND PAGE ——— */
+        .playground-hero {
+            background: linear-gradient(145deg, #0f2d4a 0%, #1F4E79 50%, #2E75B6 100%);
+            color: #fff;
+            padding: 4.5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .playground-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 40%, rgba(90,180,255,0.13) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .playground-hero__eyebrow {
+            font-size: 0.73rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 1.4rem;
+        }
+        .playground-hero__title {
+            font-size: 2.7rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            color: #fff;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+            text-shadow: 0 2px 14px rgba(0,0,0,0.25);
+        }
+        .playground-hero__title span {
+            color: #E8A000;
+        }
+        .playground-hero__sub {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            opacity: 0.88;
+            max-width: 620px;
+            margin: 0 auto 2.8rem;
+        }
+        .playground-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: #E8A000;
+            color: #1F4E79;
+            padding: 0.9rem 2.4rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: 0.01em;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .playground-hero__cta:hover {
+            background: #d09000;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 22px rgba(0,0,0,0.28);
+        }
+        .playground-hero__cta-icon {
+            font-size: 1.2rem;
+        }
+
+        /* ——— INTRO ——— */
+        .playground-intro {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 1rem;
+            text-align: center;
+        }
+        .playground-intro p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #3a4a5a;
+        }
+
+        /* ——— MODULE CARDS ——— */
+        .playground-modules {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 3rem;
+        }
+        .playground-modules__heading {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1F4E79;
+            margin-bottom: 0.5rem;
+            border: none;
+            padding: 0;
+            margin-top: 0;
+        }
+        .playground-modules__sub {
+            text-align: center;
+            color: #6C757D;
+            margin-bottom: 2.2rem;
+            font-size: 0.95rem;
+        }
+        .sim-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.4rem;
+        }
+        .sim-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.22s, box-shadow 0.22s;
+        }
+        .sim-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+        .sim-card__header {
+            padding: 1.3rem 1.4rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            border-bottom: 1px solid #eef0f3;
+        }
+        .sim-card__icon {
+            font-size: 2.1rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .sim-card__title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1F4E79;
+        }
+        .sim-card__body {
+            padding: 1rem 1.4rem 1.3rem;
+        }
+        .sim-card__desc {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+        .sim-card__pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+        .sim-pill {
+            background: #F0F5FB;
+            color: #1F4E79;
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 0.18rem 0.6rem;
+            border-radius: 10px;
+        }
+
+        /* ——— BOTTOM CTA ——— */
+        .playground-cta {
+            background: linear-gradient(135deg, #1F4E79, #2E75B6);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .playground-cta__label {
+            font-size: 0.73rem;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            opacity: 0.55;
+            margin-bottom: 1rem;
+        }
+        .playground-cta h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            border: none;
+            padding: 0;
+            margin: 0 0 0.9rem;
+        }
+        .playground-cta p {
+            font-size: 1rem;
+            opacity: 0.82;
+            max-width: 520px;
+            margin: 0 auto 2.2rem;
+            line-height: 1.7;
+        }
+        .playground-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #E8A000;
+            color: #1F4E79;
+            padding: 0.95rem 2.6rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.08rem;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .playground-cta__btn:hover {
+            background: #d09000;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 22px rgba(0,0,0,0.28);
+        }
+        .playground-cta__note {
+            margin-top: 1.1rem;
+            font-size: 0.8rem;
+            opacity: 0.45;
+        }
+
+        /* ——— RESPONSIVE ——— */
+        @media (max-width: 768px) {
+            .playground-hero { padding: 3rem 1.5rem 3rem; }
+            .playground-hero__title { font-size: 2rem; }
+            .playground-modules { padding: 2rem 1.2rem 2.5rem; }
+        }
+        @media (max-width: 480px) {
+            .playground-hero__title { font-size: 1.65rem; }
+            .sim-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body data-page="simulari">
+
+    <nav class="site-nav"></nav>
+
+    <!-- Hero -->
+    <section class="playground-hero">
+        <div>
+            <p class="playground-hero__eyebrow">Feynman Physics Playground · Laborator Digital</p>
+            <h1 class="playground-hero__title">Fizica pe care<br>o <span>poți vedea</span></h1>
+            <p class="playground-hero__sub">O platformă interactivă în care legile naturii nu se citesc — se observă. Ajustezi parametrii, rulezi experimentul, înțelegi.</p>
+            <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/"
+               target="_blank" rel="noopener noreferrer"
+               class="playground-hero__cta">
+                <span class="playground-hero__cta-icon">🧪</span>
+                Deschide Playground-ul
+            </a>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="playground-intro">
+        <p>
+            <strong>Feynman Physics Playground</strong> este o platformă educațională interactivă concepută pentru a transforma conceptele fundamentale ale fizicii din formule matematice în experiențe vizuale vii și intuitive. Inspirată de stilul pedagogic inconfundabil al lui Richard Feynman, aplicația pune accent pe experiment și observație directă, oferind posibilitatea de a <em>„vedea"</em> legile naturii la lucru.
+        </p>
+    </section>
+
+    <!-- Module de simulare -->
+    <section class="playground-modules">
+        <h2 class="playground-modules__heading">Module de simulare</h2>
+        <p class="playground-modules__sub">Patru domenii, șapte experimente — fiecare îmbogățit cu explicații contextuale și citate din <em>The Feynman Lectures on Physics</em>. <br><strong>Playground</strong>-ul, complementar acestui website, este încă în dezvoltare, periodic adăugându-se noi module.</p>
+
+        <div class="sim-grid">
+
+            <!-- Mecanică -->
+            <div class="sim-card">
+                <div class="sim-card__header">
+                    <span class="sim-card__icon">⚙️</span>
+                    <span class="sim-card__title">Mecanică și Dinamică</span>
+                </div>
+                <div class="sim-card__body">
+                    <p class="sim-card__desc">
+                        Explorează descompunerea vectorilor pe <strong>Planul Înclinat</strong> sau recrează <strong>Experimentul lui Galilei</strong> pentru a înțelege conservarea energiei mecanice. Ajustează unghiuri, mase și coeficientul de frecare — grafice în timp real pentru energia cinetică și potențială.
+                    </p>
+                    <div class="sim-card__pills">
+                        <span class="sim-pill">Planul înclinat</span>
+                        <span class="sim-pill">Conservarea energiei</span>
+                        <span class="sim-pill">Frecare</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Structura materiei -->
+            <div class="sim-card">
+                <div class="sim-card__header">
+                    <span class="sim-card__icon">⚛️</span>
+                    <span class="sim-card__title">Structura Materiei</span>
+                </div>
+                <div class="sim-card__body">
+                    <p class="sim-card__desc">
+                        Incursiuni în lumea microscopică prin modulele de <strong>Agitație Termică</strong> și <strong>Structura Atomului</strong>. Observă cum temperatura modulează viteza atomilor și cum se modifică legăturile de hidrogen în apă pe parcursul celor trei stări de agregare.
+                    </p>
+                    <div class="sim-card__pills">
+                        <span class="sim-pill">Agitație termică</span>
+                        <span class="sim-pill">Structura atomului</span>
+                        <span class="sim-pill">Stări de agregare</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optică -->
+            <div class="sim-card">
+                <div class="sim-card__header">
+                    <span class="sim-card__icon">🌈</span>
+                    <span class="sim-card__title">Optică Geometrică</span>
+                </div>
+                <div class="sim-card__body">
+                    <p class="sim-card__desc">
+                        Simularea propagării razei de lumină explică fenomenele de <strong>reflexie și refracție</strong>. Prin manipularea indicilor de refracție (aer, apă, sticlă, diamant), poți verifica Legea lui Snell și observa fenomenul spectaculos al <strong>reflexiei totale</strong>.
+                    </p>
+                    <div class="sim-card__pills">
+                        <span class="sim-pill">Reflexie</span>
+                        <span class="sim-pill">Refracție</span>
+                        <span class="sim-pill">Legea lui Snell</span>
+                        <span class="sim-pill">Reflexie totală</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electricitate -->
+            <div class="sim-card">
+                <div class="sim-card__header">
+                    <span class="sim-card__icon">⚡</span>
+                    <span class="sim-card__title">Electricitate și Circuite</span>
+                </div>
+                <div class="sim-card__body">
+                    <p class="sim-card__desc">
+                        Modulul dedicat <strong>Legii lui Ohm</strong> permite construcția virtuală a circuitelor cu rezistori în serie și paralel. Vizualizarea dinamică a fluxului de electroni ajută la înțelegerea modului în care curentul se divide în ramificații și cum rezistența echivalentă variază cu configurația.
+                    </p>
+                    <div class="sim-card__pills">
+                        <span class="sim-pill">Legea lui Ohm</span>
+                        <span class="sim-pill">Circuite serie</span>
+                        <span class="sim-pill">Circuite paralel</span>
+                        <span class="sim-pill">Flux de electroni</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="playground-cta">
+        <h2>Gata să experimentezi?</h2>
+        <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/"
+           target="_blank" rel="noopener noreferrer"
+           class="playground-cta__btn">
+            <span>🚀</span>
+            Lansează Feynman Playground
+        </a>
+        <p class="playground-cta__note"><em>Se deschide într-o fereastră nouă</em></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe<br>Prelegerile lui Richard Feynman.</p>
+                <p class="footer-credit">Made with ❤️ and <img src="Images/favicon.ico" alt="Claude" class="footer-claude-logo"></p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="index.html">Acasă</a>
+                <a href="modules.html">Module</a>
+                <a href="simulari.html">Playground</a>
+                <a href="despre-feynman.html">Despre Feynman</a>
+                <a href="https://mate-fizica.eu" target="_blank" rel="noopener noreferrer">Despre autor</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+
+</body>
+</html>
