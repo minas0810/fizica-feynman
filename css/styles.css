@@ -391,6 +391,54 @@ blockquote {
 }
 blockquote p { margin: 0; }
 
+/* ——— FEYNMAN QUOTE — citat cu atribuire vizibilă ——— */
+.feynman-quote {
+    position: relative;
+    background: linear-gradient(180deg, #FFFBF0 0%, #FFF6E0 100%);
+    border-left: 5px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    margin: 22px 0;
+    padding: 22px 28px 18px 56px;
+    font-style: italic;
+    color: #3D3D3D;
+    font-size: 1.02em;
+    line-height: 1.6;
+    box-shadow: 0 1px 3px rgba(31, 78, 121, 0.06);
+}
+.feynman-quote::before {
+    content: "\201E";
+    position: absolute;
+    left: 14px;
+    top: 4px;
+    font-size: 3.4rem;
+    font-style: normal;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.55;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+.feynman-quote p {
+    margin: 0;
+}
+.feynman-quote p + p {
+    margin-top: 10px;
+}
+.feynman-quote footer {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(31, 78, 121, 0.2);
+    font-style: normal;
+    font-size: 0.85em;
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-align: right;
+}
+.feynman-quote footer em {
+    font-style: italic;
+    font-weight: 400;
+    color: #6C757D;
+}
+
 /* ——— TABLES ——— */
 table {
     width: 100%;

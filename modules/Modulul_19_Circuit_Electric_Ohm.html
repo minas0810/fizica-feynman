@@ -41,21 +41,23 @@
 
 <h2>Citatul fundamental — Electronii în conductor</h2>
 
-<blockquote>
+<blockquote class="feynman-quote">
     <p>„Rezistența electrică este cauzată de electronii care se ciocnesc de atomii conductorului. Electronii se deplasează lent prin fir — la milimetri pe secundă — dar câmpul electric se propagă aproape cu viteza luminii. Când apeși un întrerupător, câmpul se reorganizează în întreg circuitul aproape instantaneu."</p>
+    <footer>— Richard Feynman, <em>Vol. II, Cap. 32 — Refractive Index of Dense Materials</em></footer>
 </blockquote>
 
 <h2>Analogia hidraulică a lui Feynman</h2>
 
-<blockquote>
+<blockquote class="feynman-quote">
     <p>„Circuitele electrice sunt strâns analoge circuitelor de apă. Tensiunea e ca presiunea — forța motrice. Curentul e ca debitul apei. Rezistența e ca îngustimea conductei. Legea lui Ohm, U=RI, devine complet evidentă din analogie."</p>
+    <footer>— Richard Feynman, <em>Vol. II, Cap. 22 — AC Circuits</em></footer>
 </blockquote>
 
 <div class="info-box">
     <strong>Ideea centrală:</strong> Tensiunea (U) „împinge" electronii; curentul (I) e fluxul de electroni; rezistența (R) e opoziția la curgere. Legea lui Ohm leagă toate trei: U = R·I.
 </div>
 
-<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+<h1>2. EXPLICAȚII PENTRU ELEVI</h1>
 
 <h2>Tensiunea electrică (U)</h2>
 
@@ -84,7 +86,7 @@
 
 <p><strong>Rezistența electrică</strong> este opoziția unui conductor la trecerea curentului. Se măsoară în <strong>Ohm (Ω)</strong>.</p>
 
-<p>Rezistența unui conductor depinde de:</p>
+<p>Rezistența unui conductor depinde calitativ de:</p>
 <table>
     <tr>
         <th>Factor</th>
@@ -96,10 +98,7 @@
     <tr><td>Temperatura mai mare</td><td>R crește (atomii vibrează mai tare → mai multe ciocniri)</td></tr>
 </table>
 
-<div class="formula-box">
-    $$R = \rho \cdot \frac{l}{A}$$
-</div>
-<p>unde ρ (rho) = rezistivitatea materialului (Ω·m)</p>
+<p><em>Pentru gimnaziu, rezistența se măsoară experimental cu ohmmetrul (vezi mai jos). Formula cantitativă care leagă R de proprietățile geometrice și de material (R = ρ·l/A) este o extindere pentru liceu — vezi Nivel 3.</em></p>
 
 <h2>Legea lui Ohm</h2>
 
@@ -111,6 +110,57 @@
     <strong>Mnemotehnică — Triunghiul lui Ohm:</strong><br>
     Acoperă mărimea dorită → formula apare automat:<br>
     Acoperă U → U = R·I &nbsp;|&nbsp; Acoperă I → I = U/R &nbsp;|&nbsp; Acoperă R → R = U/I
+</div>
+
+<h2>Instrumente de măsură electrice</h2>
+
+<p>Pentru a verifica experimental legea lui Ohm și pentru a studia circuitele, avem nevoie de patru instrumente — fiecare măsoară o mărime distinctă:</p>
+
+<table>
+    <tr>
+        <th>Instrument</th>
+        <th>Ce măsoară</th>
+        <th>Unitate</th>
+        <th>Conectare</th>
+    </tr>
+    <tr>
+        <td><strong>Ampermetru</strong></td>
+        <td>Intensitatea curentului electric I</td>
+        <td>amper (A)</td>
+        <td>În <em>serie</em> cu elementul (toți electronii trebuie să treacă prin el — rezistența proprie foarte mică)</td>
+    </tr>
+    <tr>
+        <td><strong>Voltmetru</strong></td>
+        <td>Tensiunea electrică U între două puncte</td>
+        <td>volt (V)</td>
+        <td>În <em>paralel</em> cu elementul (rezistența proprie foarte mare, ca să nu „fure" curent)</td>
+    </tr>
+    <tr>
+        <td><strong>Ohmmetru</strong></td>
+        <td>Rezistența electrică R a unui element</td>
+        <td>ohm (Ω)</td>
+        <td>Pe element <em>scos din circuit</em> (instrumentul își furnizează singur o tensiune mică și măsoară curentul rezultat)</td>
+    </tr>
+    <tr>
+        <td><strong>Wattmetru</strong></td>
+        <td>Puterea electrică P consumată de un element</td>
+        <td>watt (W)</td>
+        <td>Are <em>patru borne</em> — două în serie (pentru I) și două în paralel (pentru U), pe care le multiplică intern: P = U·I</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Multimetrul — instrumentul universal:</strong> Un multimetru (analogic sau digital) combină ampermetrul, voltmetrul și ohmmetrul într-o singură carcasă, cu un comutator care alege funcția. Multimetrele moderne măsoară și capacitatea, frecvența, temperatura sau verifică diodele și tranzistorii. În laboratorul de fizică al școlii, multimetrul digital este instrumentul de bază — practic, înlocuiește celelalte trei.
+</div>
+
+<div class="info-box">
+    <strong>Reguli de aur ale conectării:</strong>
+    <ul>
+        <li>Ampermetrul <em>niciodată</em> direct pe baterie (scurtcircuit — se arde!).</li>
+        <li>Voltmetrul <em>niciodată</em> în serie cu un consumator (nu mai curge curent).</li>
+        <li>Ohmmetrul <em>niciodată</em> pe un element sub tensiune (instrumentul se arde).</li>
+        <li>Înainte de a măsura, alege o scară adecvată — de la cea mai mare la cea mai mică.</li>
+    </ul>
 </div>
 
 <h2>Concepții greșite frecvente</h2>
@@ -265,7 +315,6 @@
 
 <div class="formula-box">
     Legea lui Ohm: $U = R \cdot I$<br><br>
-    Rezistivitate: $R = \rho \cdot l/A$<br><br>
     Curentul: $I = q/t$
 </div>
 
@@ -279,7 +328,18 @@
     <div class="result">Curentul prin bec = 0,5 A; Puterea = 115 W</div>
 </div>
 
-<h3>Rezistivitatea unor materiale:</h3>
+<h2>Nivel 3 — Extindere</h2>
+
+<h3>Rezistivitatea materialelor (pregătire pentru liceu):</h3>
+
+<p><em>Notă: formula R = ρ·l/A nu apare în programa de gimnaziu — la cls. VIII se cere doar relația U = R·I. Subiectul e introdus aici doar pentru elevii care vor să înțeleagă <em>de ce</em> rezistența depinde de material, lungime și secțiune.</em></p>
+
+<div class="formula-box">
+    $$R = \rho \cdot \frac{l}{A}$$
+</div>
+
+<p>unde ρ (rho) = rezistivitatea materialului (Ω·m). Cu cât ρ e mai mic, cu atât materialul conduce mai bine.</p>
+
 <table>
     <tr>
         <th>Material</th>
@@ -294,8 +354,6 @@
     <tr><td>Sticlă</td><td>~10¹²</td><td>Izolator</td></tr>
 </table>
 
-<h2>Nivel 3 — Extindere</h2>
-
 <h3>Legea lui Ohm pentru circuitul complet (cu rezistența internă):</h3>
 <div class="formula-box">
     $$I = \frac{E}{R + r} \qquad U_{borne} = E - I \cdot r$$
@@ -303,8 +361,9 @@
 <p>unde E = tensiunea electromotoare (fem), r = rezistența internă a sursei.</p>
 
 <h3>Feynman despre conducție:</h3>
-<blockquote>
+<blockquote class="feynman-quote">
     <p>„Rezistivitatea unui metal crește cu temperatura deoarece atomii vibrează mai mult, împrăștiind mai frecvent electronii de conducție. La temperaturi scăzute, unele metale devin supraconductoare — rezistență zero, conductivitate perfectă."</p>
+    <footer>— Richard Feynman, <em>Vol. III, Cap. 13 — Semiconductors</em></footer>
 </blockquote>
 
 <h1>6. VERIFICAREA ÎNȚELEGERII</h1>
@@ -419,7 +478,7 @@
         $U = R \cdot I$ &nbsp;&nbsp; (sau I=U/R, sau R=U/I)
     </div>
 
-    <h3>REZISTIVITATE:</h3>
+    <h3>REZISTIVITATE (extindere — liceu):</h3>
     <div class="formula-box">
         $R = \rho \cdot l/A$
     </div>

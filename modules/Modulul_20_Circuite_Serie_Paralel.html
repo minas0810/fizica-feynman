@@ -41,21 +41,23 @@
 
 <h2>Citatul fundamental — Simplitatea legilor circuitelor</h2>
 
-<blockquote>
+<blockquote class="feynman-quote">
     <p>„Marea frumusețe a teoriei circuitelor este că două reguli simple — legea curentului și legea tensiunii lui Kirchhoff — pot rezolva orice rețea electrică, oricât de complexă. Toate circuitele elaborate ale electronicii moderne ascultă în final aceste două reguli, derivate direct din conservarea sarcinii și conservarea energiei."</p>
+    <footer>— Richard Feynman, <em>Vol. II, Cap. 22 — AC Circuits</em></footer>
 </blockquote>
 
 <h2>De ce instalațiile electrice casnice sunt în paralel</h2>
 
-<blockquote>
+<blockquote class="feynman-quote">
     <p>„Casele sunt conectate în paralel pentru ca fiecare dispozitiv să primească tensiunea completă de alimentare și să funcționeze independent. Dacă un bec se arde, celelalte continuă să funcționeze. Conectarea în serie ar fi atât ineficientă cât și impractică pentru uz casnic."</p>
+    <footer>— Richard Feynman, <em>Vol. II, Cap. 22 — AC Circuits</em></footer>
 </blockquote>
 
 <div class="info-box">
     <strong>Ideea centrală:</strong> Circuitul serie = singur drum pentru curent; circuitul paralel = mai multe drumuri. Alegerea tipului de circuit determină cum se împart tensiunea și curentul între componente.
 </div>
 
-<h1>2. TRADUCEREA PENTRU ELEVI</h1>
+<h1>2. EXPLICAȚII PENTRU ELEVI</h1>
 
 <h2>Circuitul serie</h2>
 
@@ -126,6 +128,41 @@
 <p><strong>Legea II (a ochiurilor):</strong> Suma algebrică a tensiunilor pe un ochi de circuit = 0.</p>
 <div class="formula-box">
     $\sum U = 0$ &nbsp; (conservarea energiei)
+</div>
+
+<h2>Gruparea generatoarelor identice</h2>
+
+<p>Nu doar rezistoarele pot fi conectate în serie sau paralel — și generatoarele (bateriile, acumulatoarele) pot fi grupate, fiecare grupare având efecte distincte. Considerăm n generatoare identice, fiecare cu tensiunea electromotoare <strong>E</strong> și rezistența internă <strong>r</strong>.</p>
+
+<h3>Gruparea în serie — pentru tensiune mai mare</h3>
+
+<p>Generatoarele sunt conectate „cap la coadă": borna „+" a unuia la borna „−" a următorului. Pe ramura comună circulă același curent prin toate.</p>
+
+<div class="formula-box">
+    Tensiunea totală: $E_s = n \cdot E$<br><br>
+    Rezistența internă totală: $r_s = n \cdot r$
+</div>
+
+<p><strong>Exemplu:</strong> 4 baterii AA (1,5 V fiecare) puse în serie într-o telecomandă dau 4·1,5 = <strong>6 V</strong>. Aceeași schemă apare în lanternele cu 2 baterii (3 V), în mașinile de jucărie cu 3 baterii (4,5 V), etc.</p>
+
+<h3>Gruparea în paralel — pentru curent mai mare</h3>
+
+<p>Toate bornele „+" sunt conectate la un nod, toate bornele „−" la celălalt. Curentul total se împarte între generatoare.</p>
+
+<div class="formula-box">
+    Tensiunea totală: $E_p = E$ (neschimbată)<br><br>
+    Rezistența internă totală: $r_p = \dfrac{r}{n}$
+</div>
+
+<p><strong>Exemplu:</strong> Două baterii AA puse în paralel păstrează tensiunea de 1,5 V, dar pot furniza un curent dublu și durează de 2 ori mai mult înainte de descărcare. Bateriile auto din camioane mari sunt adesea grupate în paralel din același motiv — au nevoie de curenți mari la pornire.</p>
+
+<div class="info-box">
+    <strong>Când folosim fiecare grupare?</strong>
+    <ul>
+        <li><strong>Serie</strong> — când consumatorul are nevoie de tensiune mai mare decât a unei singure baterii (telecomandă 6 V dintr-o tensiune nominală 1,5 V).</li>
+        <li><strong>Paralel</strong> — când consumatorul are nevoie de durată mai mare la aceeași tensiune (lanterne profesionale, sisteme solare casnice cu mai multe acumulatoare).</li>
+        <li><strong>Atenție:</strong> niciodată nu se grupează în paralel baterii cu tensiuni diferite — apar curenți de „compensare" între ele, care le descarcă rapid și le pot supraîncălzi.</li>
+    </ul>
 </div>
 
 <h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>

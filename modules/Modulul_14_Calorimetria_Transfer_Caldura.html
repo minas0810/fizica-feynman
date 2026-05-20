@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulul 14: Calorimetria și transferul de căldură — Cum se măsoară mișcarea atomilor</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+    <link rel="stylesheet" href="../css/nav.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body data-module="14">
+
+    <nav class="site-nav"></nav>
+    <div class="mod-topbar"></div>
+
+    <section class="hero">
+        <h1>Fizica lui Feynman</h1>
+        <p>Proiect educațional bazat pe Feynman Lectures on Physics © Caltech</p>
+    </section>
+
+    <div class="with-toc-layout">
+        <button class="toc-toggle-btn" aria-label="Deschide cuprins">☰ Cuprins</button>
+        <aside class="toc-sidebar" id="toc">
+            <div class="toc-sidebar__title">Cuprins</div>
+            <ul class="toc-sidebar__list" id="toc-list"></ul>
+        </aside>
+
+        <main class="module-main">
+
+<div class="cover-page">
+    <div class="class-label">MODULUL 14 · CĂLDURĂ ȘI TERMODINAMICĂ</div>
+    <h1>CALORIMETRIA ȘI TRANSFERUL DE CĂLDURĂ</h1>
+    <div class="subtitle">„Cum se măsoară mișcarea atomilor — de la agitația browniană la motoarele termice"</div>
+</div>
+
+<h1>1. ESENȚA CONCEPTULUI</h1>
+
+<h2>Citatul fundamental — Atomii în mișcare</h2>
+
+<div class="info-box">
+    <strong>Reamintire (din <a href="Modulul_1_Ce_Este_Fizica.html">Modulul 1</a>):</strong> Ipoteza atomică a lui Feynman — „toate lucrurile sunt făcute din atomi, particule mici care se mișcă într-o agitație continuă" — este punctul de plecare. Tot ce vom discuta despre căldură și transfer termic este consecința directă a acestei imagini atomice.
+</div>
+
+<h2>De ce avem nevoie de calorimetrie?</h2>
+
+<div class="info-box">
+    <strong>Poziționare:</strong> Acest modul aprofundează <em>cantitativ</em> noțiunile introduse calitativ în <a href="Modulul_13_Fenomene_Termice.html">Modulul 13 — Fenomene termice</a>. Acolo am descris ce sunt temperatura, căldura, transformările de stare și dilatarea. Aici învățăm cum se măsoară aceste fenomene, cum se transferă căldura între corpuri și cum se transformă în lucru mecanic — temele explicite ale programei de clasa a VIII-a.
+</div>
+
+<p>În Modulul 13 am învățat că temperatura este o măsură a agitației moleculare. Dar cum măsurăm <em>cât de multă</em> energie schimbă două corpuri când se ating? Câtă energie e ascunsă într-un kilogram de cărbune? Cât consumă un motor de mașină pentru a urca un deal?</p>
+
+<p><strong>Calorimetria</strong> este partea fizicii care răspunde la aceste întrebări — numărând joule cu joule schimbul de energie sub formă de căldură.</p>
+
+<blockquote class="feynman-quote">
+    <p>„Căldura nu este o substanță — este energia mișcării atomilor care trece de la un corp la altul. Când punem o lingură rece într-o cană de ceai cald, atomii ceaiului lovesc atomii lingurii, le transmit din viteză, și astfel ceaiul se răcește iar lingura se încălzește. Energia se conservă — doar își schimbă proprietarul."</p>
+    <footer>— Richard Feynman, <em>Vol. I, Cap. 1 — Atoms in Motion</em></footer>
+</blockquote>
+
+<div class="info-box">
+    <strong>Ideea centrală:</strong> Când două corpuri la temperaturi diferite intră în contact, energia termică trece de la cel cald la cel rece, până când temperaturile se egalează. Calorimetria descrie exact <em>cât</em> de multă energie trece — și se bazează pe o lege simplă: <strong>energia se conservă</strong>.
+</div>
+
+<h1>2. EXPLICAȚII PENTRU ELEVI</h1>
+
+<h2>Mișcarea browniană — atomii prinși asupra faptului</h2>
+
+<p>În 1827, botanistul Robert Brown a privit la microscop niște grăuncioare de polen suspendate în apă. Spre uimirea lui, granulele se mișcau în zigzag, dezordonat, fără încetare — chiar dacă apa părea perfect liniștită.</p>
+
+<p>Abia după 80 de ani, Albert Einstein a explicat fenomenul: granulele de polen sunt lovite continuu, din toate părțile, de molecule de apă invizibile. Loviturile nu se compensează perfect, iar granula se zbate în toate direcțiile. <strong>Mișcarea browniană este dovada directă, vizibilă cu microscopul, că materia este alcătuită din atomi în agitație continuă.</strong></p>
+
+<div class="info-box">
+    <strong>De ce contează:</strong> Mișcarea browniană este „semnătura" agitației termice. Cu cât temperatura e mai mare, cu atât moleculele de apă se mișcă mai repede, cu atât granulele de polen se zbat mai puternic. Temperatura nu e doar un număr — e o consecință vizibilă a mișcării moleculare.
+</div>
+
+<h2>Difuzia — răspândirea spontană</h2>
+
+<p>Dacă pui o picătură de cerneală într-un pahar cu apă, după câteva minute apa se colorează uniform — fără să o amesteci. Acest fenomen se numește <strong>difuzie</strong>. Moleculele de cerneală sunt împrăștiate prin apă de loviturile dezordonate ale moleculelor de apă (mișcarea browniană la scară mai mică).</p>
+
+<p>Difuzia funcționează și în gaze: dacă deschizi o sticlă de parfum într-un colț al camerei, în câteva minute mirosul ajunge peste tot. Aici moleculele de parfum se împrăștie printre moleculele de aer.</p>
+
+<div class="info-box">
+    <strong>Observație:</strong> Difuzia este mai rapidă la temperaturi mai mari — pentru că agitația termică e mai puternică. Acesta este motivul pentru care zahărul se dizolvă mai repede în ceai cald decât în apă rece.
+</div>
+
+<h2>Căldura — mărime de proces, nu de stare</h2>
+
+<table>
+    <tr>
+        <th>Mărime</th>
+        <th>Tip</th>
+        <th>Ce descrie</th>
+    </tr>
+    <tr>
+        <td><strong>Temperatura (T)</strong></td>
+        <td>mărime de <em>stare</em></td>
+        <td>Cât de agitate sunt moleculele <em>chiar acum</em></td>
+    </tr>
+    <tr>
+        <td><strong>Căldura (Q)</strong></td>
+        <td>mărime de <em>proces</em></td>
+        <td>Câtă energie a trecut de la un corp la altul</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Distincția cheie:</strong> Un corp nu „conține căldură" — conține <em>energie internă</em>. Căldura este energia care <em>se transferă</em>, în timpul unui proces, de la un corp mai cald la unul mai rece. Odată ce procesul s-a încheiat, nu mai vorbim de „căldură", ci de energie internă.
+</div>
+
+<h2>Coeficienții calorici — cum răspund substanțele la căldură</h2>
+
+<p>Dacă încălzești 1 kg de apă cu un Joule, temperatura crește cu un anumit pas. Dacă faci același lucru cu 1 kg de fier, temperatura crește cu un pas mult mai mare. De ce? Pentru că <strong>căldura specifică</strong> a apei e mult mai mare decât a fierului.</p>
+
+<div class="formula-box">
+    Căldura necesară pentru a încălzi un corp:
+    $$Q = m \cdot c \cdot \Delta T$$
+</div>
+
+<p>Unde:</p>
+<ul>
+    <li><strong>m</strong> = masa corpului (kg)</li>
+    <li><strong>c</strong> = căldura specifică a substanței (J/(kg·°C)) — o proprietate a materialului</li>
+    <li><strong>ΔT</strong> = variația de temperatură (°C sau K — diferența e aceeași)</li>
+    <li><strong>Q</strong> = căldura schimbată (J)</li>
+</ul>
+
+<h3>Tabel cu călduri specifice uzuale</h3>
+
+<table>
+    <tr><th>Substanță</th><th>c (J/(kg·°C))</th><th>Observație</th></tr>
+    <tr><td>Apă lichidă</td><td>4186</td><td>Cea mai mare dintre lichidele uzuale</td></tr>
+    <tr><td>Gheață</td><td>2090</td><td>Aproximativ jumătate din apa lichidă</td></tr>
+    <tr><td>Aer</td><td>1005</td><td>La presiune constantă</td></tr>
+    <tr><td>Aluminiu</td><td>900</td><td>Bun absorbant de căldură</td></tr>
+    <tr><td>Sticlă</td><td>840</td><td>—</td></tr>
+    <tr><td>Nisip uscat</td><td>800</td><td>De aceea plaja arde la prânz</td></tr>
+    <tr><td>Fier / Oțel</td><td>450</td><td>—</td></tr>
+    <tr><td>Cupru</td><td>390</td><td>—</td></tr>
+    <tr><td>Plumb</td><td>130</td><td>Se încălzește foarte ușor</td></tr>
+</table>
+
+<div class="info-box">
+    <strong>De ce apa e specială:</strong> Apa are căldura specifică de ~5 ori mai mare decât nisipul. Asta înseamnă că, la Soare, nisipul se încălzește de 5 ori mai repede decât apa. De aceea, la prânz pe plajă, nisipul arde dar apa e răcoroasă — și de aceea oceanele moderează clima planetei.
+</div>
+
+<h2>Cele trei moduri de transmitere a căldurii</h2>
+
+<p>Căldura poate trece de la un corp la altul în trei feluri diferite. Reține că în toate trei energia merge mereu de la cald spre rece.</p>
+
+<table>
+    <tr>
+        <th>Mod</th>
+        <th>Mecanism atomic</th>
+        <th>Mediu necesar</th>
+        <th>Exemplu zilnic</th>
+    </tr>
+    <tr>
+        <td><strong>Conducție</strong></td>
+        <td>Atomii vibrează mai puternic și transmit vibrația vecinilor, fără ca ei să se deplaseze</td>
+        <td>Solid (mai ales metale)</td>
+        <td>Lingura din ceai se încălzește la mâner</td>
+    </tr>
+    <tr>
+        <td><strong>Convecție</strong></td>
+        <td>Materia caldă se ridică (e mai puțin densă), cea rece coboară — apare un curent</td>
+        <td>Fluid (lichid sau gaz)</td>
+        <td>Aerul cald al caloriferului urcă spre tavan</td>
+    </tr>
+    <tr>
+        <td><strong>Radiație</strong></td>
+        <td>Energia e emisă sub formă de unde electromagnetice (infraroșii)</td>
+        <td>Niciunul — funcționează și în vid</td>
+        <td>Căldura Soarelui ajunge la noi prin vidul cosmic</td>
+    </tr>
+</table>
+
+<div class="info-box">
+    <strong>Întrebare-test:</strong> Dacă deschizi cuptorul, cum simți căldura? Toate cele trei! <em>Radiație</em> de la pereții incandescenți, <em>convecție</em> de la aerul cald care iese, și <em>conducție</em> dacă atingi mânerul metalic.
+</div>
+
+<h2>Conductori și izolatori termici</h2>
+
+<table>
+    <tr><th>Conductori buni</th><th>Izolatori (conductori slabi)</th></tr>
+    <tr><td>Cupru, argint, aluminiu, fier</td><td>Lemn, plastic, sticlă, polistiren</td></tr>
+    <tr><td>Apă (slab față de metale)</td><td>Aerul (foarte bun izolator dacă e nemișcat)</td></tr>
+</table>
+
+<p>De aceea hainele groase de iarnă au fibre care prind aer între ele: <strong>aerul nemișcat este unul dintre cei mai buni izolatori naturali</strong>. Pereții caselor cu polistiren sau cu vată minerală păstrează căldura tot prin acest principiu — aerul prins în pori.</p>
+
+<h2>Legea calorimetriei — ecuația contabilă</h2>
+
+<p>Imaginează-ți două corpuri la temperaturi diferite puse în contact, izolate de exterior (de exemplu, într-un termos). Energia nu poate fugi în afară. Atunci:</p>
+
+<div class="formula-box">
+    $$Q_{\text{cedat}} = Q_{\text{primit}}$$
+</div>
+
+<p>Cu alte cuvinte: <strong>tot ce pierde corpul cald, primește corpul rece</strong>. Această afirmație simplă este consecința conservării energiei și formează baza calorimetriei.</p>
+
+<h2>Temperatura de echilibru</h2>
+
+<p>Dacă amesteci două corpuri (1 și 2) de mase, călduri specifice și temperaturi diferite, în final ambele ajung la o temperatură comună <strong>t<sub>e</sub></strong> (temperatura de echilibru). Aplicând legea calorimetriei:</p>
+
+<div class="formula-box">
+    $$m_1 \, c_1 \, (t_1 - t_e) = m_2 \, c_2 \, (t_e - t_2)$$
+    de unde
+    $$t_e = \frac{m_1 c_1 t_1 + m_2 c_2 t_2}{m_1 c_1 + m_2 c_2}$$
+</div>
+
+<div class="info-box">
+    <strong>Interpretare:</strong> Temperatura de echilibru este o <em>medie ponderată</em> a temperaturilor inițiale — iar ponderile sunt produsele m·c (numite <em>capacități calorice</em>). Corpul cu capacitate calorică mare „trage" temperatura de echilibru spre el.
+</div>
+
+<h2>Concepții greșite frecvente</h2>
+
+<table>
+    <tr><th>Concepția greșită</th><th>Adevărul</th></tr>
+    <tr>
+        <td>„Căldura și temperatura sunt același lucru"</td>
+        <td>Temperatura e starea (cât de fierbinte), căldura e procesul (câtă energie trece). Un pahar cu apă fierbinte și o piscină cu apă caldă pot avea temperaturi apropiate, dar piscina conține de mii de ori mai multă energie internă.</td>
+    </tr>
+    <tr>
+        <td>„Metalele sunt mai reci decât lemnul iarna"</td>
+        <td>Au aceeași temperatură (a camerei). Metalul pare mai rece pentru că <em>conduce</em> căldura mai repede din mâna ta — degetul răcește mai repede atingând metal.</td>
+    </tr>
+    <tr>
+        <td>„Termosul conține căldura"</td>
+        <td>Termosul blochează cele trei moduri de transfer: pereți argintați (reduc radiația), vid între pereți (blochează conducția și convecția). Nu „conține" căldură — împiedică plecarea ei.</td>
+    </tr>
+    <tr>
+        <td>„Căldura urcă întotdeauna"</td>
+        <td>Aerul cald urcă (e mai puțin dens) — dar acesta e fenomenul de convecție. Radiația și conducția merg în orice direcție: de la cald spre rece, oriunde se află acela.</td>
+    </tr>
+</table>
+
+<h1>3. EXEMPLE DIN VIAȚA REALĂ</h1>
+
+<h2>Exemplul 1: De ce nisipul arde și apa e răcoroasă, sub același Soare?</h2>
+
+<p><strong>Situația:</strong> O zi de vară pe plajă, ora 13:00. Nisipul te arde la tălpi, dar apa mării e plăcută.</p>
+
+<p><strong>Analiza:</strong></p>
+<ul>
+    <li>Soarele transferă aceeași cantitate de energie pe metru pătrat, atât nisipului cât și apei (~1000 W/m²).</li>
+    <li>Căldura specifică a nisipului: c ≈ 800 J/(kg·°C). Căldura specifică a apei: c = 4186 J/(kg·°C).</li>
+    <li>Aceeași energie încălzește nisipul de aproximativ 5 ori mai mult decât apa.</li>
+    <li>În plus, apa amestecă energia prin convecție (apa caldă de la suprafață se duce în jos), nisipul nu.</li>
+</ul>
+
+<div class="result">Concluzie: căldura specifică mare a apei + convecția = apă răcoroasă. Aceasta este și explicația pentru care orașele de pe litoral au veri mai blânde decât cele din interior.</div>
+
+<h2>Exemplul 2: Termosul — campionul antitransfer</h2>
+
+<p><strong>Situația:</strong> Un termos păstrează ceaiul cald 8 ore. Cum?</p>
+
+<p><strong>Analiza:</strong> Termosul blochează simultan toate cele trei moduri de transfer:</p>
+
+<table>
+    <tr><th>Mod de transfer</th><th>Cum e blocat</th></tr>
+    <tr><td>Conducție</td><td>Pereți dubli cu <em>vid</em> între ei — fără atomi, fără vibrații transmise</td></tr>
+    <tr><td>Convecție</td><td>Tot vidul blochează — fără fluid, fără curenți</td></tr>
+    <tr><td>Radiație</td><td>Pereți <em>argintați / oglindiți</em> — radiația infraroșie e reflectată înapoi în ceai</td></tr>
+</table>
+
+<div class="result">Termosul e un dispozitiv inteligent: o singură construcție rezolvă cele trei probleme. Acesta este motivul pentru care a fost inventat în 1892 (de Sir James Dewar) pentru păstrarea gazelor lichefiate, nu pentru ceai!</div>
+
+<h2>Exemplul 3: Caloriferul casei — convecție organizată</h2>
+
+<p>Caloriferul nu „calorifează" încăperea radiind. El încălzește aerul din imediata vecinătate, care urcă spre tavan, apoi aerul rece de la podea ia locul lui și se încălzește la rândul său. Apare un <em>curent de convecție</em> care amestecă aerul camerei.</p>
+
+<p>De aceea caloriferele sunt mereu puse <strong>jos, sub ferestre</strong>: ferestrele sunt zona cea mai rece, aerul rece coboară de la geam pe podea, iar caloriferul îl prinde acolo și îl ridică. Dacă ar fi sus, ai avea aer cald sus și aer rece jos — picioare reci, cap fierbinte.</p>
+
+<h2>Exemplul 4: Combustibilii — energia ascunsă în legăturile chimice</h2>
+
+<p>Un combustibil este o substanță care, prin ardere, eliberează multă căldură. Mărimea care caracterizează un combustibil este <strong>puterea calorică q</strong>, măsurată în J/kg — câtă energie se eliberează la arderea unui kilogram.</p>
+
+<div class="formula-box">
+    $$Q = m \cdot q$$
+</div>
+
+<table>
+    <tr><th>Combustibil</th><th>q (MJ/kg)</th></tr>
+    <tr><td>Lemn uscat</td><td>~16</td></tr>
+    <tr><td>Cărbune</td><td>~30</td></tr>
+    <tr><td>Benzină</td><td>~46</td></tr>
+    <tr><td>Motorină</td><td>~45</td></tr>
+    <tr><td>Gaz natural (metan)</td><td>~50</td></tr>
+    <tr><td>Hidrogen</td><td>~120</td></tr>
+</table>
+
+<div class="info-box">
+    <strong>Observație:</strong> 1 kg de benzină eliberează aproape 46 milioane de jouli — suficient pentru a ridica un automobil de 1 tonă pe un munte de aproape 5 km înălțime! Doar că motorul transformă în mișcare doar 25–30% din această energie — restul se pierde ca <em>căldură reziduală</em>.
+</div>
+
+<h2>Exemplul 5: Motorul termic — căldura devine mișcare</h2>
+
+<p>Un <strong>motor termic</strong> este orice dispozitiv care transformă căldura în lucru mecanic: motorul cu benzină al mașinii, motorul Diesel al camionului, turbinele cu abur ale centralelor electrice, chiar și ceasul cu aburi al lui James Watt.</p>
+
+<p>Schema funcționării (calitativ):</p>
+
+<ol>
+    <li>Combustibilul arde și încălzește un gaz (sau vaporizează apă) — primește o căldură <strong>Q<sub>1</sub></strong> de la sursa caldă.</li>
+    <li>Gazul cald se dilată și împinge un piston (sau o turbină) — produce lucrul mecanic <strong>L</strong>.</li>
+    <li>Gazul răcit este evacuat — cedează o căldură <strong>Q<sub>2</sub></strong> sursei reci (atmosfera, radiatorul, condensatorul).</li>
+    <li>Conservarea energiei: <strong>L = Q<sub>1</sub> − Q<sub>2</sub></strong></li>
+</ol>
+
+<div class="formula-box">
+    Randamentul motorului termic:
+    $$\eta = \frac{L}{Q_1} = \frac{Q_1 - Q_2}{Q_1}$$
+</div>
+
+<div class="info-box">
+    <strong>Adevărul cinstit:</strong> Niciun motor termic nu poate avea randament 100%. O parte din căldura primită trebuie întotdeauna cedată sursei reci — această observație este atât de profundă încât a devenit <em>Principiul al doilea al termodinamicii</em>. Motoarele reale: benzină ~25–30%, Diesel ~40%, turbine moderne ~60%.
+</div>
+
+<h1>4. EXPERIMENTE DEMONSTRATIVE</h1>
+
+<div class="experiment">
+    <h3>Experimentul 1: Difuzia — cerneală în apă caldă vs. apă rece</h3>
+
+    <p><strong>Obiectiv:</strong> Demonstrarea că agitația termică controlează viteza difuziei.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Două pahare transparente identice</li>
+        <li>Apă fierbinte (~70°C) și apă rece (din frigider, ~5°C)</li>
+        <li>O picătură de cerneală sau de colorant alimentar</li>
+        <li>Cronometru</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Umple cele două pahare cu apă (unul fierbinte, unul rece) — nu le agita după aceea.</li>
+        <li>Lasă să se liniștească aproximativ 30 de secunde.</li>
+        <li>Pune simultan o picătură de cerneală în fiecare pahar, exact la suprafață, fără să atingi apa.</li>
+        <li>Cronometrează cât durează până culoarea se uniformizează în fiecare pahar.</li>
+    </ol>
+
+    <div class="result">Concluzie: În apa fierbinte difuzia e mult mai rapidă (1–2 minute), în apa rece poate dura 10–20 de minute. Agitația termică e motorul difuziei — moleculele mai rapide împrăștie mai eficient cerneala.</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 2: Calorimetrul de cafea — temperatura de echilibru</h3>
+
+    <p><strong>Obiectiv:</strong> Verificarea cantitativă a legii calorimetriei prin amestec de două ape la temperaturi diferite.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un pahar de polistiren (pentru cafea la pachet) — izolator natural foarte bun</li>
+        <li>Un termometru cu interval 0–100°C</li>
+        <li>O cană gradată (pentru măsurarea volumelor)</li>
+        <li>Apă rece (~10°C) și apă caldă (~60°C)</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Pune 100 ml de apă rece în paharul de polistiren. Notează temperatura: t₁.</li>
+        <li>Măsoară 100 ml de apă caldă într-o cană. Notează temperatura: t₂.</li>
+        <li>Toarnă rapid apa caldă peste cea rece, amestecă o secundă cu termometrul.</li>
+        <li>Citește temperatura de echilibru după 5–10 secunde: t<sub>e (măsurat)</sub>.</li>
+        <li>Calculează predicția teoretică: t<sub>e (calculat)</sub> = (t₁ + t₂)/2 — deoarece m₁ = m₂ și c₁ = c₂ (ambele sunt apă).</li>
+        <li>Compară: diferența între măsurat și calculat e mică? (1–2°C de obicei, din cauza pierderilor reziduale)</li>
+    </ol>
+
+    <div class="result">Concluzie: Legea calorimetriei se verifică experimental. Mica diferență (1–2°C sub valoarea teoretică) provine din căldura cedată paharului și aerului — niciun calorimetru nu e perfect izolat.</div>
+</div>
+
+<div class="experiment">
+    <h3>Experimentul 3: Convecția — curenții într-un pahar cu apă</h3>
+
+    <p><strong>Obiectiv:</strong> Vizualizarea curenților de convecție.</p>
+
+    <p><strong>Materiale necesare:</strong></p>
+    <ul>
+        <li>Un pahar transparent înalt</li>
+        <li>Apă la temperatura camerei</li>
+        <li>O picătură de cerneală</li>
+        <li>O sursă mică de încălzire (o lumânare sau o lampă de bază, pusă sub o jumătate a paharului) — sau apă caldă într-un vas peste care așezi paharul</li>
+    </ul>
+
+    <p><strong>Procedură:</strong></p>
+    <ol>
+        <li>Așază paharul astfel încât numai o parte a bazei să fie încălzită ușor.</li>
+        <li>Pune o picătură de cerneală deasupra zonei încălzite.</li>
+        <li>Observă: cerneala urcă pe partea caldă, ajunge sus, traversează spre partea rece și coboară. Apare o <em>celulă de convecție</em>.</li>
+    </ol>
+
+    <div class="result">Concluzie: Apa caldă (mai puțin densă) urcă; apa rece (mai densă) coboară. Curentul de convecție se închide într-o buclă — același mecanism care încălzește camerele cu calorifer și care produce vânturile pe Pământ.</div>
+</div>
+
+<h1>5. TEORIA MATEMATICĂ</h1>
+
+<h2>Nivel 1 — Exprimare calitativă</h2>
+
+<p><strong>Căldura</strong> este energia transferată între două corpuri datorită diferenței de temperatură. Trece <em>spontan</em> de la corpul mai cald spre cel mai rece.</p>
+
+<p><strong>Calorimetria</strong> este metoda prin care măsurăm cantitatea de căldură schimbată, folosind legea conservării energiei.</p>
+
+<h2>Nivel 2 — Formulele de bază</h2>
+
+<h3>Ecuația calorimetrică (încălzire sau răcire fără schimbare de stare)</h3>
+
+<div class="formula-box">
+    $$Q = m \cdot c \cdot \Delta T$$
+</div>
+
+<p>Unde Q se exprimă în jouli (J), m în kg, c în J/(kg·°C), iar ΔT în °C sau K.</p>
+
+<h3>Capacitatea calorică a unui corp</h3>
+
+<div class="formula-box">
+    $$C = m \cdot c \qquad [\text{J/°C}]$$
+</div>
+
+<p>Capacitatea calorică C arată câtă căldură e necesară pentru a ridica temperatura <em>întregului corp</em> cu un grad. Spre deosebire de c (proprietate a substanței), C depinde de cât material avem.</p>
+
+<h3>Căldura latentă (la schimbarea stării de agregare)</h3>
+
+<div class="formula-box">
+    $$Q = m \cdot \lambda$$
+</div>
+
+<p>λ se numește <strong>căldură latentă specifică</strong> și se măsoară în J/kg. La topire/solidificare se folosește λ<sub>t</sub>, la vaporizare/condensare se folosește λ<sub>v</sub>.</p>
+
+<table>
+    <tr><th>Substanță</th><th>λ<sub>topire</sub> (J/kg)</th><th>λ<sub>vaporizare</sub> (J/kg)</th></tr>
+    <tr><td>Apă / gheață</td><td>334 000</td><td>2 260 000</td></tr>
+    <tr><td>Etanol</td><td>108 000</td><td>855 000</td></tr>
+    <tr><td>Plumb</td><td>25 000</td><td>871 000</td></tr>
+</table>
+
+<div class="info-box">
+    <strong>Observație importantă:</strong> În timpul schimbării de stare, temperatura rămâne <em>constantă</em>, chiar dacă se absoarbe sau se eliberează căldură. Energia se duce în ruperea/formarea legăturilor moleculare, nu în accelerarea moleculelor.
+</div>
+
+<h3>Ecuația calorimetrică completă — temperatura de echilibru</h3>
+
+<p>Pentru două corpuri puse în contact termic, izolate de exterior:</p>
+
+<div class="formula-box">
+    $$Q_{\text{cedat}} = Q_{\text{primit}}$$
+    $$m_1 c_1 (t_1 - t_e) = m_2 c_2 (t_e - t_2)$$
+    $$\boxed{\, t_e = \dfrac{m_1 c_1 t_1 + m_2 c_2 t_2}{m_1 c_1 + m_2 c_2} \,}$$
+</div>
+
+<h3>Puterea calorică a combustibililor</h3>
+
+<div class="formula-box">
+    $$Q = m \cdot q$$
+</div>
+
+<p>q se exprimă în J/kg și reprezintă energia eliberată prin arderea unui kilogram de combustibil.</p>
+
+<h3>Randamentul motorului termic</h3>
+
+<div class="formula-box">
+    $$\eta = \frac{L_{\text{util}}}{Q_{\text{consumat}}} = \frac{Q_1 - Q_2}{Q_1}$$
+</div>
+
+<p>η este un număr subunitar (între 0 și 1) sau, exprimat în procente, între 0% și 100%.</p>
+
+<div class="solution">
+    <h4>Exemplu rezolvat 1: Temperatura de echilibru</h4>
+    <p>Se amestecă 200 g apă rece la 15°C cu 300 g apă caldă la 75°C. Care este temperatura de echilibru? (Se neglijează pierderile.)</p>
+
+    <p><strong>Rezolvare:</strong></p>
+    <ul>
+        <li>Ambele substanțe sunt apă: c₁ = c₂ = c (se simplifică).</li>
+        <li>t<sub>e</sub> = (m₁·t₁ + m₂·t₂) / (m₁ + m₂) = (0,2·15 + 0,3·75) / (0,2 + 0,3) = (3 + 22,5) / 0,5 = <strong>51°C</strong></li>
+    </ul>
+    <div class="result">Apa caldă, fiind mai multă (300 g vs. 200 g), trage temperatura de echilibru mai aproape de 75°C decât de 15°C.</div>
+</div>
+
+<div class="solution">
+    <h4>Exemplu rezolvat 2: Câtă benzină consumă o mașină</h4>
+    <p>O mașină cu randamentul η = 25% trebuie să dezvolte un lucru mecanic de 5 MJ pentru a urca un deal. Câtă benzină consumă? (q<sub>benzină</sub> = 46 MJ/kg)</p>
+
+    <p><strong>Rezolvare:</strong></p>
+    <ul>
+        <li>Q<sub>consumat</sub> = L / η = 5 MJ / 0,25 = 20 MJ</li>
+        <li>m = Q / q = 20 MJ / 46 MJ/kg ≈ <strong>0,435 kg</strong> de benzină</li>
+        <li>La densitatea benzinei (~750 kg/m³): volumul ≈ 0,435 / 750 ≈ 0,00058 m³ = <strong>0,58 litri</strong></li>
+    </ul>
+    <div class="result">Pentru a urca dealul real, motorul a ars circa 0,58 litri de benzină. Restul de 75% din energia chimică s-a risipit ca radiator fierbinte și gaze de eșapament.</div>
+</div>
+
+<h2>Nivel 3 — Extindere</h2>
+
+<div class="info-box">
+    <strong>Notă:</strong> Legătura microscopică dintre temperatură și energia cinetică medie a unei molecule (formula $E_c = \tfrac{3}{2} k_B T$ a lui Boltzmann) a fost discutată deja în <a href="Modulul_13_Fenomene_Termice.html#5">Modulul 13 — Nivel 3</a>. Aici ne ocupăm de fluxul de căldură prin pereți, completând tabloul calorimetric.
+</div>
+
+<h3>Conducția termică — legea lui Fourier (calitativ)</h3>
+
+<p>Cantitatea de căldură care trece printr-un perete în unitatea de timp este proporțională cu aria peretelui și cu diferența de temperatură, și invers proporțională cu grosimea:</p>
+
+<div class="formula-box">
+    $$\frac{Q}{\Delta t} \propto \frac{A \cdot \Delta T}{d}$$
+</div>
+
+<p>Coeficientul de proporționalitate (notat <em>k</em> — conductivitatea termică) este o proprietate a materialului. Aceasta explică de ce ferestrele cu geam dublu (d mare, plus un strat de aer izolant) păstrează căldura mult mai bine decât cele cu geam simplu.</p>
+
+<h1>6. VERIFICAREA ÎNȚELEGERII</h1>
+
+<h2>Întrebări Adevărat/Fals</h2>
+
+<p><strong>1. „Căldura este o substanță pe care un corp o conține."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Căldura este o <em>formă de energie în tranzit</em>, nu o substanță. Un corp conține energie internă; căldura este energia care trece de la un corp la altul în timpul unui proces. Această idee greșită — „caloric" — a fost abandonată în secolul XIX.
+</div>
+
+<p><strong>2. „În timpul topirii gheții la 0°C, temperatura amestecului apă+gheață rămâne 0°C până când toată gheața s-a topit."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Întreaga căldură absorbită este folosită pentru ruperea legăturilor moleculare ale gheții (căldura latentă de topire), nu pentru accelerarea moleculelor. Temperatura rămâne constantă atâta vreme cât coexistă cele două faze.
+</div>
+
+<p><strong>3. „Căldura specifică a apei este mare — de aceea apa fierbe greu."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT.</strong> Pentru a încălzi 1 kg de apă cu 1°C trebuie 4186 J — de aproape 5 ori mai mult decât pentru nisip sau aluminiu. Această proprietate face din apă cel mai bun lichid termoregulator de pe Pământ.
+</div>
+
+<p><strong>4. „Două corpuri în contact termic ajung mereu la aceeași temperatură, indiferent de masele lor."</strong></p>
+<div class="answer">
+    ✓ <strong>ADEVĂRAT</strong> (dacă sunt izolate de exterior și au timp). Temperatura de echilibru depinde de mase și de călduri specifice, dar starea finală e una de echilibru termic — temperatură unică.
+</div>
+
+<p><strong>5. „Un motor termic poate avea randament 100% dacă e construit perfect."</strong></p>
+<div class="answer">
+    ✗ <strong>FALS.</strong> Principiul al doilea al termodinamicii interzice asta: orice motor termic trebuie să cedeze o parte din căldură unei surse reci. Limita teoretică (motorul Carnot) depinde de raportul dintre temperaturile sursei reci și cea caldă: η<sub>max</sub> = 1 − T<sub>rece</sub>/T<sub>cald</sub>.
+</div>
+
+<h2>Întrebări „De ce...?"</h2>
+
+<p><strong>6. De ce metalul pare mai rece decât lemnul iarna, chiar dacă au aceeași temperatură?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Pentru că metalul are conductivitate termică mult mai mare. Când îl atingi cu mâna (care e la 36°C), el extrage căldură din degetul tău mult mai repede decât lemnul. Senzația de „rece" este de fapt senzația pierderii rapide a căldurii din piele. Lemnul, fiind izolator, „blochează" pierderea — deci pare cald.
+</div>
+
+<p><strong>7. De ce se transpiră atunci când e cald, și de ce te răcorește transpirația?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Apa de pe piele, ca să se evapore, are nevoie de căldură latentă de vaporizare (2,26 MJ/kg — foarte mult!). Ia această energie din pielea ta — deci pielea se răcește. Transpirația este sistemul natural de răcire al corpului, exact ca un radiator cu evaporare. De aceea, când e umiditate mare, transpirația nu se mai evaporă și nu te mai răcorește.
+</div>
+
+<p><strong>8. De ce un termos păstrează la fel de bine ceaiul cald și înghețata rece?</strong></p>
+<div class="answer">
+    <strong>Răspuns:</strong> Termosul nu „menține căldura" — el blochează <em>transferul de căldură</em> în orice direcție. Dacă interiorul e mai cald decât exteriorul, blochează pierderea spre exterior. Dacă interiorul e mai rece, blochează pătrunderea căldurii din exterior. Vidul și suprafețele oglindite funcționează simetric — nu „aleg" o direcție.
+</div>
+
+<h2>Problemă cantitativă</h2>
+
+<p><strong>9. Într-un calorimetru se află 500 g apă la 20°C. Se introduce o bilă de fier de 200 g, încălzită la 200°C. Care este temperatura de echilibru? (c<sub>apă</sub> = 4186 J/(kg·°C), c<sub>fier</sub> = 450 J/(kg·°C). Se neglijează căldura preluată de calorimetru.)</strong></p>
+
+<div class="solution">
+    <h4>Rezolvare:</h4>
+    <ul>
+        <li>Date: m₁ = 0,5 kg apă, t₁ = 20°C, c₁ = 4186; m₂ = 0,2 kg fier, t₂ = 200°C, c₂ = 450.</li>
+        <li>Q<sub>primit de apă</sub> = Q<sub>cedat de fier</sub>:</li>
+        <li>m₁·c₁·(t<sub>e</sub> − t₁) = m₂·c₂·(t₂ − t<sub>e</sub>)</li>
+        <li>0,5 · 4186 · (t<sub>e</sub> − 20) = 0,2 · 450 · (200 − t<sub>e</sub>)</li>
+        <li>2093 · (t<sub>e</sub> − 20) = 90 · (200 − t<sub>e</sub>)</li>
+        <li>2093·t<sub>e</sub> − 41860 = 18000 − 90·t<sub>e</sub></li>
+        <li>2183·t<sub>e</sub> = 59860 → t<sub>e</sub> ≈ <strong>27,4°C</strong></li>
+    </ul>
+    <div class="result">Deși fierul era la 200°C și apa la 20°C, temperatura de echilibru este de doar 27,4°C — apa „învinge" pentru că are masa mai mare și mai ales căldura specifică de 9 ori mai mare. Apa are o capacitate calorică (m·c) totală de aproape 25 de ori mai mare decât fierul.</div>
+</div>
+
+<h2>Situație-problemă</h2>
+
+<p><strong>10. Casa lui Mihai se încălzește iarna cu un cazan pe gaz natural (q = 50 MJ/kg). Cazanul consumă 2 kg de gaz pe zi, iar randamentul instalației este 80%. Câtă energie utilă ajunge zilnic la calorifere?</strong></p>
+
+<div class="answer">
+    <strong>Răspuns:</strong>
+    <ul>
+        <li>Energia chimică totală a gazului ars: Q<sub>total</sub> = m · q = 2 · 50 = <strong>100 MJ</strong></li>
+        <li>Energia utilă (la calorifere): L<sub>util</sub> = η · Q = 0,80 · 100 = <strong>80 MJ pe zi</strong></li>
+        <li>Pierderea: 20 MJ — gaze evacuate prin coș, pierderi pe țevi.</li>
+    </ul>
+    În echivalent electric, 80 MJ ≈ 22 kWh — atât consumă zilnic casa pentru încălzire.
+</div>
+
+<h1>7. RESURSE SUPLIMENTARE</h1>
+
+<h2>Lecturi din Feynman</h2>
+<ul>
+    <li><strong>Vol. I, Cap. 1</strong> — „Atoms in Motion" — ipoteza atomică, mișcarea browniană, ideea că totul vibrează.</li>
+    <li><strong>Vol. I, Cap. 13</strong> — „Work and Potential Energy" — conservarea energiei ca lege universală.</li>
+    <li><strong>Vol. I, Cap. 44</strong> — „The Laws of Thermodynamics" — randamentul motoarelor termice, principiul al doilea.</li>
+</ul>
+
+<h2>Conexiuni interdisciplinare</h2>
+
+<table>
+    <tr><th>Disciplina</th><th>Conexiunea</th></tr>
+    <tr>
+        <td><strong>Biologie</strong></td>
+        <td>Metabolismul — corpul uman e un „motor" la 37°C care arde glucide și grăsimi (q ≈ 17 MJ/kg pentru glucide, 39 MJ/kg pentru grăsimi). Termoreglarea prin transpirație folosește căldură latentă de vaporizare.</td>
+    </tr>
+    <tr>
+        <td><strong>Geografie</strong></td>
+        <td>Clima litoralului vs. clima continentală — apa moderează variațiile de temperatură datorită căldurii specifice mari. Curenții oceanici (Gulfstream) sunt convecție la scară planetară.</td>
+    </tr>
+    <tr>
+        <td><strong>Chimie</strong></td>
+        <td>Reacțiile exotermice și endotermice — arderea, sinteza, dizolvarea. Puterea calorică a combustibililor depinde de energia legăturilor chimice.</td>
+    </tr>
+    <tr>
+        <td><strong>Tehnologie</strong></td>
+        <td>Motoare cu ardere internă, turbine cu abur, pompe de căldură, termopane, izolații termice — toate aplică aceleași principii.</td>
+    </tr>
+</table>
+
+<div class="synthesis">
+    <h2>FIȘĂ DE SINTEZĂ</h2>
+
+    <p><strong>IDEE CHEIE:</strong> Căldura este energia transferată între corpuri datorită diferenței de temperatură. Se conservă (Q<sub>cedat</sub> = Q<sub>primit</sub>) și se transmite în trei moduri: conducție, convecție, radiație. Calorimetria măsoară aceste transferuri folosind ecuația Q = m·c·ΔT.</p>
+
+    <h3>FORMULE CHEIE:</h3>
+    <div class="formula-box">
+        Încălzire/răcire: $Q = m \cdot c \cdot \Delta T$<br><br>
+        Schimbare de stare: $Q = m \cdot \lambda$<br><br>
+        Echilibrul termic: $m_1 c_1 (t_1 - t_e) = m_2 c_2 (t_e - t_2)$<br><br>
+        Combustibili: $Q = m \cdot q$<br><br>
+        Randament motor termic: $\eta = \dfrac{L}{Q_1} = \dfrac{Q_1 - Q_2}{Q_1}$
+    </div>
+
+    <h3>IDEI CHEIE:</h3>
+    <ul>
+        <li>Temperatura = stare; căldura = proces (energie în tranzit).</li>
+        <li>Mișcarea browniană și difuzia sunt dovezi vizibile ale agitației moleculare.</li>
+        <li>Trei moduri de transfer al căldurii: conducție (vibrații transmise), convecție (mișcare de material), radiație (unde electromagnetice — funcționează și în vid).</li>
+        <li>Aerul nemișcat și vidul sunt cei mai buni izolatori. Metalele sunt cei mai buni conductori.</li>
+        <li>Apa are căldură specifică foarte mare (4186 J/(kg·°C)) — moderator natural al climei.</li>
+        <li>În timpul topirii sau vaporizării, temperatura rămâne constantă, dar se schimbă energia (căldura latentă).</li>
+        <li>Niciun motor termic nu poate avea randament 100% — principiul al doilea al termodinamicii.</li>
+    </ul>
+
+    <h3>CE ZICE FEYNMAN:</h3>
+    <p>„Toate lucrurile sunt făcute din atomi — particule mici care se mișcă într-o agitație continuă. Tot ce numim căldură, temperatură, schimbare de stare, ardere — totul se reduce la mișcarea acestor atomi. Universul este, fundamental, un dans neîncetat de particule mici."</p>
+</div>
+
+</main>
+    </div>
+
+    <div class="module-nav module-nav--bottom"></div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Fizica lui Feynman</h3>
+                <p>Materiale didactice pentru gimnaziu bazate pe <br> Prelegerile lui Richard Feynman.</p>
+                <p class="footer-credit">Made with ❤️ and <img src="../Images/favicon.ico" alt="Claude" class="footer-claude-logo"></p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigare</h3>
+                <a href="../index.html">Acasă</a>
+                <a href="../modules.html">Modulele de studiu</a>
+                <a href="../despre-feynman.html">Despre Feynman</a>
+                <a href="https://feynman-physics-playground-295263139871.europe-west2.run.app/" target="_blank" rel="noopener noreferrer">Simulări</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proiect educațional bazat pe <br/>Feynman Lectures on Physics © Caltech</p>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+</body>
+</html>
