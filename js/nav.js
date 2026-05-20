@@ -62,7 +62,7 @@
   function aboutHref()        { return isTopLevel ? 'despre-feynman.html' : '../despre-feynman.html'; }
   function modulesHref()      { return isTopLevel ? 'modules.html'        : '../modules.html'; }
   function simulariHref()     { return isTopLevel ? 'simulari.html'       : '../simulari.html'; }
-  function authorHref()       { return 'https://mate-fizica.eu'; }
+  function authorHref()       { return 'https://prof-minas.ro'; }
 
   /* ================================================
      1. NAVBAR GLOBALĂ
