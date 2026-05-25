@@ -420,18 +420,30 @@ body {
     gap: 0.4rem;
 }
 .footer-claude-logo,
+.footer-antigravity-logo,
+.footer-heart {
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+.footer-claude-logo,
 .footer-antigravity-logo {
     width: 16px;
     height: 16px;
-    vertical-align: middle;
     border-radius: 4px;
-    opacity: 0.6;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.footer-heart {
+    cursor: default;
 }
 .footer-claude-logo:hover,
-.footer-antigravity-logo:hover {
+.footer-antigravity-logo:hover,
+.footer-heart:hover {
     opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.25);
+}
+.footer-heart:hover {
+    text-shadow: 0 0 10px rgba(255, 65, 108, 0.8);
 }
 .footer-bottom {
     text-align: center;
