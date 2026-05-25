@@ -419,12 +419,19 @@ body {
     justify-content: center;
     gap: 0.4rem;
 }
-.footer-claude-logo {
+.footer-claude-logo,
+.footer-antigravity-logo {
     width: 16px;
     height: 16px;
     vertical-align: middle;
     border-radius: 4px;
     opacity: 0.6;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.footer-claude-logo:hover,
+.footer-antigravity-logo:hover {
+    opacity: 1;
+    transform: scale(1.15);
 }
 .footer-bottom {
     text-align: center;
@@ -1006,3 +1013,4 @@ footer em { font-style: italic; }
     color: var(--primary-indigo);
     font-weight: 700;
 }
+

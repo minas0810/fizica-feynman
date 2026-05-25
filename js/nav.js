@@ -1,6 +1,6 @@
 /* ===========================================
    FIZICA LUI FEYNMAN — nav.js
-   Sistem de navigație — 21 module
+   Sistem de navigație — 22 de module
    =========================================== */
 
 (function () {
@@ -41,7 +41,7 @@
     { n: 22, icon: '🌍', title: 'Energia și viața',                       short: 'Energia și viața',       file: 'Modulul_22_Energia_si_Viata.html',                   bloc: 'Epilog — Energia și viața' },
   ];
 
-  const TOTAL = MODULES.length; /* 21 */
+  const TOTAL = MODULES.length; /* 22 */
 
   const body   = document.body;
   const modNum = parseInt(body.getAttribute('data-module'), 10) || 0;
@@ -98,10 +98,6 @@
       <a href="${simulariHref()}" class="drop-mobile-link">
         <span class="drop-icon">🧪</span>
         <span class="drop-title">Playground</span>
-      </a>
-      <a href="${authorHref()}" target="_blank" rel="noopener noreferrer" class="drop-mobile-link">
-        <span class="drop-icon">✍️</span>
-        <span class="drop-title">Despre autor</span>
       </a>`;
 
     nav.innerHTML = `
@@ -122,7 +118,6 @@
         </div>
         <a href="${simulariHref()}" class="site-nav__simulari">Playground</a>
         <a href="${aboutHref()}" class="site-nav__despre-feynman">Despre Feynman</a>
-        <a href="${authorHref()}" target="_blank" rel="noopener noreferrer" class="site-nav__despre-autor">Despre autor</a>
         <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
       </div>`;
 
