@@ -70,7 +70,7 @@ body[data-module] .site-nav::after {
 
 /* Meniu Links */
 .site-nav__home,
-.site-nav__simulari,
+.site-nav__playground,
 .site-nav__despre-feynman,
 .site-nav__despre-autor,
 .site-nav__module-list {
@@ -84,7 +84,7 @@ body[data-module] .site-nav::after {
     white-space: nowrap;
 }
 .site-nav__home:hover,
-.site-nav__simulari:hover,
+.site-nav__playground:hover,
 .site-nav__despre-feynman:hover,
 .site-nav__despre-autor:hover,
 .site-nav__module-list:hover {
@@ -608,7 +608,7 @@ body[data-module] .site-nav::after {
     .site-nav__module-list,
     .site-nav__despre-feynman,
     .site-nav__despre-autor,
-    .site-nav__simulari {
+    .site-nav__playground {
         display: none;
     }
     .site-nav__hamburger { display: flex; }

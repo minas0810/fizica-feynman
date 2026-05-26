@@ -48,7 +48,7 @@
   const isIndex        = body.getAttribute('data-page') === 'index';
   const isModulesPage  = body.getAttribute('data-page') === 'modules';
   const isAboutFeynman = body.getAttribute('data-page') === 'despre-feynman';
-  const isSimulari     = body.getAttribute('data-page') === 'simulari';
+  const isPlayground   = body.getAttribute('data-page') === 'playground';
   const isAboutAuthor  = body.getAttribute('data-page') === 'despre-autor';
   const isModule       = modNum > 0;
 
@@ -56,12 +56,12 @@
   const curIdx = MODULES.findIndex(m => m.n === modNum);
 
   /* —— Căi relative —— */
-  const isTopLevel = isIndex || isModulesPage || isAboutFeynman || isSimulari || isAboutAuthor;
+  const isTopLevel = isIndex || isModulesPage || isAboutFeynman || isPlayground || isAboutAuthor;
   function modHref(file)      { return isTopLevel ? 'modules/' + file : file; }
   function homeHref()         { return isTopLevel ? 'index.html'          : '../index.html'; }
   function aboutHref()        { return isTopLevel ? 'despre-feynman.html' : '../despre-feynman.html'; }
   function modulesHref()      { return isTopLevel ? 'modules.html'        : '../modules.html'; }
-  function simulariHref()     { return isTopLevel ? 'simulari.html'       : '../simulari.html'; }
+  function playgroundHref()   { return isTopLevel ? 'playground.html'     : '../playground.html'; }
   function authorHref()       { return 'https://prof-minas.ro'; }
 
   /* ================================================
@@ -95,7 +95,7 @@
         <span class="drop-icon">👨‍🔬</span>
         <span class="drop-title">Despre Feynman</span>
       </a>
-      <a href="${simulariHref()}" class="drop-mobile-link">
+      <a href="${playgroundHref()}" class="drop-mobile-link">
         <span class="drop-icon">🧪</span>
         <span class="drop-title">Playground</span>
       </a>`;
@@ -116,7 +116,7 @@
             ${mobileLinksHTML}
           </div>
         </div>
-        <a href="${simulariHref()}" class="site-nav__simulari">Playground</a>
+        <a href="${playgroundHref()}" class="site-nav__playground">Playground</a>
         <a href="${aboutHref()}" class="site-nav__despre-feynman">Despre Feynman</a>
         <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
       </div>`;
