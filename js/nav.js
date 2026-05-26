@@ -29,7 +29,7 @@
     { n: 13, icon: '🎢', title: 'Energia mecanică',                       short: 'Energia mecanică',       file: 'Modulul_9_Energia_Mecanica.html',                    bloc: 'Actul IV — Conservarea energiei' },
     { n: 14, icon: '⚖️', title: 'Echilibrul corpurilor și pârghiile',     short: 'Echilibru și pârghii',   file: 'Modulul_10_Echilibru_Parghii.html',                  bloc: 'Actul IV — Conservarea energiei' },
     /* Actul V — Unde și lumină */
-    { n: 15, icon: '🔊', title: 'Sunetul',                                short: 'Sunetul',                file: 'Modulul_15_Sunetul.html',                            bloc: 'Actul V — Unde și lumină' },
+    { n: 15, icon: '🔊', title: 'Unde mecanice: valul și sunetul',        short: 'Unde mecanice',          file: 'Modulul_15_Unde_Mecanice_Valul_si_Sunetul.html',      bloc: 'Actul V — Unde și lumină' },
     { n: 16, icon: '🌈', title: 'Fenomene optice',                        short: 'Fenomene optice',        file: 'Modulul_16_Fenomene_Optice.html',                    bloc: 'Actul V — Unde și lumină' },
     { n: 17, icon: '👁️', title: 'Lentile și ochiul uman',                short: 'Lentile și ochi',        file: 'Modulul_17_Lentile_Ochiul_Uman.html',                bloc: 'Actul V — Unde și lumină' },
     /* Actul VI — Electricitate și magnetism */
