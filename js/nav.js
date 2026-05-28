@@ -94,10 +94,6 @@
       <a href="${aboutHref()}" class="drop-mobile-link">
         <span class="drop-icon">👨‍🔬</span>
         <span class="drop-title">Despre Feynman</span>
-      </a>
-      <a href="${playgroundHref()}" class="drop-mobile-link">
-        <span class="drop-icon">🧪</span>
-        <span class="drop-title">Playground</span>
       </a>`;
 
     nav.innerHTML = `
@@ -116,7 +112,6 @@
             ${mobileLinksHTML}
           </div>
         </div>
-        <a href="${playgroundHref()}" class="site-nav__playground">Playground</a>
         <a href="${aboutHref()}" class="site-nav__despre-feynman">Despre Feynman</a>
         <button class="site-nav__hamburger" id="nav-hamburger" aria-label="Meniu module">☰</button>
       </div>`;
