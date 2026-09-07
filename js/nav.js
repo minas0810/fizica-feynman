@@ -62,7 +62,7 @@
   function aboutHref()        { return isTopLevel ? 'despre-feynman.html' : '../despre-feynman.html'; }
   function modulesHref()      { return isTopLevel ? 'modules.html'        : '../modules.html'; }
   function playgroundHref()   { return isTopLevel ? 'playground.html'     : '../playground.html'; }
-  function authorHref()       { return 'https://prof-minas.ro'; }
+  function authorHref()       { return ''; }
 
   /* ================================================
      1. NAVBAR GLOBALĂ
